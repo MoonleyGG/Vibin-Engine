@@ -1,0 +1,7 @@
+.haxelib/
+export/
+Funkin-main/
+
+.DS_Store
+Thumbs.db
+*.log

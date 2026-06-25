@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+    <meta title="Friday Night Funkin': Vibin Engine" package="com.St4rrlightGæmes.fnfvibinengine" version="26.1.0" company="St4rrlight Gæmes" />
+    <app main="Main" path="Export" file="VibinEngine" />
+
+    <source path="Source" />
+	
+    <haxelib name="lime" />
+    <haxelib name="openfl" />
+    <haxelib name="flixel" />
+    <haxelib name="hxCodec" />
+    <haxelib name="flixel-addons" />
+    <haxelib name="flxanimate" />
+	
+    <assets path="Assets" rename="assets" />
+
+    <window width="1280" height="720" fps="60" background="#000000" hardware="true" vsync="false" allow-high-dpi="true" />
+
+    <set name="BUILD_DIR" value="export/debug" if="debug" />
+    <set name="BUILD_DIR" value="export/32bit" if="32bits" />
+</project>
