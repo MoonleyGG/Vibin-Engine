@@ -6,4 +6,5 @@ class Paths
 
     public static var images:String = "assets/images/";
     public static var music:String = "assets/music/";
+    public static var sounds:String = "assets/sounds";
 }
