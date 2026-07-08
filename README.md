@@ -1,5 +1,2 @@
-<<<<<<< HEAD
-THIS ENGINE IS NOT READY FOR USE. AND IT A HEAVY WORK IN PROGRESS!!
-=======
-THIS ENGINE IS NOT READY FOR USE. AND IT A HEAVY WORK IN PROGRESS!!
->>>>>>> 904b19f4ecad49aa526b7066b47b0cfc9eb1e5cd
+# THIS ENGINE IS NOT READY FOR USE. AND IT A HEAVY WORK IN PROGRESS!!
+<img src="Art/Marketing/warning.png" alt="Image" width="400" style="image-rendering: pixelated;">
