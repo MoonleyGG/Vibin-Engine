@@ -59,18 +59,16 @@ class MainMenuState extends MusicBeatState
             menuItems.add(item); 
         }
 
-        switchSelection(0, false); // don't play sound on initial boot
+        switchSelection(0, false);
     } 
     
     override function update(elapsed:Float)
     {
         super.update(elapsed);
 
-        // Keyboard navigation
         if (FlxG.keys.justPressed.UP) switchSelection(-1);
         if (FlxG.keys.justPressed.DOWN) switchSelection(1);
-        
-        // Mouse hover and click handling
+
 menuItems.forEach(function(item:MenuButton)
 {
     if (FlxG.mouse.overlaps(item))
@@ -78,7 +76,7 @@ menuItems.forEach(function(item:MenuButton)
         if (selectedButton != item.ID)
         {
             selectedButton = item.ID;
-            switchSelection(0, true, true); // Force the sound to play here!
+            switchSelection(0, true, true);
         }
 
         if (FlxG.mouse.justPressed)
@@ -88,7 +86,6 @@ menuItems.forEach(function(item:MenuButton)
     }
 });
 
-        // Keyboard activation fallback
         if (FlxG.keys.justPressed.SPACE || FlxG.keys.justPressed.ENTER)
         {
             selectCurrentButton();
@@ -102,7 +99,6 @@ menuItems.forEach(function(item:MenuButton)
     if (selectedButton < 0) selectedButton = MenuButton.buttons.length - 1;
     if (selectedButton >= MenuButton.buttons.length) selectedButton = 0;
 
-    // FIX: Play sound if change isn't 0 OR if we specifically forced it via mouse hover
     if (playSound && (change != 0 || forceSound)) 
     {
         SoundUtil.PlaySound("scrollMenu");

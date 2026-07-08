@@ -9,22 +9,192 @@ using StringTools;
 class SoundUtil
 {
     public static var currentMusic:FlxSound;
-    
-    // Tracks the exact filename string for MusicBeatState to read later
+
     public static var currentMusicName:String = "";
 
-    // Direct access helper instance variable
+    public static var currentSongLayerSounds:Array<FlxSound> = [];
+
     public static var GetInfo:MusicInfoResolver = new MusicInfoResolver(new MusicInfoImpl());
 
-    /**
-     * Plays a sound effect from the assets/sounds/ folder.
-     * @param soundName The name of the sound file (without .ogg extension).
-     * @param volume Optional volume scale from 0.0 to 1.0 (Defaults to 1.0).
-     */
     public static function PlaySound(soundName:String, volume:Float = 1.0):Void
     {
         var path = 'assets/sounds/$soundName.ogg';
         FlxG.sound.play(path, volume);
+    }
+
+    public static function PlaySong(songPath:String, fadeIn:Bool = false, volume:Float = 1.0, startTime:Float = 0.0, endTime:Float = -1.0, loop:Bool = true):Void
+    {
+        // stop existing stems
+        if (currentSongLayerSounds.length > 0)
+        {
+            for (soundItem in currentSongLayerSounds)
+            {
+                if (soundItem != null)
+                {
+                    soundItem.stop();
+                    soundItem.destroy();
+                }
+            }
+            currentSongLayerSounds = [];
+        }
+        if (FlxG.sound.music != null) FlxG.sound.music.stop();
+
+        var baseDirectory = 'assets/songs/$songPath';
+        var trackedFiles:Array<String> = [];
+
+        if (Assets.exists(baseDirectory + '.ogg'))
+        {
+            trackedFiles.push(baseDirectory + '.ogg');
+            currentMusicName = songPath;
+        }
+        else
+        {
+            var allAssets = Assets.list();
+            for (asset in allAssets)
+            {
+                if (asset.startsWith(baseDirectory + '/') && asset.endsWith('.ogg'))
+                {
+                    trackedFiles.push(asset);
+                }
+            }
+            currentMusicName = songPath;
+        }
+
+        if (trackedFiles.length == 0) return;
+
+        // Load all stems first, wait for all to finish loading, then start them together
+        var pendingSounds:Array<FlxSound> = [];
+        var loadedCount:Int = 0;
+        var totalStems:Int = trackedFiles.length;
+
+        var resolveEmbeddedAsset = function(path:String):Null<String>
+        {
+            if (Assets.exists(path))
+                return path;
+
+            var assetsPrefix = "assets/";
+            if (path.startsWith(assetsPrefix))
+            {
+                var stripped = path.substr(assetsPrefix.length);
+                if (Assets.exists(stripped))
+                    return stripped;
+            }
+            else
+            {
+                var prefixed = assetsPrefix + path;
+                if (Assets.exists(prefixed))
+                    return prefixed;
+            }
+
+            return null;
+        };
+
+        var onAllLoaded = function() {
+            var startTimeMs = startTime * 1000;
+
+            for (s in pendingSounds)
+            {
+                if (s != null)
+                {
+                    s.play(true, startTimeMs);
+                }
+            }
+
+            if (fadeIn)
+            {
+                for (s in pendingSounds)
+                {
+                    if (s != null)
+                    {
+                        s.volume = 0;
+                        s.fadeIn(1, 0, volume);
+                    }
+                }
+            }
+            else
+            {
+                for (s in pendingSounds)
+                    if (s != null) s.volume = volume;
+            }
+        }
+
+        for (i in 0...trackedFiles.length)
+        {
+            var audioTrackPath = trackedFiles[i];
+            var stemSound:FlxSound;
+            var embeddedId:Null<String> = resolveEmbeddedAsset(audioTrackPath);
+
+            if (embeddedId != null)
+            {
+                stemSound = FlxG.sound.load(embeddedId, volume, loop, null, false, false);
+                if (stemSound != null)
+                {
+                    pendingSounds.push(stemSound);
+                    currentSongLayerSounds.push(stemSound);
+
+                    if (i == 0)
+                        currentMusic = stemSound;
+
+                    loadedCount++;
+                    continue;
+                }
+            }
+
+            stemSound = FlxG.sound.load(null, volume, loop, null, false, false, audioTrackPath,
+                null,
+                function()
+                {
+                    loadedCount++;
+                    if (loadedCount >= totalStems)
+                        onAllLoaded();
+                }
+            );
+
+            if (stemSound != null)
+            {
+                pendingSounds.push(stemSound);
+                currentSongLayerSounds.push(stemSound);
+
+                if (i == 0)
+                    currentMusic = stemSound;
+            }
+        }
+
+        if (loadedCount >= totalStems)
+            onAllLoaded();
+
+        if (loadedCount >= totalStems)
+            onAllLoaded();
+        // end PlaySong
+    }
+
+    public static function StopSong(fadeOut:Bool = false):Void
+    {
+        currentMusicName = "";
+
+        if (currentSongLayerSounds.length == 0) return;
+
+        var soundsToClear = currentSongLayerSounds.copy();
+        currentSongLayerSounds = [];
+
+        for (soundItem in soundsToClear)
+        {
+            if (soundItem != null && soundItem.playing)
+            {
+                if (fadeOut)
+                {
+                    soundItem.fadeOut(1, 0, function(tween) {
+                        soundItem.stop();
+                        soundItem.destroy();
+                    });
+                }
+                else
+                {
+                    soundItem.stop();
+                    soundItem.destroy();
+                }
+            }
+        }
     }
 
     public static function PlayMusic(
@@ -33,20 +203,15 @@ class SoundUtil
         persistent:Bool = false
     ):Void
     {
-        // FIX: If this exact song is already playing, do absolutely nothing and let it continue vibin'
         if (FlxG.sound.music != null && FlxG.sound.music.playing && currentMusicName == musicName)
         {
             FlxG.sound.music.persist = persistent;
             return;
         }
 
-        // Remember the song name globally
         currentMusicName = musicName;
-
         var path = 'assets/music/$musicName.ogg';
-
         FlxG.sound.playMusic(path);
-
         currentMusic = FlxG.sound.music;
 
         if (currentMusic != null)
@@ -61,19 +226,12 @@ class SoundUtil
         }
     }
 
-    /**
-     * Stops a specific music track by name, with an optional fade-out effect.
-     * @param musicName The name of the song that should stop.
-     * @param fadeOut If true, the music will gracefully fade out over 1 second before stopping.
-     */
     public static function StopMusic(musicName:String, fadeOut:Bool = false):Void
     {
-        // Only run if there is active music playing and it matches the requested song name
         if (FlxG.sound.music != null && currentMusicName == musicName)
         {
             if (fadeOut)
             {
-                // Fade out over 1 second, from current volume down to 0
                 FlxG.sound.music.fadeOut(1, 0, function(tween) {
                     FlxG.sound.music.stop();
                     currentMusicName = "";
@@ -81,7 +239,6 @@ class SoundUtil
             }
             else
             {
-                // Stop instantly
                 FlxG.sound.music.stop();
                 currentMusicName = "";
             }
@@ -89,9 +246,6 @@ class SoundUtil
     }
 }
 
-/**
- * The Haxe Abstract wrapper handling field resolution tricks.
- */
 @:forward
 abstract MusicInfoResolver(MusicInfoImpl) from MusicInfoImpl to MusicInfoImpl
 {
@@ -105,16 +259,14 @@ abstract MusicInfoResolver(MusicInfoImpl) from MusicInfoImpl to MusicInfoImpl
     }
 }
 
-/**
- * The inner utility logic container that performs actual .ini file layout parsing.
- */
 class MusicInfoImpl
 {
     public function new() {}
 
     public function getBpm(field:String):Int
     {
-        var iniPath = 'assets/music/$field.ini';
+        var iniPath = 'assets/songs/$field.ini';
+        if (!Assets.exists(iniPath)) iniPath = 'assets/music/$field.ini';
         
         if (Assets.exists(iniPath))
         {
@@ -143,6 +295,6 @@ class MusicInfoImpl
             }
         }
 
-        return 100; // Default fallback if .ini doesn't exist
+        return 100; 
     }
 }

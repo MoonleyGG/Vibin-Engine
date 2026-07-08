@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="NoteHoldAssets.png">
+<SubTexture name="left sustain loop0000" x="0" y="0" width="50" height="87" frameX="-1" frameY="0" frameWidth="52" frameHeight="87" />
+<SubTexture name="left sustain end0000" x="0" y="87" width="50" height="64" frameX="-1" frameY="0" frameWidth="52" frameHeight="87" />
+<SubTexture name="down sustain loop0000" x="50" y="0" width="50" height="87" frameX="-1" frameY="0" frameWidth="52" frameHeight="87" />
+<SubTexture name="down sustain end0000" x="50" y="87" width="50" height="64" frameX="-1" frameY="0" frameWidth="52" frameHeight="87" />
+<SubTexture name="up sustain loop0000" x="100" y="0" width="50" height="87" frameX="-1" frameY="0" frameWidth="52" frameHeight="87" />
+<SubTexture name="up sustain end0000" x="100" y="87" width="50" height="64" frameX="-1" frameY="0" frameWidth="52" frameHeight="87" />
+<SubTexture name="right sustain loop0000" x="150" y="0" width="50" height="87" frameX="-1" frameY="0" frameWidth="52" frameHeight="87" />
+<SubTexture name="right sustain end0000" x="150" y="87" width="50" height="64" frameX="-1" frameY="0" frameWidth="52" frameHeight="87" />
+</TextureAtlas>

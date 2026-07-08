@@ -9,9 +9,8 @@ import flxanimate.FlxAnimate;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxTween;
-import flixel.tweens.FlxEase; // If this still errors, change to: flixel.tweens.misc.FlxEase
+import flixel.tweens.FlxEase;
 
-// the paths
 import vibin.backend.Paths.*;
 import vibin.states.titlestate.TextShit.*;
 import vibin.states.mainmenustate.MainMenuState;
@@ -36,8 +35,6 @@ class TitleState extends MusicBeatState
         SoundUtil.PlayMusic("freakyMenu", true, true);
 
         super.create();
-
-        trace("TitleState initialized with BPM: " + BPM);
         
         ngLogo = new FlxSprite(0, 0, images + "logo/NewgroundsLogo.png");
         ngLogo.scale.set(0.8, 0.8);
@@ -110,10 +107,8 @@ class TitleState extends MusicBeatState
             });
         }
 
-        // FIX: Spelled 'lastKey' right
         var lastKey = FlxG.keys.firstJustPressed();
 
-// In HaxeFlixel, if no key is pressed, firstJustPressed() returns -1 or 0
 if (lastKey > 0)
 {
     playerInput.push(lastKey);

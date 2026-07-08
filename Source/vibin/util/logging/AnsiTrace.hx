@@ -13,9 +13,6 @@ import sys.io.File;
 using tools.AnsiUtil;
 using StringTools;
 
-/**
- * Class that helps with some Ansi related logging functionality like some terminal color checking
- */
 @:nullSafety
 class AnsiTrace
 {
@@ -27,11 +24,6 @@ class AnsiTrace
   private static var logFileClosed:Bool = false;
   #end
 
-  /**
-   * Output a message to the log.
-   * Called when using `trace()`, and modified from the default to support ANSI colors.
-   * @param v The value to print.
-   */
   public static function trace(v:Dynamic, ?info:haxe.PosInfos)
   {
     #if (sys && FEATURE_DEBUG_FILE_LOGGING)
@@ -77,16 +69,9 @@ class AnsiTrace
     #end
   }
 
-  /**
-   * Returns our terminals support for color output
-   */
   public static var colorSupported:Bool = #if sys (Sys.getEnv("TERM")?.startsWith('xterm')
     || Sys.getEnv("ANSICON") != null) #else false #end;
 
-  /**
-   * Format the output to use ANSI colors.
-   * Edited from the standard `trace()` implementation.
-   */
   static function formatOutput(v:Dynamic, ?infos:haxe.PosInfos):String
   {
     var str:String = Std.string(v);
@@ -97,7 +82,6 @@ class AnsiTrace
       var dirs:Array<String> = infos.fileName.split("/");
       dirs[dirs.length - 1] = dirs[dirs.length - 1].bold();
 
-      // rejoin the dirs
       infos.fileName = dirs.join("/");
     }
 
@@ -118,9 +102,6 @@ class AnsiTrace
     return pstr + ": " + str;
   }
 
-  /**
-   * Print color pixel art of BF in ANSI format.
-   */
   public static function traceBF()
   {
     #if (sys)
@@ -133,10 +114,6 @@ class AnsiTrace
     #end
   }
 
-  /**
-   * Color pixel art of BF in ANSI format.
-   * Generated using https://dom111.github.io/image-to-ansi/
-   */
   public static var ansiBF:Array<String> = ["
 ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
 ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣤⣤⣤⣤⣤⣿⣿⣿⣿⣧⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄

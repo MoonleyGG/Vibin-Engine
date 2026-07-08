@@ -1,8 +1,5 @@
 package vibin.util;
 
-/**
- * Utilities for performing operations on dates.
- */
 @:nullSafety
 class DateUtil
 {

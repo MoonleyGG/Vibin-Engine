@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="StrumlineNotes.png">
+<SubTexture name="left static0000" x="0" y="898" width="154" height="157" frameX="-1" frameY="0" frameWidth="155" frameHeight="158" />
+<SubTexture name="down static0000" x="308" y="898" width="157" height="154" frameX="0" frameY="-1" frameWidth="157" frameHeight="155" />
+<SubTexture name="right static0000" x="154" y="898" width="154" height="157" frameX="-1" frameY="0" frameWidth="155" frameHeight="157" />
+<SubTexture name="up static0000" x="465" y="898" width="157" height="154" frameX="0" frameY="0" frameWidth="157" frameHeight="154" />
+<SubTexture name="left hit0000" x="0" y="228" width="226" height="227" frameX="0" frameY="0" frameWidth="232" frameHeight="236" />
+<SubTexture name="left hit0001" x="683" y="0" width="216" height="219" frameX="-5" frameY="-5" frameWidth="232" frameHeight="236" />
+<SubTexture name="left hit0002" x="653" y="679" width="217" height="217" frameX="-3" frameY="-5" frameWidth="232" frameHeight="236" />
+<SubTexture name="left hit0003" x="653" y="679" width="217" height="217" frameX="-3" frameY="-5" frameWidth="232" frameHeight="236" />
+<SubTexture name="left hit0004" x="224" y="455" width="223" height="223" frameX="0" frameY="-1" frameWidth="232" frameHeight="236" />
+<SubTexture name="left hit0005" x="447" y="455" width="223" height="223" frameX="0" frameY="-1" frameWidth="232" frameHeight="236" />
+<SubTexture name="left miss0000" x="1116" y="146" width="139" height="142" frameX="-3" frameY="-3" frameWidth="146" frameHeight="149" />
+<SubTexture name="left miss0001" x="1116" y="146" width="139" height="142" frameX="-3" frameY="-3" frameWidth="146" frameHeight="149" />
+<SubTexture name="left miss0002" x="923" y="898" width="146" height="149" frameX="0" frameY="0" frameWidth="146" frameHeight="149" />
+<SubTexture name="left miss0003" x="923" y="898" width="146" height="149" frameX="0" frameY="0" frameWidth="146" frameHeight="149" />
+<SubTexture name="down hit0000" x="226" y="228" width="227" height="225" frameX="0" frameY="0" frameWidth="235" frameHeight="230" />
+<SubTexture name="down hit0001" x="456" y="0" width="227" height="225" frameX="0" frameY="0" frameWidth="235" frameHeight="230" />
+<SubTexture name="down hit0002" x="683" y="219" width="210" height="210" frameX="-8" frameY="-7" frameWidth="235" frameHeight="230" />
+<SubTexture name="down hit0003" x="683" y="219" width="210" height="210" frameX="-8" frameY="-7" frameWidth="235" frameHeight="230" />
+<SubTexture name="down hit0004" x="899" y="0" width="217" height="217" frameX="-5" frameY="-4" frameWidth="235" frameHeight="230" />
+<SubTexture name="down hit0005" x="899" y="217" width="217" height="217" frameX="-5" frameY="-4" frameWidth="235" frameHeight="230" />
+<SubTexture name="down miss0000" x="1116" y="570" width="142" height="139" frameX="-4" frameY="-2" frameWidth="149" frameHeight="146" />
+<SubTexture name="down miss0001" x="1116" y="570" width="142" height="139" frameX="-4" frameY="-2" frameWidth="149" frameHeight="146" />
+<SubTexture name="down miss0002" x="1116" y="0" width="149" height="146" frameX="0" frameY="0" frameWidth="149" frameHeight="146" />
+<SubTexture name="down miss0003" x="1116" y="0" width="149" height="146" frameX="0" frameY="0" frameWidth="149" frameHeight="146" />
+<SubTexture name="up hit0000" x="0" y="0" width="228" height="228" frameX="0" frameY="0" frameWidth="238" frameHeight="235" />
+<SubTexture name="up hit0001" x="228" y="0" width="228" height="228" frameX="0" frameY="0" frameWidth="238" frameHeight="235" />
+<SubTexture name="up hit0002" x="683" y="429" width="206" height="206" frameX="-10" frameY="-11" frameWidth="238" frameHeight="235" />
+<SubTexture name="up hit0003" x="683" y="429" width="206" height="206" frameX="-10" frameY="-11" frameWidth="238" frameHeight="235" />
+<SubTexture name="up hit0004" x="899" y="434" width="213" height="212" frameX="-7" frameY="-8" frameWidth="238" frameHeight="235" />
+<SubTexture name="up hit0005" x="899" y="646" width="213" height="212" frameX="-7" frameY="-8" frameWidth="238" frameHeight="235" />
+<SubTexture name="up miss0000" x="1116" y="288" width="144" height="141" frameX="-5" frameY="-4" frameWidth="153" frameHeight="150" />
+<SubTexture name="up miss0001" x="1116" y="288" width="144" height="141" frameX="-5" frameY="-4" frameWidth="153" frameHeight="150" />
+<SubTexture name="up miss0002" x="770" y="898" width="153" height="150" frameX="0" frameY="0" frameWidth="153" frameHeight="150" />
+<SubTexture name="up miss0003" x="770" y="898" width="153" height="150" frameX="0" frameY="0" frameWidth="153" frameHeight="150" />
+<SubTexture name="right hit0000" x="219" y="679" width="217" height="218" frameX="-5" frameY="-6" frameWidth="233" frameHeight="236" />
+<SubTexture name="right hit0001" x="436" y="679" width="217" height="218" frameX="-5" frameY="-6" frameWidth="233" frameHeight="236" />
+<SubTexture name="right hit0002" x="0" y="679" width="219" height="219" frameX="-4" frameY="-3" frameWidth="233" frameHeight="236" />
+<SubTexture name="right hit0003" x="0" y="679" width="219" height="219" frameX="-4" frameY="-3" frameWidth="233" frameHeight="236" />
+<SubTexture name="right hit0004" x="456" y="225" width="224" height="224" frameX="0" frameY="0" frameWidth="233" frameHeight="236" />
+<SubTexture name="right hit0005" x="0" y="455" width="224" height="224" frameX="0" frameY="0" frameWidth="233" frameHeight="236" />
+<SubTexture name="right miss0000" x="1116" y="429" width="138" height="141" frameX="-3" frameY="-7" frameWidth="148" frameHeight="151" />
+<SubTexture name="right miss0001" x="1116" y="429" width="138" height="141" frameX="-3" frameY="-7" frameWidth="148" frameHeight="151" />
+<SubTexture name="right miss0002" x="622" y="898" width="148" height="151" frameX="0" frameY="0" frameWidth="148" frameHeight="151" />
+<SubTexture name="right miss0003" x="622" y="898" width="148" height="151" frameX="0" frameY="0" frameWidth="148" frameHeight="151" />
+</TextureAtlas>

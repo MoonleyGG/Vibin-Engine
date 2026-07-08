@@ -1,0 +1,1 @@
+first get osu! with this link: https://github.com/ppy/osu/releases/latest/download/install.exe then watch the guide below

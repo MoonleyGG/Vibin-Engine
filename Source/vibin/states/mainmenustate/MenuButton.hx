@@ -5,7 +5,7 @@ import flixel.FlxSprite;
 import flixel.util.FlxDestroyUtil;
 import vibin.backend.Paths.*;
 
-import 
+import vibin.states.storymodestate.StoryModeState;
 
 enum abstract MenuButtonType(String) to String {
     var STORYMODE = "storymode";
@@ -21,7 +21,7 @@ class MenuButton extends FlxSprite
     public static var buttons:Array<MenuButtonType> = [STORYMODE, FREEPLAY, AWARDS, OPTIONS, CREDITS];
 
     public var type:MenuButtonType;
-    public var onSelectCallback:Void->Void; // The action this button performs
+    public var onSelectCallback:Void->Void;
     
     private var buttonPath:String = "assets/images/menu/MainMenu/buttons";
 
@@ -45,11 +45,10 @@ class MenuButton extends FlxSprite
         antialiasing = true;
         scrollFactor.set(0.2, 0.2);
 
-        // Assign what happens when this specific button type is activated
         switch (type)
         {
             case STORYMODE:
-                // onSelectCallback = () -> FlxG.switchState(() -> new StoryMenuState());
+                onSelectCallback = () -> FlxG.switchState(() -> new StoryModeState());
             case FREEPLAY:
                 // onSelectCallback = () -> FlxG.switchState(() -> new FreeplayState());
             case AWARDS:

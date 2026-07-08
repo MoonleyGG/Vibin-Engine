@@ -5,9 +5,6 @@ import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.FlxSprite;
 import flixel.FlxG;
 
-/**
- * An enum abstract defining anchor alignments for the Alphabet component.
- */
 enum abstract AlphabetAlignment(String) from String to String
 {
   var LEFT = "LEFT";
@@ -15,9 +12,6 @@ enum abstract AlphabetAlignment(String) from String to String
   var RIGHT = "RIGHT";
 }
 
-/**
- * A custom abstract that allows the X parameter to accept either a Float number or an AlphabetAlignment.
- */
 abstract AlphabetX(Dynamic) from Float from Int from AlphabetAlignment to Dynamic {
   @:from
   static public function fromString(s:String):AlphabetX {
@@ -27,34 +21,21 @@ abstract AlphabetX(Dynamic) from Float from Int from AlphabetAlignment to Dynami
 
 class Alphabet extends FlxSpriteGroup
 {
-  // -----------------------------------------------------------------
-  // TWEAK THESE VALUES FOR QUICK TITLE HEIGHT ADJUSTMENTS:
-  // -----------------------------------------------------------------
-  public static var titleY1:Float = 200; // Y position when whichOne is 1
-  public static var titleY2:Float = 260; // Y position when whichOne is 2
+  public static var titleY1:Float = 200;
+  public static var titleY2:Float = 260;
   public static var titleY3:Float = 320;
-  // -----------------------------------------------------------------
 
   public var text:String = "";
   public var spacing:Float = 0; 
   public var isBold:Bool = false;
 
-  // Track any active title text instances created via MakeTitleText
   private static var activeTitles:Array<Alphabet> = [];
 
-  /**
-   * Helper factory to create, build, and anchor-align an Alphabet text group.
-   * @param text The string to display.
-   * @param x Can be a Float number (e.g. 150) or an alignment string ("LEFT", "MIDDLE", "RIGHT").
-   * @param y The vertical Y position of the text.
-   * @param isBold If true, letters enforce the [LETTER] bold asset variant. Numbers stay normal.
-   */
   public static function NewText(text:String, x:AlphabetX, y:Float, isBold:Bool = false):Alphabet
   {
     var alphabet = new Alphabet(text, isBold);
     alphabet.y = y;
 
-    // Check if x is a raw number value
     if (Std.isOfType(x, Float) || Std.isOfType(x, Int))
     {
       alphabet.x = cast(x, Float);
@@ -80,12 +61,6 @@ class Alphabet extends FlxSpriteGroup
     return alphabet;
   }
 
-  /**
-   * Creates a bold, horizontally-centered title line preset at specific row rules.
-   * @param text The text string to build out.
-   * @param whichOne If 1, sets Y to titleY1. If 2, sets Y to titleY2.
-   * @return The generated Alphabet object.
-   */
   public static function MakeTitleText(text:String, whichOne:Int):Alphabet
   {
     var targetY:Float = 0;
@@ -93,13 +68,10 @@ class Alphabet extends FlxSpriteGroup
     if (whichOne == 2) targetY = titleY2;
     if (whichOne == 3) targetY = titleY3;
 
-    // Forces isBold to ALWAYS be true for titles
     var titleObj = Alphabet.NewText(text, "MIDDLE", targetY, true);
     
-    // Store it inside our internal tracking list
     activeTitles.push(titleObj);
 
-    // Automatically add it to the active screen state manager context
     if (FlxG.state != null) {
       FlxG.state.add(titleObj);
     }
@@ -107,23 +79,18 @@ class Alphabet extends FlxSpriteGroup
     return titleObj;
   }
 
-  /**
-   * Destroys and safely removes all title text layers currently on screen.
-   */
   public static function ClearTitleText():Void
   {
     for (title in activeTitles)
     {
       if (title != null)
       {
-        // Safely wipe out graphics memory allocation references
         if (FlxG.state != null) {
           FlxG.state.remove(title);
         }
         title.destroy();
       }
     }
-    // Wipe the reference array tracking clear
     activeTitles = [];
   }
 
@@ -134,9 +101,6 @@ class Alphabet extends FlxSpriteGroup
     changeText(text);
   }
 
-  /**
-   * Clears old child letter sprites and builds a new line utilizing the texture atlas assets.
-   */
   public function changeText(newText:String):Void
   {
     this.text = newText;

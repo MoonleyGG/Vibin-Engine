@@ -23,7 +23,6 @@ class Main extends Sprite
             #end
         };
 
-		// Enable ANSI-colored trace output for the terminal.
 		haxe.Log.trace = AnsiTrace.trace;
 		addChild(new FlxGame(1280, 720, TitleState));
 		#if debug

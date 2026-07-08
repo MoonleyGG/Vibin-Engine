@@ -2,7 +2,6 @@ package vibin.util;
 
 import haxe.zip.Entry;
 import lime.utils.Bytes;
-import lime.ui.FileDialog;
 import openfl.Lib;
 import openfl.net.FileFilter;
 import haxe.io.Path;
@@ -18,9 +17,6 @@ import haxe.ui.containers.dialogs.Dialogs.FileDialogExtensionInfo;
 
 using StringTools;
 
-/**
- * Utilities for reading and writing files on various platforms.
- */
 @:nullSafety
 class FileUtil
 {
@@ -50,9 +46,6 @@ class FileUtil
   };
   #end
 
-  /**
-   * Paths which should not be deleted or modified by scripts.
-   */
   public static var PROTECTED_PATHS(get, never):Array<String>;
 
   static function get_PROTECTED_PATHS():Array<String>
@@ -62,7 +55,6 @@ class FileUtil
     #if sys
     for (i in 0...protected.length)
     {
-      // On Linux 'fullPath' just makes most of these null which actually just makes the paths unprotected
       protected[i] = #if !linux sys.FileSystem.fullPath #end (Path.join([gameDirectory, protected[i]]));
     }
     #end
@@ -70,9 +62,6 @@ class FileUtil
     return protected;
   }
 
-  /**
-   * Regex for invalid filesystem characters.
-   */
   public static final INVALID_CHARS:EReg = ~/[:*?"<>|\n\r\t]/g;
 
   #if sys
@@ -91,15 +80,6 @@ class FileUtil
   #end
 
   #if FEATURE_HAXEUI
-  /**
-   * Browses for a single file, then calls `onSelect(fileInfo)` when a file is selected.
-   * Powered by HaxeUI, so it works on all platforms.
-   * File contents will be binary, not String.
-   *
-   * @param typeFilter
-   * @param onSelect A callback that provides a `SelectedFileInfo` object when a file is selected.
-   * @param onCancel A callback that is called when the user closes the dialog without selecting a file.
-   */
   public static function browseForBinaryFile(dialogTitle:String, ?typeFilter:Array<FileDialogExtensionInfo>, onSelect:(SelectedFileInfo) -> Void,
       ?onCancel:() -> Void)
   {
@@ -117,22 +97,13 @@ class FileUtil
 
     Dialogs.openFile(onComplete, {
       readContents: true,
-      readAsBinary: true, // Binary
+      readAsBinary: true,
       multiple: false,
       extensions: typeFilter ?? new Array<FileDialogExtensionInfo>(),
       title: dialogTitle,
     });
   }
 
-  /**
-   * Browses for a single file, then calls `onSelect(fileInfo)` when a file is selected.
-   * Powered by HaxeUI, so it works on all platforms.
-   * File contents will be a String, not binary.
-   *
-   * @param typeFilter
-   * @param onSelect A callback that provides a `SelectedFileInfo` object when a file is selected.
-   * @param onCancel A callback that is called when the user closes the dialog without selecting a file.
-   */
   public static function browseForTextFile(dialogTitle:String, ?typeFilter:Array<FileDialogExtensionInfo>, onSelect:(SelectedFileInfo) -> Void,
       ?onCancel:() -> Void):Void
   {
@@ -150,7 +121,7 @@ class FileUtil
 
     Dialogs.openFile(onComplete, {
       readContents: true,
-      readAsBinary: false, // Text
+      readAsBinary: false,
       multiple: false,
       extensions: typeFilter ?? new Array<FileDialogExtensionInfo>(),
       title: dialogTitle,
@@ -158,12 +129,6 @@ class FileUtil
   }
   #end
 
-  /**
-   * Browses for a directory, then calls `onSelect(path)` when a path chosen.
-   *
-   * @param typeFilter TODO What does this do?
-   * @return Whether the file dialog was opened successfully.
-   */
   public static function browseForDirectory(?typeFilter:Array<FileFilter>, onSelect:(String) -> Void, ?onCancel:() -> Void, ?defaultPath:String,
       ?dialogTitle:String):Bool
   {
@@ -177,34 +142,17 @@ class FileUtil
 
     return false;
     #else
-    FileDialog.openDirectory(Lib.current.stage.window, function(filepaths:Array<String>):Void
-    {
-      if (filepaths.length > 0)
-      {
-        if (onSelect != null)
-        {
-          onSelect(filepaths[0]);
-        }
-      }
-      else
-      {
-        if (onCancel != null)
-        {
-          onCancel();
-        }
-      }
-    }, defaultPath, false);
+    trace('WARNING: browseForDirectory is not supported by this runtime.');
 
-    return true;
+    if (onCancel != null)
+    {
+      onCancel();
+    }
+
+    return false;
     #end
   }
 
-  /**
-   * Browses for multiple file, then calls `onSelect(paths)` when a path chosen.
-   * Note that on HTML5 this will immediately fail.
-   *
-   * @return Whether the file dialog was opened successfully.
-   */
   public static function browseForMultipleFiles(?typeFilter:Array<FileFilter>, onSelect:(Array<String>) -> Void, ?onCancel:() -> Void, ?defaultPath:String,
       ?dialogTitle:String):Bool
   {
@@ -218,35 +166,30 @@ class FileUtil
 
     return false;
     #else
-    FileDialog.openFile(Lib.current.stage.window, function(filepaths:Array<String>, filter):Void
-    {
-      if (filepaths.length > 0)
-      {
-        if (onSelect != null)
-        {
-          onSelect(filepaths);
-        }
-      }
-      else
-      {
-        if (onCancel != null)
-        {
-          onCancel();
-        }
-      }
-    }, @:privateAccess openfl.filesystem.File.__getFilterTypes(typeFilter ?? []),
-      defaultPath, true);
+    var file = new FileReference();
 
+    file.addEventListener(Event.SELECT, function(e:Event):Void
+    {
+      var selectedFile:FileReference = cast e.target;
+      if (onSelect != null)
+      {
+        onSelect([selectedFile.name]);
+      }
+    });
+
+    file.addEventListener(Event.CANCEL, function(e:Event):Void
+    {
+      if (onCancel != null)
+      {
+        onCancel();
+      }
+    });
+
+    file.browse();
     return true;
     #end
   }
 
-  /**
-   * Browses for a file location to save to, then calls `onSave(path)` when a path chosen.
-   *
-   * @param typeFilter TODO What does this do?
-   * @return Whether the file dialog was opened successfully.
-   */
   public static function browseForSaveFile(?typeFilter:Array<FileFilter>, onSelect:(String) -> Void, ?onCancel:() -> Void, ?defaultPath:String,
       ?dialogTitle:String):Bool
   {
@@ -260,33 +203,54 @@ class FileUtil
 
     return false;
     #else
-    FileDialog.saveFile(Lib.current.stage.window, function(filepath:String, filter):Void
+    var file = new FileReference();
+
+    file.addEventListener(Event.SELECT, function(e:Event):Void
     {
-      if (filepath != null)
+      var selectedFile:FileReference = cast e.target;
+      if (onSelect != null)
       {
-        if (onSelect != null)
-        {
-          onSelect(filepath);
-        }
+        onSelect(selectedFile.name);
       }
-      else
+    });
+
+    file.addEventListener(Event.CANCEL, function(e:Event):Void
+    {
+      if (onCancel != null)
       {
-        if (onCancel != null)
-        {
-          onCancel();
-        }
+        onCancel();
       }
-    }, @:privateAccess openfl.filesystem.File.__getFilterTypes(typeFilter ?? []), defaultPath);
+    });
+
+    file.save('', defaultPath != null ? Path.withoutDirectory(defaultPath) : 'file.txt');
     return true;
     #end
   }
 
-  /**
-   * Browses for a single file location, then writes the provided `haxe.io.Bytes` data and calls `onSave(path)` when done.
-   * Works great on desktop and HTML5.
-   *
-   * @return Whether the file dialog was opened successfully.
-   */
+  public static function saveTextFile(data:String, ?defaultFileName:String, ?onSave:(String) -> Void, ?onCancel:() -> Void):Void
+  {
+    var file = new FileReference();
+
+    file.addEventListener(Event.SELECT, function(e:Event):Void
+    {
+      var selectedFile:FileReference = cast e.target;
+      if (onSave != null)
+      {
+        onSave(selectedFile.name);
+      }
+    });
+
+    file.addEventListener(Event.CANCEL, function(e:Event):Void
+    {
+      if (onCancel != null)
+      {
+        onCancel();
+      }
+    });
+
+    file.save(data, defaultFileName != null ? defaultFileName : 'file.txt');
+  }
+
   public static function saveFile(data:Bytes, ?typeFilter:Array<FileFilter>, ?onSave:(String) -> Void, ?onCancel:() -> Void, ?defaultFileName:String,
       ?dialogTitle:String):Bool
   {
@@ -300,71 +264,40 @@ class FileUtil
 
     return false;
     #else
-    FileDialog.saveFile(Lib.current.stage.window, function(filepath:String, filter):Void
+    var file = new FileReference();
+
+    file.addEventListener(Event.SELECT, function(e:Event):Void
     {
-      if (filepath != null)
+      var selectedFile:FileReference = cast e.target;
+      if (onSave != null)
       {
-        if (data != null)
-        {
-          Bytes.toFile(filepath, data);
-        }
-
-        if (onSave != null)
-        {
-          onSave(filepath);
-        }
+        onSave(selectedFile.name);
       }
-      else
+    });
+
+    file.addEventListener(Event.CANCEL, function(e:Event):Void
+    {
+      if (onCancel != null)
       {
-        if (onCancel != null)
-        {
-          onCancel();
-        }
+        onCancel();
       }
-    }, @:privateAccess openfl.filesystem.File.__getFilterTypes(typeFilter ?? []),
-      defaultFileName);
+    });
 
+    file.save(data, defaultFileName != null ? defaultFileName : 'file');
     return true;
     #end
   }
 
-  /**
-   * Prompts the user to save multiple files.
-   * On desktop, this will prompt the user for a directory, then write all of the files to there.
-   * On HTML5, this will zip the files up and prompt the user to save that.
-   *
-   * @param typeFilter TODO What does this do?
-   * @return Whether the file dialog was opened successfully.
-   */
+
   public static function saveMultipleFiles(resources:Array<Entry>, ?onSaveAll:(Array<String>) -> Void, ?onCancel:() -> Void, ?defaultPath:String,
       force:Bool = false):Bool
   {
     #if desktop
-    // Prompt the user for a directory, then write all of the files to there.
     var onSelectDir:(String) -> Void = function(targetPath:String):Void
     {
       var paths:Array<String> = new Array<String>();
       for (resource in resources)
       {
-        /*
-          var filePath:String = Path.join([targetPath, resource.fileName]);
-          try
-          {
-            if (resource.data == null)
-            {
-              trace('WARNING: File $filePath has no data or content. Skipping.');
-              continue;
-            }
-            else
-            {
-              writeBytesToPath(filePath, resource.data, force ? Force : Skip);
-            }
-          }
-          catch (e:Dynamic)
-          {
-            throw 'Failed to write file (probably already exists): $filePath';
-          }
-         */
         if (resource.data == null)
         {
           trace('WARNING: File ${resource.fileName} has no data or content. Skipping.');
@@ -407,13 +340,9 @@ class FileUtil
     #end
   }
 
-  /**
-   * Takes an array of file entries and prompts the user to save them as a ZIP file.
-   */
   public static function saveFilesAsZIP(resources:Array<Entry>, ?onSave:(Array<String>) -> Void, ?onCancel:() -> Void, ?defaultPath:String,
       force:Bool = false):Bool
   {
-    // Create a ZIP file.
     var zipBytes:Bytes = createZIPFromEntries(resources);
     var onSave:(String) -> Void = function(path:String)
     {
@@ -425,18 +354,13 @@ class FileUtil
       }
     };
 
-    // Prompt the user to save the ZIP file.
     saveFile(zipBytes, [FILE_FILTER_ZIP], onSave, onCancel, defaultPath, 'Save files as ZIP...');
     return true;
   }
 
-  /**
-   * Takes an array of file entries and prompts the user to save them as a FNFC file.
-   */
   public static function saveChartAsFNFC(resources:Array<Entry>, ?onSave:(Array<String>) -> Void, ?onCancel:() -> Void, ?defaultPath:String,
       force:Bool = false):Bool
   {
-    // Create a ZIP file.
     var zipBytes:Bytes = createZIPFromEntries(resources);
     var onSave:(String) -> Void = function(path:String)
     {
@@ -447,23 +371,14 @@ class FileUtil
         onSave([path]);
       }
     };
-    // Prompt the user to save the ZIP file.
     saveFile(zipBytes, [FILE_FILTER_FNFC], onSave, onCancel, defaultPath, 'Save chart as FNFC...');
     return true;
   }
 
-  /**
-   * Takes an array of file entries and forcibly writes a ZIP to the given path.
-   * Only works on native, because HTML5 doesn't allow you to write files to arbitrary paths.
-   * Use `saveFilesAsZIP` instead.
-   * @param force Whether to force overwrite an existing file.
-   */
   public static function saveFilesAsZIPToPath(resources:Array<Entry>, path:String, mode:FileWriteMode = Skip):Bool
   {
     #if sys
-    // Create a ZIP file.
     var zipBytes:Bytes = createZIPFromEntries(resources);
-    // Write the ZIP.
     writeBytesToPath(path, zipBytes, mode);
     return true;
     #else
@@ -471,13 +386,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Read string file contents directly from a given path.
-   * Only works on native.
-   *
-   * @param path The path to the file.
-   * @return The file contents.
-   */
   public static function readStringFromPath(path:String):String
   {
     #if sys
@@ -487,13 +395,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Read bytes file contents directly from a given path.
-   * Only works on native.
-   *
-   * @param path The path to the file.
-   * @return The file contents.
-   */
   public static function readBytesFromPath(path:String):Bytes
   {
     #if sys
@@ -503,12 +404,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Browse for a file to read and execute a callback once we have a file reference.
-   * Works great on HTML5 or desktop.
-   *
-   * @param	callback The function to call when the file is loaded.
-   */
   public static function browseFileReference(callback:(FileReference) -> Void):Void
   {
     var file = new FileReference();
@@ -531,9 +426,6 @@ class FileUtil
     file.browse();
   }
 
-  /**
-   * Prompts the user to save a file to their computer.
-   */
   public static function writeFileReference(path:String, data:String, callback:String->Void)
   {
     var file = new FileReference();
@@ -559,30 +451,15 @@ class FileUtil
     file.save(data, path);
   }
 
-  /**
-   * Read JSON file contents directly from a given path.
-   * Only works on native.
-   *
-   * @param path The path to the file.
-   * @return The JSON data.
-   */
   public static function readJSONFromPath(path:String):Dynamic
   {
     #if sys
-    return SerializerUtil.fromJSON(sys.io.File.getContent(path));
+    return haxe.Json.parse(sys.io.File.getContent(path));
     #else
     throw 'Direct file reading by path is not supported on this platform.';
     #end
   }
 
-  /**
-   * Write string file contents directly to a given path.
-   * Only works on native.
-   *
-   * @param path The path to the file.
-   * @param data The string to write.
-   * @param mode Whether to Force, Skip, or Ask to overwrite an existing file.
-   */
   public static function writeStringToPath(path:String, data:String, mode:FileWriteMode = Skip):Void
   {
     #if sys
@@ -605,7 +482,6 @@ class FileUtil
       case Ask:
         if (pathExists(path))
         {
-          // TODO: We don't have the technology to use native popups yet.
           throw 'Entry at path already exists: $path';
         }
         else
@@ -618,14 +494,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Write byte file contents directly to a given path.
-   * Only works on native.
-   *
-   * @param path The path to the file.
-   * @param data The bytes to write.
-   * @param mode Whether to Force, Skip, or Ask to overwrite an existing file.
-   */
   public static function writeBytesToPath(path:String, data:Bytes, mode:FileWriteMode = Skip):Void
   {
     #if sys
@@ -647,7 +515,6 @@ class FileUtil
       case Ask:
         if (pathExists(path))
         {
-          // TODO: We don't have the technology to use native popups yet.
           throw 'Entry at path already exists: "$path"';
         }
         else
@@ -666,13 +533,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Write string file contents directly to the end of a file at the given path.
-   * Only works on native.
-   *
-   * @param path The path to the file.
-   * @param data The string to append.
-   */
   public static function appendStringToPath(path:String, data:String):Void
   {
     #if sys
@@ -707,13 +567,7 @@ class FileUtil
     #end
   }
 
-  /**
-   * Moves a file from one location to another.
-   * Only works on native.
-   *
-   * @param path The path to the file.
-   * @param destination The path to move the file to.
-   */
+
   public static function moveFile(path:String, destination:String):Void
   {
     #if sys
@@ -728,12 +582,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Delete a file at the given path.
-   * Only works on native.
-   *
-   * @param path The path to the file.
-   */
   public static function deleteFile(path:String):Void
   {
     #if sys
@@ -743,13 +591,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Get a file's size in bytes. Max representable size is ~2.147 GB.
-   * Only works on native.
-   *
-   * @param path The path to the file.
-   * @return The size of the file in bytes.
-   */
   public static function getFileSize(path:String):Int
   {
     #if sys
@@ -759,13 +600,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Check if a path exists on the filesystem.
-   * Only works on native.
-   *
-   * @param path The path to the potential file or directory.
-   * @return Whether the path exists.
-   */
   public static function pathExists(path:String):Bool
   {
     #if sys
@@ -775,13 +609,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Check if a path is a file on the filesystem.
-   * Only works on native.
-   *
-   * @param path The path to the potential file.
-   * @return Whether the path exists and is a file.
-   */
   public static function fileExists(path:String):Bool
   {
     #if sys
@@ -791,13 +618,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Check if a path is a directory on the filesystem.
-   * Only works on native.
-   *
-   * @param path The path to the potential directory.
-   * @return Whether the path exists and is a directory.
-   */
   public static function directoryExists(path:String):Bool
   {
     #if sys
@@ -814,12 +634,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Create a directory if it doesn't already exist.
-   * Only works on native.
-   *
-   * @param dir The path to the directory.
-   */
   public static function createDirIfNotExists(dir:String):Void
   {
     if (!directoryExists(dir))
@@ -832,13 +646,6 @@ class FileUtil
     }
   }
 
-  /**
-   * List all entries in a directory.
-   * Only works on native.
-   *
-   * @param path The path to the directory.
-   * @return An array of entries in the directory.
-   */
   public static function readDir(path:String):Array<String>
   {
     #if sys
@@ -848,15 +655,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Move a directory from one location to another, optionally ignoring some paths.
-   * Only works on native.
-   *
-   * @param path The path to the directory.
-   * @param destination The path to move the directory to.
-   * @param ignore A list of paths to ignore.
-   * @param strict Fails if the destination directory is not empty.
-   */
   public static function moveDir(path:String, destination:String, ?ignore:Array<String>, strict:Bool = true):Void
   {
     #if sys
@@ -868,7 +666,6 @@ class FileUtil
     createDirIfNotExists(destination);
     if (strict)
     {
-      // Ensure the destination is empty if strict mode is enabled.
       var entries:Array<String> = readDir(destination);
       if (entries.length > 0)
       {
@@ -907,14 +704,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Delete a directory, optionally including its contents, and optionally ignoring some paths.
-   * Only works on native.
-   *
-   * @param path The path to the directory.
-   * @param recursive Whether to delete all contents of the directory.
-   * @param ignore A list of paths to ignore.
-   */
   public static function deleteDir(path:String, recursive:Bool = false, ?ignore:Array<String>):Void
   {
     #if sys
@@ -956,13 +745,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Get a directory's total size in bytes. Max representable size is ~2.147 GB.
-   * Only works on native.
-   *
-   * @param path The path to the directory.
-   * @return The total size of the directory in bytes.
-   */
   public static function getDirSize(path:String):Int
   {
     #if sys
@@ -1001,12 +783,6 @@ class FileUtil
   static var tempDir:Null<String> = null;
   static final TEMP_ENV_VARS:Array<String> = ['TEMP', 'TMPDIR', 'TEMPDIR', 'TMP'];
 
-  /**
-   * Get the path to a temporary directory we can use for writing files.
-   * Only works on native.
-   *
-   * @return The path to the temporary directory.
-   */
   public static function getTempDir():Null<String>
   {
     if (tempDir != null) return tempDir;
@@ -1033,14 +809,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Rename a file or directory.
-   * Only works on native.
-   *
-   * @param path The path to the file or directory.
-   * @param newName The new name of the file or directory.
-   * @param keepExtension Whether to keep the extension the same, if applicable.
-   */
   public static function rename(path:String, newName:String, keepExtension:Bool = true):Void
   {
     #if sys
@@ -1068,7 +836,6 @@ class FileUtil
 
     if (pathExists(newName))
     {
-      // Prevent overwriting something.
       throw 'Destination path already exists: "$newName"';
     }
 
@@ -1078,17 +845,16 @@ class FileUtil
     #end
   }
 
-  /**
-   * Create a Bytes object containing a ZIP file, containing the provided entries.
-   *
-   * @param entries The entries to add to the ZIP file.
-   * @return The ZIP file as a Bytes object.
-   */
   public static function createZIPFromEntries(entries:Array<Entry>):Bytes
   {
     var o:haxe.io.BytesOutput = new haxe.io.BytesOutput();
     var zipWriter:haxe.zip.Writer = new haxe.zip.Writer(o);
-    zipWriter.write(entries.list());
+    var entryList = new haxe.ds.List<Entry>();
+    for (entry in entries)
+    {
+      entryList.add(entry);
+    }
+    zipWriter.write(entryList);
     return o.getBytes();
   }
 
@@ -1121,26 +887,12 @@ class FileUtil
     return results;
   }
 
-  /**
-   * Create a ZIP file entry from a file name and its string contents.
-   *
-   * @param name The name of the file. You can use slashes to create subdirectories.
-   * @param content The string contents of the file.
-   * @return The resulting entry.
-   */
   public static function makeZIPEntry(name:String, content:String):Entry
   {
     var data:Bytes = haxe.io.Bytes.ofString(content, UTF8);
     return makeZIPEntryFromBytes(name, data);
   }
 
-  /**
-   * Create a ZIP file entry from a file name and its string contents.
-   *
-   * @param name The name of the file. You can use slashes to create subdirectories.
-   * @param data The byte data of the file.
-   * @return The resulting entry.
-   */
   public static function makeZIPEntryFromBytes(name:String, data:haxe.io.Bytes):Entry
   {
     return {
@@ -1155,12 +907,6 @@ class FileUtil
     };
   }
 
-  /**
-   * Runs platform-specific code to open a path in the file explorer.
-   *
-   * @param pathFolder The path of the folder to open.
-   * @param createIfNotExists If `true`, creates the folder if missing; otherwise, throws an error.
-   */
   public static function openFolder(pathFolder:String, createIfNotExists:Bool = true):Void
   {
     #if sys
@@ -1177,11 +923,6 @@ class FileUtil
     #if windows
     Sys.command('explorer', [pathFolder.replace('/', '\\')]);
     #elseif mac
-    // mac could be fuckie with where the log folder is relative to the game file...
-    // if this comment is still here... it means it has NOT been verified on mac yet!
-    //
-    // FileUtil.hx note: this was originally used to open the logs specifically!
-    // thats why the above comment is there!
     Sys.command('open', [pathFolder]);
     #elseif linux
     var exitCode = Sys.command("xdg-open", [pathFolder]);
@@ -1204,11 +945,6 @@ class FileUtil
     #end
   }
 
-  /**
-   * Runs platform-specific code to open a file explorer and select a specific file.
-   *
-   * @param path The path of the file to select.
-   */
   public static function openSelectFile(path:String):Void
   {
     #if sys
@@ -1250,18 +986,9 @@ class FileUtil
   }
 }
 
-/**
- * Utilities for reading and writing files on various platforms.
- * Wrapper for `FileUtil` that sanitizes paths for script safety.
- */ @:nullSafety
+@:nullSafety
 class FileUtilSandboxed
 {
-  /**
-   * Prevent paths from exiting the root.
-   *
-   * @param path The path to sanitize.
-   * @return The sanitized path.
-   */
   public static function sanitizePath(path:String):String
   {
     path = (path ?? '').trim();
@@ -1310,9 +1037,7 @@ class FileUtilSandboxed
     }
 
     #if sys
-    // TODO: figure out how to get "real" path of symlinked paths
     #if linux
-    // The implementation on Linux fails if the path doesn't exist
     var realPath:Null<String> = null;
     var unresolvedSegments:Array<String> = [];
     while (realPath == null && sanitized.length > 0)
@@ -1341,11 +1066,6 @@ class FileUtilSandboxed
     #end
   }
 
-  /**
-   * Check against protected paths.
-   * @param path The path to check.
-   * @return Whether the path is protected.
-   */
   public static function isProtected(path:String, sanitizeFirst:Bool = true):Bool
   {
     if (sanitizeFirst) path = sanitizePath(path);
@@ -1584,18 +1304,9 @@ class FileUtilSandboxed
 
 enum FileWriteMode
 {
-  /**
-   * Forcibly overwrite the file if it already exists.
-   */
   Force;
 
-  /**
-   * Ask the user if they want to overwrite the file if it already exists.
-   */
   Ask;
 
-  /**
-   * Skip the file if it already exists.
-   */
   Skip;
 }
