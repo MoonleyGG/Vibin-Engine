@@ -15,18 +15,13 @@ class ChartEditorState extends MusicBeatState
     public var player:String = "Boyfriend";
     public var opponent:String = "Dad";
     public var bpmText:String = "100";
-    
-    // The customizable link variable
-    public var guideLink:String = "https://example.com/your-guide"; 
+    public var keyCount:String = "4";
 
     private var activeField:Int = 0;
     private var playerField:TextField;
     private var opponentField:TextField;
     private var bpmField:TextField;
-    private var infoText:TextField;
-    
-    // The new link text field
-    private var linkField:TextField; 
+    private var keyCountField:TextField;
 
     override public function create():Void
     {
@@ -42,50 +37,22 @@ class ChartEditorState extends MusicBeatState
     private function createUiFields():Void
     {
         var labelFormat = new TextFormat("_sans", 24, 0xFFFFFF, false);
-        var infoFormat = new TextFormat("_sans", 18, 0xCCCCCC, false);
 
         playerField = createTextField(20, 20, 760, 42, labelFormat);
         opponentField = createTextField(20, 80, 760, 42, labelFormat);
         bpmField = createTextField(20, 140, 760, 42, labelFormat);
-        infoText = createTextField(20, 200, 760, 120, infoFormat);
-        infoText.multiline = true;
-        infoText.wordWrap = true;
-        infoText.selectable = false;
+        keyCountField = createTextField(20, 200, 760, 42, labelFormat);
 
         FlxG.stage.addChild(playerField);
         FlxG.stage.addChild(opponentField);
         FlxG.stage.addChild(bpmField);
-        FlxG.stage.addChild(infoText);
-
-        // --- NEW: Creating the Big Clickable Link in the Center ---
-        
-        // Define format: Size 32, White (0xFFFFFF), Centered alignment
-        var linkFormat = new TextFormat("_sans", 32, 0xFFFFFF, true);
-        linkFormat.align = TextFormatAlign.CENTER;
+        FlxG.stage.addChild(keyCountField);
 
         // Position it right in the center of the FlxG game dimensions
         var fieldWidth:Float = 800;
         var fieldHeight:Float = 100;
         var centerX:Float = (FlxG.width - fieldWidth) / 2;
         var centerY:Float = (FlxG.height - fieldHeight) / 2;
-
-        linkField = new TextField();
-        linkField.defaultTextFormat = linkFormat;
-        linkField.x = centerX;
-        linkField.y = centerY;
-        linkField.width = fieldWidth;
-        linkField.height = fieldHeight;
-        linkField.multiline = true;
-        linkField.wordWrap = true;
-        linkField.selectable = false;
-        
-        // These two properties are crucial for making links clickable in OpenFL
-        linkField.mouseEnabled = true; 
-        
-        // Set up the text using basic HTML anchor tags wrapped around your link variable
-        linkField.htmlText = "chart editor isnt available yet, use this guide + converter:<br><a href='" + guideLink + "'><u>" + guideLink + "</u></a>";
-
-        FlxG.stage.addChild(linkField);
         // -----------------------------------------------------------
     }
 
@@ -111,69 +78,109 @@ class ChartEditorState extends MusicBeatState
         playerField.text = "Player: " + player + (activeField == 0 ? " <" : "");
         opponentField.text = "Opponent: " + opponent + (activeField == 1 ? " <" : "");
         bpmField.text = "BPM: " + bpmText + (activeField == 2 ? " <" : "");
-        infoText.text = "TAB = switch field\nBACKSPACE = delete char\nENTER = save metadata.xml\nESC = return to play state";
-        
-        // Updates the link text dynamically if guideLink ever changes mid-state
-        if (linkField != null) {
-            linkField.htmlText = "chart editor isnt available yet, use this guide + converter:<br><a href='" + guideLink + "'><u>" + guideLink + "</u></a>";
-        }
+        keyCountField.text = "Key Count: " + keyCount + (activeField == 3 ? " <" : "");
     }
 
-    private function keyboardDown(event:KeyboardEvent):Void
+private function keyboardDown(event:KeyboardEvent):Void
+{
+    switch (event.keyCode)
     {
-        switch (event.keyCode)
-        {
-            case Keyboard.TAB:
-                activeField = (activeField + 1) % 3;
-                event.preventDefault();
-            case Keyboard.BACKSPACE:
-                if (activeField == 0 && player.length > 0) player = player.substring(0, player.length - 1);
-                else if (activeField == 1 && opponent.length > 0) opponent = opponent.substring(0, opponent.length - 1);
-                else if (activeField == 2 && bpmText.length > 0) bpmText = bpmText.substring(0, bpmText.length - 1);
-                event.preventDefault();
-            case Keyboard.ENTER:
-                exportMetadata();
-                event.preventDefault();
-            case Keyboard.ESCAPE:
-                cleanupStage();
-                FlxG.switchState(new vibin.states.playstate.PlayState());
-                event.preventDefault();
-            default:
-                if (event.charCode > 0)
+        case Keyboard.TAB:
+            activeField = (activeField + 1) % 4;
+            event.preventDefault();
+
+        case Keyboard.BACKSPACE:
+            switch (activeField)
+            {
+                case 0:
+                    if (player.length > 0)
+                        player = player.substring(0, player.length - 1);
+
+                case 1:
+                    if (opponent.length > 0)
+                        opponent = opponent.substring(0, opponent.length - 1);
+
+                case 2:
+                    if (bpmText.length > 0)
+                        bpmText = bpmText.substring(0, bpmText.length - 1);
+
+                case 3:
+                    if (keyCount.length > 0)
+                        keyCount = keyCount.substring(0, keyCount.length - 1);
+            }
+
+            event.preventDefault();
+
+        case Keyboard.ENTER:
+            exportMetadata();
+            event.preventDefault();
+
+        case Keyboard.ESCAPE:
+            cleanupStage();
+            FlxG.switchState(new vibin.states.playstate.PlayState());
+            event.preventDefault();
+
+        default:
+            if (event.charCode > 0)
+            {
+                var char = String.fromCharCode(event.charCode);
+
+                switch (activeField)
                 {
-                    var char = String.fromCharCode(event.charCode);
-                    if (activeField == 0) player += char;
-                    else if (activeField == 1) opponent += char;
-                    else if (activeField == 2 && ~/^[0-9]$/.match(char)) bpmText += char;
+                    case 0:
+                        player += char;
+
+                    case 1:
+                        opponent += char;
+
+                    case 2:
+                        if (~/^[0-9]$/.match(char))
+                            bpmText += char;
+
+                    case 3:
+                        if (~/^[0-9]$/.match(char))
+                            keyCount += char;
                 }
-        }
-
-        refreshFields();
+            }
     }
 
-    private function exportMetadata():Void
-    {
-        var bpmValue:Int = bpmText.length > 0 ? Std.parseInt(bpmText) : 100;
-        if (bpmValue <= 0) bpmValue = 100;
+    refreshFields();
+}
 
-        var xmlContent = '<metadata>\n\t<player>' + player + '</player>\n\t<opponent>' + opponent + '</opponent>\n\t<bpm>' + bpmValue + '</bpm>\n</metadata>';
+private function exportMetadata():Void
+{
+    var bpmValue:Int = bpmText.length > 0 ? Std.parseInt(bpmText) : 100;
+    if (bpmValue <= 0)
+        bpmValue = 100;
 
-        FileUtil.saveTextFile(xmlContent, 'metadata.xml', function(savedName:String):Void
+    var keyCountValue:Int = keyCount.length > 0 ? Std.parseInt(keyCount) : 4;
+    if (keyCountValue <= 0)
+        keyCountValue = 4;
+
+    var xmlContent =
+        '<metadata>\n' +
+        '\t<player>' + player + '</player>\n' +
+        '\t<opponent>' + opponent + '</opponent>\n' +
+        '\t<bpm>' + bpmValue + '</bpm>\n' +
+        '\t<keyCount>' + keyCountValue + '</keyCount>\n' +
+        '</metadata>';
+
+    FileUtil.saveTextFile(xmlContent, "metadata.xml",
+        function(savedName:String):Void
         {
-            trace('Exported metadata to ' + savedName);
-        }, function():Void
+            trace("Exported metadata to " + savedName);
+        },
+        function():Void
         {
-            trace('Metadata save canceled.');
+            trace("Metadata save canceled.");
         });
-    }
+}
 
     private function cleanupStage():Void
     {
         if (FlxG.stage != null)
         {
             FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, keyboardDown);
-            if (linkField != null && FlxG.stage.contains(linkField))
-                FlxG.stage.removeChild(linkField);
         }
     }
 

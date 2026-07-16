@@ -1,7 +1,12 @@
 package vibin.states.playstate;
 
 import flixel.FlxSprite;
+
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+
 import vibin.backend.Paths.*;
+
 import haxe.ds.StringMap;
 
 class Icon extends FlxSprite
@@ -10,6 +15,9 @@ class Icon extends FlxSprite
 
     var parts:Int = 1;
     var iconName:String;
+
+    var baseScale:Float = 1;
+    var beatLeft:Bool = false;
 
     // name: filename (without extension) inside assets/images/icons/
     // state: integer frame to show (0..parts-1)
@@ -57,8 +65,13 @@ class Icon extends FlxSprite
         animation.play('state' + s, true);
 
         this.scale.set(scale, scale);
+
+        baseScale = scale;
+
         updateHitbox();
         antialiasing = true;
+
+        centerOrigin();
 
         this.x = x;
         this.y = y;
@@ -86,4 +99,47 @@ class Icon extends FlxSprite
         var ic = registry.get(name);
         if (ic != null) ic.changeStateTo(state);
     }
+
+    public function beat(duration:Float):Void
+{
+    beatLeft = !beatLeft;
+
+    FlxTween.cancelTweensOf(this);
+    FlxTween.cancelTweensOf(scale);
+
+    angle = beatLeft ? -20 : 20;
+var cx = getGraphicMidpoint().x;
+var cy = getGraphicMidpoint().y;
+
+scale.set(baseScale * 1.15, baseScale * 1.15);
+updateHitbox();
+
+setPosition(
+    cx - width * 0.5,
+    cy - height * 0.5
+);
+
+    FlxTween.tween(this, {angle: 0}, duration * 0.75, {
+        ease: FlxEase.quadOut
+    });
+
+    FlxTween.tween(scale, {
+        x: baseScale,
+        y: baseScale
+    }, duration * 0.75, {
+        ease: FlxEase.quadOut,
+onUpdate: function(_)
+{
+    var cx = getGraphicMidpoint().x;
+    var cy = getGraphicMidpoint().y;
+
+    updateHitbox();
+
+    setPosition(
+        cx - width * 0.5,
+        cy - height * 0.5
+    );
+}
+    });
+}
 }

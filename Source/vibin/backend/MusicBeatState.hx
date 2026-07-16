@@ -13,7 +13,7 @@ class MusicBeatState extends FlxTransitionableState
     
     private var lastBeatTime:Float = 0;
     private var beatTimer:Float = 0;
-    private var beatStep:Float = 0;
+    public var beatStep:Float = 0;
     private var countdownBeat:Int = 0;
     private var countdownDone:Bool = false;
     override public function create():Void
@@ -86,7 +86,7 @@ class MusicBeatState extends FlxTransitionableState
 
     public function beatHit():Void
     {
-        // 4-beat countdown: beats 0, 1, 2, then startSong() on beat 3 (4th beat)
+        // Jerster figured out how to do math and calculated why beat 3 is = beat 4
         if (!countdownDone)
         {
             if (countdownBeat == 3)

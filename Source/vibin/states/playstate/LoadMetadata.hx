@@ -10,10 +10,13 @@ class LoadMetadata
     public static var player:String = "Boyfriend";
     public static var opponent:String = "Dad";
     public static var bpm:Int = 100;
+    public static var keyCount:Int = 1;
+    // 1. Add the scrollSpeed static variable with a default of 2.0
+    public static var scrollSpeed:Float = 2.0; 
 
     public static function loadSongMetadata(song:String, currentBpm:Int):Void
     {
-        var metadataPath = 'assets/data/$song/metadata.xml';
+        var metadataPath = 'assets/songs/$song/metadata.xml';
 
         if (Assets.exists(metadataPath))
         {
@@ -22,18 +25,31 @@ class LoadMetadata
             var loadedOpponent:String = extractXmlTagValue(fileContent, "opponent", opponent);
             var loadedBpmText:String = extractXmlTagValue(fileContent, "bpm", Std.string(currentBpm));
             var parsedBpm:Null<Int> = Std.parseInt(loadedBpmText);
+            var loadedKeyCountText:String = extractXmlTagValue(fileContent, "keyCount", Std.string(keyCount));
+            var parsedKeyCount:Null<Int> = Std.parseInt(loadedKeyCountText);
+
+            // 2. Extract and parse the scroll speed from metadata.xml
+            var loadedScrollSpeedText:String = extractXmlTagValue(fileContent, "scrollSpeed", Std.string(scrollSpeed));
+            var parsedScrollSpeed:Null<Float> = Std.parseFloat(loadedScrollSpeedText);
 
             player = loadedPlayer.length > 0 ? loadedPlayer : player;
             opponent = loadedOpponent.length > 0 ? loadedOpponent : opponent;
-            if (parsedBpm != null && parsedBpm > 0) bpm = parsedBpm;
+            if (parsedBpm != null && parsedBpm > 0)
+                bpm = parsedBpm;
+            if (parsedKeyCount != null && parsedKeyCount > 0)
+                keyCount = parsedKeyCount;
+            
+            // 3. Assign the parsed speed if valid
+            if (parsedScrollSpeed != null && parsedScrollSpeed > 0)
+                scrollSpeed = parsedScrollSpeed;
 
             songMetadataAvailable = true;
-            trace('Loaded metadata for $song: player=$player opponent=$opponent bpm=$bpm');
         }
         else
         {
             songMetadataAvailable = false;
-            trace('Missing metadata XML: ' + metadataPath + ' — continuing without song playback.');
+            // Fallback default value if no metadata exists
+            scrollSpeed = 2.0; 
         }
     }
 
@@ -47,6 +63,6 @@ class LoadMetadata
         var end = content.indexOf(closeTag, start + openTag.length);
         if (end < 0) return fallback;
 
-        return StringTools.trim(content.substring(start + openTag.length, end));
+        return content.substring(start + openTag.length, end);
     }
 }

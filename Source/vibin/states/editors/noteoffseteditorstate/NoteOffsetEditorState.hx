@@ -37,6 +37,17 @@ class NoteOffsetEditorState extends MusicBeatState
 
     var notes:Array<FlxSprite>;
 
+    // falling-note (tap head) preview, one per direction - shown in "note" mode
+    var fallingNoteSprites:Array<FlxSprite>;
+
+    // sustain trail (hold loop) preview, one per direction - shown in "sustainLoop" mode
+    var sustainLoopSprites:Array<FlxSprite>;
+
+    // faint reference copy of the note head, shown only in "sustainLoop"
+    // mode so the trail can be aligned against where the head actually
+    // sits (including its own offset) instead of against the strum receptor
+    var ghostHeadSprites:Array<FlxSprite>;
+
     //==================================================
     // UI
     //==================================================
@@ -79,7 +90,7 @@ class NoteOffsetEditorState extends MusicBeatState
     FlxG.mouse.visible = true;
 
     //==================================================
-    // Load atlas
+    // Load atlases
     //==================================================
 
     var atlas = FlxAtlasFrames.fromSparrow(
@@ -87,8 +98,18 @@ class NoteOffsetEditorState extends MusicBeatState
         "assets/images/StrumlineNotes.xml"
     );
 
+    var noteAtlas = FlxAtlasFrames.fromSparrow(
+        "assets/images/notes.png",
+        "assets/images/notes.xml"
+    );
+
+    var holdAtlas = FlxAtlasFrames.fromSparrow(
+        "assets/images/NoteHoldAssets.png",
+        "assets/images/NoteHoldAssets.xml"
+    );
+
     //==================================================
-    // Create notes
+    // Create strum receptor preview (static/miss/hit)
     //==================================================
 
     noteGroup = new FlxSpriteGroup();
@@ -102,6 +123,9 @@ class NoteOffsetEditorState extends MusicBeatState
     leftNote.animation.addByPrefix("miss", "left miss", 24, false);
     leftNote.animation.addByPrefix("hit", "left hit", 24, false);
     leftNote.animation.play("static");
+    leftNote.antialiasing = true;
+    leftNote.scale.set(0.75, 0.75);
+    leftNote.updateHitbox();
     noteGroup.add(leftNote);
 
     downNote = new FlxSprite(1 * spacing, 0);
@@ -110,6 +134,9 @@ class NoteOffsetEditorState extends MusicBeatState
     downNote.animation.addByPrefix("miss", "down miss", 24, false);
     downNote.animation.addByPrefix("hit", "down hit", 24, false);
     downNote.animation.play("static");
+    downNote.antialiasing = true;
+    downNote.scale.set(0.75, 0.75);
+    downNote.updateHitbox();
     noteGroup.add(downNote);
 
     upNote = new FlxSprite(2 * spacing, 0);
@@ -118,6 +145,9 @@ class NoteOffsetEditorState extends MusicBeatState
     upNote.animation.addByPrefix("miss", "up miss", 24, false);
     upNote.animation.addByPrefix("hit", "up hit", 24, false);
     upNote.animation.play("static");
+    upNote.antialiasing = true;
+    upNote.scale.set(0.75, 0.75);
+    upNote.updateHitbox();
     noteGroup.add(upNote);
 
     rightNote = new FlxSprite(3 * spacing, 0);
@@ -126,6 +156,9 @@ class NoteOffsetEditorState extends MusicBeatState
     rightNote.animation.addByPrefix("miss", "right miss", 24, false);
     rightNote.animation.addByPrefix("hit", "right hit", 24, false);
     rightNote.animation.play("static");
+    rightNote.antialiasing = true;
+    rightNote.scale.set(0.75, 0.75);
+    rightNote.updateHitbox();
     noteGroup.add(rightNote);
 
     noteGroup.screenCenter(FlxAxes.X);
@@ -137,6 +170,96 @@ class NoteOffsetEditorState extends MusicBeatState
         upNote,
         rightNote
     ];
+
+    //==================================================
+    // Create falling-note (tap head) preview
+    //==================================================
+    // positioned over the same columns as the strum preview above, using
+    // noteGroup's already-centered x as the anchor (so they line up) -
+    // added directly to the state rather than noteGroup, since adding to
+    // an already-positioned group doesn't retroactively inherit its offset
+
+    fallingNoteSprites = [];
+
+    for (i in 0...noteNames.length)
+    {
+        var sprite = new FlxSprite(0, 0);
+        sprite.frames = noteAtlas;
+        sprite.animation.addByPrefix("note", noteNames[i], 24, false);
+        sprite.animation.play("note");
+        sprite.antialiasing = true;
+        sprite.scale.set(0.75, 0.75); // matches Note.hx's actual gameplay scale
+        sprite.updateHitbox();
+
+        // center over the matching strum receptor - this is exactly the
+        // formula PlayState uses (strumNote.x/y + (strumNote.w/h - note.w/h) / 2).
+        // Placing raw sprites at the same column X as the strum preview
+        // (like before) ignores that the two atlases are different native
+        // sizes, so "looks aligned here" didn't mean "looks aligned in game".
+        sprite.x = notes[i].x + (notes[i].width - sprite.width) / 2;
+        sprite.y = notes[i].y + (notes[i].height - sprite.height) / 2;
+
+        sprite.visible = false;
+        add(sprite);
+        fallingNoteSprites.push(sprite);
+    }
+
+    //==================================================
+    // Ghost note head - reference only, shown in sustain mode so you're
+    // aligning the trail against where the head actually sits (including
+    // its own "note" offset), not against the strum receptor directly
+    //==================================================
+
+    ghostHeadSprites = [];
+
+    for (i in 0...noteNames.length)
+    {
+        var sprite = new FlxSprite(0, 0);
+        sprite.frames = noteAtlas;
+        sprite.animation.addByPrefix("note", noteNames[i], 24, false);
+        sprite.animation.play("note");
+        sprite.antialiasing = true;
+        sprite.scale.set(0.75, 0.75);
+        sprite.updateHitbox();
+        sprite.x = notes[i].x + (notes[i].width - sprite.width) / 2;
+        sprite.y = notes[i].y + (notes[i].height - sprite.height) / 2;
+        sprite.alpha = 0.35;
+        sprite.visible = false;
+        add(sprite);
+        ghostHeadSprites.push(sprite);
+    }
+
+    //==================================================
+    // Create sustain trail (hold loop) preview
+    //==================================================
+    // NOTE: in gameplay the loop's scale.y stretches per note to match
+    // hold length, which also scales its Y offset proportionally. This
+    // preview uses a fixed representative height, so the X offset here is
+    // exact but the Y offset is only approximate - always spot check a
+    // real hold note in-game after tuning.
+
+    sustainLoopSprites = [];
+
+    for (i in 0...noteNames.length)
+    {
+        var sprite = new FlxSprite(0, 0);
+        sprite.frames = holdAtlas;
+        sprite.animation.addByPrefix("loop", noteNames[i] + " sustain loop", 24, false);
+        sprite.animation.play("loop");
+        sprite.antialiasing = true;
+        sprite.scale.set(0.75, 3); // tall preview stand-in for a stretched hold
+        sprite.updateHitbox();
+
+        // positioned relative to the ghost head using the exact same
+        // formula Note.hx uses for the real sustain trail
+        var ghost = ghostHeadSprites[i];
+        sprite.x = ghost.x + (ghost.width - sprite.width) / 2;
+        sprite.y = ghost.y + ghost.height / 2;
+
+        sprite.visible = false;
+        add(sprite);
+        sustainLoopSprites.push(sprite);
+    }
 
     //==================================================
     // Default offset data
@@ -158,6 +281,20 @@ class NoteOffsetEditorState extends MusicBeatState
         },
 
         "hit": {
+            left:  {x: 0, y: 0},
+            down:  {x: 0, y: 0},
+            up:    {x: 0, y: 0},
+            right: {x: 0, y: 0}
+        },
+
+        "note": {
+            left:  {x: 0, y: 0},
+            down:  {x: 0, y: 0},
+            up:    {x: 0, y: 0},
+            right: {x: 0, y: 0}
+        },
+
+        "sustainLoop": {
             left:  {x: 0, y: 0},
             down:  {x: 0, y: 0},
             up:    {x: 0, y: 0},
@@ -185,6 +322,14 @@ class NoteOffsetEditorState extends MusicBeatState
     }
     #end
 
+    // older saved files won't have the newer "note"/"sustainLoop" keys -
+    // patch them in so the editor doesn't crash switching to those modes
+    ensureModeDefaults("static");
+    ensureModeDefaults("miss");
+    ensureModeDefaults("hit");
+    ensureModeDefaults("note");
+    ensureModeDefaults("sustainLoop");
+
     //==================================================
     // UI
     //==================================================
@@ -195,9 +340,9 @@ class NoteOffsetEditorState extends MusicBeatState
 
     helpText = new FlxText(
         10,
-        FlxG.height - 120,
+        FlxG.height - 140,
         0,
-        "1 Static\n2 Miss\n3 Hit\nA/D Select Note\nArrow Keys Move Offset\nShift = Move 10\nSpace Replay Animation\nE Export JSON\nESC Back"
+        "1 Static\n2 Miss\n3 Hit\n4 Note\n5 Sustain\nA/D Select Note\nArrow Keys Move Offset\nShift = Move 10\nSpace Replay Animation\nE Export JSON\nESC Back"
     );
 
     helpText.setFormat(null, 16, FlxColor.GRAY);
@@ -206,6 +351,7 @@ class NoteOffsetEditorState extends MusicBeatState
     selectedIndex = 0;
     currentMode = "static";
 
+    refreshVisibility();
     refreshSelection();
     refreshOffsets();
     refreshUI();
@@ -224,6 +370,8 @@ override public function update(elapsed:Float):Void
     if (FlxG.keys.justPressed.ONE)
     {
         currentMode = "static";
+        refreshVisibility();
+        refreshSelection();
         refreshOffsets();
         refreshUI();
     }
@@ -231,6 +379,8 @@ override public function update(elapsed:Float):Void
     if (FlxG.keys.justPressed.TWO)
     {
         currentMode = "miss";
+        refreshVisibility();
+        refreshSelection();
         refreshOffsets();
         refreshUI();
     }
@@ -238,6 +388,26 @@ override public function update(elapsed:Float):Void
     if (FlxG.keys.justPressed.THREE)
     {
         currentMode = "hit";
+        refreshVisibility();
+        refreshSelection();
+        refreshOffsets();
+        refreshUI();
+    }
+
+    if (FlxG.keys.justPressed.FOUR)
+    {
+        currentMode = "note";
+        refreshVisibility();
+        refreshSelection();
+        refreshOffsets();
+        refreshUI();
+    }
+
+    if (FlxG.keys.justPressed.FIVE)
+    {
+        currentMode = "sustainLoop";
+        refreshVisibility();
+        refreshSelection();
         refreshOffsets();
         refreshUI();
     }
@@ -274,7 +444,7 @@ override public function update(elapsed:Float):Void
 
     if (FlxG.keys.justPressed.SPACE)
     {
-        notes[selectedIndex].animation.play(currentMode, true);
+        activeSprites()[selectedIndex].animation.play(activeAnimationName(), true);
     }
 
     //==================================================
@@ -357,26 +527,123 @@ override public function update(elapsed:Float):Void
     }
 }
 
+//==================================================
+// Mode helpers
+//==================================================
+
+function isStrumMode():Bool
+{
+    return currentMode == "static" || currentMode == "miss" || currentMode == "hit";
+}
+
+function activeSprites():Array<FlxSprite>
+{
+    return switch (currentMode)
+    {
+        case "note": fallingNoteSprites;
+        case "sustainLoop": sustainLoopSprites;
+        default: notes;
+    }
+}
+
+function activeAnimationName():String
+{
+    if (isStrumMode())
+        return currentMode;
+
+    return currentMode == "note" ? "note" : "loop";
+}
+
+function ensureModeDefaults(mode:String):Void
+{
+    if (Reflect.field(offsets, mode) != null)
+        return;
+
+    Reflect.setField(offsets, mode, {
+        left:  {x: 0, y: 0},
+        down:  {x: 0, y: 0},
+        up:    {x: 0, y: 0},
+        right: {x: 0, y: 0}
+    });
+}
+
+function refreshVisibility():Void
+{
+    for (s in notes)
+        s.visible = isStrumMode();
+
+    for (s in fallingNoteSprites)
+        s.visible = (currentMode == "note");
+
+    for (s in sustainLoopSprites)
+        s.visible = (currentMode == "sustainLoop");
+
+    for (s in ghostHeadSprites)
+        s.visible = (currentMode == "sustainLoop");
+}
+
 function refreshSelection():Void
 {
-    for (i in 0...notes.length)
+    var sprites = activeSprites();
+
+    for (i in 0...sprites.length)
     {
-        notes[i].color = (i == selectedIndex)
+        sprites[i].color = (i == selectedIndex)
             ? FlxColor.YELLOW
             : FlxColor.WHITE;
     }
 
-    notes[selectedIndex].animation.play(currentMode, true);
+    sprites[selectedIndex].animation.play(activeAnimationName(), true);
 }
 
 function refreshOffsets():Void
 {
-    for (i in 0...notes.length)
+    // ghost head always reflects the current "note" offset, regardless of
+    // which mode we're in, so it's ready the moment sustain mode is entered
+    var noteOffsetData:Dynamic = Reflect.field(offsets, "note");
+
+    for (i in 0...ghostHeadSprites.length)
     {
-        var sprite = notes[i];
+        var ghost = ghostHeadSprites[i];
+        var off = Reflect.field(noteOffsetData, noteNames[i]);
+        ghost.offset.set(off.x, off.y);
+    }
+
+    if (currentMode == "sustainLoop")
+    {
+        var sustainOffsetData:Dynamic = Reflect.field(offsets, "sustainLoop");
+
+        for (i in 0...sustainLoopSprites.length)
+        {
+            var sprite = sustainLoopSprites[i];
+            var ghost = ghostHeadSprites[i];
+            var off = Reflect.field(sustainOffsetData, noteNames[i]);
+
+            sprite.animation.play("loop", true);
+
+            // applied as a direct position shift, NOT sprite.offset - the
+            // loop preview uses non-uniform scale (tall stretch), and
+            // Flixel's updateHitbox() recalculates offset to compensate
+            // for that stretch. Overwriting it via .offset silently
+            // discards that compensation and throws the sprite way off,
+            // which is exactly the "very wrong" position bug. Real hold
+            // notes in Note.hx have the same fix.
+            sprite.x = ghost.x + (ghost.width - sprite.width) / 2 + off.x;
+            sprite.y = ghost.y + ghost.height / 2 + off.y;
+        }
+
+        refreshUI();
+        return;
+    }
+
+    var sprites = activeSprites();
+
+    for (i in 0...sprites.length)
+    {
+        var sprite = sprites[i];
         var noteName = noteNames[i];
 
-        sprite.animation.play(currentMode, true);
+        sprite.animation.play(activeAnimationName(), true);
 
         var modeData:Dynamic = Reflect.field(offsets, currentMode);
         var offsetData:Dynamic = Reflect.field(modeData, noteName);
@@ -390,10 +657,13 @@ function refreshUI():Void
     var modeData:Dynamic = Reflect.field(offsets, currentMode);
     var offsetData:Dynamic = Reflect.field(modeData, noteNames[selectedIndex]);
 
+    var modeLabel = currentMode == "sustainLoop" ? "SUSTAIN" : currentMode.toUpperCase();
+
     infoText.text =
-        "Mode: " + currentMode.toUpperCase() + "\n" +
+        "Mode: " + modeLabel + "\n" +
         "Selected: " + noteNames[selectedIndex].toUpperCase() + "\n\n" +
         "Offset X: " + offsetData.x + "\n" +
-        "Offset Y: " + offsetData.y;
+        "Offset Y: " + offsetData.y +
+        (currentMode == "sustainLoop" ? "\n\n(Y offset is approximate here -\nactual hold height varies per note)" : "");
 }
 }
