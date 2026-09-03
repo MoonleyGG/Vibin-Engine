@@ -1,0 +1,5 @@
+hxcpp=4.3.2
+hxcpp_api_level=430
+hxcpp_smart_strings=1
+no_console=1
+hxcpp=D:/Hackse/haxe/lib/hxcpp/4,3,2/

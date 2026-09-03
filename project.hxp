@@ -1,0 +1,124 @@
+package;
+
+import lime.project.*;
+import hxp.*;
+import lime.tools.*;
+import sys.FileSystem;
+import sys.io.File;
+import haxe.io.Bytes;
+import haxe.io.Path;
+import haxe.ds.Map;
+import haxe.xml.Printer;
+
+using StringTools;
+
+/**
+ * This HXP performs the functions of a Lime `project.xml` file,
+ * but it's written in Haxe rather than XML!
+ *
+ * This makes it far easier to organize, reuse, and refactor,
+ * and improves management of feature flag logic.
+ */
+@:nullSafety
+class Project extends HXProject {
+
+	//
+	// METADATA
+	//
+
+	/**
+     * version, the whole game reads the value from here so dw about changing it 
+     */
+	 static final VERSION:String = "0.1.0";
+
+
+    /**
+     * the game title. self explanitory, shows on the game window and some other places.
+     */
+	 static final TITLE:String = "Friday Night Funkin': Vibin Engine";
+
+    /**
+     * the "Company" name. self explanitory
+     */
+	 static final COMPANY:String = "MoonleyGG";
+
+    /**
+     * simplified game title. also used for the exe file
+     */
+	 static final TITLESIMPLE:String = "vibinengine";
+
+	 //
+	 // WINDOW CONFIGS
+	 //
+
+    /**
+     * the window width. i recommend it stay 1280
+     */
+	 static final WIDTH:Int = 1280;
+
+    /**
+     * the window height. i recommend it stay 720
+     */
+	 static final HEIGHT:Int = 720;
+
+    /**
+     * fps. stands for frames per second. self explanitory
+     */
+	 static final FPS:Int = 60;
+
+    /**
+     * hardwar/gpu acceleration for graphics rendering, this makes it perform better.
+     */
+	 static final HARDWARE:Bool = true;
+
+    /**
+     * if the window can be rezisable. i recomment not touching this.
+     */
+	 static final RESIZABLE:Bool = true;
+
+    /**
+     * vsync, if `true` the framerate is locked to the monitors refresh rate. if `false` can cause screen tearing
+     */
+	 static final VSYNC:Bool = true;
+
+    /**
+     * i dont really know what this does myself. HIGHLY RECOMMENDED for modern monitors tho. :3
+     */
+	 static final ALLOWHIGHDPI:Bool = true;
+
+    /**
+     * keep this as none. or else the aspect ratio wont be like. just dont touch bro 😭😭😭
+     */
+	 static final WINDOWSCALE:String = "none";
+
+    public function new() {
+        super();
+
+        meta = { title: TITLE, packageName: "com." + COMPANY.replace(" ", "").toLowerCase() + "." + TITLESIMPLE.replace(" ", "").toLowerCase(), version: VERSION, company: COMPANY };
+        app = { main: "Main", path: "Export", file: TITLESIMPLE }; // shouldnt need to make a var for the main file. it should stay as main.
+		window = { width: WIDTH	, height: HEIGHT, fps: FPS, hardware: HARDWARE, resizable: RESIZABLE, vsync: VSYNC, allowHighDPI: ALLOWHIGHDPI, scale: WINDOWSCALE};
+
+        sources.push("Source");
+
+        includeAssets("Assets", "assets", ["*"], ["lime.svg"]);
+
+        icons.push(new Icon("Assets/lime.svg"));
+
+		doHaxeDefs();
+		loadHaxelibraries();
+   }
+
+   function doHaxeDefs() {
+	haxedefs.set("version", VERSION);
+   }
+
+   function loadHaxelibraries() {
+	haxelibs.push(new Haxelib("lime"));
+	haxelibs.push(new Haxelib("flixel"));
+	haxelibs.push(new Haxelib("openfl"));
+   
+   if (target == Platform.WINDOWS || target == Platform.MAC || target == Platform.LINUX) {
+      haxelibs.push(new Haxelib("hxdiscord_rpc"));
+      }
+   }
+}
