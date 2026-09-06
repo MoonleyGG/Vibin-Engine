@@ -31,7 +31,7 @@ class MainMenuButton extends FlxSprite
     public function playAnim(animName:String, force:Bool = false):Void
     {
         animation.play(animName, force);
-        centerOffsets(); // man which one do i use 🙏
+        centerOffsets(); // son which one do i use 🙏
         centerOrigin();
     }
 }

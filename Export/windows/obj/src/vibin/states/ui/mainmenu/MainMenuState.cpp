@@ -78,31 +78,34 @@
 #include <vibin/states/ui/mainmenu/MainMenuState.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_88c362ffb1408ce3_13_new,"vibin.states.ui.mainmenu.MainMenuState","new",0x159b111d,"vibin.states.ui.mainmenu.MainMenuState.new","vibin/states/ui/mainmenu/MainMenuState.hx",13,0x6725daf3)
-HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_35_create,"vibin.states.ui.mainmenu.MainMenuState","create",0x77bd7a5f,"vibin.states.ui.mainmenu.MainMenuState.create","vibin/states/ui/mainmenu/MainMenuState.hx",35,0x6725daf3)
-HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_78_update,"vibin.states.ui.mainmenu.MainMenuState","update",0x82b3996c,"vibin.states.ui.mainmenu.MainMenuState.update","vibin/states/ui/mainmenu/MainMenuState.hx",78,0x6725daf3)
-HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_103_updateButtonPositions,"vibin.states.ui.mainmenu.MainMenuState","updateButtonPositions",0x0a338b4c,"vibin.states.ui.mainmenu.MainMenuState.updateButtonPositions","vibin/states/ui/mainmenu/MainMenuState.hx",103,0x6725daf3)
-HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_122_changeSelection,"vibin.states.ui.mainmenu.MainMenuState","changeSelection",0x4af980f9,"vibin.states.ui.mainmenu.MainMenuState.changeSelection","vibin/states/ui/mainmenu/MainMenuState.hx",122,0x6725daf3)
-HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_141_changeSelection,"vibin.states.ui.mainmenu.MainMenuState","changeSelection",0x4af980f9,"vibin.states.ui.mainmenu.MainMenuState.changeSelection","vibin/states/ui/mainmenu/MainMenuState.hx",141,0x6725daf3)
-HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_144_changeSelection,"vibin.states.ui.mainmenu.MainMenuState","changeSelection",0x4af980f9,"vibin.states.ui.mainmenu.MainMenuState.changeSelection","vibin/states/ui/mainmenu/MainMenuState.hx",144,0x6725daf3)
+HX_DEFINE_STACK_FRAME(_hx_pos_88c362ffb1408ce3_14_new,"vibin.states.ui.mainmenu.MainMenuState","new",0x159b111d,"vibin.states.ui.mainmenu.MainMenuState.new","vibin/states/ui/mainmenu/MainMenuState.hx",14,0x6725daf3)
+HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_53_create,"vibin.states.ui.mainmenu.MainMenuState","create",0x77bd7a5f,"vibin.states.ui.mainmenu.MainMenuState.create","vibin/states/ui/mainmenu/MainMenuState.hx",53,0x6725daf3)
+HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_65_update,"vibin.states.ui.mainmenu.MainMenuState","update",0x82b3996c,"vibin.states.ui.mainmenu.MainMenuState.update","vibin/states/ui/mainmenu/MainMenuState.hx",65,0x6725daf3)
+HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_83_setupDiscord,"vibin.states.ui.mainmenu.MainMenuState","setupDiscord",0x8fb4ec52,"vibin.states.ui.mainmenu.MainMenuState.setupDiscord","vibin/states/ui/mainmenu/MainMenuState.hx",83,0x6725daf3)
+HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_86_setupMenuButtons,"vibin.states.ui.mainmenu.MainMenuState","setupMenuButtons",0x162a3408,"vibin.states.ui.mainmenu.MainMenuState.setupMenuButtons","vibin/states/ui/mainmenu/MainMenuState.hx",86,0x6725daf3)
+HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_99_setupSprites,"vibin.states.ui.mainmenu.MainMenuState","setupSprites",0x3c8adb74,"vibin.states.ui.mainmenu.MainMenuState.setupSprites","vibin/states/ui/mainmenu/MainMenuState.hx",99,0x6725daf3)
+HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_123_checkControls,"vibin.states.ui.mainmenu.MainMenuState","checkControls",0xf323525b,"vibin.states.ui.mainmenu.MainMenuState.checkControls","vibin/states/ui/mainmenu/MainMenuState.hx",123,0x6725daf3)
+HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_132_updateButtonPositions,"vibin.states.ui.mainmenu.MainMenuState","updateButtonPositions",0x0a338b4c,"vibin.states.ui.mainmenu.MainMenuState.updateButtonPositions","vibin/states/ui/mainmenu/MainMenuState.hx",132,0x6725daf3)
+HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_149_updateSprites,"vibin.states.ui.mainmenu.MainMenuState","updateSprites",0xfe057cc2,"vibin.states.ui.mainmenu.MainMenuState.updateSprites","vibin/states/ui/mainmenu/MainMenuState.hx",149,0x6725daf3)
+HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_162_changeSelection,"vibin.states.ui.mainmenu.MainMenuState","changeSelection",0x4af980f9,"vibin.states.ui.mainmenu.MainMenuState.changeSelection","vibin/states/ui/mainmenu/MainMenuState.hx",162,0x6725daf3)
+HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_180_changeSelection,"vibin.states.ui.mainmenu.MainMenuState","changeSelection",0x4af980f9,"vibin.states.ui.mainmenu.MainMenuState.changeSelection","vibin/states/ui/mainmenu/MainMenuState.hx",180,0x6725daf3)
+HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_183_changeSelection,"vibin.states.ui.mainmenu.MainMenuState","changeSelection",0x4af980f9,"vibin.states.ui.mainmenu.MainMenuState.changeSelection","vibin/states/ui/mainmenu/MainMenuState.hx",183,0x6725daf3)
 namespace vibin{
 namespace states{
 namespace ui{
 namespace mainmenu{
 
 void MainMenuState_obj::__construct(){
-            	HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_13_new)
-HXLINE(  33)		this->buttonPadding = ((Float)310);
-HXLINE(  28)		this->targetHeightPixels = ((Float)720);
-HXLINE(  27)		this->targetWidthPixels = ((Float)1280);
-HXLINE(  25)		this->passiveSpeed = ((Float)60);
-HXLINE(  22)		this->bgScale = ((Float)1);
-HXLINE(  21)		this->currentSelectionAngle = ((Float)0);
-HXLINE(  20)		this->targetSelectionAngle = ((Float)0);
-HXLINE(  19)		this->vinylSpinAngle = ((Float)0);
-HXLINE(  18)		this->curSelected = 0;
-HXLINE(  14)		this->MenuButtons = ::Array_obj< ::String >::__new(0);
-HXLINE(  13)		super::__construct();
+            	HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_14_new)
+HXLINE(  46)		this->updateElapsed = ((Float)0);
+HXLINE(  44)		this->curSelected = 0;
+HXLINE(  43)		this->vinylSpinAngle = ((Float)0);
+HXLINE(  42)		this->targetSelectionAngle = ((Float)0);
+HXLINE(  41)		this->currentSelectionAngle = ((Float)0);
+HXLINE(  39)		this->MenuButtons = ::Array_obj< ::String >::__new(0);
+HXLINE(  34)		this->passiveSpeed = ((Float)60);
+HXLINE(  30)		this->buttonPadding = ((Float)310);
+HXLINE(  14)		super::__construct();
             	}
 
 Dynamic MainMenuState_obj::__CreateEmpty() { return new MainMenuState_obj; }
@@ -137,128 +140,119 @@ bool MainMenuState_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 void MainMenuState_obj::create(){
-            	HX_GC_STACKFRAME(&_hx_pos_88c362ffb1408ce3_35_create)
-HXLINE(  36)		this->super::create();
-HXLINE(  38)		::flixel::FlxG_obj::cameras->set_bgColor(-137103);
-HXLINE(  40)		::backend::DiscordRPC_obj::changePresence(HX_("In the Menus",0a,c1,ad,c6),HX_("Main Menu",e6,3a,4e,c8),null(),null());
-HXLINE(  42)		this->menuButtonGroup =  ::flixel::group::FlxTypedGroup_obj::__alloc( HX_CTX ,null());
-HXLINE(  44)		this->MenuButtons = ::util::fileUtils::TxtSplitter_obj::SplitTxt(HX_("menus/ui/mainmenu/MainMenuButtons",12,2c,93,1a));
-HXLINE(  46)		{
-HXLINE(  46)			int _g = 0;
-HXDLIN(  46)			int _g1 = this->MenuButtons->length;
-HXDLIN(  46)			while((_g < _g1)){
-HXLINE(  46)				_g = (_g + 1);
-HXDLIN(  46)				int i = (_g - 1);
-HXLINE(  47)				 ::vibin::objects::ui::mainmenu::MainMenuButton button =  ::vibin::objects::ui::mainmenu::MainMenuButton_obj::__alloc( HX_CTX ,0,0,this->MenuButtons->__get(i));
-HXLINE(  48)				Float menuButtonLength = ( (Float)(this->MenuButtons->length) );
-HXLINE(  49)				button->scrollFactor->set(0,0);
-HXLINE(  50)				this->menuButtonGroup->add(button).StaticCast<  ::vibin::objects::ui::mainmenu::MainMenuButton >();
-            			}
-            		}
-HXLINE(  53)		this->bg =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
-HXLINE(  54)		this->bg->loadGraphic(HX_("assets/images/menus/bg.png",a6,73,5a,6d),null(),null(),null(),null(),null());
-HXLINE(  55)		this->bg->scrollFactor->set(0,0);
-HXLINE(  56)		this->add(this->bg);
-HXLINE(  58)		this->recordedge =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
-HXLINE(  59)		this->recordedge->loadGraphic(HX_("assets/images/menus/mainmenu/recordedge.png",ba,fb,05,9a),null(),null(),null(),null(),null());
-HXLINE(  60)		this->recordedge->scrollFactor->set(0,0);
-HXLINE(  62)		this->vinyl =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
-HXLINE(  63)		this->vinyl->loadGraphic(HX_("assets/images/menus/mainmenu/record.png",fd,47,30,20),null(),null(),null(),null(),null());
-HXLINE(  64)		this->vinyl->scrollFactor->set(0,0);
-HXLINE(  65)		this->vinyl->centerOffsets(null());
-HXLINE(  66)		{
-HXLINE(  66)			 ::flixel::FlxSprite _this = this->vinyl;
-HXDLIN(  66)			_this->origin->set((( (Float)(_this->frameWidth) ) * ((Float)0.5)),(( (Float)(_this->frameHeight) ) * ((Float)0.5)));
-            		}
-HXLINE(  68)		 ::flixel::FlxSprite _hx_tmp = this->recordedge;
-HXDLIN(  68)		int _hx_tmp1 = ::flixel::FlxG_obj::width;
-HXDLIN(  68)		Float _hx_tmp2 = (( (Float)(_hx_tmp1) ) - this->recordedge->get_width());
-HXDLIN(  68)		int _hx_tmp3 = ::flixel::FlxG_obj::height;
-HXDLIN(  68)		_hx_tmp->setPosition(_hx_tmp2,(( (Float)(_hx_tmp3) ) - this->recordedge->get_height()));
-HXLINE(  69)		 ::flixel::FlxSprite _hx_tmp4 = this->vinyl;
-HXDLIN(  69)		int _hx_tmp5 = ::flixel::FlxG_obj::width;
-HXDLIN(  69)		Float _hx_tmp6 = (( (Float)(_hx_tmp5) ) - this->vinyl->get_width());
-HXDLIN(  69)		int _hx_tmp7 = ::flixel::FlxG_obj::height;
-HXDLIN(  69)		_hx_tmp4->setPosition(_hx_tmp6,((( (Float)(_hx_tmp7) ) - this->vinyl->get_height()) / ( (Float)(2) )));
-HXLINE(  71)		this->add(this->vinyl);
-HXLINE(  72)		this->add(this->menuButtonGroup);
-HXLINE(  73)		this->add(this->recordedge);
-HXLINE(  75)		this->updateButtonPositions();
+            	HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_53_create)
+HXLINE(  54)		this->super::create();
+HXLINE(  59)		::flixel::FlxG_obj::cameras->set_bgColor(-137103);
+HXLINE(  61)		this->setupDiscord();
+HXLINE(  62)		this->setupSprites();
             	}
 
 
 void MainMenuState_obj::update(Float elapsed){
-            	HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_78_update)
-HXLINE(  79)		this->super::update(elapsed);
-HXLINE(  81)		 ::flixel::FlxSprite _hx_tmp = this->recordedge;
-HXDLIN(  81)		int _hx_tmp1 = ::flixel::FlxG_obj::width;
-HXDLIN(  81)		Float _hx_tmp2 = (( (Float)(_hx_tmp1) ) - this->recordedge->get_width());
-HXDLIN(  81)		int _hx_tmp3 = ::flixel::FlxG_obj::height;
-HXDLIN(  81)		_hx_tmp->setPosition(_hx_tmp2,(( (Float)(_hx_tmp3) ) - this->recordedge->get_height()));
-HXLINE(  82)		this->bg->setGraphicSize(1280,720);
-HXLINE(  83)		this->bg->updateHitbox();
-HXLINE(  84)		this->bg->set_x(( (Float)(0) ));
-HXLINE(  85)		 ::flixel::FlxSprite _hx_tmp4 = this->vinyl;
-HXDLIN(  85)		int _hx_tmp5 = ::flixel::FlxG_obj::width;
-HXDLIN(  85)		_hx_tmp4->set_x((( (Float)(_hx_tmp5) ) - this->vinyl->get_width()));
-HXLINE(  86)		{
-HXLINE(  86)			 ::flixel::FlxSprite _this = this->vinyl;
-HXDLIN(  86)			int axes = 16;
-HXDLIN(  86)			bool _hx_tmp6;
-HXDLIN(  86)			if ((axes != 1)) {
-HXLINE(  86)				_hx_tmp6 = (axes == 17);
-            			}
-            			else {
-HXLINE(  86)				_hx_tmp6 = true;
-            			}
-HXDLIN(  86)			if (_hx_tmp6) {
-HXLINE(  86)				int _hx_tmp7 = ::flixel::FlxG_obj::width;
-HXDLIN(  86)				_this->set_x(((( (Float)(_hx_tmp7) ) - _this->get_width()) / ( (Float)(2) )));
-            			}
-HXDLIN(  86)			bool _hx_tmp8;
-HXDLIN(  86)			if ((axes != 16)) {
-HXLINE(  86)				_hx_tmp8 = (axes == 17);
-            			}
-            			else {
-HXLINE(  86)				_hx_tmp8 = true;
-            			}
-HXDLIN(  86)			if (_hx_tmp8) {
-HXLINE(  86)				int _hx_tmp9 = ::flixel::FlxG_obj::height;
-HXDLIN(  86)				_this->set_y(((( (Float)(_hx_tmp9) ) - _this->get_height()) / ( (Float)(2) )));
+            	HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_65_update)
+HXLINE(  66)		this->super::update(elapsed);
+HXLINE(  68)		this->updateElapsed = elapsed;
+HXLINE(  70)		this->updateButtonPositions();
+HXLINE(  71)		this->updateSprites();
+HXLINE(  72)		this->checkControls();
+            	}
+
+
+void MainMenuState_obj::setupDiscord(){
+            	HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_83_setupDiscord)
+HXDLIN(  83)		::backend::DiscordRPC_obj::changePresence(HX_("In the Menus",0a,c1,ad,c6),HX_("Main Menu",e6,3a,4e,c8),null(),null());
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(MainMenuState_obj,setupDiscord,(void))
+
+void MainMenuState_obj::setupMenuButtons(){
+            	HX_GC_STACKFRAME(&_hx_pos_88c362ffb1408ce3_86_setupMenuButtons)
+HXLINE(  87)		this->menuButtonGroup =  ::flixel::group::FlxTypedGroup_obj::__alloc( HX_CTX ,null());
+HXLINE(  88)		this->MenuButtons = ::util::fileUtils::TxtSplitter_obj::SplitTxt(HX_("menus/ui/mainmenu/MainMenuButtons",12,2c,93,1a));
+HXLINE(  90)		{
+HXLINE(  90)			int _g = 0;
+HXDLIN(  90)			int _g1 = this->MenuButtons->length;
+HXDLIN(  90)			while((_g < _g1)){
+HXLINE(  90)				_g = (_g + 1);
+HXDLIN(  90)				int i = (_g - 1);
+HXLINE(  91)				 ::vibin::objects::ui::mainmenu::MainMenuButton button =  ::vibin::objects::ui::mainmenu::MainMenuButton_obj::__alloc( HX_CTX ,0,0,this->MenuButtons->__get(i));
+HXLINE(  92)				Float menuButtonLength = ( (Float)(this->MenuButtons->length) );
+HXLINE(  93)				button->scrollFactor->set(0,0);
+HXLINE(  94)				this->menuButtonGroup->add(button).StaticCast<  ::vibin::objects::ui::mainmenu::MainMenuButton >();
             			}
             		}
-HXLINE(  88)		 ::vibin::states::ui::mainmenu::MainMenuState _hx_tmp10 = ::hx::ObjectPtr<OBJ_>(this);
-HXDLIN(  88)		_hx_tmp10->vinylSpinAngle = (_hx_tmp10->vinylSpinAngle + (this->passiveSpeed * elapsed));
-HXLINE(  91)		this->vinyl->set_angle((this->vinylSpinAngle + (this->currentSelectionAngle * ((Float)0.7))));
-HXLINE(  93)		this->updateButtonPositions();
-HXLINE(  95)		if (::flixel::FlxG_obj::keys->checkKeyArrayState(::vibin::options::OptionControls_obj::downKeys,2)) {
-HXLINE(  96)			this->changeSelection(1);
+HXLINE(  96)		this->updateButtonPositions();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(MainMenuState_obj,setupMenuButtons,(void))
+
+void MainMenuState_obj::setupSprites(){
+            	HX_GC_STACKFRAME(&_hx_pos_88c362ffb1408ce3_99_setupSprites)
+HXLINE( 100)		this->bg =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,HX_("assets/images/menus/bg.png",a6,73,5a,6d));
+HXLINE( 101)		this->bg->scrollFactor->set(0,0);
+HXLINE( 103)		this->recordedge =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,HX_("assets/images/menus/mainmenu/recordedge.png",ba,fb,05,9a));
+HXLINE( 104)		this->recordedge->scrollFactor->set(0,0);
+HXLINE( 105)		 ::flixel::FlxSprite _hx_tmp = this->recordedge;
+HXDLIN( 105)		int _hx_tmp1 = ::flixel::FlxG_obj::width;
+HXDLIN( 105)		Float _hx_tmp2 = (( (Float)(_hx_tmp1) ) - this->recordedge->get_width());
+HXDLIN( 105)		int _hx_tmp3 = ::flixel::FlxG_obj::height;
+HXDLIN( 105)		_hx_tmp->setPosition(_hx_tmp2,(( (Float)(_hx_tmp3) ) - this->recordedge->get_height()));
+HXLINE( 107)		this->vinyl =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,HX_("assets/images/menus/mainmenu/record.png",fd,47,30,20));
+HXLINE( 108)		this->vinyl->scrollFactor->set(0,0);
+HXLINE( 109)		this->vinyl->centerOffsets(null());
+HXLINE( 110)		{
+HXLINE( 110)			 ::flixel::FlxSprite _this = this->vinyl;
+HXDLIN( 110)			_this->origin->set((( (Float)(_this->frameWidth) ) * ((Float)0.5)),(( (Float)(_this->frameHeight) ) * ((Float)0.5)));
             		}
-HXLINE(  98)		if (::flixel::FlxG_obj::keys->checkKeyArrayState(::vibin::options::OptionControls_obj::upKeys,2)) {
-HXLINE(  99)			this->changeSelection(-1);
+HXLINE( 111)		 ::flixel::FlxSprite _hx_tmp4 = this->vinyl;
+HXDLIN( 111)		int _hx_tmp5 = ::flixel::FlxG_obj::width;
+HXDLIN( 111)		Float _hx_tmp6 = (( (Float)(_hx_tmp5) ) - this->vinyl->get_width());
+HXDLIN( 111)		int _hx_tmp7 = ::flixel::FlxG_obj::height;
+HXDLIN( 111)		_hx_tmp4->setPosition(_hx_tmp6,((( (Float)(_hx_tmp7) ) - this->vinyl->get_height()) / ( (Float)(2) )));
+HXLINE( 112)		this->setupMenuButtons();
+HXLINE( 117)		this->add(this->bg);
+HXLINE( 118)		this->add(this->vinyl);
+HXLINE( 119)		this->add(this->menuButtonGroup);
+HXLINE( 120)		this->add(this->recordedge);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(MainMenuState_obj,setupSprites,(void))
+
+void MainMenuState_obj::checkControls(){
+            	HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_123_checkControls)
+HXLINE( 124)		if (::flixel::FlxG_obj::keys->checkKeyArrayState(::vibin::options::OptionControls_obj::downKeys,2)) {
+HXLINE( 125)			this->changeSelection(1);
+            		}
+HXLINE( 127)		if (::flixel::FlxG_obj::keys->checkKeyArrayState(::vibin::options::OptionControls_obj::upKeys,2)) {
+HXLINE( 128)			this->changeSelection(-1);
             		}
             	}
 
 
+HX_DEFINE_DYNAMIC_FUNC0(MainMenuState_obj,checkControls,(void))
+
 void MainMenuState_obj::updateButtonPositions(){
-            	HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_103_updateButtonPositions)
-HXLINE( 104)		Float vinylCenterX = this->vinyl->getGraphicMidpoint(null())->x;
-HXLINE( 105)		Float vinylCenterY = this->vinyl->getGraphicMidpoint(null())->y;
-HXLINE( 106)		Float angleStep = ((::Math_obj::PI * ( (Float)(2) )) / ( (Float)(this->menuButtonGroup->members->get_length()) ));
-HXLINE( 108)		{
-HXLINE( 108)			int _g = 0;
-HXDLIN( 108)			int _g1 = this->menuButtonGroup->members->get_length();
-HXDLIN( 108)			while((_g < _g1)){
-HXLINE( 108)				_g = (_g + 1);
-HXDLIN( 108)				int i = (_g - 1);
-HXLINE( 109)				 ::vibin::objects::ui::mainmenu::MainMenuButton button = Dynamic( this->menuButtonGroup->members->__get(i)).StaticCast<  ::vibin::objects::ui::mainmenu::MainMenuButton >();
-HXLINE( 112)				Float selectionOffsetRad = (this->currentSelectionAngle * (::Math_obj::PI / ( (Float)(180) )));
-HXLINE( 113)				Float placementAngle = ((::Math_obj::PI + selectionOffsetRad) - (( (Float)(i) ) * angleStep));
-HXLINE( 115)				Float _hx_tmp = (vinylCenterX + (::Math_obj::cos(placementAngle) * this->buttonPadding));
-HXDLIN( 115)				button->set_x((_hx_tmp - (button->get_width() / ( (Float)(2) ))));
-HXLINE( 116)				Float _hx_tmp1 = (vinylCenterY + (::Math_obj::sin(placementAngle) * this->buttonPadding));
-HXDLIN( 116)				button->set_y((_hx_tmp1 - (button->get_height() / ( (Float)(2) ))));
-HXLINE( 118)				button->set_angle(((placementAngle * (( (Float)(180) ) / ::Math_obj::PI)) - ( (Float)(180) )));
+            	HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_132_updateButtonPositions)
+HXLINE( 133)		Float vinylCenterX = this->vinyl->getGraphicMidpoint(null())->x;
+HXLINE( 134)		Float vinylCenterY = this->vinyl->getGraphicMidpoint(null())->y;
+HXLINE( 135)		Float angleStep = ((::Math_obj::PI * ( (Float)(2) )) / ( (Float)(this->menuButtonGroup->members->get_length()) ));
+HXLINE( 137)		{
+HXLINE( 137)			int _g = 0;
+HXDLIN( 137)			int _g1 = this->menuButtonGroup->members->get_length();
+HXDLIN( 137)			while((_g < _g1)){
+HXLINE( 137)				_g = (_g + 1);
+HXDLIN( 137)				int i = (_g - 1);
+HXLINE( 138)				 ::vibin::objects::ui::mainmenu::MainMenuButton button = Dynamic( this->menuButtonGroup->members->__get(i)).StaticCast<  ::vibin::objects::ui::mainmenu::MainMenuButton >();
+HXLINE( 140)				Float selectionOffsetRad = (this->currentSelectionAngle * (::Math_obj::PI / ( (Float)(180) )));
+HXLINE( 141)				Float placementAngle = ((::Math_obj::PI + selectionOffsetRad) - (( (Float)(i) ) * angleStep));
+HXLINE( 143)				Float _hx_tmp = (vinylCenterX + (::Math_obj::cos(placementAngle) * this->buttonPadding));
+HXDLIN( 143)				button->set_x((_hx_tmp - (button->get_width() / ( (Float)(2) ))));
+HXLINE( 144)				Float _hx_tmp1 = (vinylCenterY + (::Math_obj::sin(placementAngle) * this->buttonPadding));
+HXDLIN( 144)				button->set_y((_hx_tmp1 - (button->get_height() / ( (Float)(2) ))));
+HXLINE( 145)				button->set_angle(((placementAngle * (( (Float)(180) ) / ::Math_obj::PI)) - ( (Float)(180) )));
             			}
             		}
             	}
@@ -266,59 +260,106 @@ HXLINE( 118)				button->set_angle(((placementAngle * (( (Float)(180) ) / ::Math_
 
 HX_DEFINE_DYNAMIC_FUNC0(MainMenuState_obj,updateButtonPositions,(void))
 
+void MainMenuState_obj::updateSprites(){
+            	HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_149_updateSprites)
+HXLINE( 150)		 ::flixel::FlxSprite _hx_tmp = this->recordedge;
+HXDLIN( 150)		int _hx_tmp1 = ::flixel::FlxG_obj::width;
+HXDLIN( 150)		Float _hx_tmp2 = (( (Float)(_hx_tmp1) ) - this->recordedge->get_width());
+HXDLIN( 150)		int _hx_tmp3 = ::flixel::FlxG_obj::height;
+HXDLIN( 150)		_hx_tmp->setPosition(_hx_tmp2,(( (Float)(_hx_tmp3) ) - this->recordedge->get_height()));
+HXLINE( 152)		this->bg->setGraphicSize(1280,720);
+HXLINE( 153)		this->bg->updateHitbox();
+HXLINE( 154)		this->bg->set_x(( (Float)(0) ));
+HXLINE( 156)		 ::flixel::FlxSprite _hx_tmp4 = this->vinyl;
+HXDLIN( 156)		int _hx_tmp5 = ::flixel::FlxG_obj::width;
+HXDLIN( 156)		_hx_tmp4->set_x((( (Float)(_hx_tmp5) ) - this->vinyl->get_width()));
+HXLINE( 157)		{
+HXLINE( 157)			 ::flixel::FlxSprite _this = this->vinyl;
+HXDLIN( 157)			int axes = 16;
+HXDLIN( 157)			bool _hx_tmp6;
+HXDLIN( 157)			if ((axes != 1)) {
+HXLINE( 157)				_hx_tmp6 = (axes == 17);
+            			}
+            			else {
+HXLINE( 157)				_hx_tmp6 = true;
+            			}
+HXDLIN( 157)			if (_hx_tmp6) {
+HXLINE( 157)				int _hx_tmp7 = ::flixel::FlxG_obj::width;
+HXDLIN( 157)				_this->set_x(((( (Float)(_hx_tmp7) ) - _this->get_width()) / ( (Float)(2) )));
+            			}
+HXDLIN( 157)			bool _hx_tmp8;
+HXDLIN( 157)			if ((axes != 16)) {
+HXLINE( 157)				_hx_tmp8 = (axes == 17);
+            			}
+            			else {
+HXLINE( 157)				_hx_tmp8 = true;
+            			}
+HXDLIN( 157)			if (_hx_tmp8) {
+HXLINE( 157)				int _hx_tmp9 = ::flixel::FlxG_obj::height;
+HXDLIN( 157)				_this->set_y(((( (Float)(_hx_tmp9) ) - _this->get_height()) / ( (Float)(2) )));
+            			}
+            		}
+HXLINE( 158)		 ::vibin::states::ui::mainmenu::MainMenuState _hx_tmp10 = ::hx::ObjectPtr<OBJ_>(this);
+HXDLIN( 158)		_hx_tmp10->vinylSpinAngle = (_hx_tmp10->vinylSpinAngle + (this->passiveSpeed * this->updateElapsed));
+HXLINE( 159)		this->vinyl->set_angle((this->vinylSpinAngle + (this->currentSelectionAngle * ((Float)0.7))));
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(MainMenuState_obj,updateSprites,(void))
+
 void MainMenuState_obj::changeSelection(::hx::Null< int >  __o_change){
             		int change = __o_change.Default(0);
-            	HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_122_changeSelection)
-HXDLIN( 122)		 ::vibin::states::ui::mainmenu::MainMenuState _gthis = ::hx::ObjectPtr<OBJ_>(this);
-HXLINE( 123)		 ::vibin::states::ui::mainmenu::MainMenuState _hx_tmp = ::hx::ObjectPtr<OBJ_>(this);
-HXDLIN( 123)		_hx_tmp->curSelected = (_hx_tmp->curSelected + change);
-HXLINE( 125)		if ((this->curSelected < 0)) {
-HXLINE( 126)			this->curSelected = (this->MenuButtons->length - 1);
+            	HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_162_changeSelection)
+HXDLIN( 162)		 ::vibin::states::ui::mainmenu::MainMenuState _gthis = ::hx::ObjectPtr<OBJ_>(this);
+HXLINE( 163)		 ::vibin::states::ui::mainmenu::MainMenuState _hx_tmp = ::hx::ObjectPtr<OBJ_>(this);
+HXDLIN( 163)		_hx_tmp->curSelected = (_hx_tmp->curSelected + change);
+HXLINE( 165)		if ((this->curSelected < 0)) {
+HXLINE( 166)			this->curSelected = (this->MenuButtons->length - 1);
             		}
-HXLINE( 127)		if ((this->curSelected >= this->MenuButtons->length)) {
-HXLINE( 128)			this->curSelected = 0;
+HXLINE( 167)		if ((this->curSelected >= this->MenuButtons->length)) {
+HXLINE( 168)			this->curSelected = 0;
             		}
-HXLINE( 130)		Float angleStepDeg = (( (Float)(360) ) / ( (Float)(this->menuButtonGroup->members->get_length()) ));
-HXLINE( 131)		this->targetSelectionAngle = (( (Float)(this->curSelected) ) * angleStepDeg);
-HXLINE( 133)		if (::hx::IsNotNull( this->spinTween )) {
-HXLINE( 134)			this->spinTween->cancel();
+HXLINE( 170)		Float angleStepDeg = (( (Float)(360) ) / ( (Float)(this->menuButtonGroup->members->get_length()) ));
+HXLINE( 171)		this->targetSelectionAngle = (( (Float)(this->curSelected) ) * angleStepDeg);
+HXLINE( 173)		if (::hx::IsNotNull( this->spinTween )) {
+HXLINE( 174)			this->spinTween->cancel();
             		}
-HXLINE( 137)		this->spinTween = ::flixel::tweens::FlxTween_obj::tween(::hx::ObjectPtr<OBJ_>(this), ::Dynamic(::hx::Anon_obj::Create(1)
+HXLINE( 176)		this->spinTween = ::flixel::tweens::FlxTween_obj::tween(::hx::ObjectPtr<OBJ_>(this), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("currentSelectionAngle",00,ea,29,8d),this->targetSelectionAngle)),((Float)0.8), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::quintOut_dyn())));
-HXLINE( 139)		if ((change < 0)) {
+HXLINE( 178)		if ((change < 0)) {
             			HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_0, ::vibin::states::ui::mainmenu::MainMenuState,_gthis) HXARGC(1)
             			void _hx_run(Float val){
-            				HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_141_changeSelection)
-HXLINE( 141)				_gthis->passiveSpeed = val;
+            				HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_180_changeSelection)
+HXLINE( 180)				_gthis->passiveSpeed = val;
             			}
             			HX_END_LOCAL_FUNC1((void))
 
             			HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_1, ::vibin::states::ui::mainmenu::MainMenuState,_gthis) HXARGC(1)
             			void _hx_run(Float val){
-            				HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_144_changeSelection)
-HXLINE( 144)				_gthis->passiveSpeed = val;
+            				HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_183_changeSelection)
+HXLINE( 183)				_gthis->passiveSpeed = val;
             			}
             			HX_END_LOCAL_FUNC1((void))
 
-HXLINE( 140)			::flixel::tweens::FlxTween_obj::num(this->passiveSpeed,( (Float)(0) ),((Float)0.3), ::Dynamic(::hx::Anon_obj::Create(1)
+HXLINE( 179)			::flixel::tweens::FlxTween_obj::num(this->passiveSpeed,( (Float)(0) ),((Float)0.3), ::Dynamic(::hx::Anon_obj::Create(1)
             				->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineOut_dyn())), ::Dynamic(new _hx_Closure_0(_gthis)));
-HXLINE( 143)			::flixel::tweens::FlxTween_obj::num(( (Float)(0) ),( (Float)(60) ),((Float)0.5), ::Dynamic(::hx::Anon_obj::Create(2)
+HXLINE( 182)			::flixel::tweens::FlxTween_obj::num(( (Float)(0) ),( (Float)(60) ),((Float)0.5), ::Dynamic(::hx::Anon_obj::Create(2)
             				->setFixed(0,HX_("startDelay",c1,af,3d,f3),((Float)0.3))
             				->setFixed(1,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineInOut_dyn())), ::Dynamic(new _hx_Closure_1(_gthis)));
             		}
-HXLINE( 148)		{
-HXLINE( 148)			int _g = 0;
-HXDLIN( 148)			int _g1 = this->menuButtonGroup->members->get_length();
-HXDLIN( 148)			while((_g < _g1)){
-HXLINE( 148)				_g = (_g + 1);
-HXDLIN( 148)				int i = (_g - 1);
-HXLINE( 149)				 ::vibin::objects::ui::mainmenu::MainMenuButton button = Dynamic( this->menuButtonGroup->members->__get(i)).StaticCast<  ::vibin::objects::ui::mainmenu::MainMenuButton >();
-HXLINE( 150)				if ((i == this->curSelected)) {
-HXLINE( 151)					button->playAnim(HX_("selected",5b,2a,6d,b1),null());
+HXLINE( 187)		{
+HXLINE( 187)			int _g = 0;
+HXDLIN( 187)			int _g1 = this->menuButtonGroup->members->get_length();
+HXDLIN( 187)			while((_g < _g1)){
+HXLINE( 187)				_g = (_g + 1);
+HXDLIN( 187)				int i = (_g - 1);
+HXLINE( 188)				 ::vibin::objects::ui::mainmenu::MainMenuButton button = Dynamic( this->menuButtonGroup->members->__get(i)).StaticCast<  ::vibin::objects::ui::mainmenu::MainMenuButton >();
+HXLINE( 189)				if ((i == this->curSelected)) {
+HXLINE( 190)					button->playAnim(HX_("selected",5b,2a,6d,b1),null());
             				}
             				else {
-HXLINE( 153)					button->playAnim(HX_("idle",14,a7,b3,45),null());
+HXLINE( 194)					button->playAnim(HX_("idle",14,a7,b3,45),null());
             				}
             			}
             		}
@@ -348,42 +389,38 @@ MainMenuState_obj::MainMenuState_obj()
 void MainMenuState_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(MainMenuState);
-	HX_MARK_MEMBER_NAME(MenuButtons,"MenuButtons");
 	HX_MARK_MEMBER_NAME(menuButtonGroup,"menuButtonGroup");
-	HX_MARK_MEMBER_NAME(bg,"bg");
-	HX_MARK_MEMBER_NAME(curSelected,"curSelected");
-	HX_MARK_MEMBER_NAME(vinylSpinAngle,"vinylSpinAngle");
-	HX_MARK_MEMBER_NAME(targetSelectionAngle,"targetSelectionAngle");
-	HX_MARK_MEMBER_NAME(currentSelectionAngle,"currentSelectionAngle");
-	HX_MARK_MEMBER_NAME(bgScale,"bgScale");
-	HX_MARK_MEMBER_NAME(spinTween,"spinTween");
-	HX_MARK_MEMBER_NAME(passiveSpeed,"passiveSpeed");
-	HX_MARK_MEMBER_NAME(targetWidthPixels,"targetWidthPixels");
-	HX_MARK_MEMBER_NAME(targetHeightPixels,"targetHeightPixels");
 	HX_MARK_MEMBER_NAME(recordedge,"recordedge");
 	HX_MARK_MEMBER_NAME(vinyl,"vinyl");
+	HX_MARK_MEMBER_NAME(bg,"bg");
 	HX_MARK_MEMBER_NAME(buttonPadding,"buttonPadding");
+	HX_MARK_MEMBER_NAME(passiveSpeed,"passiveSpeed");
+	HX_MARK_MEMBER_NAME(MenuButtons,"MenuButtons");
+	HX_MARK_MEMBER_NAME(currentSelectionAngle,"currentSelectionAngle");
+	HX_MARK_MEMBER_NAME(targetSelectionAngle,"targetSelectionAngle");
+	HX_MARK_MEMBER_NAME(vinylSpinAngle,"vinylSpinAngle");
+	HX_MARK_MEMBER_NAME(curSelected,"curSelected");
+	HX_MARK_MEMBER_NAME(updateElapsed,"updateElapsed");
+	HX_MARK_MEMBER_NAME(spinTween,"spinTween");
 	 ::flixel::FlxState_obj::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
 }
 
 void MainMenuState_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(MenuButtons,"MenuButtons");
 	HX_VISIT_MEMBER_NAME(menuButtonGroup,"menuButtonGroup");
-	HX_VISIT_MEMBER_NAME(bg,"bg");
-	HX_VISIT_MEMBER_NAME(curSelected,"curSelected");
-	HX_VISIT_MEMBER_NAME(vinylSpinAngle,"vinylSpinAngle");
-	HX_VISIT_MEMBER_NAME(targetSelectionAngle,"targetSelectionAngle");
-	HX_VISIT_MEMBER_NAME(currentSelectionAngle,"currentSelectionAngle");
-	HX_VISIT_MEMBER_NAME(bgScale,"bgScale");
-	HX_VISIT_MEMBER_NAME(spinTween,"spinTween");
-	HX_VISIT_MEMBER_NAME(passiveSpeed,"passiveSpeed");
-	HX_VISIT_MEMBER_NAME(targetWidthPixels,"targetWidthPixels");
-	HX_VISIT_MEMBER_NAME(targetHeightPixels,"targetHeightPixels");
 	HX_VISIT_MEMBER_NAME(recordedge,"recordedge");
 	HX_VISIT_MEMBER_NAME(vinyl,"vinyl");
+	HX_VISIT_MEMBER_NAME(bg,"bg");
 	HX_VISIT_MEMBER_NAME(buttonPadding,"buttonPadding");
+	HX_VISIT_MEMBER_NAME(passiveSpeed,"passiveSpeed");
+	HX_VISIT_MEMBER_NAME(MenuButtons,"MenuButtons");
+	HX_VISIT_MEMBER_NAME(currentSelectionAngle,"currentSelectionAngle");
+	HX_VISIT_MEMBER_NAME(targetSelectionAngle,"targetSelectionAngle");
+	HX_VISIT_MEMBER_NAME(vinylSpinAngle,"vinylSpinAngle");
+	HX_VISIT_MEMBER_NAME(curSelected,"curSelected");
+	HX_VISIT_MEMBER_NAME(updateElapsed,"updateElapsed");
+	HX_VISIT_MEMBER_NAME(spinTween,"spinTween");
 	 ::flixel::FlxState_obj::__Visit(HX_VISIT_ARG);
 }
 
@@ -400,9 +437,6 @@ void MainMenuState_obj::__Visit(HX_VISIT_PARAMS)
 		if (HX_FIELD_EQ(inName,"create") ) { return ::hx::Val( create_dyn() ); }
 		if (HX_FIELD_EQ(inName,"update") ) { return ::hx::Val( update_dyn() ); }
 		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"bgScale") ) { return ::hx::Val( bgScale ); }
-		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"spinTween") ) { return ::hx::Val( spinTween ); }
 		break;
@@ -415,9 +449,14 @@ void MainMenuState_obj::__Visit(HX_VISIT_PARAMS)
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"passiveSpeed") ) { return ::hx::Val( passiveSpeed ); }
+		if (HX_FIELD_EQ(inName,"setupDiscord") ) { return ::hx::Val( setupDiscord_dyn() ); }
+		if (HX_FIELD_EQ(inName,"setupSprites") ) { return ::hx::Val( setupSprites_dyn() ); }
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"buttonPadding") ) { return ::hx::Val( buttonPadding ); }
+		if (HX_FIELD_EQ(inName,"updateElapsed") ) { return ::hx::Val( updateElapsed ); }
+		if (HX_FIELD_EQ(inName,"checkControls") ) { return ::hx::Val( checkControls_dyn() ); }
+		if (HX_FIELD_EQ(inName,"updateSprites") ) { return ::hx::Val( updateSprites_dyn() ); }
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"vinylSpinAngle") ) { return ::hx::Val( vinylSpinAngle ); }
@@ -426,11 +465,8 @@ void MainMenuState_obj::__Visit(HX_VISIT_PARAMS)
 		if (HX_FIELD_EQ(inName,"menuButtonGroup") ) { return ::hx::Val( menuButtonGroup ); }
 		if (HX_FIELD_EQ(inName,"changeSelection") ) { return ::hx::Val( changeSelection_dyn() ); }
 		break;
-	case 17:
-		if (HX_FIELD_EQ(inName,"targetWidthPixels") ) { return ::hx::Val( targetWidthPixels ); }
-		break;
-	case 18:
-		if (HX_FIELD_EQ(inName,"targetHeightPixels") ) { return ::hx::Val( targetHeightPixels ); }
+	case 16:
+		if (HX_FIELD_EQ(inName,"setupMenuButtons") ) { return ::hx::Val( setupMenuButtons_dyn() ); }
 		break;
 	case 20:
 		if (HX_FIELD_EQ(inName,"targetSelectionAngle") ) { return ::hx::Val( targetSelectionAngle ); }
@@ -451,9 +487,6 @@ void MainMenuState_obj::__Visit(HX_VISIT_PARAMS)
 	case 5:
 		if (HX_FIELD_EQ(inName,"vinyl") ) { vinyl=inValue.Cast<  ::flixel::FlxSprite >(); return inValue; }
 		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"bgScale") ) { bgScale=inValue.Cast< Float >(); return inValue; }
-		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"spinTween") ) { spinTween=inValue.Cast<  ::flixel::tweens::FlxTween >(); return inValue; }
 		break;
@@ -469,18 +502,13 @@ void MainMenuState_obj::__Visit(HX_VISIT_PARAMS)
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"buttonPadding") ) { buttonPadding=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"updateElapsed") ) { updateElapsed=inValue.Cast< Float >(); return inValue; }
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"vinylSpinAngle") ) { vinylSpinAngle=inValue.Cast< Float >(); return inValue; }
 		break;
 	case 15:
 		if (HX_FIELD_EQ(inName,"menuButtonGroup") ) { menuButtonGroup=inValue.Cast<  ::flixel::group::FlxTypedGroup >(); return inValue; }
-		break;
-	case 17:
-		if (HX_FIELD_EQ(inName,"targetWidthPixels") ) { targetWidthPixels=inValue.Cast< Float >(); return inValue; }
-		break;
-	case 18:
-		if (HX_FIELD_EQ(inName,"targetHeightPixels") ) { targetHeightPixels=inValue.Cast< Float >(); return inValue; }
 		break;
 	case 20:
 		if (HX_FIELD_EQ(inName,"targetSelectionAngle") ) { targetSelectionAngle=inValue.Cast< Float >(); return inValue; }
@@ -493,65 +521,64 @@ void MainMenuState_obj::__Visit(HX_VISIT_PARAMS)
 
 void MainMenuState_obj::__GetFields(Array< ::String> &outFields)
 {
-	outFields->push(HX_("MenuButtons",42,4e,d7,ff));
 	outFields->push(HX_("menuButtonGroup",8e,fc,89,0e));
-	outFields->push(HX_("bg",c5,55,00,00));
-	outFields->push(HX_("curSelected",fb,eb,ab,32));
-	outFields->push(HX_("vinylSpinAngle",63,58,9a,ca));
-	outFields->push(HX_("targetSelectionAngle",18,7b,d4,a0));
-	outFields->push(HX_("currentSelectionAngle",00,ea,29,8d));
-	outFields->push(HX_("bgScale",85,de,f5,25));
-	outFields->push(HX_("spinTween",49,99,b1,7e));
-	outFields->push(HX_("passiveSpeed",60,a2,24,d3));
-	outFields->push(HX_("targetWidthPixels",02,96,74,6c));
-	outFields->push(HX_("targetHeightPixels",65,47,af,ea));
 	outFields->push(HX_("recordedge",4e,5b,88,6c));
 	outFields->push(HX_("vinyl",6e,bc,03,37));
+	outFields->push(HX_("bg",c5,55,00,00));
 	outFields->push(HX_("buttonPadding",ff,21,dc,ee));
+	outFields->push(HX_("passiveSpeed",60,a2,24,d3));
+	outFields->push(HX_("MenuButtons",42,4e,d7,ff));
+	outFields->push(HX_("currentSelectionAngle",00,ea,29,8d));
+	outFields->push(HX_("targetSelectionAngle",18,7b,d4,a0));
+	outFields->push(HX_("vinylSpinAngle",63,58,9a,ca));
+	outFields->push(HX_("curSelected",fb,eb,ab,32));
+	outFields->push(HX_("updateElapsed",33,fd,2e,86));
+	outFields->push(HX_("spinTween",49,99,b1,7e));
 	super::__GetFields(outFields);
 };
 
 #ifdef HXCPP_SCRIPTABLE
 static ::hx::StorageInfo MainMenuState_obj_sMemberStorageInfo[] = {
-	{::hx::fsObject /* ::Array< ::String > */ ,(int)offsetof(MainMenuState_obj,MenuButtons),HX_("MenuButtons",42,4e,d7,ff)},
 	{::hx::fsObject /*  ::flixel::group::FlxTypedGroup */ ,(int)offsetof(MainMenuState_obj,menuButtonGroup),HX_("menuButtonGroup",8e,fc,89,0e)},
-	{::hx::fsObject /*  ::flixel::FlxSprite */ ,(int)offsetof(MainMenuState_obj,bg),HX_("bg",c5,55,00,00)},
-	{::hx::fsInt,(int)offsetof(MainMenuState_obj,curSelected),HX_("curSelected",fb,eb,ab,32)},
-	{::hx::fsFloat,(int)offsetof(MainMenuState_obj,vinylSpinAngle),HX_("vinylSpinAngle",63,58,9a,ca)},
-	{::hx::fsFloat,(int)offsetof(MainMenuState_obj,targetSelectionAngle),HX_("targetSelectionAngle",18,7b,d4,a0)},
-	{::hx::fsFloat,(int)offsetof(MainMenuState_obj,currentSelectionAngle),HX_("currentSelectionAngle",00,ea,29,8d)},
-	{::hx::fsFloat,(int)offsetof(MainMenuState_obj,bgScale),HX_("bgScale",85,de,f5,25)},
-	{::hx::fsObject /*  ::flixel::tweens::FlxTween */ ,(int)offsetof(MainMenuState_obj,spinTween),HX_("spinTween",49,99,b1,7e)},
-	{::hx::fsFloat,(int)offsetof(MainMenuState_obj,passiveSpeed),HX_("passiveSpeed",60,a2,24,d3)},
-	{::hx::fsFloat,(int)offsetof(MainMenuState_obj,targetWidthPixels),HX_("targetWidthPixels",02,96,74,6c)},
-	{::hx::fsFloat,(int)offsetof(MainMenuState_obj,targetHeightPixels),HX_("targetHeightPixels",65,47,af,ea)},
 	{::hx::fsObject /*  ::flixel::FlxSprite */ ,(int)offsetof(MainMenuState_obj,recordedge),HX_("recordedge",4e,5b,88,6c)},
 	{::hx::fsObject /*  ::flixel::FlxSprite */ ,(int)offsetof(MainMenuState_obj,vinyl),HX_("vinyl",6e,bc,03,37)},
+	{::hx::fsObject /*  ::flixel::FlxSprite */ ,(int)offsetof(MainMenuState_obj,bg),HX_("bg",c5,55,00,00)},
 	{::hx::fsFloat,(int)offsetof(MainMenuState_obj,buttonPadding),HX_("buttonPadding",ff,21,dc,ee)},
+	{::hx::fsFloat,(int)offsetof(MainMenuState_obj,passiveSpeed),HX_("passiveSpeed",60,a2,24,d3)},
+	{::hx::fsObject /* ::Array< ::String > */ ,(int)offsetof(MainMenuState_obj,MenuButtons),HX_("MenuButtons",42,4e,d7,ff)},
+	{::hx::fsFloat,(int)offsetof(MainMenuState_obj,currentSelectionAngle),HX_("currentSelectionAngle",00,ea,29,8d)},
+	{::hx::fsFloat,(int)offsetof(MainMenuState_obj,targetSelectionAngle),HX_("targetSelectionAngle",18,7b,d4,a0)},
+	{::hx::fsFloat,(int)offsetof(MainMenuState_obj,vinylSpinAngle),HX_("vinylSpinAngle",63,58,9a,ca)},
+	{::hx::fsInt,(int)offsetof(MainMenuState_obj,curSelected),HX_("curSelected",fb,eb,ab,32)},
+	{::hx::fsFloat,(int)offsetof(MainMenuState_obj,updateElapsed),HX_("updateElapsed",33,fd,2e,86)},
+	{::hx::fsObject /*  ::flixel::tweens::FlxTween */ ,(int)offsetof(MainMenuState_obj,spinTween),HX_("spinTween",49,99,b1,7e)},
 	{ ::hx::fsUnknown, 0, null()}
 };
 static ::hx::StaticInfo *MainMenuState_obj_sStaticStorageInfo = 0;
 #endif
 
 static ::String MainMenuState_obj_sMemberFields[] = {
-	HX_("MenuButtons",42,4e,d7,ff),
 	HX_("menuButtonGroup",8e,fc,89,0e),
-	HX_("bg",c5,55,00,00),
-	HX_("curSelected",fb,eb,ab,32),
-	HX_("vinylSpinAngle",63,58,9a,ca),
-	HX_("targetSelectionAngle",18,7b,d4,a0),
-	HX_("currentSelectionAngle",00,ea,29,8d),
-	HX_("bgScale",85,de,f5,25),
-	HX_("spinTween",49,99,b1,7e),
-	HX_("passiveSpeed",60,a2,24,d3),
-	HX_("targetWidthPixels",02,96,74,6c),
-	HX_("targetHeightPixels",65,47,af,ea),
 	HX_("recordedge",4e,5b,88,6c),
 	HX_("vinyl",6e,bc,03,37),
+	HX_("bg",c5,55,00,00),
 	HX_("buttonPadding",ff,21,dc,ee),
+	HX_("passiveSpeed",60,a2,24,d3),
+	HX_("MenuButtons",42,4e,d7,ff),
+	HX_("currentSelectionAngle",00,ea,29,8d),
+	HX_("targetSelectionAngle",18,7b,d4,a0),
+	HX_("vinylSpinAngle",63,58,9a,ca),
+	HX_("curSelected",fb,eb,ab,32),
+	HX_("updateElapsed",33,fd,2e,86),
+	HX_("spinTween",49,99,b1,7e),
 	HX_("create",fc,66,0f,7c),
 	HX_("update",09,86,05,87),
+	HX_("setupDiscord",af,ac,e9,70),
+	HX_("setupMenuButtons",e5,e6,02,1d),
+	HX_("setupSprites",d1,9b,bf,1d),
+	HX_("checkControls",5e,e3,16,20),
 	HX_("updateButtonPositions",4f,57,74,17),
+	HX_("updateSprites",c5,0d,f9,2a),
 	HX_("changeSelection",bc,98,b5,48),
 	::String(null()) };
 

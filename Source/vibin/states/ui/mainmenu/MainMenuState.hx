@@ -56,10 +56,9 @@ class MainMenuState extends MusicUIBeatState {
         /**
          * convert this to the most recurring color in the bg when i have made that system.
          */
-        FlxG.cameras.bgColor = 0xFFfde871
+        FlxG.cameras.bgColor = 0xFFfde871;
         
         setupDiscord();
-        setupMenuButtons();
         setupSprites();
       }
 
@@ -70,6 +69,7 @@ class MainMenuState extends MusicUIBeatState {
 
         updateButtonPositions();
         updateSprites();
+        checkControls();
       }
 
       /**
@@ -109,10 +109,12 @@ class MainMenuState extends MusicUIBeatState {
         vinyl.centerOffsets();
         vinyl.centerOrigin();
         vinyl.setPosition(FlxG.width - vinyl.width, (FlxG.height - vinyl.height) / 2);
+        setupMenuButtons();
         
         /**
          * add the sprites in proper order
          */
+         add(bg);
          add(vinyl);
          add(menuButtonGroup);
          add(recordedge);
@@ -129,13 +131,13 @@ class MainMenuState extends MusicUIBeatState {
 
     function updateButtonPositions() {
         var vinylCenterX:Float = vinyl.getGraphicMidpoint().x;
-        var vinylCenterY:Float = niyl.getGraphicMidpoint().y;
+        var vinylCenterY:Float = vinyl.getGraphicMidpoint().y;
         var angleStep:Float = (Math.PI * 2) / menuButtonGroup.members.length;
 
         for (i in 0...menuButtonGroup.members.length) {
             var button:MainMenuButton = menuButtonGroup.members[i];
 
-            var selectionOffsetRad:Float = currentSelectionAngle - (Math.PI / 180);
+            var selectionOffsetRad:Float = currentSelectionAngle * (Math.PI / 180);
             var placementAngle:Float = Math.PI + selectionOffsetRad - (i * angleStep);
 
             button.x = vinylCenterX + (Math.cos(placementAngle) * buttonPadding) - (button.width / 2);
@@ -177,7 +179,7 @@ class MainMenuState extends MusicUIBeatState {
             FlxTween.num(passiveSpeed, 0, 0.3, {ease: FlxEase.sineOut}, function(val:Float) {
                 passiveSpeed = val;
             });
-            FlxTween.num(0, 50, 0.5, {ease: FlxEase.sineInOut, startDelay: 0.3}, function(val:Float) {
+            FlxTween.num(0, 60, 0.5, {ease: FlxEase.sineInOut, startDelay: 0.3}, function(val:Float) {
                 passiveSpeed = val;
             });
         }

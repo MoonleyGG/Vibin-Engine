@@ -58,27 +58,40 @@ class HXCPP_CLASS_ATTRIBUTES MainMenuState_obj : public  ::vibin::backend::backe
 		bool _hx_isInstanceOf(int inClassId);
 		::String __ToString() const { return HX_("MainMenuState",59,88,5e,20); }
 
-		::Array< ::String > MenuButtons;
 		 ::flixel::group::FlxTypedGroup menuButtonGroup;
-		 ::flixel::FlxSprite bg;
-		int curSelected;
-		Float vinylSpinAngle;
-		Float targetSelectionAngle;
-		Float currentSelectionAngle;
-		Float bgScale;
-		 ::flixel::tweens::FlxTween spinTween;
-		Float passiveSpeed;
-		Float targetWidthPixels;
-		Float targetHeightPixels;
 		 ::flixel::FlxSprite recordedge;
 		 ::flixel::FlxSprite vinyl;
+		 ::flixel::FlxSprite bg;
 		Float buttonPadding;
+		Float passiveSpeed;
+		::Array< ::String > MenuButtons;
+		Float currentSelectionAngle;
+		Float targetSelectionAngle;
+		Float vinylSpinAngle;
+		int curSelected;
+		Float updateElapsed;
+		 ::flixel::tweens::FlxTween spinTween;
 		void create();
 
 		void update(Float elapsed);
 
+		void setupDiscord();
+		::Dynamic setupDiscord_dyn();
+
+		void setupMenuButtons();
+		::Dynamic setupMenuButtons_dyn();
+
+		void setupSprites();
+		::Dynamic setupSprites_dyn();
+
+		void checkControls();
+		::Dynamic checkControls_dyn();
+
 		void updateButtonPositions();
 		::Dynamic updateButtonPositions_dyn();
+
+		void updateSprites();
+		::Dynamic updateSprites_dyn();
 
 		void changeSelection(::hx::Null< int >  change);
 		::Dynamic changeSelection_dyn();

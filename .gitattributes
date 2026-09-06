@@ -1,0 +1,5 @@
+# i stole this file from the fnf repo too, credits to them ofc!
+
+* text=auto eol=lf
+*.hxc linguist-language=Haxe
+*.hxp linguist-language=Haxe
