@@ -2,7 +2,9 @@ package vibin;
 
 import flixel.FlxSprite;
 import flixel.FlxState;
-import flixel.FlxG;
+
+import openfl.Lib;
+import openfl.events.Event;
 
 /**
  * Perform a bunch of game setup, then immediately transition to whatever state you linked.

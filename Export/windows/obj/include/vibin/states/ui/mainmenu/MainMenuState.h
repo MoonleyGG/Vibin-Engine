@@ -10,9 +10,12 @@
 #include <vibin/backend/backendStates/MusicUIBeatState.h>
 #endif
 HX_DECLARE_CLASS1(flixel,FlxBasic)
+HX_DECLARE_CLASS1(flixel,FlxObject)
+HX_DECLARE_CLASS1(flixel,FlxSprite)
 HX_DECLARE_CLASS1(flixel,FlxState)
 HX_DECLARE_CLASS2(flixel,group,FlxTypedContainer)
 HX_DECLARE_CLASS2(flixel,group,FlxTypedGroup)
+HX_DECLARE_CLASS2(flixel,tweens,FlxTween)
 HX_DECLARE_CLASS2(flixel,util,IFlxDestroyable)
 HX_DECLARE_CLASS3(vibin,backend,backendStates,MusicUIBeatState)
 HX_DECLARE_CLASS4(vibin,states,ui,mainmenu,MainMenuState)
@@ -56,7 +59,29 @@ class HXCPP_CLASS_ATTRIBUTES MainMenuState_obj : public  ::vibin::backend::backe
 		::String __ToString() const { return HX_("MainMenuState",59,88,5e,20); }
 
 		::Array< ::String > MenuButtons;
+		 ::flixel::group::FlxTypedGroup menuButtonGroup;
+		 ::flixel::FlxSprite bg;
+		int curSelected;
+		Float vinylSpinAngle;
+		Float targetSelectionAngle;
+		Float currentSelectionAngle;
+		Float bgScale;
+		 ::flixel::tweens::FlxTween spinTween;
+		Float passiveSpeed;
+		Float targetWidthPixels;
+		Float targetHeightPixels;
+		 ::flixel::FlxSprite recordedge;
+		 ::flixel::FlxSprite vinyl;
+		Float buttonPadding;
 		void create();
+
+		void update(Float elapsed);
+
+		void updateButtonPositions();
+		::Dynamic updateButtonPositions_dyn();
+
+		void changeSelection(::hx::Null< int >  change);
+		::Dynamic changeSelection_dyn();
 
 };
 

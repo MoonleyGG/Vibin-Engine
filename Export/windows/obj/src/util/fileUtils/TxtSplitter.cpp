@@ -14,7 +14,7 @@
 #include <util/fileUtils/TxtSplitter.h>
 #endif
 
-HX_LOCAL_STACK_FRAME(_hx_pos_5541d439305bf571_16_SplitTxt,"util.fileUtils.TxtSplitter","SplitTxt",0x46978352,"util.fileUtils.TxtSplitter.SplitTxt","util/fileUtils/TxtSplitter.hx",16,0xe36df84e)
+HX_LOCAL_STACK_FRAME(_hx_pos_5541d439305bf571_14_SplitTxt,"util.fileUtils.TxtSplitter","SplitTxt",0x46978352,"util.fileUtils.TxtSplitter.SplitTxt","util/fileUtils/TxtSplitter.hx",14,0xe36df84e)
 namespace util{
 namespace fileUtils{
 
@@ -36,32 +36,32 @@ bool TxtSplitter_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 ::Array< ::String > TxtSplitter_obj::SplitTxt(::String path){
-            	HX_STACKFRAME(&_hx_pos_5541d439305bf571_16_SplitTxt)
-HXLINE(  17)		::String fullPath = path;
-HXLINE(  19)		if (!(::StringTools_obj::startsWith(fullPath,HX_("assets/data/",f9,10,73,a0)))) {
-HXLINE(  20)			fullPath = (HX_("assets/data/",f9,10,73,a0) + fullPath);
+            	HX_STACKFRAME(&_hx_pos_5541d439305bf571_14_SplitTxt)
+HXLINE(  15)		::String fullPath = path;
+HXLINE(  17)		if (!(::StringTools_obj::startsWith(fullPath,HX_("assets/data/",f9,10,73,a0)))) {
+HXLINE(  18)			fullPath = (HX_("assets/data/",f9,10,73,a0) + fullPath);
             		}
-HXLINE(  23)		if (!(::StringTools_obj::endsWith(fullPath,HX_(".vibintxt",aa,59,09,40)))) {
-HXLINE(  24)			fullPath = (fullPath + HX_(".vibintxt",aa,59,09,40));
+HXLINE(  21)		if (!(::StringTools_obj::endsWith(fullPath,HX_(".vibintxt",aa,59,09,40)))) {
+HXLINE(  22)			fullPath = (fullPath + HX_(".vibintxt",aa,59,09,40));
             		}
-HXLINE(  27)		if (!(::sys::FileSystem_obj::exists(fullPath))) {
-HXLINE(  28)			return ::Array_obj< ::String >::__new(0);
+HXLINE(  25)		if (!(::sys::FileSystem_obj::exists(fullPath))) {
+HXLINE(  26)			return ::Array_obj< ::String >::__new(0);
             		}
-HXLINE(  31)		::String rawText = ::sys::io::File_obj::getContent(fullPath);
-HXLINE(  32)		::Array< ::String > lines = rawText.split(HX_("\n",0a,00,00,00));
-HXLINE(  33)		::Array< ::String > result = ::Array_obj< ::String >::__new(0);
-HXLINE(  35)		{
-HXLINE(  35)			int _g = 0;
-HXDLIN(  35)			while((_g < lines->length)){
-HXLINE(  35)				::String line = lines->__get(_g);
-HXDLIN(  35)				_g = (_g + 1);
-HXLINE(  36)				::String trimmed = ::StringTools_obj::trim(line);
-HXLINE(  37)				if ((trimmed.length > 0)) {
-HXLINE(  38)					result->push(trimmed);
+HXLINE(  29)		::String rawText = ::sys::io::File_obj::getContent(fullPath);
+HXLINE(  30)		::Array< ::String > lines = rawText.split(HX_("\n",0a,00,00,00));
+HXLINE(  31)		::Array< ::String > result = ::Array_obj< ::String >::__new(0);
+HXLINE(  33)		{
+HXLINE(  33)			int _g = 0;
+HXDLIN(  33)			while((_g < lines->length)){
+HXLINE(  33)				::String line = lines->__get(_g);
+HXDLIN(  33)				_g = (_g + 1);
+HXLINE(  34)				::String trimmed = ::StringTools_obj::trim(line);
+HXLINE(  35)				if ((trimmed.length > 0)) {
+HXLINE(  36)					result->push(trimmed);
             				}
             			}
             		}
-HXLINE(  42)		return result;
+HXLINE(  40)		return result;
             	}
 
 

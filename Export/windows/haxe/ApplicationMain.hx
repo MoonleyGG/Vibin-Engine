@@ -16,11 +16,11 @@ class ApplicationMain
 	#if !macro
 	public static function main()
 	{
-		lime.system.System.__registerEntryPoint("vibinengine", create);
+		lime.system.System.__registerEntryPoint("VibinEngine", create);
 
 		#if (js && html5)
 		#if (munit || (utest && openfl_enable_utest_legacy_mode))
-		lime.system.System.embed("vibinengine", null, 1280, 720);
+		lime.system.System.embed("VibinEngine", null, 1280, 720);
 		#end
 		#else
 		create(null);
@@ -35,9 +35,9 @@ class ApplicationMain
 		ManifestResources.init(config);
 		#end
 
-		app.meta["build"] = "57";
+		app.meta["build"] = "2";
 		app.meta["company"] = "MoonleyGG";
-		app.meta["file"] = "vibinengine";
+		app.meta["file"] = "VibinEngine";
 		app.meta["name"] = "Friday Night Funkin': Vibin Engine";
 		app.meta["packageName"] = "com.moonleygg.vibinengine";
 		app.meta["version"] = "0.1.0";

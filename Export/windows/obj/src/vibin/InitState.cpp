@@ -74,15 +74,15 @@
 #include <vibin/states/ui/mainmenu/MainMenuState.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_900b7a48763599b6_11_new,"vibin.InitState","new",0x8bd937b9,"vibin.InitState.new","vibin/InitState.hx",11,0xccb15f58)
-HX_LOCAL_STACK_FRAME(_hx_pos_900b7a48763599b6_19_create,"vibin.InitState","create",0x81785d43,"vibin.InitState.create","vibin/InitState.hx",19,0xccb15f58)
-HX_LOCAL_STACK_FRAME(_hx_pos_900b7a48763599b6_27_create,"vibin.InitState","create",0x81785d43,"vibin.InitState.create","vibin/InitState.hx",27,0xccb15f58)
+HX_DEFINE_STACK_FRAME(_hx_pos_900b7a48763599b6_13_new,"vibin.InitState","new",0x8bd937b9,"vibin.InitState.new","vibin/InitState.hx",13,0xccb15f58)
+HX_LOCAL_STACK_FRAME(_hx_pos_900b7a48763599b6_21_create,"vibin.InitState","create",0x81785d43,"vibin.InitState.create","vibin/InitState.hx",21,0xccb15f58)
+HX_LOCAL_STACK_FRAME(_hx_pos_900b7a48763599b6_32_create,"vibin.InitState","create",0x81785d43,"vibin.InitState.create","vibin/InitState.hx",32,0xccb15f58)
 namespace vibin{
 
 void InitState_obj::__construct(){
-            	HX_STACKFRAME(&_hx_pos_900b7a48763599b6_11_new)
-HXLINE(  16)		this->transState = ::hx::ClassOf< ::vibin::states::ui::mainmenu::MainMenuState >();
-HXLINE(  11)		super::__construct();
+            	HX_STACKFRAME(&_hx_pos_900b7a48763599b6_13_new)
+HXLINE(  18)		this->transState = ::hx::ClassOf< ::vibin::states::ui::mainmenu::MainMenuState >();
+HXLINE(  13)		super::__construct();
             	}
 
 Dynamic InitState_obj::__CreateEmpty() { return new InitState_obj; }
@@ -113,36 +113,36 @@ bool InitState_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 void InitState_obj::create(){
-            	HX_STACKFRAME(&_hx_pos_900b7a48763599b6_19_create)
-HXDLIN(  19)		 ::vibin::InitState _gthis = ::hx::ObjectPtr<OBJ_>(this);
-HXLINE(  20)		this->super::create();
-HXLINE(  22)		::haxe::Log_obj::trace(HX_("loaded",05,48,6f,58),::hx::SourceInfo(HX_("Source/vibin/InitState.hx",2c,db,e5,f2),22,HX_("vibin.InitState",47,e7,aa,5e),HX_("create",fc,66,0f,7c)));
-HXLINE(  24)		::backend::DiscordRPC_obj::initialize(HX_("1545087548085510336",80,42,e9,2b));
-HXLINE(  25)		::flixel::FlxG_obj::autoPause = false;
-HXLINE(  27)		{
+            	HX_STACKFRAME(&_hx_pos_900b7a48763599b6_21_create)
+HXDLIN(  21)		 ::vibin::InitState _gthis = ::hx::ObjectPtr<OBJ_>(this);
+HXLINE(  22)		this->super::create();
+HXLINE(  24)		::haxe::Log_obj::trace(HX_("loaded",05,48,6f,58),::hx::SourceInfo(HX_("Source/vibin/InitState.hx",2c,db,e5,f2),24,HX_("vibin.InitState",47,e7,aa,5e),HX_("create",fc,66,0f,7c)));
+HXLINE(  29)		::backend::DiscordRPC_obj::initialize(HX_("1545087548085510336",80,42,e9,2b));
+HXLINE(  30)		::flixel::FlxG_obj::autoPause = false;
+HXLINE(  32)		{
             			HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_0, ::vibin::InitState,_gthis) HXARGC(0)
             			 ::flixel::FlxState _hx_run(){
-            				HX_STACKFRAME(&_hx_pos_900b7a48763599b6_27_create)
-HXLINE(  27)				return ( ( ::flixel::FlxState)(::Type_obj::createInstance(_gthis->transState,::cpp::VirtualArray_obj::__new(0))) );
+            				HX_STACKFRAME(&_hx_pos_900b7a48763599b6_32_create)
+HXLINE(  32)				return ( ( ::flixel::FlxState)(::Type_obj::createInstance(_gthis->transState,::cpp::VirtualArray_obj::__new(0))) );
             			}
             			HX_END_LOCAL_FUNC0(return)
 
             			HX_BEGIN_LOCAL_FUNC_S2(::hx::LocalFunc,_hx_Closure_1, ::Dynamic,nextState, ::flixel::FlxState,stateOnCall) HXARGC(0)
             			void _hx_run(){
-            				HX_STACKFRAME(&_hx_pos_900b7a48763599b6_27_create)
-HXLINE(  27)				if (::hx::IsInstanceEq( ::flixel::FlxG_obj::game->_state,stateOnCall )) {
-HXLINE(  27)					::flixel::FlxG_obj::game->_nextState = nextState;
+            				HX_STACKFRAME(&_hx_pos_900b7a48763599b6_32_create)
+HXLINE(  32)				if (::hx::IsInstanceEq( ::flixel::FlxG_obj::game->_state,stateOnCall )) {
+HXLINE(  32)					::flixel::FlxG_obj::game->_nextState = nextState;
             				}
             				else {
-HXLINE(  27)					 ::flixel::_hx_system::frontEnds::LogFrontEnd _this = ::flixel::FlxG_obj::log;
-HXDLIN(  27)					_this->advanced(HX_("`onOutroComplete` was called after the state was switched. This will be ignored",46,b2,58,c7),_this->styles->warning,true,::hx::SourceInfo(HX_("flixel/FlxG.hx",36,68,17,8e),387,HX_("flixel.FlxG",07,ab,3b,0e),HX_("switchState",7d,07,8b,77)));
+HXLINE(  32)					 ::flixel::_hx_system::frontEnds::LogFrontEnd _this = ::flixel::FlxG_obj::log;
+HXDLIN(  32)					_this->advanced(HX_("`onOutroComplete` was called after the state was switched. This will be ignored",46,b2,58,c7),_this->styles->warning,true,::hx::SourceInfo(HX_("flixel/FlxG.hx",36,68,17,8e),387,HX_("flixel.FlxG",07,ab,3b,0e),HX_("switchState",7d,07,8b,77)));
             				}
             			}
             			HX_END_LOCAL_FUNC0((void))
 
-HXLINE(  27)			 ::Dynamic nextState = ::flixel::util::typeLimit::_NextState::NextState_Impl__obj::fromMaker( ::Dynamic(new _hx_Closure_0(_gthis)));
-HXDLIN(  27)			 ::flixel::FlxState stateOnCall = ::flixel::FlxG_obj::game->_state;
-HXDLIN(  27)			::flixel::FlxG_obj::game->_state->startOutro( ::Dynamic(new _hx_Closure_1(nextState,stateOnCall)));
+HXLINE(  32)			 ::Dynamic nextState = ::flixel::util::typeLimit::_NextState::NextState_Impl__obj::fromMaker( ::Dynamic(new _hx_Closure_0(_gthis)));
+HXDLIN(  32)			 ::flixel::FlxState stateOnCall = ::flixel::FlxG_obj::game->_state;
+HXDLIN(  32)			::flixel::FlxG_obj::game->_state->startOutro( ::Dynamic(new _hx_Closure_1(nextState,stateOnCall)));
             		}
             	}
 

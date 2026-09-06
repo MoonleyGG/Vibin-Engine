@@ -19,9 +19,9 @@ BEGIN
 			VALUE "CompanyName", "MoonleyGG"
 			VALUE "FileDescription", "Friday Night Funkin': Vibin Engine"
 			VALUE "FileVersion", "0.1.0.0"
-			VALUE "InternalName", "vibinengine"
+			VALUE "InternalName", "VibinEngine"
 			VALUE "LegalCopyright", "Copyright (C) 2026 MoonleyGG"
-			VALUE "OriginalFilename", "vibinengine"
+			VALUE "OriginalFilename", "VibinEngine"
 			VALUE "ProductName", "com.moonleygg.vibinengine"
 			VALUE "ProductVersion", "0.1.0.0"
 		END

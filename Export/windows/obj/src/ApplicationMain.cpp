@@ -137,7 +137,7 @@ HXDLIN( 251)		 ::Dynamic init = ::hx::ClassOf< ::lime::app::Application >();
 
 void ApplicationMain_obj::main(){
             	HX_STACKFRAME(&_hx_pos_6fcf922b66429816_18_main)
-HXLINE(  19)		::lime::_hx_system::System_obj::_hx___registerEntryPoint(HX_("vibinengine",36,ea,e8,55),::ApplicationMain_obj::create_dyn());
+HXLINE(  19)		::lime::_hx_system::System_obj::_hx___registerEntryPoint(HX_("VibinEngine",36,f6,af,6e),::ApplicationMain_obj::create_dyn());
 HXLINE(  26)		::ApplicationMain_obj::create(null());
             	}
 
@@ -169,9 +169,9 @@ HXLINE( 121)			::ApplicationMain_obj::start(stage);
             	HX_GC_STACKFRAME(&_hx_pos_6fcf922b66429816_31_create)
 HXLINE(  32)		 ::openfl::display::Application app =  ::openfl::display::Application_obj::__alloc( HX_CTX );
 HXLINE(  35)		::ManifestResources_obj::init(config);
-HXLINE(  38)		app->meta->set(HX_("build",2e,db,ea,ba),HX_("57",62,2e,00,00));
+HXLINE(  38)		app->meta->set(HX_("build",2e,db,ea,ba),HX_("2",32,00,00,00));
 HXLINE(  39)		app->meta->set(HX_("company",3d,15,69,83),HX_("MoonleyGG",3f,81,f1,b4));
-HXLINE(  40)		app->meta->set(HX_("file",7c,ce,bb,43),HX_("vibinengine",36,ea,e8,55));
+HXLINE(  40)		app->meta->set(HX_("file",7c,ce,bb,43),HX_("VibinEngine",36,f6,af,6e));
 HXLINE(  41)		app->meta->set(HX_("name",4b,72,ff,48),HX_("Friday Night Funkin': Vibin Engine",01,0f,e9,1b));
 HXLINE(  42)		app->meta->set(HX_("packageName",f1,04,ad,04),HX_("com.moonleygg.vibinengine",ba,42,65,75));
 HXLINE(  43)		app->meta->set(HX_("version",18,e7,f1,7c),HX_("0.1.0",75,ff,c8,c1));

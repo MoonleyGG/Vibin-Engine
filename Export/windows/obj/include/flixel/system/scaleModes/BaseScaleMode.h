@@ -56,7 +56,7 @@ class HXCPP_CLASS_ATTRIBUTES BaseScaleMode_obj : public ::hx::Object
 		 ::flixel::math::FlxBasePoint offset;
 		 ::flixel::util::FlxHorizontalAlign horizontalAlign;
 		 ::flixel::util::FlxVerticalAlign verticalAlign;
-		virtual void onMeasure(int Width,int Height);
+		void onMeasure(int Width,int Height);
 		::Dynamic onMeasure_dyn();
 
 		virtual void updateGameSize(int Width,int Height);

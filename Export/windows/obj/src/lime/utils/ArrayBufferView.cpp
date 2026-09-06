@@ -28,14 +28,14 @@
 
 HX_DEFINE_STACK_FRAME(_hx_pos_244a612994c6bd06_13_new,"lime.utils.ArrayBufferView","new",0xa2471efa,"lime.utils.ArrayBufferView.new","lime/utils/ArrayBufferView.hx",13,0xb543acf8)
 HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_185_subarray_lime_utils_Int16Array,"lime.utils.ArrayBufferView","subarray_lime_utils_Int16Array",0xca4c1d7d,"lime.utils.ArrayBufferView.subarray_lime_utils_Int16Array","lime/utils/ArrayBufferView.hx",185,0xb543acf8)
+HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_185_subarray_lime_utils_Int32Array,"lime.utils.ArrayBufferView","subarray_lime_utils_Int32Array",0x84099983,"lime.utils.ArrayBufferView.subarray_lime_utils_Int32Array","lime/utils/ArrayBufferView.hx",185,0xb543acf8)
+HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_185_subarray_lime_utils_UInt16Array,"lime.utils.ArrayBufferView","subarray_lime_utils_UInt16Array",0x1214e722,"lime.utils.ArrayBufferView.subarray_lime_utils_UInt16Array","lime/utils/ArrayBufferView.hx",185,0xb543acf8)
+HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_185_subarray_lime_utils_UInt32Array,"lime.utils.ArrayBufferView","subarray_lime_utils_UInt32Array",0xcbd26328,"lime.utils.ArrayBufferView.subarray_lime_utils_UInt32Array","lime/utils/ArrayBufferView.hx",185,0xb543acf8)
 HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_185_subarray_lime_utils_Float64Array,"lime.utils.ArrayBufferView","subarray_lime_utils_Float64Array",0x2bc0d377,"lime.utils.ArrayBufferView.subarray_lime_utils_Float64Array","lime/utils/ArrayBufferView.hx",185,0xb543acf8)
 HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_185_subarray_lime_utils_Int8Array,"lime.utils.ArrayBufferView","subarray_lime_utils_Int8Array",0x5ec0bd58,"lime.utils.ArrayBufferView.subarray_lime_utils_Int8Array","lime/utils/ArrayBufferView.hx",185,0xb543acf8)
 HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_185_subarray_lime_utils_UInt8ClampedArray,"lime.utils.ArrayBufferView","subarray_lime_utils_UInt8ClampedArray",0x0c7948a5,"lime.utils.ArrayBufferView.subarray_lime_utils_UInt8ClampedArray","lime/utils/ArrayBufferView.hx",185,0xb543acf8)
-HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_185_subarray_lime_utils_UInt16Array,"lime.utils.ArrayBufferView","subarray_lime_utils_UInt16Array",0x1214e722,"lime.utils.ArrayBufferView.subarray_lime_utils_UInt16Array","lime/utils/ArrayBufferView.hx",185,0xb543acf8)
-HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_185_subarray_lime_utils_Int32Array,"lime.utils.ArrayBufferView","subarray_lime_utils_Int32Array",0x84099983,"lime.utils.ArrayBufferView.subarray_lime_utils_Int32Array","lime/utils/ArrayBufferView.hx",185,0xb543acf8)
-HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_185_subarray_lime_utils_UInt32Array,"lime.utils.ArrayBufferView","subarray_lime_utils_UInt32Array",0xcbd26328,"lime.utils.ArrayBufferView.subarray_lime_utils_UInt32Array","lime/utils/ArrayBufferView.hx",185,0xb543acf8)
-HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_185_subarray_lime_utils_Float32Array,"lime.utils.ArrayBufferView","subarray_lime_utils_Float32Array",0xe249b676,"lime.utils.ArrayBufferView.subarray_lime_utils_Float32Array","lime/utils/ArrayBufferView.hx",185,0xb543acf8)
 HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_185_subarray_lime_utils_UInt8Array,"lime.utils.ArrayBufferView","subarray_lime_utils_UInt8Array",0xa88baf53,"lime.utils.ArrayBufferView.subarray_lime_utils_UInt8Array","lime/utils/ArrayBufferView.hx",185,0xb543acf8)
+HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_185_subarray_lime_utils_Float32Array,"lime.utils.ArrayBufferView","subarray_lime_utils_Float32Array",0xe249b676,"lime.utils.ArrayBufferView.subarray_lime_utils_Float32Array","lime/utils/ArrayBufferView.hx",185,0xb543acf8)
 HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_54_initTypedArray,"lime.utils.ArrayBufferView","initTypedArray",0x0a95c3a5,"lime.utils.ArrayBufferView.initTypedArray","lime/utils/ArrayBufferView.hx",54,0xb543acf8)
 HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_85_initBuffer,"lime.utils.ArrayBufferView","initBuffer",0x6e6530d6,"lime.utils.ArrayBufferView.initBuffer","lime/utils/ArrayBufferView.hx",85,0xb543acf8)
 HX_LOCAL_STACK_FRAME(_hx_pos_244a612994c6bd06_121_initArray,"lime.utils.ArrayBufferView","initArray",0xe96cc683,"lime.utils.ArrayBufferView.initArray","lime/utils/ArrayBufferView.hx",121,0xb543acf8)
@@ -1073,6 +1073,2838 @@ HXLINE( 225)		return view;
 
 
 HX_DEFINE_DYNAMIC_FUNC2(ArrayBufferView_obj,subarray_lime_utils_Int16Array,return )
+
+ ::lime::utils::ArrayBufferView ArrayBufferView_obj::subarray_lime_utils_Int32Array(int begin, ::Dynamic end){
+            	HX_GC_STACKFRAME(&_hx_pos_244a612994c6bd06_185_subarray_lime_utils_Int32Array)
+HXLINE( 186)		if (::hx::IsNull( end )) {
+HXLINE( 186)			end = this->length;
+            		}
+HXLINE( 187)		int len = (( (int)(end) ) - begin);
+HXLINE( 188)		if ((len < 0)) {
+HXLINE( 188)			len = 0;
+            		}
+HXLINE( 189)		if ((len > this->length)) {
+HXLINE( 189)			len = this->length;
+            		}
+HXLINE( 190)		int byte_offset = ((begin * this->bytesPerElement) + this->byteOffset);
+HXLINE( 192)		 ::lime::utils::ArrayBufferView view;
+HXDLIN( 192)		switch((int)(this->type)){
+            			case (int)0: {
+HXLINE( 222)				HX_STACK_DO_THROW(HX_("subarray on a blank ArrayBufferView",39,87,fd,19));
+            			}
+            			break;
+            			case (int)1: {
+HXLINE( 195)				 ::Dynamic elements = null();
+HXDLIN( 195)				 ::haxe::io::Bytes buffer = this->buffer;
+HXDLIN( 195)				::cpp::VirtualArray array = null();
+HXDLIN( 195)				 ::openfl::_Vector::IntVector vector = null();
+HXDLIN( 195)				 ::lime::utils::ArrayBufferView view1 = null();
+HXDLIN( 195)				 ::Dynamic byteoffset = byte_offset;
+HXDLIN( 195)				if (::hx::IsNull( byteoffset )) {
+HXLINE( 195)					byteoffset = 0;
+            				}
+HXDLIN( 195)				 ::lime::utils::ArrayBufferView this1;
+HXDLIN( 195)				if (::hx::IsNotNull( elements )) {
+HXLINE( 195)					this1 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements,1);
+            				}
+            				else {
+HXLINE( 195)					if (::hx::IsNotNull( array )) {
+HXLINE( 195)						 ::lime::utils::ArrayBufferView _this =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
+HXDLIN( 195)						_this->byteOffset = 0;
+HXDLIN( 195)						_this->length = array->get_length();
+HXDLIN( 195)						_this->byteLength = (_this->length * _this->bytesPerElement);
+HXDLIN( 195)						_this->buffer = ::haxe::io::Bytes_obj::alloc(_this->byteLength);
+HXDLIN( 195)						_this->copyFromArray(array,null());
+HXDLIN( 195)						this1 = _this;
+            					}
+            					else {
+HXLINE( 195)						if (::hx::IsNotNull( vector )) {
+HXLINE( 195)							 ::lime::utils::ArrayBufferView _this1 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
+HXDLIN( 195)							::cpp::VirtualArray array1 = ( (::cpp::VirtualArray)(vector->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 195)							_this1->byteOffset = 0;
+HXDLIN( 195)							_this1->length = array1->get_length();
+HXDLIN( 195)							_this1->byteLength = (_this1->length * _this1->bytesPerElement);
+HXDLIN( 195)							_this1->buffer = ::haxe::io::Bytes_obj::alloc(_this1->byteLength);
+HXDLIN( 195)							_this1->copyFromArray(array1,null());
+HXDLIN( 195)							this1 = _this1;
+            						}
+            						else {
+HXLINE( 195)							if (::hx::IsNotNull( view1 )) {
+HXLINE( 195)								 ::lime::utils::ArrayBufferView _this2 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
+HXDLIN( 195)								 ::haxe::io::Bytes srcData = view1->buffer;
+HXDLIN( 195)								int srcLength = view1->length;
+HXDLIN( 195)								int srcByteOffset = view1->byteOffset;
+HXDLIN( 195)								int srcElementSize = view1->bytesPerElement;
+HXDLIN( 195)								int elementSize = _this2->bytesPerElement;
+HXDLIN( 195)								if ((view1->type == _this2->type)) {
+HXLINE( 195)									int srcLength1 = srcData->length;
+HXDLIN( 195)									int cloneLength = (srcLength1 - srcByteOffset);
+HXDLIN( 195)									_this2->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength);
+HXDLIN( 195)									_this2->buffer->blit(0,srcData,srcByteOffset,cloneLength);
+            								}
+            								else {
+HXLINE( 195)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 195)								_this2->byteLength = (_this2->bytesPerElement * srcLength);
+HXDLIN( 195)								_this2->byteOffset = 0;
+HXDLIN( 195)								_this2->length = srcLength;
+HXDLIN( 195)								this1 = _this2;
+            							}
+            							else {
+HXLINE( 195)								if (::hx::IsNotNull( buffer )) {
+HXLINE( 195)									 ::lime::utils::ArrayBufferView _this3 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
+HXDLIN( 195)									int in_byteOffset = ( (int)(byteoffset) );
+HXDLIN( 195)									if ((in_byteOffset < 0)) {
+HXLINE( 195)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 195)									if ((::hx::Mod(in_byteOffset,_this3->bytesPerElement) != 0)) {
+HXLINE( 195)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 195)									int bufferByteLength = buffer->length;
+HXDLIN( 195)									int elementSize1 = _this3->bytesPerElement;
+HXDLIN( 195)									int newByteLength = bufferByteLength;
+HXDLIN( 195)									if (::hx::IsNull( len )) {
+HXLINE( 195)										newByteLength = (bufferByteLength - in_byteOffset);
+HXDLIN( 195)										if ((::hx::Mod(bufferByteLength,_this3->bytesPerElement) != 0)) {
+HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 195)										if ((newByteLength < 0)) {
+HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 195)										newByteLength = (len * _this3->bytesPerElement);
+HXDLIN( 195)										int newRange = (in_byteOffset + newByteLength);
+HXDLIN( 195)										if ((newRange > bufferByteLength)) {
+HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 195)									_this3->buffer = buffer;
+HXDLIN( 195)									_this3->byteOffset = in_byteOffset;
+HXDLIN( 195)									_this3->byteLength = newByteLength;
+HXDLIN( 195)									_this3->length = ::Std_obj::_hx_int((( (Float)(newByteLength) ) / ( (Float)(_this3->bytesPerElement) )));
+HXDLIN( 195)									this1 = _this3;
+            								}
+            								else {
+HXLINE( 195)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int8Array",40,53,da,77));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this1;
+            			}
+            			break;
+            			case (int)2: {
+HXLINE( 198)				 ::Dynamic elements1 = null();
+HXDLIN( 198)				 ::haxe::io::Bytes buffer1 = this->buffer;
+HXDLIN( 198)				::cpp::VirtualArray array2 = null();
+HXDLIN( 198)				 ::openfl::_Vector::IntVector vector1 = null();
+HXDLIN( 198)				 ::lime::utils::ArrayBufferView view2 = null();
+HXDLIN( 198)				 ::Dynamic byteoffset1 = byte_offset;
+HXDLIN( 198)				if (::hx::IsNull( byteoffset1 )) {
+HXLINE( 198)					byteoffset1 = 0;
+            				}
+HXDLIN( 198)				 ::lime::utils::ArrayBufferView this2;
+HXDLIN( 198)				if (::hx::IsNotNull( elements1 )) {
+HXLINE( 198)					this2 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements1,2);
+            				}
+            				else {
+HXLINE( 198)					if (::hx::IsNotNull( array2 )) {
+HXLINE( 198)						 ::lime::utils::ArrayBufferView _this4 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
+HXDLIN( 198)						_this4->byteOffset = 0;
+HXDLIN( 198)						_this4->length = array2->get_length();
+HXDLIN( 198)						_this4->byteLength = (_this4->length * _this4->bytesPerElement);
+HXDLIN( 198)						_this4->buffer = ::haxe::io::Bytes_obj::alloc(_this4->byteLength);
+HXDLIN( 198)						_this4->copyFromArray(array2,null());
+HXDLIN( 198)						this2 = _this4;
+            					}
+            					else {
+HXLINE( 198)						if (::hx::IsNotNull( vector1 )) {
+HXLINE( 198)							 ::lime::utils::ArrayBufferView _this5 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
+HXDLIN( 198)							::cpp::VirtualArray array3 = ( (::cpp::VirtualArray)(vector1->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 198)							_this5->byteOffset = 0;
+HXDLIN( 198)							_this5->length = array3->get_length();
+HXDLIN( 198)							_this5->byteLength = (_this5->length * _this5->bytesPerElement);
+HXDLIN( 198)							_this5->buffer = ::haxe::io::Bytes_obj::alloc(_this5->byteLength);
+HXDLIN( 198)							_this5->copyFromArray(array3,null());
+HXDLIN( 198)							this2 = _this5;
+            						}
+            						else {
+HXLINE( 198)							if (::hx::IsNotNull( view2 )) {
+HXLINE( 198)								 ::lime::utils::ArrayBufferView _this6 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
+HXDLIN( 198)								 ::haxe::io::Bytes srcData1 = view2->buffer;
+HXDLIN( 198)								int srcLength2 = view2->length;
+HXDLIN( 198)								int srcByteOffset1 = view2->byteOffset;
+HXDLIN( 198)								int srcElementSize1 = view2->bytesPerElement;
+HXDLIN( 198)								int elementSize2 = _this6->bytesPerElement;
+HXDLIN( 198)								if ((view2->type == _this6->type)) {
+HXLINE( 198)									int srcLength3 = srcData1->length;
+HXDLIN( 198)									int cloneLength1 = (srcLength3 - srcByteOffset1);
+HXDLIN( 198)									_this6->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength1);
+HXDLIN( 198)									_this6->buffer->blit(0,srcData1,srcByteOffset1,cloneLength1);
+            								}
+            								else {
+HXLINE( 198)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 198)								_this6->byteLength = (_this6->bytesPerElement * srcLength2);
+HXDLIN( 198)								_this6->byteOffset = 0;
+HXDLIN( 198)								_this6->length = srcLength2;
+HXDLIN( 198)								this2 = _this6;
+            							}
+            							else {
+HXLINE( 198)								if (::hx::IsNotNull( buffer1 )) {
+HXLINE( 198)									 ::lime::utils::ArrayBufferView _this7 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
+HXDLIN( 198)									int in_byteOffset1 = ( (int)(byteoffset1) );
+HXDLIN( 198)									if ((in_byteOffset1 < 0)) {
+HXLINE( 198)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 198)									if ((::hx::Mod(in_byteOffset1,_this7->bytesPerElement) != 0)) {
+HXLINE( 198)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 198)									int bufferByteLength1 = buffer1->length;
+HXDLIN( 198)									int elementSize3 = _this7->bytesPerElement;
+HXDLIN( 198)									int newByteLength1 = bufferByteLength1;
+HXDLIN( 198)									if (::hx::IsNull( len )) {
+HXLINE( 198)										newByteLength1 = (bufferByteLength1 - in_byteOffset1);
+HXDLIN( 198)										if ((::hx::Mod(bufferByteLength1,_this7->bytesPerElement) != 0)) {
+HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 198)										if ((newByteLength1 < 0)) {
+HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 198)										newByteLength1 = (len * _this7->bytesPerElement);
+HXDLIN( 198)										int newRange1 = (in_byteOffset1 + newByteLength1);
+HXDLIN( 198)										if ((newRange1 > bufferByteLength1)) {
+HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 198)									_this7->buffer = buffer1;
+HXDLIN( 198)									_this7->byteOffset = in_byteOffset1;
+HXDLIN( 198)									_this7->byteLength = newByteLength1;
+HXDLIN( 198)									_this7->length = ::Std_obj::_hx_int((( (Float)(newByteLength1) ) / ( (Float)(_this7->bytesPerElement) )));
+HXDLIN( 198)									this2 = _this7;
+            								}
+            								else {
+HXLINE( 198)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int16Array",95,b2,95,a7));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this2;
+            			}
+            			break;
+            			case (int)3: {
+HXLINE( 201)				 ::Dynamic elements2 = null();
+HXDLIN( 201)				 ::haxe::io::Bytes buffer2 = this->buffer;
+HXDLIN( 201)				::cpp::VirtualArray array4 = null();
+HXDLIN( 201)				 ::openfl::_Vector::IntVector vector2 = null();
+HXDLIN( 201)				 ::lime::utils::ArrayBufferView view3 = null();
+HXDLIN( 201)				 ::Dynamic byteoffset2 = byte_offset;
+HXDLIN( 201)				if (::hx::IsNull( byteoffset2 )) {
+HXLINE( 201)					byteoffset2 = 0;
+            				}
+HXDLIN( 201)				 ::lime::utils::ArrayBufferView this3;
+HXDLIN( 201)				if (::hx::IsNotNull( elements2 )) {
+HXLINE( 201)					this3 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements2,3);
+            				}
+            				else {
+HXLINE( 201)					if (::hx::IsNotNull( array4 )) {
+HXLINE( 201)						 ::lime::utils::ArrayBufferView _this8 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
+HXDLIN( 201)						_this8->byteOffset = 0;
+HXDLIN( 201)						_this8->length = array4->get_length();
+HXDLIN( 201)						_this8->byteLength = (_this8->length * _this8->bytesPerElement);
+HXDLIN( 201)						_this8->buffer = ::haxe::io::Bytes_obj::alloc(_this8->byteLength);
+HXDLIN( 201)						_this8->copyFromArray(array4,null());
+HXDLIN( 201)						this3 = _this8;
+            					}
+            					else {
+HXLINE( 201)						if (::hx::IsNotNull( vector2 )) {
+HXLINE( 201)							 ::lime::utils::ArrayBufferView _this9 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
+HXDLIN( 201)							::cpp::VirtualArray array5 = ( (::cpp::VirtualArray)(vector2->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 201)							_this9->byteOffset = 0;
+HXDLIN( 201)							_this9->length = array5->get_length();
+HXDLIN( 201)							_this9->byteLength = (_this9->length * _this9->bytesPerElement);
+HXDLIN( 201)							_this9->buffer = ::haxe::io::Bytes_obj::alloc(_this9->byteLength);
+HXDLIN( 201)							_this9->copyFromArray(array5,null());
+HXDLIN( 201)							this3 = _this9;
+            						}
+            						else {
+HXLINE( 201)							if (::hx::IsNotNull( view3 )) {
+HXLINE( 201)								 ::lime::utils::ArrayBufferView _this10 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
+HXDLIN( 201)								 ::haxe::io::Bytes srcData2 = view3->buffer;
+HXDLIN( 201)								int srcLength4 = view3->length;
+HXDLIN( 201)								int srcByteOffset2 = view3->byteOffset;
+HXDLIN( 201)								int srcElementSize2 = view3->bytesPerElement;
+HXDLIN( 201)								int elementSize4 = _this10->bytesPerElement;
+HXDLIN( 201)								if ((view3->type == _this10->type)) {
+HXLINE( 201)									int srcLength5 = srcData2->length;
+HXDLIN( 201)									int cloneLength2 = (srcLength5 - srcByteOffset2);
+HXDLIN( 201)									_this10->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength2);
+HXDLIN( 201)									_this10->buffer->blit(0,srcData2,srcByteOffset2,cloneLength2);
+            								}
+            								else {
+HXLINE( 201)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 201)								_this10->byteLength = (_this10->bytesPerElement * srcLength4);
+HXDLIN( 201)								_this10->byteOffset = 0;
+HXDLIN( 201)								_this10->length = srcLength4;
+HXDLIN( 201)								this3 = _this10;
+            							}
+            							else {
+HXLINE( 201)								if (::hx::IsNotNull( buffer2 )) {
+HXLINE( 201)									 ::lime::utils::ArrayBufferView _this11 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
+HXDLIN( 201)									int in_byteOffset2 = ( (int)(byteoffset2) );
+HXDLIN( 201)									if ((in_byteOffset2 < 0)) {
+HXLINE( 201)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 201)									if ((::hx::Mod(in_byteOffset2,_this11->bytesPerElement) != 0)) {
+HXLINE( 201)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 201)									int bufferByteLength2 = buffer2->length;
+HXDLIN( 201)									int elementSize5 = _this11->bytesPerElement;
+HXDLIN( 201)									int newByteLength2 = bufferByteLength2;
+HXDLIN( 201)									if (::hx::IsNull( len )) {
+HXLINE( 201)										newByteLength2 = (bufferByteLength2 - in_byteOffset2);
+HXDLIN( 201)										if ((::hx::Mod(bufferByteLength2,_this11->bytesPerElement) != 0)) {
+HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 201)										if ((newByteLength2 < 0)) {
+HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 201)										newByteLength2 = (len * _this11->bytesPerElement);
+HXDLIN( 201)										int newRange2 = (in_byteOffset2 + newByteLength2);
+HXDLIN( 201)										if ((newRange2 > bufferByteLength2)) {
+HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 201)									_this11->buffer = buffer2;
+HXDLIN( 201)									_this11->byteOffset = in_byteOffset2;
+HXDLIN( 201)									_this11->byteLength = newByteLength2;
+HXDLIN( 201)									_this11->length = ::Std_obj::_hx_int((( (Float)(newByteLength2) ) / ( (Float)(_this11->bytesPerElement) )));
+HXDLIN( 201)									this3 = _this11;
+            								}
+            								else {
+HXLINE( 201)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int32Array",9b,2e,53,61));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this3;
+            			}
+            			break;
+            			case (int)4: {
+HXLINE( 204)				 ::Dynamic elements3 = null();
+HXDLIN( 204)				 ::haxe::io::Bytes buffer3 = this->buffer;
+HXDLIN( 204)				::cpp::VirtualArray array6 = null();
+HXDLIN( 204)				 ::openfl::_Vector::IntVector vector3 = null();
+HXDLIN( 204)				 ::lime::utils::ArrayBufferView view4 = null();
+HXDLIN( 204)				 ::Dynamic byteoffset3 = byte_offset;
+HXDLIN( 204)				if (::hx::IsNull( byteoffset3 )) {
+HXLINE( 204)					byteoffset3 = 0;
+            				}
+HXDLIN( 204)				 ::lime::utils::ArrayBufferView this4;
+HXDLIN( 204)				if (::hx::IsNotNull( elements3 )) {
+HXLINE( 204)					this4 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements3,4);
+            				}
+            				else {
+HXLINE( 204)					if (::hx::IsNotNull( array6 )) {
+HXLINE( 204)						 ::lime::utils::ArrayBufferView _this12 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
+HXDLIN( 204)						_this12->byteOffset = 0;
+HXDLIN( 204)						_this12->length = array6->get_length();
+HXDLIN( 204)						_this12->byteLength = (_this12->length * _this12->bytesPerElement);
+HXDLIN( 204)						_this12->buffer = ::haxe::io::Bytes_obj::alloc(_this12->byteLength);
+HXDLIN( 204)						_this12->copyFromArray(array6,null());
+HXDLIN( 204)						this4 = _this12;
+            					}
+            					else {
+HXLINE( 204)						if (::hx::IsNotNull( vector3 )) {
+HXLINE( 204)							 ::lime::utils::ArrayBufferView _this13 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
+HXDLIN( 204)							::cpp::VirtualArray array7 = ( (::cpp::VirtualArray)(vector3->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 204)							_this13->byteOffset = 0;
+HXDLIN( 204)							_this13->length = array7->get_length();
+HXDLIN( 204)							_this13->byteLength = (_this13->length * _this13->bytesPerElement);
+HXDLIN( 204)							_this13->buffer = ::haxe::io::Bytes_obj::alloc(_this13->byteLength);
+HXDLIN( 204)							_this13->copyFromArray(array7,null());
+HXDLIN( 204)							this4 = _this13;
+            						}
+            						else {
+HXLINE( 204)							if (::hx::IsNotNull( view4 )) {
+HXLINE( 204)								 ::lime::utils::ArrayBufferView _this14 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
+HXDLIN( 204)								 ::haxe::io::Bytes srcData3 = view4->buffer;
+HXDLIN( 204)								int srcLength6 = view4->length;
+HXDLIN( 204)								int srcByteOffset3 = view4->byteOffset;
+HXDLIN( 204)								int srcElementSize3 = view4->bytesPerElement;
+HXDLIN( 204)								int elementSize6 = _this14->bytesPerElement;
+HXDLIN( 204)								if ((view4->type == _this14->type)) {
+HXLINE( 204)									int srcLength7 = srcData3->length;
+HXDLIN( 204)									int cloneLength3 = (srcLength7 - srcByteOffset3);
+HXDLIN( 204)									_this14->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength3);
+HXDLIN( 204)									_this14->buffer->blit(0,srcData3,srcByteOffset3,cloneLength3);
+            								}
+            								else {
+HXLINE( 204)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 204)								_this14->byteLength = (_this14->bytesPerElement * srcLength6);
+HXDLIN( 204)								_this14->byteOffset = 0;
+HXDLIN( 204)								_this14->length = srcLength6;
+HXDLIN( 204)								this4 = _this14;
+            							}
+            							else {
+HXLINE( 204)								if (::hx::IsNotNull( buffer3 )) {
+HXLINE( 204)									 ::lime::utils::ArrayBufferView _this15 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
+HXDLIN( 204)									int in_byteOffset3 = ( (int)(byteoffset3) );
+HXDLIN( 204)									if ((in_byteOffset3 < 0)) {
+HXLINE( 204)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 204)									if ((::hx::Mod(in_byteOffset3,_this15->bytesPerElement) != 0)) {
+HXLINE( 204)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 204)									int bufferByteLength3 = buffer3->length;
+HXDLIN( 204)									int elementSize7 = _this15->bytesPerElement;
+HXDLIN( 204)									int newByteLength3 = bufferByteLength3;
+HXDLIN( 204)									if (::hx::IsNull( len )) {
+HXLINE( 204)										newByteLength3 = (bufferByteLength3 - in_byteOffset3);
+HXDLIN( 204)										if ((::hx::Mod(bufferByteLength3,_this15->bytesPerElement) != 0)) {
+HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 204)										if ((newByteLength3 < 0)) {
+HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 204)										newByteLength3 = (len * _this15->bytesPerElement);
+HXDLIN( 204)										int newRange3 = (in_byteOffset3 + newByteLength3);
+HXDLIN( 204)										if ((newRange3 > bufferByteLength3)) {
+HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 204)									_this15->buffer = buffer3;
+HXDLIN( 204)									_this15->byteOffset = in_byteOffset3;
+HXDLIN( 204)									_this15->byteLength = newByteLength3;
+HXDLIN( 204)									_this15->length = ::Std_obj::_hx_int((( (Float)(newByteLength3) ) / ( (Float)(_this15->bytesPerElement) )));
+HXDLIN( 204)									this4 = _this15;
+            								}
+            								else {
+HXLINE( 204)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt8Array",6b,44,d5,85));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this4;
+            			}
+            			break;
+            			case (int)5: {
+HXLINE( 207)				 ::Dynamic elements4 = null();
+HXDLIN( 207)				 ::haxe::io::Bytes buffer4 = this->buffer;
+HXDLIN( 207)				::cpp::VirtualArray array8 = null();
+HXDLIN( 207)				 ::openfl::_Vector::IntVector vector4 = null();
+HXDLIN( 207)				 ::lime::utils::ArrayBufferView view5 = null();
+HXDLIN( 207)				 ::Dynamic byteoffset4 = byte_offset;
+HXDLIN( 207)				if (::hx::IsNull( byteoffset4 )) {
+HXLINE( 207)					byteoffset4 = 0;
+            				}
+HXDLIN( 207)				 ::lime::utils::ArrayBufferView this5;
+HXDLIN( 207)				if (::hx::IsNotNull( elements4 )) {
+HXLINE( 207)					this5 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements4,5);
+            				}
+            				else {
+HXLINE( 207)					if (::hx::IsNotNull( array8 )) {
+HXLINE( 207)						 ::lime::utils::ArrayBufferView _this16 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
+HXDLIN( 207)						_this16->byteOffset = 0;
+HXDLIN( 207)						_this16->length = array8->get_length();
+HXDLIN( 207)						_this16->byteLength = (_this16->length * _this16->bytesPerElement);
+HXDLIN( 207)						_this16->buffer = ::haxe::io::Bytes_obj::alloc(_this16->byteLength);
+HXDLIN( 207)						_this16->copyFromArray(array8,null());
+HXDLIN( 207)						this5 = _this16;
+            					}
+            					else {
+HXLINE( 207)						if (::hx::IsNotNull( vector4 )) {
+HXLINE( 207)							 ::lime::utils::ArrayBufferView _this17 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
+HXDLIN( 207)							::cpp::VirtualArray array9 = ( (::cpp::VirtualArray)(vector4->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 207)							_this17->byteOffset = 0;
+HXDLIN( 207)							_this17->length = array9->get_length();
+HXDLIN( 207)							_this17->byteLength = (_this17->length * _this17->bytesPerElement);
+HXDLIN( 207)							_this17->buffer = ::haxe::io::Bytes_obj::alloc(_this17->byteLength);
+HXDLIN( 207)							_this17->copyFromArray(array9,null());
+HXDLIN( 207)							this5 = _this17;
+            						}
+            						else {
+HXLINE( 207)							if (::hx::IsNotNull( view5 )) {
+HXLINE( 207)								 ::lime::utils::ArrayBufferView _this18 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
+HXDLIN( 207)								 ::haxe::io::Bytes srcData4 = view5->buffer;
+HXDLIN( 207)								int srcLength8 = view5->length;
+HXDLIN( 207)								int srcByteOffset4 = view5->byteOffset;
+HXDLIN( 207)								int srcElementSize4 = view5->bytesPerElement;
+HXDLIN( 207)								int elementSize8 = _this18->bytesPerElement;
+HXDLIN( 207)								if ((view5->type == _this18->type)) {
+HXLINE( 207)									int srcLength9 = srcData4->length;
+HXDLIN( 207)									int cloneLength4 = (srcLength9 - srcByteOffset4);
+HXDLIN( 207)									_this18->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength4);
+HXDLIN( 207)									_this18->buffer->blit(0,srcData4,srcByteOffset4,cloneLength4);
+            								}
+            								else {
+HXLINE( 207)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 207)								_this18->byteLength = (_this18->bytesPerElement * srcLength8);
+HXDLIN( 207)								_this18->byteOffset = 0;
+HXDLIN( 207)								_this18->length = srcLength8;
+HXDLIN( 207)								this5 = _this18;
+            							}
+            							else {
+HXLINE( 207)								if (::hx::IsNotNull( buffer4 )) {
+HXLINE( 207)									 ::lime::utils::ArrayBufferView _this19 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
+HXDLIN( 207)									int in_byteOffset4 = ( (int)(byteoffset4) );
+HXDLIN( 207)									if ((in_byteOffset4 < 0)) {
+HXLINE( 207)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 207)									if ((::hx::Mod(in_byteOffset4,_this19->bytesPerElement) != 0)) {
+HXLINE( 207)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 207)									int bufferByteLength4 = buffer4->length;
+HXDLIN( 207)									int elementSize9 = _this19->bytesPerElement;
+HXDLIN( 207)									int newByteLength4 = bufferByteLength4;
+HXDLIN( 207)									if (::hx::IsNull( len )) {
+HXLINE( 207)										newByteLength4 = (bufferByteLength4 - in_byteOffset4);
+HXDLIN( 207)										if ((::hx::Mod(bufferByteLength4,_this19->bytesPerElement) != 0)) {
+HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 207)										if ((newByteLength4 < 0)) {
+HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 207)										newByteLength4 = (len * _this19->bytesPerElement);
+HXDLIN( 207)										int newRange4 = (in_byteOffset4 + newByteLength4);
+HXDLIN( 207)										if ((newRange4 > bufferByteLength4)) {
+HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 207)									_this19->buffer = buffer4;
+HXDLIN( 207)									_this19->byteOffset = in_byteOffset4;
+HXDLIN( 207)									_this19->byteLength = newByteLength4;
+HXDLIN( 207)									_this19->length = ::Std_obj::_hx_int((( (Float)(newByteLength4) ) / ( (Float)(_this19->bytesPerElement) )));
+HXDLIN( 207)									this5 = _this19;
+            								}
+            								else {
+HXLINE( 207)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt8ClampedArray",8d,06,77,13));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this5;
+            			}
+            			break;
+            			case (int)6: {
+HXLINE( 210)				 ::Dynamic elements5 = null();
+HXDLIN( 210)				 ::haxe::io::Bytes buffer5 = this->buffer;
+HXDLIN( 210)				::cpp::VirtualArray array10 = null();
+HXDLIN( 210)				 ::openfl::_Vector::IntVector vector5 = null();
+HXDLIN( 210)				 ::lime::utils::ArrayBufferView view6 = null();
+HXDLIN( 210)				 ::Dynamic byteoffset5 = byte_offset;
+HXDLIN( 210)				if (::hx::IsNull( byteoffset5 )) {
+HXLINE( 210)					byteoffset5 = 0;
+            				}
+HXDLIN( 210)				 ::lime::utils::ArrayBufferView this6;
+HXDLIN( 210)				if (::hx::IsNotNull( elements5 )) {
+HXLINE( 210)					this6 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements5,6);
+            				}
+            				else {
+HXLINE( 210)					if (::hx::IsNotNull( array10 )) {
+HXLINE( 210)						 ::lime::utils::ArrayBufferView _this20 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
+HXDLIN( 210)						_this20->byteOffset = 0;
+HXDLIN( 210)						_this20->length = array10->get_length();
+HXDLIN( 210)						_this20->byteLength = (_this20->length * _this20->bytesPerElement);
+HXDLIN( 210)						_this20->buffer = ::haxe::io::Bytes_obj::alloc(_this20->byteLength);
+HXDLIN( 210)						_this20->copyFromArray(array10,null());
+HXDLIN( 210)						this6 = _this20;
+            					}
+            					else {
+HXLINE( 210)						if (::hx::IsNotNull( vector5 )) {
+HXLINE( 210)							 ::lime::utils::ArrayBufferView _this21 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
+HXDLIN( 210)							::cpp::VirtualArray array11 = ( (::cpp::VirtualArray)(vector5->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 210)							_this21->byteOffset = 0;
+HXDLIN( 210)							_this21->length = array11->get_length();
+HXDLIN( 210)							_this21->byteLength = (_this21->length * _this21->bytesPerElement);
+HXDLIN( 210)							_this21->buffer = ::haxe::io::Bytes_obj::alloc(_this21->byteLength);
+HXDLIN( 210)							_this21->copyFromArray(array11,null());
+HXDLIN( 210)							this6 = _this21;
+            						}
+            						else {
+HXLINE( 210)							if (::hx::IsNotNull( view6 )) {
+HXLINE( 210)								 ::lime::utils::ArrayBufferView _this22 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
+HXDLIN( 210)								 ::haxe::io::Bytes srcData5 = view6->buffer;
+HXDLIN( 210)								int srcLength10 = view6->length;
+HXDLIN( 210)								int srcByteOffset5 = view6->byteOffset;
+HXDLIN( 210)								int srcElementSize5 = view6->bytesPerElement;
+HXDLIN( 210)								int elementSize10 = _this22->bytesPerElement;
+HXDLIN( 210)								if ((view6->type == _this22->type)) {
+HXLINE( 210)									int srcLength11 = srcData5->length;
+HXDLIN( 210)									int cloneLength5 = (srcLength11 - srcByteOffset5);
+HXDLIN( 210)									_this22->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength5);
+HXDLIN( 210)									_this22->buffer->blit(0,srcData5,srcByteOffset5,cloneLength5);
+            								}
+            								else {
+HXLINE( 210)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 210)								_this22->byteLength = (_this22->bytesPerElement * srcLength10);
+HXDLIN( 210)								_this22->byteOffset = 0;
+HXDLIN( 210)								_this22->length = srcLength10;
+HXDLIN( 210)								this6 = _this22;
+            							}
+            							else {
+HXLINE( 210)								if (::hx::IsNotNull( buffer5 )) {
+HXLINE( 210)									 ::lime::utils::ArrayBufferView _this23 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
+HXDLIN( 210)									int in_byteOffset5 = ( (int)(byteoffset5) );
+HXDLIN( 210)									if ((in_byteOffset5 < 0)) {
+HXLINE( 210)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 210)									if ((::hx::Mod(in_byteOffset5,_this23->bytesPerElement) != 0)) {
+HXLINE( 210)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 210)									int bufferByteLength5 = buffer5->length;
+HXDLIN( 210)									int elementSize11 = _this23->bytesPerElement;
+HXDLIN( 210)									int newByteLength5 = bufferByteLength5;
+HXDLIN( 210)									if (::hx::IsNull( len )) {
+HXLINE( 210)										newByteLength5 = (bufferByteLength5 - in_byteOffset5);
+HXDLIN( 210)										if ((::hx::Mod(bufferByteLength5,_this23->bytesPerElement) != 0)) {
+HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 210)										if ((newByteLength5 < 0)) {
+HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 210)										newByteLength5 = (len * _this23->bytesPerElement);
+HXDLIN( 210)										int newRange5 = (in_byteOffset5 + newByteLength5);
+HXDLIN( 210)										if ((newRange5 > bufferByteLength5)) {
+HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 210)									_this23->buffer = buffer5;
+HXDLIN( 210)									_this23->byteOffset = in_byteOffset5;
+HXDLIN( 210)									_this23->byteLength = newByteLength5;
+HXDLIN( 210)									_this23->length = ::Std_obj::_hx_int((( (Float)(newByteLength5) ) / ( (Float)(_this23->bytesPerElement) )));
+HXDLIN( 210)									this6 = _this23;
+            								}
+            								else {
+HXLINE( 210)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt16Array",0a,c7,2d,d5));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this6;
+            			}
+            			break;
+            			case (int)7: {
+HXLINE( 213)				 ::Dynamic elements6 = null();
+HXDLIN( 213)				 ::haxe::io::Bytes buffer6 = this->buffer;
+HXDLIN( 213)				::cpp::VirtualArray array12 = null();
+HXDLIN( 213)				 ::openfl::_Vector::IntVector vector6 = null();
+HXDLIN( 213)				 ::lime::utils::ArrayBufferView view7 = null();
+HXDLIN( 213)				 ::Dynamic byteoffset6 = byte_offset;
+HXDLIN( 213)				if (::hx::IsNull( byteoffset6 )) {
+HXLINE( 213)					byteoffset6 = 0;
+            				}
+HXDLIN( 213)				 ::lime::utils::ArrayBufferView this7;
+HXDLIN( 213)				if (::hx::IsNotNull( elements6 )) {
+HXLINE( 213)					this7 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements6,7);
+            				}
+            				else {
+HXLINE( 213)					if (::hx::IsNotNull( array12 )) {
+HXLINE( 213)						 ::lime::utils::ArrayBufferView _this24 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
+HXDLIN( 213)						_this24->byteOffset = 0;
+HXDLIN( 213)						_this24->length = array12->get_length();
+HXDLIN( 213)						_this24->byteLength = (_this24->length * _this24->bytesPerElement);
+HXDLIN( 213)						_this24->buffer = ::haxe::io::Bytes_obj::alloc(_this24->byteLength);
+HXDLIN( 213)						_this24->copyFromArray(array12,null());
+HXDLIN( 213)						this7 = _this24;
+            					}
+            					else {
+HXLINE( 213)						if (::hx::IsNotNull( vector6 )) {
+HXLINE( 213)							 ::lime::utils::ArrayBufferView _this25 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
+HXDLIN( 213)							::cpp::VirtualArray array13 = ( (::cpp::VirtualArray)(vector6->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 213)							_this25->byteOffset = 0;
+HXDLIN( 213)							_this25->length = array13->get_length();
+HXDLIN( 213)							_this25->byteLength = (_this25->length * _this25->bytesPerElement);
+HXDLIN( 213)							_this25->buffer = ::haxe::io::Bytes_obj::alloc(_this25->byteLength);
+HXDLIN( 213)							_this25->copyFromArray(array13,null());
+HXDLIN( 213)							this7 = _this25;
+            						}
+            						else {
+HXLINE( 213)							if (::hx::IsNotNull( view7 )) {
+HXLINE( 213)								 ::lime::utils::ArrayBufferView _this26 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
+HXDLIN( 213)								 ::haxe::io::Bytes srcData6 = view7->buffer;
+HXDLIN( 213)								int srcLength12 = view7->length;
+HXDLIN( 213)								int srcByteOffset6 = view7->byteOffset;
+HXDLIN( 213)								int srcElementSize6 = view7->bytesPerElement;
+HXDLIN( 213)								int elementSize12 = _this26->bytesPerElement;
+HXDLIN( 213)								if ((view7->type == _this26->type)) {
+HXLINE( 213)									int srcLength13 = srcData6->length;
+HXDLIN( 213)									int cloneLength6 = (srcLength13 - srcByteOffset6);
+HXDLIN( 213)									_this26->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength6);
+HXDLIN( 213)									_this26->buffer->blit(0,srcData6,srcByteOffset6,cloneLength6);
+            								}
+            								else {
+HXLINE( 213)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 213)								_this26->byteLength = (_this26->bytesPerElement * srcLength12);
+HXDLIN( 213)								_this26->byteOffset = 0;
+HXDLIN( 213)								_this26->length = srcLength12;
+HXDLIN( 213)								this7 = _this26;
+            							}
+            							else {
+HXLINE( 213)								if (::hx::IsNotNull( buffer6 )) {
+HXLINE( 213)									 ::lime::utils::ArrayBufferView _this27 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
+HXDLIN( 213)									int in_byteOffset6 = ( (int)(byteoffset6) );
+HXDLIN( 213)									if ((in_byteOffset6 < 0)) {
+HXLINE( 213)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 213)									if ((::hx::Mod(in_byteOffset6,_this27->bytesPerElement) != 0)) {
+HXLINE( 213)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 213)									int bufferByteLength6 = buffer6->length;
+HXDLIN( 213)									int elementSize13 = _this27->bytesPerElement;
+HXDLIN( 213)									int newByteLength6 = bufferByteLength6;
+HXDLIN( 213)									if (::hx::IsNull( len )) {
+HXLINE( 213)										newByteLength6 = (bufferByteLength6 - in_byteOffset6);
+HXDLIN( 213)										if ((::hx::Mod(bufferByteLength6,_this27->bytesPerElement) != 0)) {
+HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 213)										if ((newByteLength6 < 0)) {
+HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 213)										newByteLength6 = (len * _this27->bytesPerElement);
+HXDLIN( 213)										int newRange6 = (in_byteOffset6 + newByteLength6);
+HXDLIN( 213)										if ((newRange6 > bufferByteLength6)) {
+HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 213)									_this27->buffer = buffer6;
+HXDLIN( 213)									_this27->byteOffset = in_byteOffset6;
+HXDLIN( 213)									_this27->byteLength = newByteLength6;
+HXDLIN( 213)									_this27->length = ::Std_obj::_hx_int((( (Float)(newByteLength6) ) / ( (Float)(_this27->bytesPerElement) )));
+HXDLIN( 213)									this7 = _this27;
+            								}
+            								else {
+HXLINE( 213)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt32Array",10,43,eb,8e));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this7;
+            			}
+            			break;
+            			case (int)8: {
+HXLINE( 216)				 ::Dynamic elements7 = null();
+HXDLIN( 216)				 ::haxe::io::Bytes buffer7 = this->buffer;
+HXDLIN( 216)				::cpp::VirtualArray array14 = null();
+HXDLIN( 216)				 ::openfl::_Vector::FloatVector vector7 = null();
+HXDLIN( 216)				 ::lime::utils::ArrayBufferView view8 = null();
+HXDLIN( 216)				 ::Dynamic byteoffset7 = byte_offset;
+HXDLIN( 216)				if (::hx::IsNull( byteoffset7 )) {
+HXLINE( 216)					byteoffset7 = 0;
+            				}
+HXDLIN( 216)				 ::lime::utils::ArrayBufferView this8;
+HXDLIN( 216)				if (::hx::IsNotNull( elements7 )) {
+HXLINE( 216)					this8 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements7,8);
+            				}
+            				else {
+HXLINE( 216)					if (::hx::IsNotNull( array14 )) {
+HXLINE( 216)						 ::lime::utils::ArrayBufferView _this28 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
+HXDLIN( 216)						_this28->byteOffset = 0;
+HXDLIN( 216)						_this28->length = array14->get_length();
+HXDLIN( 216)						_this28->byteLength = (_this28->length * _this28->bytesPerElement);
+HXDLIN( 216)						_this28->buffer = ::haxe::io::Bytes_obj::alloc(_this28->byteLength);
+HXDLIN( 216)						_this28->copyFromArray(array14,null());
+HXDLIN( 216)						this8 = _this28;
+            					}
+            					else {
+HXLINE( 216)						if (::hx::IsNotNull( vector7 )) {
+HXLINE( 216)							 ::lime::utils::ArrayBufferView _this29 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
+HXDLIN( 216)							::cpp::VirtualArray array15 = ( (::cpp::VirtualArray)(vector7->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 216)							_this29->byteOffset = 0;
+HXDLIN( 216)							_this29->length = array15->get_length();
+HXDLIN( 216)							_this29->byteLength = (_this29->length * _this29->bytesPerElement);
+HXDLIN( 216)							_this29->buffer = ::haxe::io::Bytes_obj::alloc(_this29->byteLength);
+HXDLIN( 216)							_this29->copyFromArray(array15,null());
+HXDLIN( 216)							this8 = _this29;
+            						}
+            						else {
+HXLINE( 216)							if (::hx::IsNotNull( view8 )) {
+HXLINE( 216)								 ::lime::utils::ArrayBufferView _this30 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
+HXDLIN( 216)								 ::haxe::io::Bytes srcData7 = view8->buffer;
+HXDLIN( 216)								int srcLength14 = view8->length;
+HXDLIN( 216)								int srcByteOffset7 = view8->byteOffset;
+HXDLIN( 216)								int srcElementSize7 = view8->bytesPerElement;
+HXDLIN( 216)								int elementSize14 = _this30->bytesPerElement;
+HXDLIN( 216)								if ((view8->type == _this30->type)) {
+HXLINE( 216)									int srcLength15 = srcData7->length;
+HXDLIN( 216)									int cloneLength7 = (srcLength15 - srcByteOffset7);
+HXDLIN( 216)									_this30->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength7);
+HXDLIN( 216)									_this30->buffer->blit(0,srcData7,srcByteOffset7,cloneLength7);
+            								}
+            								else {
+HXLINE( 216)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 216)								_this30->byteLength = (_this30->bytesPerElement * srcLength14);
+HXDLIN( 216)								_this30->byteOffset = 0;
+HXDLIN( 216)								_this30->length = srcLength14;
+HXDLIN( 216)								this8 = _this30;
+            							}
+            							else {
+HXLINE( 216)								if (::hx::IsNotNull( buffer7 )) {
+HXLINE( 216)									 ::lime::utils::ArrayBufferView _this31 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
+HXDLIN( 216)									int in_byteOffset7 = ( (int)(byteoffset7) );
+HXDLIN( 216)									if ((in_byteOffset7 < 0)) {
+HXLINE( 216)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 216)									if ((::hx::Mod(in_byteOffset7,_this31->bytesPerElement) != 0)) {
+HXLINE( 216)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 216)									int bufferByteLength7 = buffer7->length;
+HXDLIN( 216)									int elementSize15 = _this31->bytesPerElement;
+HXDLIN( 216)									int newByteLength7 = bufferByteLength7;
+HXDLIN( 216)									if (::hx::IsNull( len )) {
+HXLINE( 216)										newByteLength7 = (bufferByteLength7 - in_byteOffset7);
+HXDLIN( 216)										if ((::hx::Mod(bufferByteLength7,_this31->bytesPerElement) != 0)) {
+HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 216)										if ((newByteLength7 < 0)) {
+HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 216)										newByteLength7 = (len * _this31->bytesPerElement);
+HXDLIN( 216)										int newRange7 = (in_byteOffset7 + newByteLength7);
+HXDLIN( 216)										if ((newRange7 > bufferByteLength7)) {
+HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 216)									_this31->buffer = buffer7;
+HXDLIN( 216)									_this31->byteOffset = in_byteOffset7;
+HXDLIN( 216)									_this31->byteLength = newByteLength7;
+HXDLIN( 216)									_this31->length = ::Std_obj::_hx_int((( (Float)(newByteLength7) ) / ( (Float)(_this31->bytesPerElement) )));
+HXDLIN( 216)									this8 = _this31;
+            								}
+            								else {
+HXLINE( 216)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Float32Array",8e,c1,f4,d4));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this8;
+            			}
+            			break;
+            			case (int)9: {
+HXLINE( 219)				 ::Dynamic elements8 = null();
+HXDLIN( 219)				 ::haxe::io::Bytes buffer8 = this->buffer;
+HXDLIN( 219)				::cpp::VirtualArray array16 = null();
+HXDLIN( 219)				 ::openfl::_Vector::FloatVector vector8 = null();
+HXDLIN( 219)				 ::lime::utils::ArrayBufferView view9 = null();
+HXDLIN( 219)				 ::Dynamic byteoffset8 = byte_offset;
+HXDLIN( 219)				if (::hx::IsNull( byteoffset8 )) {
+HXLINE( 219)					byteoffset8 = 0;
+            				}
+HXDLIN( 219)				 ::lime::utils::ArrayBufferView this9;
+HXDLIN( 219)				if (::hx::IsNotNull( elements8 )) {
+HXLINE( 219)					this9 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements8,9);
+            				}
+            				else {
+HXLINE( 219)					if (::hx::IsNotNull( array16 )) {
+HXLINE( 219)						 ::lime::utils::ArrayBufferView _this32 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
+HXDLIN( 219)						_this32->byteOffset = 0;
+HXDLIN( 219)						_this32->length = array16->get_length();
+HXDLIN( 219)						_this32->byteLength = (_this32->length * _this32->bytesPerElement);
+HXDLIN( 219)						_this32->buffer = ::haxe::io::Bytes_obj::alloc(_this32->byteLength);
+HXDLIN( 219)						_this32->copyFromArray(array16,null());
+HXDLIN( 219)						this9 = _this32;
+            					}
+            					else {
+HXLINE( 219)						if (::hx::IsNotNull( vector8 )) {
+HXLINE( 219)							 ::lime::utils::ArrayBufferView _this33 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
+HXDLIN( 219)							::cpp::VirtualArray array17 = ( (::cpp::VirtualArray)(vector8->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 219)							_this33->byteOffset = 0;
+HXDLIN( 219)							_this33->length = array17->get_length();
+HXDLIN( 219)							_this33->byteLength = (_this33->length * _this33->bytesPerElement);
+HXDLIN( 219)							_this33->buffer = ::haxe::io::Bytes_obj::alloc(_this33->byteLength);
+HXDLIN( 219)							_this33->copyFromArray(array17,null());
+HXDLIN( 219)							this9 = _this33;
+            						}
+            						else {
+HXLINE( 219)							if (::hx::IsNotNull( view9 )) {
+HXLINE( 219)								 ::lime::utils::ArrayBufferView _this34 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
+HXDLIN( 219)								 ::haxe::io::Bytes srcData8 = view9->buffer;
+HXDLIN( 219)								int srcLength16 = view9->length;
+HXDLIN( 219)								int srcByteOffset8 = view9->byteOffset;
+HXDLIN( 219)								int srcElementSize8 = view9->bytesPerElement;
+HXDLIN( 219)								int elementSize16 = _this34->bytesPerElement;
+HXDLIN( 219)								if ((view9->type == _this34->type)) {
+HXLINE( 219)									int srcLength17 = srcData8->length;
+HXDLIN( 219)									int cloneLength8 = (srcLength17 - srcByteOffset8);
+HXDLIN( 219)									_this34->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength8);
+HXDLIN( 219)									_this34->buffer->blit(0,srcData8,srcByteOffset8,cloneLength8);
+            								}
+            								else {
+HXLINE( 219)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 219)								_this34->byteLength = (_this34->bytesPerElement * srcLength16);
+HXDLIN( 219)								_this34->byteOffset = 0;
+HXDLIN( 219)								_this34->length = srcLength16;
+HXDLIN( 219)								this9 = _this34;
+            							}
+            							else {
+HXLINE( 219)								if (::hx::IsNotNull( buffer8 )) {
+HXLINE( 219)									 ::lime::utils::ArrayBufferView _this35 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
+HXDLIN( 219)									int in_byteOffset8 = ( (int)(byteoffset8) );
+HXDLIN( 219)									if ((in_byteOffset8 < 0)) {
+HXLINE( 219)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 219)									if ((::hx::Mod(in_byteOffset8,_this35->bytesPerElement) != 0)) {
+HXLINE( 219)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 219)									int bufferByteLength8 = buffer8->length;
+HXDLIN( 219)									int elementSize17 = _this35->bytesPerElement;
+HXDLIN( 219)									int newByteLength8 = bufferByteLength8;
+HXDLIN( 219)									if (::hx::IsNull( len )) {
+HXLINE( 219)										newByteLength8 = (bufferByteLength8 - in_byteOffset8);
+HXDLIN( 219)										if ((::hx::Mod(bufferByteLength8,_this35->bytesPerElement) != 0)) {
+HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 219)										if ((newByteLength8 < 0)) {
+HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 219)										newByteLength8 = (len * _this35->bytesPerElement);
+HXDLIN( 219)										int newRange8 = (in_byteOffset8 + newByteLength8);
+HXDLIN( 219)										if ((newRange8 > bufferByteLength8)) {
+HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 219)									_this35->buffer = buffer8;
+HXDLIN( 219)									_this35->byteOffset = in_byteOffset8;
+HXDLIN( 219)									_this35->byteLength = newByteLength8;
+HXDLIN( 219)									_this35->length = ::Std_obj::_hx_int((( (Float)(newByteLength8) ) / ( (Float)(_this35->bytesPerElement) )));
+HXDLIN( 219)									this9 = _this35;
+            								}
+            								else {
+HXLINE( 219)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Float64Array",8f,de,6b,1e));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this9;
+            			}
+            			break;
+            		}
+HXLINE( 225)		return view;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(ArrayBufferView_obj,subarray_lime_utils_Int32Array,return )
+
+ ::lime::utils::ArrayBufferView ArrayBufferView_obj::subarray_lime_utils_UInt16Array(int begin, ::Dynamic end){
+            	HX_GC_STACKFRAME(&_hx_pos_244a612994c6bd06_185_subarray_lime_utils_UInt16Array)
+HXLINE( 186)		if (::hx::IsNull( end )) {
+HXLINE( 186)			end = this->length;
+            		}
+HXLINE( 187)		int len = (( (int)(end) ) - begin);
+HXLINE( 188)		if ((len < 0)) {
+HXLINE( 188)			len = 0;
+            		}
+HXLINE( 189)		if ((len > this->length)) {
+HXLINE( 189)			len = this->length;
+            		}
+HXLINE( 190)		int byte_offset = ((begin * this->bytesPerElement) + this->byteOffset);
+HXLINE( 192)		 ::lime::utils::ArrayBufferView view;
+HXDLIN( 192)		switch((int)(this->type)){
+            			case (int)0: {
+HXLINE( 222)				HX_STACK_DO_THROW(HX_("subarray on a blank ArrayBufferView",39,87,fd,19));
+            			}
+            			break;
+            			case (int)1: {
+HXLINE( 195)				 ::Dynamic elements = null();
+HXDLIN( 195)				 ::haxe::io::Bytes buffer = this->buffer;
+HXDLIN( 195)				::cpp::VirtualArray array = null();
+HXDLIN( 195)				 ::openfl::_Vector::IntVector vector = null();
+HXDLIN( 195)				 ::lime::utils::ArrayBufferView view1 = null();
+HXDLIN( 195)				 ::Dynamic byteoffset = byte_offset;
+HXDLIN( 195)				if (::hx::IsNull( byteoffset )) {
+HXLINE( 195)					byteoffset = 0;
+            				}
+HXDLIN( 195)				 ::lime::utils::ArrayBufferView this1;
+HXDLIN( 195)				if (::hx::IsNotNull( elements )) {
+HXLINE( 195)					this1 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements,1);
+            				}
+            				else {
+HXLINE( 195)					if (::hx::IsNotNull( array )) {
+HXLINE( 195)						 ::lime::utils::ArrayBufferView _this =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
+HXDLIN( 195)						_this->byteOffset = 0;
+HXDLIN( 195)						_this->length = array->get_length();
+HXDLIN( 195)						_this->byteLength = (_this->length * _this->bytesPerElement);
+HXDLIN( 195)						_this->buffer = ::haxe::io::Bytes_obj::alloc(_this->byteLength);
+HXDLIN( 195)						_this->copyFromArray(array,null());
+HXDLIN( 195)						this1 = _this;
+            					}
+            					else {
+HXLINE( 195)						if (::hx::IsNotNull( vector )) {
+HXLINE( 195)							 ::lime::utils::ArrayBufferView _this1 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
+HXDLIN( 195)							::cpp::VirtualArray array1 = ( (::cpp::VirtualArray)(vector->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 195)							_this1->byteOffset = 0;
+HXDLIN( 195)							_this1->length = array1->get_length();
+HXDLIN( 195)							_this1->byteLength = (_this1->length * _this1->bytesPerElement);
+HXDLIN( 195)							_this1->buffer = ::haxe::io::Bytes_obj::alloc(_this1->byteLength);
+HXDLIN( 195)							_this1->copyFromArray(array1,null());
+HXDLIN( 195)							this1 = _this1;
+            						}
+            						else {
+HXLINE( 195)							if (::hx::IsNotNull( view1 )) {
+HXLINE( 195)								 ::lime::utils::ArrayBufferView _this2 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
+HXDLIN( 195)								 ::haxe::io::Bytes srcData = view1->buffer;
+HXDLIN( 195)								int srcLength = view1->length;
+HXDLIN( 195)								int srcByteOffset = view1->byteOffset;
+HXDLIN( 195)								int srcElementSize = view1->bytesPerElement;
+HXDLIN( 195)								int elementSize = _this2->bytesPerElement;
+HXDLIN( 195)								if ((view1->type == _this2->type)) {
+HXLINE( 195)									int srcLength1 = srcData->length;
+HXDLIN( 195)									int cloneLength = (srcLength1 - srcByteOffset);
+HXDLIN( 195)									_this2->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength);
+HXDLIN( 195)									_this2->buffer->blit(0,srcData,srcByteOffset,cloneLength);
+            								}
+            								else {
+HXLINE( 195)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 195)								_this2->byteLength = (_this2->bytesPerElement * srcLength);
+HXDLIN( 195)								_this2->byteOffset = 0;
+HXDLIN( 195)								_this2->length = srcLength;
+HXDLIN( 195)								this1 = _this2;
+            							}
+            							else {
+HXLINE( 195)								if (::hx::IsNotNull( buffer )) {
+HXLINE( 195)									 ::lime::utils::ArrayBufferView _this3 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
+HXDLIN( 195)									int in_byteOffset = ( (int)(byteoffset) );
+HXDLIN( 195)									if ((in_byteOffset < 0)) {
+HXLINE( 195)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 195)									if ((::hx::Mod(in_byteOffset,_this3->bytesPerElement) != 0)) {
+HXLINE( 195)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 195)									int bufferByteLength = buffer->length;
+HXDLIN( 195)									int elementSize1 = _this3->bytesPerElement;
+HXDLIN( 195)									int newByteLength = bufferByteLength;
+HXDLIN( 195)									if (::hx::IsNull( len )) {
+HXLINE( 195)										newByteLength = (bufferByteLength - in_byteOffset);
+HXDLIN( 195)										if ((::hx::Mod(bufferByteLength,_this3->bytesPerElement) != 0)) {
+HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 195)										if ((newByteLength < 0)) {
+HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 195)										newByteLength = (len * _this3->bytesPerElement);
+HXDLIN( 195)										int newRange = (in_byteOffset + newByteLength);
+HXDLIN( 195)										if ((newRange > bufferByteLength)) {
+HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 195)									_this3->buffer = buffer;
+HXDLIN( 195)									_this3->byteOffset = in_byteOffset;
+HXDLIN( 195)									_this3->byteLength = newByteLength;
+HXDLIN( 195)									_this3->length = ::Std_obj::_hx_int((( (Float)(newByteLength) ) / ( (Float)(_this3->bytesPerElement) )));
+HXDLIN( 195)									this1 = _this3;
+            								}
+            								else {
+HXLINE( 195)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int8Array",40,53,da,77));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this1;
+            			}
+            			break;
+            			case (int)2: {
+HXLINE( 198)				 ::Dynamic elements1 = null();
+HXDLIN( 198)				 ::haxe::io::Bytes buffer1 = this->buffer;
+HXDLIN( 198)				::cpp::VirtualArray array2 = null();
+HXDLIN( 198)				 ::openfl::_Vector::IntVector vector1 = null();
+HXDLIN( 198)				 ::lime::utils::ArrayBufferView view2 = null();
+HXDLIN( 198)				 ::Dynamic byteoffset1 = byte_offset;
+HXDLIN( 198)				if (::hx::IsNull( byteoffset1 )) {
+HXLINE( 198)					byteoffset1 = 0;
+            				}
+HXDLIN( 198)				 ::lime::utils::ArrayBufferView this2;
+HXDLIN( 198)				if (::hx::IsNotNull( elements1 )) {
+HXLINE( 198)					this2 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements1,2);
+            				}
+            				else {
+HXLINE( 198)					if (::hx::IsNotNull( array2 )) {
+HXLINE( 198)						 ::lime::utils::ArrayBufferView _this4 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
+HXDLIN( 198)						_this4->byteOffset = 0;
+HXDLIN( 198)						_this4->length = array2->get_length();
+HXDLIN( 198)						_this4->byteLength = (_this4->length * _this4->bytesPerElement);
+HXDLIN( 198)						_this4->buffer = ::haxe::io::Bytes_obj::alloc(_this4->byteLength);
+HXDLIN( 198)						_this4->copyFromArray(array2,null());
+HXDLIN( 198)						this2 = _this4;
+            					}
+            					else {
+HXLINE( 198)						if (::hx::IsNotNull( vector1 )) {
+HXLINE( 198)							 ::lime::utils::ArrayBufferView _this5 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
+HXDLIN( 198)							::cpp::VirtualArray array3 = ( (::cpp::VirtualArray)(vector1->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 198)							_this5->byteOffset = 0;
+HXDLIN( 198)							_this5->length = array3->get_length();
+HXDLIN( 198)							_this5->byteLength = (_this5->length * _this5->bytesPerElement);
+HXDLIN( 198)							_this5->buffer = ::haxe::io::Bytes_obj::alloc(_this5->byteLength);
+HXDLIN( 198)							_this5->copyFromArray(array3,null());
+HXDLIN( 198)							this2 = _this5;
+            						}
+            						else {
+HXLINE( 198)							if (::hx::IsNotNull( view2 )) {
+HXLINE( 198)								 ::lime::utils::ArrayBufferView _this6 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
+HXDLIN( 198)								 ::haxe::io::Bytes srcData1 = view2->buffer;
+HXDLIN( 198)								int srcLength2 = view2->length;
+HXDLIN( 198)								int srcByteOffset1 = view2->byteOffset;
+HXDLIN( 198)								int srcElementSize1 = view2->bytesPerElement;
+HXDLIN( 198)								int elementSize2 = _this6->bytesPerElement;
+HXDLIN( 198)								if ((view2->type == _this6->type)) {
+HXLINE( 198)									int srcLength3 = srcData1->length;
+HXDLIN( 198)									int cloneLength1 = (srcLength3 - srcByteOffset1);
+HXDLIN( 198)									_this6->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength1);
+HXDLIN( 198)									_this6->buffer->blit(0,srcData1,srcByteOffset1,cloneLength1);
+            								}
+            								else {
+HXLINE( 198)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 198)								_this6->byteLength = (_this6->bytesPerElement * srcLength2);
+HXDLIN( 198)								_this6->byteOffset = 0;
+HXDLIN( 198)								_this6->length = srcLength2;
+HXDLIN( 198)								this2 = _this6;
+            							}
+            							else {
+HXLINE( 198)								if (::hx::IsNotNull( buffer1 )) {
+HXLINE( 198)									 ::lime::utils::ArrayBufferView _this7 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
+HXDLIN( 198)									int in_byteOffset1 = ( (int)(byteoffset1) );
+HXDLIN( 198)									if ((in_byteOffset1 < 0)) {
+HXLINE( 198)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 198)									if ((::hx::Mod(in_byteOffset1,_this7->bytesPerElement) != 0)) {
+HXLINE( 198)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 198)									int bufferByteLength1 = buffer1->length;
+HXDLIN( 198)									int elementSize3 = _this7->bytesPerElement;
+HXDLIN( 198)									int newByteLength1 = bufferByteLength1;
+HXDLIN( 198)									if (::hx::IsNull( len )) {
+HXLINE( 198)										newByteLength1 = (bufferByteLength1 - in_byteOffset1);
+HXDLIN( 198)										if ((::hx::Mod(bufferByteLength1,_this7->bytesPerElement) != 0)) {
+HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 198)										if ((newByteLength1 < 0)) {
+HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 198)										newByteLength1 = (len * _this7->bytesPerElement);
+HXDLIN( 198)										int newRange1 = (in_byteOffset1 + newByteLength1);
+HXDLIN( 198)										if ((newRange1 > bufferByteLength1)) {
+HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 198)									_this7->buffer = buffer1;
+HXDLIN( 198)									_this7->byteOffset = in_byteOffset1;
+HXDLIN( 198)									_this7->byteLength = newByteLength1;
+HXDLIN( 198)									_this7->length = ::Std_obj::_hx_int((( (Float)(newByteLength1) ) / ( (Float)(_this7->bytesPerElement) )));
+HXDLIN( 198)									this2 = _this7;
+            								}
+            								else {
+HXLINE( 198)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int16Array",95,b2,95,a7));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this2;
+            			}
+            			break;
+            			case (int)3: {
+HXLINE( 201)				 ::Dynamic elements2 = null();
+HXDLIN( 201)				 ::haxe::io::Bytes buffer2 = this->buffer;
+HXDLIN( 201)				::cpp::VirtualArray array4 = null();
+HXDLIN( 201)				 ::openfl::_Vector::IntVector vector2 = null();
+HXDLIN( 201)				 ::lime::utils::ArrayBufferView view3 = null();
+HXDLIN( 201)				 ::Dynamic byteoffset2 = byte_offset;
+HXDLIN( 201)				if (::hx::IsNull( byteoffset2 )) {
+HXLINE( 201)					byteoffset2 = 0;
+            				}
+HXDLIN( 201)				 ::lime::utils::ArrayBufferView this3;
+HXDLIN( 201)				if (::hx::IsNotNull( elements2 )) {
+HXLINE( 201)					this3 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements2,3);
+            				}
+            				else {
+HXLINE( 201)					if (::hx::IsNotNull( array4 )) {
+HXLINE( 201)						 ::lime::utils::ArrayBufferView _this8 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
+HXDLIN( 201)						_this8->byteOffset = 0;
+HXDLIN( 201)						_this8->length = array4->get_length();
+HXDLIN( 201)						_this8->byteLength = (_this8->length * _this8->bytesPerElement);
+HXDLIN( 201)						_this8->buffer = ::haxe::io::Bytes_obj::alloc(_this8->byteLength);
+HXDLIN( 201)						_this8->copyFromArray(array4,null());
+HXDLIN( 201)						this3 = _this8;
+            					}
+            					else {
+HXLINE( 201)						if (::hx::IsNotNull( vector2 )) {
+HXLINE( 201)							 ::lime::utils::ArrayBufferView _this9 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
+HXDLIN( 201)							::cpp::VirtualArray array5 = ( (::cpp::VirtualArray)(vector2->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 201)							_this9->byteOffset = 0;
+HXDLIN( 201)							_this9->length = array5->get_length();
+HXDLIN( 201)							_this9->byteLength = (_this9->length * _this9->bytesPerElement);
+HXDLIN( 201)							_this9->buffer = ::haxe::io::Bytes_obj::alloc(_this9->byteLength);
+HXDLIN( 201)							_this9->copyFromArray(array5,null());
+HXDLIN( 201)							this3 = _this9;
+            						}
+            						else {
+HXLINE( 201)							if (::hx::IsNotNull( view3 )) {
+HXLINE( 201)								 ::lime::utils::ArrayBufferView _this10 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
+HXDLIN( 201)								 ::haxe::io::Bytes srcData2 = view3->buffer;
+HXDLIN( 201)								int srcLength4 = view3->length;
+HXDLIN( 201)								int srcByteOffset2 = view3->byteOffset;
+HXDLIN( 201)								int srcElementSize2 = view3->bytesPerElement;
+HXDLIN( 201)								int elementSize4 = _this10->bytesPerElement;
+HXDLIN( 201)								if ((view3->type == _this10->type)) {
+HXLINE( 201)									int srcLength5 = srcData2->length;
+HXDLIN( 201)									int cloneLength2 = (srcLength5 - srcByteOffset2);
+HXDLIN( 201)									_this10->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength2);
+HXDLIN( 201)									_this10->buffer->blit(0,srcData2,srcByteOffset2,cloneLength2);
+            								}
+            								else {
+HXLINE( 201)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 201)								_this10->byteLength = (_this10->bytesPerElement * srcLength4);
+HXDLIN( 201)								_this10->byteOffset = 0;
+HXDLIN( 201)								_this10->length = srcLength4;
+HXDLIN( 201)								this3 = _this10;
+            							}
+            							else {
+HXLINE( 201)								if (::hx::IsNotNull( buffer2 )) {
+HXLINE( 201)									 ::lime::utils::ArrayBufferView _this11 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
+HXDLIN( 201)									int in_byteOffset2 = ( (int)(byteoffset2) );
+HXDLIN( 201)									if ((in_byteOffset2 < 0)) {
+HXLINE( 201)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 201)									if ((::hx::Mod(in_byteOffset2,_this11->bytesPerElement) != 0)) {
+HXLINE( 201)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 201)									int bufferByteLength2 = buffer2->length;
+HXDLIN( 201)									int elementSize5 = _this11->bytesPerElement;
+HXDLIN( 201)									int newByteLength2 = bufferByteLength2;
+HXDLIN( 201)									if (::hx::IsNull( len )) {
+HXLINE( 201)										newByteLength2 = (bufferByteLength2 - in_byteOffset2);
+HXDLIN( 201)										if ((::hx::Mod(bufferByteLength2,_this11->bytesPerElement) != 0)) {
+HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 201)										if ((newByteLength2 < 0)) {
+HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 201)										newByteLength2 = (len * _this11->bytesPerElement);
+HXDLIN( 201)										int newRange2 = (in_byteOffset2 + newByteLength2);
+HXDLIN( 201)										if ((newRange2 > bufferByteLength2)) {
+HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 201)									_this11->buffer = buffer2;
+HXDLIN( 201)									_this11->byteOffset = in_byteOffset2;
+HXDLIN( 201)									_this11->byteLength = newByteLength2;
+HXDLIN( 201)									_this11->length = ::Std_obj::_hx_int((( (Float)(newByteLength2) ) / ( (Float)(_this11->bytesPerElement) )));
+HXDLIN( 201)									this3 = _this11;
+            								}
+            								else {
+HXLINE( 201)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int32Array",9b,2e,53,61));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this3;
+            			}
+            			break;
+            			case (int)4: {
+HXLINE( 204)				 ::Dynamic elements3 = null();
+HXDLIN( 204)				 ::haxe::io::Bytes buffer3 = this->buffer;
+HXDLIN( 204)				::cpp::VirtualArray array6 = null();
+HXDLIN( 204)				 ::openfl::_Vector::IntVector vector3 = null();
+HXDLIN( 204)				 ::lime::utils::ArrayBufferView view4 = null();
+HXDLIN( 204)				 ::Dynamic byteoffset3 = byte_offset;
+HXDLIN( 204)				if (::hx::IsNull( byteoffset3 )) {
+HXLINE( 204)					byteoffset3 = 0;
+            				}
+HXDLIN( 204)				 ::lime::utils::ArrayBufferView this4;
+HXDLIN( 204)				if (::hx::IsNotNull( elements3 )) {
+HXLINE( 204)					this4 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements3,4);
+            				}
+            				else {
+HXLINE( 204)					if (::hx::IsNotNull( array6 )) {
+HXLINE( 204)						 ::lime::utils::ArrayBufferView _this12 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
+HXDLIN( 204)						_this12->byteOffset = 0;
+HXDLIN( 204)						_this12->length = array6->get_length();
+HXDLIN( 204)						_this12->byteLength = (_this12->length * _this12->bytesPerElement);
+HXDLIN( 204)						_this12->buffer = ::haxe::io::Bytes_obj::alloc(_this12->byteLength);
+HXDLIN( 204)						_this12->copyFromArray(array6,null());
+HXDLIN( 204)						this4 = _this12;
+            					}
+            					else {
+HXLINE( 204)						if (::hx::IsNotNull( vector3 )) {
+HXLINE( 204)							 ::lime::utils::ArrayBufferView _this13 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
+HXDLIN( 204)							::cpp::VirtualArray array7 = ( (::cpp::VirtualArray)(vector3->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 204)							_this13->byteOffset = 0;
+HXDLIN( 204)							_this13->length = array7->get_length();
+HXDLIN( 204)							_this13->byteLength = (_this13->length * _this13->bytesPerElement);
+HXDLIN( 204)							_this13->buffer = ::haxe::io::Bytes_obj::alloc(_this13->byteLength);
+HXDLIN( 204)							_this13->copyFromArray(array7,null());
+HXDLIN( 204)							this4 = _this13;
+            						}
+            						else {
+HXLINE( 204)							if (::hx::IsNotNull( view4 )) {
+HXLINE( 204)								 ::lime::utils::ArrayBufferView _this14 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
+HXDLIN( 204)								 ::haxe::io::Bytes srcData3 = view4->buffer;
+HXDLIN( 204)								int srcLength6 = view4->length;
+HXDLIN( 204)								int srcByteOffset3 = view4->byteOffset;
+HXDLIN( 204)								int srcElementSize3 = view4->bytesPerElement;
+HXDLIN( 204)								int elementSize6 = _this14->bytesPerElement;
+HXDLIN( 204)								if ((view4->type == _this14->type)) {
+HXLINE( 204)									int srcLength7 = srcData3->length;
+HXDLIN( 204)									int cloneLength3 = (srcLength7 - srcByteOffset3);
+HXDLIN( 204)									_this14->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength3);
+HXDLIN( 204)									_this14->buffer->blit(0,srcData3,srcByteOffset3,cloneLength3);
+            								}
+            								else {
+HXLINE( 204)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 204)								_this14->byteLength = (_this14->bytesPerElement * srcLength6);
+HXDLIN( 204)								_this14->byteOffset = 0;
+HXDLIN( 204)								_this14->length = srcLength6;
+HXDLIN( 204)								this4 = _this14;
+            							}
+            							else {
+HXLINE( 204)								if (::hx::IsNotNull( buffer3 )) {
+HXLINE( 204)									 ::lime::utils::ArrayBufferView _this15 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
+HXDLIN( 204)									int in_byteOffset3 = ( (int)(byteoffset3) );
+HXDLIN( 204)									if ((in_byteOffset3 < 0)) {
+HXLINE( 204)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 204)									if ((::hx::Mod(in_byteOffset3,_this15->bytesPerElement) != 0)) {
+HXLINE( 204)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 204)									int bufferByteLength3 = buffer3->length;
+HXDLIN( 204)									int elementSize7 = _this15->bytesPerElement;
+HXDLIN( 204)									int newByteLength3 = bufferByteLength3;
+HXDLIN( 204)									if (::hx::IsNull( len )) {
+HXLINE( 204)										newByteLength3 = (bufferByteLength3 - in_byteOffset3);
+HXDLIN( 204)										if ((::hx::Mod(bufferByteLength3,_this15->bytesPerElement) != 0)) {
+HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 204)										if ((newByteLength3 < 0)) {
+HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 204)										newByteLength3 = (len * _this15->bytesPerElement);
+HXDLIN( 204)										int newRange3 = (in_byteOffset3 + newByteLength3);
+HXDLIN( 204)										if ((newRange3 > bufferByteLength3)) {
+HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 204)									_this15->buffer = buffer3;
+HXDLIN( 204)									_this15->byteOffset = in_byteOffset3;
+HXDLIN( 204)									_this15->byteLength = newByteLength3;
+HXDLIN( 204)									_this15->length = ::Std_obj::_hx_int((( (Float)(newByteLength3) ) / ( (Float)(_this15->bytesPerElement) )));
+HXDLIN( 204)									this4 = _this15;
+            								}
+            								else {
+HXLINE( 204)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt8Array",6b,44,d5,85));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this4;
+            			}
+            			break;
+            			case (int)5: {
+HXLINE( 207)				 ::Dynamic elements4 = null();
+HXDLIN( 207)				 ::haxe::io::Bytes buffer4 = this->buffer;
+HXDLIN( 207)				::cpp::VirtualArray array8 = null();
+HXDLIN( 207)				 ::openfl::_Vector::IntVector vector4 = null();
+HXDLIN( 207)				 ::lime::utils::ArrayBufferView view5 = null();
+HXDLIN( 207)				 ::Dynamic byteoffset4 = byte_offset;
+HXDLIN( 207)				if (::hx::IsNull( byteoffset4 )) {
+HXLINE( 207)					byteoffset4 = 0;
+            				}
+HXDLIN( 207)				 ::lime::utils::ArrayBufferView this5;
+HXDLIN( 207)				if (::hx::IsNotNull( elements4 )) {
+HXLINE( 207)					this5 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements4,5);
+            				}
+            				else {
+HXLINE( 207)					if (::hx::IsNotNull( array8 )) {
+HXLINE( 207)						 ::lime::utils::ArrayBufferView _this16 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
+HXDLIN( 207)						_this16->byteOffset = 0;
+HXDLIN( 207)						_this16->length = array8->get_length();
+HXDLIN( 207)						_this16->byteLength = (_this16->length * _this16->bytesPerElement);
+HXDLIN( 207)						_this16->buffer = ::haxe::io::Bytes_obj::alloc(_this16->byteLength);
+HXDLIN( 207)						_this16->copyFromArray(array8,null());
+HXDLIN( 207)						this5 = _this16;
+            					}
+            					else {
+HXLINE( 207)						if (::hx::IsNotNull( vector4 )) {
+HXLINE( 207)							 ::lime::utils::ArrayBufferView _this17 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
+HXDLIN( 207)							::cpp::VirtualArray array9 = ( (::cpp::VirtualArray)(vector4->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 207)							_this17->byteOffset = 0;
+HXDLIN( 207)							_this17->length = array9->get_length();
+HXDLIN( 207)							_this17->byteLength = (_this17->length * _this17->bytesPerElement);
+HXDLIN( 207)							_this17->buffer = ::haxe::io::Bytes_obj::alloc(_this17->byteLength);
+HXDLIN( 207)							_this17->copyFromArray(array9,null());
+HXDLIN( 207)							this5 = _this17;
+            						}
+            						else {
+HXLINE( 207)							if (::hx::IsNotNull( view5 )) {
+HXLINE( 207)								 ::lime::utils::ArrayBufferView _this18 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
+HXDLIN( 207)								 ::haxe::io::Bytes srcData4 = view5->buffer;
+HXDLIN( 207)								int srcLength8 = view5->length;
+HXDLIN( 207)								int srcByteOffset4 = view5->byteOffset;
+HXDLIN( 207)								int srcElementSize4 = view5->bytesPerElement;
+HXDLIN( 207)								int elementSize8 = _this18->bytesPerElement;
+HXDLIN( 207)								if ((view5->type == _this18->type)) {
+HXLINE( 207)									int srcLength9 = srcData4->length;
+HXDLIN( 207)									int cloneLength4 = (srcLength9 - srcByteOffset4);
+HXDLIN( 207)									_this18->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength4);
+HXDLIN( 207)									_this18->buffer->blit(0,srcData4,srcByteOffset4,cloneLength4);
+            								}
+            								else {
+HXLINE( 207)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 207)								_this18->byteLength = (_this18->bytesPerElement * srcLength8);
+HXDLIN( 207)								_this18->byteOffset = 0;
+HXDLIN( 207)								_this18->length = srcLength8;
+HXDLIN( 207)								this5 = _this18;
+            							}
+            							else {
+HXLINE( 207)								if (::hx::IsNotNull( buffer4 )) {
+HXLINE( 207)									 ::lime::utils::ArrayBufferView _this19 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
+HXDLIN( 207)									int in_byteOffset4 = ( (int)(byteoffset4) );
+HXDLIN( 207)									if ((in_byteOffset4 < 0)) {
+HXLINE( 207)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 207)									if ((::hx::Mod(in_byteOffset4,_this19->bytesPerElement) != 0)) {
+HXLINE( 207)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 207)									int bufferByteLength4 = buffer4->length;
+HXDLIN( 207)									int elementSize9 = _this19->bytesPerElement;
+HXDLIN( 207)									int newByteLength4 = bufferByteLength4;
+HXDLIN( 207)									if (::hx::IsNull( len )) {
+HXLINE( 207)										newByteLength4 = (bufferByteLength4 - in_byteOffset4);
+HXDLIN( 207)										if ((::hx::Mod(bufferByteLength4,_this19->bytesPerElement) != 0)) {
+HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 207)										if ((newByteLength4 < 0)) {
+HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 207)										newByteLength4 = (len * _this19->bytesPerElement);
+HXDLIN( 207)										int newRange4 = (in_byteOffset4 + newByteLength4);
+HXDLIN( 207)										if ((newRange4 > bufferByteLength4)) {
+HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 207)									_this19->buffer = buffer4;
+HXDLIN( 207)									_this19->byteOffset = in_byteOffset4;
+HXDLIN( 207)									_this19->byteLength = newByteLength4;
+HXDLIN( 207)									_this19->length = ::Std_obj::_hx_int((( (Float)(newByteLength4) ) / ( (Float)(_this19->bytesPerElement) )));
+HXDLIN( 207)									this5 = _this19;
+            								}
+            								else {
+HXLINE( 207)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt8ClampedArray",8d,06,77,13));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this5;
+            			}
+            			break;
+            			case (int)6: {
+HXLINE( 210)				 ::Dynamic elements5 = null();
+HXDLIN( 210)				 ::haxe::io::Bytes buffer5 = this->buffer;
+HXDLIN( 210)				::cpp::VirtualArray array10 = null();
+HXDLIN( 210)				 ::openfl::_Vector::IntVector vector5 = null();
+HXDLIN( 210)				 ::lime::utils::ArrayBufferView view6 = null();
+HXDLIN( 210)				 ::Dynamic byteoffset5 = byte_offset;
+HXDLIN( 210)				if (::hx::IsNull( byteoffset5 )) {
+HXLINE( 210)					byteoffset5 = 0;
+            				}
+HXDLIN( 210)				 ::lime::utils::ArrayBufferView this6;
+HXDLIN( 210)				if (::hx::IsNotNull( elements5 )) {
+HXLINE( 210)					this6 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements5,6);
+            				}
+            				else {
+HXLINE( 210)					if (::hx::IsNotNull( array10 )) {
+HXLINE( 210)						 ::lime::utils::ArrayBufferView _this20 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
+HXDLIN( 210)						_this20->byteOffset = 0;
+HXDLIN( 210)						_this20->length = array10->get_length();
+HXDLIN( 210)						_this20->byteLength = (_this20->length * _this20->bytesPerElement);
+HXDLIN( 210)						_this20->buffer = ::haxe::io::Bytes_obj::alloc(_this20->byteLength);
+HXDLIN( 210)						_this20->copyFromArray(array10,null());
+HXDLIN( 210)						this6 = _this20;
+            					}
+            					else {
+HXLINE( 210)						if (::hx::IsNotNull( vector5 )) {
+HXLINE( 210)							 ::lime::utils::ArrayBufferView _this21 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
+HXDLIN( 210)							::cpp::VirtualArray array11 = ( (::cpp::VirtualArray)(vector5->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 210)							_this21->byteOffset = 0;
+HXDLIN( 210)							_this21->length = array11->get_length();
+HXDLIN( 210)							_this21->byteLength = (_this21->length * _this21->bytesPerElement);
+HXDLIN( 210)							_this21->buffer = ::haxe::io::Bytes_obj::alloc(_this21->byteLength);
+HXDLIN( 210)							_this21->copyFromArray(array11,null());
+HXDLIN( 210)							this6 = _this21;
+            						}
+            						else {
+HXLINE( 210)							if (::hx::IsNotNull( view6 )) {
+HXLINE( 210)								 ::lime::utils::ArrayBufferView _this22 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
+HXDLIN( 210)								 ::haxe::io::Bytes srcData5 = view6->buffer;
+HXDLIN( 210)								int srcLength10 = view6->length;
+HXDLIN( 210)								int srcByteOffset5 = view6->byteOffset;
+HXDLIN( 210)								int srcElementSize5 = view6->bytesPerElement;
+HXDLIN( 210)								int elementSize10 = _this22->bytesPerElement;
+HXDLIN( 210)								if ((view6->type == _this22->type)) {
+HXLINE( 210)									int srcLength11 = srcData5->length;
+HXDLIN( 210)									int cloneLength5 = (srcLength11 - srcByteOffset5);
+HXDLIN( 210)									_this22->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength5);
+HXDLIN( 210)									_this22->buffer->blit(0,srcData5,srcByteOffset5,cloneLength5);
+            								}
+            								else {
+HXLINE( 210)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 210)								_this22->byteLength = (_this22->bytesPerElement * srcLength10);
+HXDLIN( 210)								_this22->byteOffset = 0;
+HXDLIN( 210)								_this22->length = srcLength10;
+HXDLIN( 210)								this6 = _this22;
+            							}
+            							else {
+HXLINE( 210)								if (::hx::IsNotNull( buffer5 )) {
+HXLINE( 210)									 ::lime::utils::ArrayBufferView _this23 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
+HXDLIN( 210)									int in_byteOffset5 = ( (int)(byteoffset5) );
+HXDLIN( 210)									if ((in_byteOffset5 < 0)) {
+HXLINE( 210)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 210)									if ((::hx::Mod(in_byteOffset5,_this23->bytesPerElement) != 0)) {
+HXLINE( 210)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 210)									int bufferByteLength5 = buffer5->length;
+HXDLIN( 210)									int elementSize11 = _this23->bytesPerElement;
+HXDLIN( 210)									int newByteLength5 = bufferByteLength5;
+HXDLIN( 210)									if (::hx::IsNull( len )) {
+HXLINE( 210)										newByteLength5 = (bufferByteLength5 - in_byteOffset5);
+HXDLIN( 210)										if ((::hx::Mod(bufferByteLength5,_this23->bytesPerElement) != 0)) {
+HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 210)										if ((newByteLength5 < 0)) {
+HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 210)										newByteLength5 = (len * _this23->bytesPerElement);
+HXDLIN( 210)										int newRange5 = (in_byteOffset5 + newByteLength5);
+HXDLIN( 210)										if ((newRange5 > bufferByteLength5)) {
+HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 210)									_this23->buffer = buffer5;
+HXDLIN( 210)									_this23->byteOffset = in_byteOffset5;
+HXDLIN( 210)									_this23->byteLength = newByteLength5;
+HXDLIN( 210)									_this23->length = ::Std_obj::_hx_int((( (Float)(newByteLength5) ) / ( (Float)(_this23->bytesPerElement) )));
+HXDLIN( 210)									this6 = _this23;
+            								}
+            								else {
+HXLINE( 210)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt16Array",0a,c7,2d,d5));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this6;
+            			}
+            			break;
+            			case (int)7: {
+HXLINE( 213)				 ::Dynamic elements6 = null();
+HXDLIN( 213)				 ::haxe::io::Bytes buffer6 = this->buffer;
+HXDLIN( 213)				::cpp::VirtualArray array12 = null();
+HXDLIN( 213)				 ::openfl::_Vector::IntVector vector6 = null();
+HXDLIN( 213)				 ::lime::utils::ArrayBufferView view7 = null();
+HXDLIN( 213)				 ::Dynamic byteoffset6 = byte_offset;
+HXDLIN( 213)				if (::hx::IsNull( byteoffset6 )) {
+HXLINE( 213)					byteoffset6 = 0;
+            				}
+HXDLIN( 213)				 ::lime::utils::ArrayBufferView this7;
+HXDLIN( 213)				if (::hx::IsNotNull( elements6 )) {
+HXLINE( 213)					this7 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements6,7);
+            				}
+            				else {
+HXLINE( 213)					if (::hx::IsNotNull( array12 )) {
+HXLINE( 213)						 ::lime::utils::ArrayBufferView _this24 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
+HXDLIN( 213)						_this24->byteOffset = 0;
+HXDLIN( 213)						_this24->length = array12->get_length();
+HXDLIN( 213)						_this24->byteLength = (_this24->length * _this24->bytesPerElement);
+HXDLIN( 213)						_this24->buffer = ::haxe::io::Bytes_obj::alloc(_this24->byteLength);
+HXDLIN( 213)						_this24->copyFromArray(array12,null());
+HXDLIN( 213)						this7 = _this24;
+            					}
+            					else {
+HXLINE( 213)						if (::hx::IsNotNull( vector6 )) {
+HXLINE( 213)							 ::lime::utils::ArrayBufferView _this25 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
+HXDLIN( 213)							::cpp::VirtualArray array13 = ( (::cpp::VirtualArray)(vector6->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 213)							_this25->byteOffset = 0;
+HXDLIN( 213)							_this25->length = array13->get_length();
+HXDLIN( 213)							_this25->byteLength = (_this25->length * _this25->bytesPerElement);
+HXDLIN( 213)							_this25->buffer = ::haxe::io::Bytes_obj::alloc(_this25->byteLength);
+HXDLIN( 213)							_this25->copyFromArray(array13,null());
+HXDLIN( 213)							this7 = _this25;
+            						}
+            						else {
+HXLINE( 213)							if (::hx::IsNotNull( view7 )) {
+HXLINE( 213)								 ::lime::utils::ArrayBufferView _this26 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
+HXDLIN( 213)								 ::haxe::io::Bytes srcData6 = view7->buffer;
+HXDLIN( 213)								int srcLength12 = view7->length;
+HXDLIN( 213)								int srcByteOffset6 = view7->byteOffset;
+HXDLIN( 213)								int srcElementSize6 = view7->bytesPerElement;
+HXDLIN( 213)								int elementSize12 = _this26->bytesPerElement;
+HXDLIN( 213)								if ((view7->type == _this26->type)) {
+HXLINE( 213)									int srcLength13 = srcData6->length;
+HXDLIN( 213)									int cloneLength6 = (srcLength13 - srcByteOffset6);
+HXDLIN( 213)									_this26->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength6);
+HXDLIN( 213)									_this26->buffer->blit(0,srcData6,srcByteOffset6,cloneLength6);
+            								}
+            								else {
+HXLINE( 213)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 213)								_this26->byteLength = (_this26->bytesPerElement * srcLength12);
+HXDLIN( 213)								_this26->byteOffset = 0;
+HXDLIN( 213)								_this26->length = srcLength12;
+HXDLIN( 213)								this7 = _this26;
+            							}
+            							else {
+HXLINE( 213)								if (::hx::IsNotNull( buffer6 )) {
+HXLINE( 213)									 ::lime::utils::ArrayBufferView _this27 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
+HXDLIN( 213)									int in_byteOffset6 = ( (int)(byteoffset6) );
+HXDLIN( 213)									if ((in_byteOffset6 < 0)) {
+HXLINE( 213)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 213)									if ((::hx::Mod(in_byteOffset6,_this27->bytesPerElement) != 0)) {
+HXLINE( 213)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 213)									int bufferByteLength6 = buffer6->length;
+HXDLIN( 213)									int elementSize13 = _this27->bytesPerElement;
+HXDLIN( 213)									int newByteLength6 = bufferByteLength6;
+HXDLIN( 213)									if (::hx::IsNull( len )) {
+HXLINE( 213)										newByteLength6 = (bufferByteLength6 - in_byteOffset6);
+HXDLIN( 213)										if ((::hx::Mod(bufferByteLength6,_this27->bytesPerElement) != 0)) {
+HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 213)										if ((newByteLength6 < 0)) {
+HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 213)										newByteLength6 = (len * _this27->bytesPerElement);
+HXDLIN( 213)										int newRange6 = (in_byteOffset6 + newByteLength6);
+HXDLIN( 213)										if ((newRange6 > bufferByteLength6)) {
+HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 213)									_this27->buffer = buffer6;
+HXDLIN( 213)									_this27->byteOffset = in_byteOffset6;
+HXDLIN( 213)									_this27->byteLength = newByteLength6;
+HXDLIN( 213)									_this27->length = ::Std_obj::_hx_int((( (Float)(newByteLength6) ) / ( (Float)(_this27->bytesPerElement) )));
+HXDLIN( 213)									this7 = _this27;
+            								}
+            								else {
+HXLINE( 213)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt32Array",10,43,eb,8e));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this7;
+            			}
+            			break;
+            			case (int)8: {
+HXLINE( 216)				 ::Dynamic elements7 = null();
+HXDLIN( 216)				 ::haxe::io::Bytes buffer7 = this->buffer;
+HXDLIN( 216)				::cpp::VirtualArray array14 = null();
+HXDLIN( 216)				 ::openfl::_Vector::FloatVector vector7 = null();
+HXDLIN( 216)				 ::lime::utils::ArrayBufferView view8 = null();
+HXDLIN( 216)				 ::Dynamic byteoffset7 = byte_offset;
+HXDLIN( 216)				if (::hx::IsNull( byteoffset7 )) {
+HXLINE( 216)					byteoffset7 = 0;
+            				}
+HXDLIN( 216)				 ::lime::utils::ArrayBufferView this8;
+HXDLIN( 216)				if (::hx::IsNotNull( elements7 )) {
+HXLINE( 216)					this8 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements7,8);
+            				}
+            				else {
+HXLINE( 216)					if (::hx::IsNotNull( array14 )) {
+HXLINE( 216)						 ::lime::utils::ArrayBufferView _this28 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
+HXDLIN( 216)						_this28->byteOffset = 0;
+HXDLIN( 216)						_this28->length = array14->get_length();
+HXDLIN( 216)						_this28->byteLength = (_this28->length * _this28->bytesPerElement);
+HXDLIN( 216)						_this28->buffer = ::haxe::io::Bytes_obj::alloc(_this28->byteLength);
+HXDLIN( 216)						_this28->copyFromArray(array14,null());
+HXDLIN( 216)						this8 = _this28;
+            					}
+            					else {
+HXLINE( 216)						if (::hx::IsNotNull( vector7 )) {
+HXLINE( 216)							 ::lime::utils::ArrayBufferView _this29 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
+HXDLIN( 216)							::cpp::VirtualArray array15 = ( (::cpp::VirtualArray)(vector7->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 216)							_this29->byteOffset = 0;
+HXDLIN( 216)							_this29->length = array15->get_length();
+HXDLIN( 216)							_this29->byteLength = (_this29->length * _this29->bytesPerElement);
+HXDLIN( 216)							_this29->buffer = ::haxe::io::Bytes_obj::alloc(_this29->byteLength);
+HXDLIN( 216)							_this29->copyFromArray(array15,null());
+HXDLIN( 216)							this8 = _this29;
+            						}
+            						else {
+HXLINE( 216)							if (::hx::IsNotNull( view8 )) {
+HXLINE( 216)								 ::lime::utils::ArrayBufferView _this30 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
+HXDLIN( 216)								 ::haxe::io::Bytes srcData7 = view8->buffer;
+HXDLIN( 216)								int srcLength14 = view8->length;
+HXDLIN( 216)								int srcByteOffset7 = view8->byteOffset;
+HXDLIN( 216)								int srcElementSize7 = view8->bytesPerElement;
+HXDLIN( 216)								int elementSize14 = _this30->bytesPerElement;
+HXDLIN( 216)								if ((view8->type == _this30->type)) {
+HXLINE( 216)									int srcLength15 = srcData7->length;
+HXDLIN( 216)									int cloneLength7 = (srcLength15 - srcByteOffset7);
+HXDLIN( 216)									_this30->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength7);
+HXDLIN( 216)									_this30->buffer->blit(0,srcData7,srcByteOffset7,cloneLength7);
+            								}
+            								else {
+HXLINE( 216)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 216)								_this30->byteLength = (_this30->bytesPerElement * srcLength14);
+HXDLIN( 216)								_this30->byteOffset = 0;
+HXDLIN( 216)								_this30->length = srcLength14;
+HXDLIN( 216)								this8 = _this30;
+            							}
+            							else {
+HXLINE( 216)								if (::hx::IsNotNull( buffer7 )) {
+HXLINE( 216)									 ::lime::utils::ArrayBufferView _this31 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
+HXDLIN( 216)									int in_byteOffset7 = ( (int)(byteoffset7) );
+HXDLIN( 216)									if ((in_byteOffset7 < 0)) {
+HXLINE( 216)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 216)									if ((::hx::Mod(in_byteOffset7,_this31->bytesPerElement) != 0)) {
+HXLINE( 216)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 216)									int bufferByteLength7 = buffer7->length;
+HXDLIN( 216)									int elementSize15 = _this31->bytesPerElement;
+HXDLIN( 216)									int newByteLength7 = bufferByteLength7;
+HXDLIN( 216)									if (::hx::IsNull( len )) {
+HXLINE( 216)										newByteLength7 = (bufferByteLength7 - in_byteOffset7);
+HXDLIN( 216)										if ((::hx::Mod(bufferByteLength7,_this31->bytesPerElement) != 0)) {
+HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 216)										if ((newByteLength7 < 0)) {
+HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 216)										newByteLength7 = (len * _this31->bytesPerElement);
+HXDLIN( 216)										int newRange7 = (in_byteOffset7 + newByteLength7);
+HXDLIN( 216)										if ((newRange7 > bufferByteLength7)) {
+HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 216)									_this31->buffer = buffer7;
+HXDLIN( 216)									_this31->byteOffset = in_byteOffset7;
+HXDLIN( 216)									_this31->byteLength = newByteLength7;
+HXDLIN( 216)									_this31->length = ::Std_obj::_hx_int((( (Float)(newByteLength7) ) / ( (Float)(_this31->bytesPerElement) )));
+HXDLIN( 216)									this8 = _this31;
+            								}
+            								else {
+HXLINE( 216)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Float32Array",8e,c1,f4,d4));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this8;
+            			}
+            			break;
+            			case (int)9: {
+HXLINE( 219)				 ::Dynamic elements8 = null();
+HXDLIN( 219)				 ::haxe::io::Bytes buffer8 = this->buffer;
+HXDLIN( 219)				::cpp::VirtualArray array16 = null();
+HXDLIN( 219)				 ::openfl::_Vector::FloatVector vector8 = null();
+HXDLIN( 219)				 ::lime::utils::ArrayBufferView view9 = null();
+HXDLIN( 219)				 ::Dynamic byteoffset8 = byte_offset;
+HXDLIN( 219)				if (::hx::IsNull( byteoffset8 )) {
+HXLINE( 219)					byteoffset8 = 0;
+            				}
+HXDLIN( 219)				 ::lime::utils::ArrayBufferView this9;
+HXDLIN( 219)				if (::hx::IsNotNull( elements8 )) {
+HXLINE( 219)					this9 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements8,9);
+            				}
+            				else {
+HXLINE( 219)					if (::hx::IsNotNull( array16 )) {
+HXLINE( 219)						 ::lime::utils::ArrayBufferView _this32 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
+HXDLIN( 219)						_this32->byteOffset = 0;
+HXDLIN( 219)						_this32->length = array16->get_length();
+HXDLIN( 219)						_this32->byteLength = (_this32->length * _this32->bytesPerElement);
+HXDLIN( 219)						_this32->buffer = ::haxe::io::Bytes_obj::alloc(_this32->byteLength);
+HXDLIN( 219)						_this32->copyFromArray(array16,null());
+HXDLIN( 219)						this9 = _this32;
+            					}
+            					else {
+HXLINE( 219)						if (::hx::IsNotNull( vector8 )) {
+HXLINE( 219)							 ::lime::utils::ArrayBufferView _this33 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
+HXDLIN( 219)							::cpp::VirtualArray array17 = ( (::cpp::VirtualArray)(vector8->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 219)							_this33->byteOffset = 0;
+HXDLIN( 219)							_this33->length = array17->get_length();
+HXDLIN( 219)							_this33->byteLength = (_this33->length * _this33->bytesPerElement);
+HXDLIN( 219)							_this33->buffer = ::haxe::io::Bytes_obj::alloc(_this33->byteLength);
+HXDLIN( 219)							_this33->copyFromArray(array17,null());
+HXDLIN( 219)							this9 = _this33;
+            						}
+            						else {
+HXLINE( 219)							if (::hx::IsNotNull( view9 )) {
+HXLINE( 219)								 ::lime::utils::ArrayBufferView _this34 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
+HXDLIN( 219)								 ::haxe::io::Bytes srcData8 = view9->buffer;
+HXDLIN( 219)								int srcLength16 = view9->length;
+HXDLIN( 219)								int srcByteOffset8 = view9->byteOffset;
+HXDLIN( 219)								int srcElementSize8 = view9->bytesPerElement;
+HXDLIN( 219)								int elementSize16 = _this34->bytesPerElement;
+HXDLIN( 219)								if ((view9->type == _this34->type)) {
+HXLINE( 219)									int srcLength17 = srcData8->length;
+HXDLIN( 219)									int cloneLength8 = (srcLength17 - srcByteOffset8);
+HXDLIN( 219)									_this34->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength8);
+HXDLIN( 219)									_this34->buffer->blit(0,srcData8,srcByteOffset8,cloneLength8);
+            								}
+            								else {
+HXLINE( 219)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 219)								_this34->byteLength = (_this34->bytesPerElement * srcLength16);
+HXDLIN( 219)								_this34->byteOffset = 0;
+HXDLIN( 219)								_this34->length = srcLength16;
+HXDLIN( 219)								this9 = _this34;
+            							}
+            							else {
+HXLINE( 219)								if (::hx::IsNotNull( buffer8 )) {
+HXLINE( 219)									 ::lime::utils::ArrayBufferView _this35 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
+HXDLIN( 219)									int in_byteOffset8 = ( (int)(byteoffset8) );
+HXDLIN( 219)									if ((in_byteOffset8 < 0)) {
+HXLINE( 219)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 219)									if ((::hx::Mod(in_byteOffset8,_this35->bytesPerElement) != 0)) {
+HXLINE( 219)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 219)									int bufferByteLength8 = buffer8->length;
+HXDLIN( 219)									int elementSize17 = _this35->bytesPerElement;
+HXDLIN( 219)									int newByteLength8 = bufferByteLength8;
+HXDLIN( 219)									if (::hx::IsNull( len )) {
+HXLINE( 219)										newByteLength8 = (bufferByteLength8 - in_byteOffset8);
+HXDLIN( 219)										if ((::hx::Mod(bufferByteLength8,_this35->bytesPerElement) != 0)) {
+HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 219)										if ((newByteLength8 < 0)) {
+HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 219)										newByteLength8 = (len * _this35->bytesPerElement);
+HXDLIN( 219)										int newRange8 = (in_byteOffset8 + newByteLength8);
+HXDLIN( 219)										if ((newRange8 > bufferByteLength8)) {
+HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 219)									_this35->buffer = buffer8;
+HXDLIN( 219)									_this35->byteOffset = in_byteOffset8;
+HXDLIN( 219)									_this35->byteLength = newByteLength8;
+HXDLIN( 219)									_this35->length = ::Std_obj::_hx_int((( (Float)(newByteLength8) ) / ( (Float)(_this35->bytesPerElement) )));
+HXDLIN( 219)									this9 = _this35;
+            								}
+            								else {
+HXLINE( 219)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Float64Array",8f,de,6b,1e));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this9;
+            			}
+            			break;
+            		}
+HXLINE( 225)		return view;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(ArrayBufferView_obj,subarray_lime_utils_UInt16Array,return )
+
+ ::lime::utils::ArrayBufferView ArrayBufferView_obj::subarray_lime_utils_UInt32Array(int begin, ::Dynamic end){
+            	HX_GC_STACKFRAME(&_hx_pos_244a612994c6bd06_185_subarray_lime_utils_UInt32Array)
+HXLINE( 186)		if (::hx::IsNull( end )) {
+HXLINE( 186)			end = this->length;
+            		}
+HXLINE( 187)		int len = (( (int)(end) ) - begin);
+HXLINE( 188)		if ((len < 0)) {
+HXLINE( 188)			len = 0;
+            		}
+HXLINE( 189)		if ((len > this->length)) {
+HXLINE( 189)			len = this->length;
+            		}
+HXLINE( 190)		int byte_offset = ((begin * this->bytesPerElement) + this->byteOffset);
+HXLINE( 192)		 ::lime::utils::ArrayBufferView view;
+HXDLIN( 192)		switch((int)(this->type)){
+            			case (int)0: {
+HXLINE( 222)				HX_STACK_DO_THROW(HX_("subarray on a blank ArrayBufferView",39,87,fd,19));
+            			}
+            			break;
+            			case (int)1: {
+HXLINE( 195)				 ::Dynamic elements = null();
+HXDLIN( 195)				 ::haxe::io::Bytes buffer = this->buffer;
+HXDLIN( 195)				::cpp::VirtualArray array = null();
+HXDLIN( 195)				 ::openfl::_Vector::IntVector vector = null();
+HXDLIN( 195)				 ::lime::utils::ArrayBufferView view1 = null();
+HXDLIN( 195)				 ::Dynamic byteoffset = byte_offset;
+HXDLIN( 195)				if (::hx::IsNull( byteoffset )) {
+HXLINE( 195)					byteoffset = 0;
+            				}
+HXDLIN( 195)				 ::lime::utils::ArrayBufferView this1;
+HXDLIN( 195)				if (::hx::IsNotNull( elements )) {
+HXLINE( 195)					this1 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements,1);
+            				}
+            				else {
+HXLINE( 195)					if (::hx::IsNotNull( array )) {
+HXLINE( 195)						 ::lime::utils::ArrayBufferView _this =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
+HXDLIN( 195)						_this->byteOffset = 0;
+HXDLIN( 195)						_this->length = array->get_length();
+HXDLIN( 195)						_this->byteLength = (_this->length * _this->bytesPerElement);
+HXDLIN( 195)						_this->buffer = ::haxe::io::Bytes_obj::alloc(_this->byteLength);
+HXDLIN( 195)						_this->copyFromArray(array,null());
+HXDLIN( 195)						this1 = _this;
+            					}
+            					else {
+HXLINE( 195)						if (::hx::IsNotNull( vector )) {
+HXLINE( 195)							 ::lime::utils::ArrayBufferView _this1 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
+HXDLIN( 195)							::cpp::VirtualArray array1 = ( (::cpp::VirtualArray)(vector->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 195)							_this1->byteOffset = 0;
+HXDLIN( 195)							_this1->length = array1->get_length();
+HXDLIN( 195)							_this1->byteLength = (_this1->length * _this1->bytesPerElement);
+HXDLIN( 195)							_this1->buffer = ::haxe::io::Bytes_obj::alloc(_this1->byteLength);
+HXDLIN( 195)							_this1->copyFromArray(array1,null());
+HXDLIN( 195)							this1 = _this1;
+            						}
+            						else {
+HXLINE( 195)							if (::hx::IsNotNull( view1 )) {
+HXLINE( 195)								 ::lime::utils::ArrayBufferView _this2 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
+HXDLIN( 195)								 ::haxe::io::Bytes srcData = view1->buffer;
+HXDLIN( 195)								int srcLength = view1->length;
+HXDLIN( 195)								int srcByteOffset = view1->byteOffset;
+HXDLIN( 195)								int srcElementSize = view1->bytesPerElement;
+HXDLIN( 195)								int elementSize = _this2->bytesPerElement;
+HXDLIN( 195)								if ((view1->type == _this2->type)) {
+HXLINE( 195)									int srcLength1 = srcData->length;
+HXDLIN( 195)									int cloneLength = (srcLength1 - srcByteOffset);
+HXDLIN( 195)									_this2->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength);
+HXDLIN( 195)									_this2->buffer->blit(0,srcData,srcByteOffset,cloneLength);
+            								}
+            								else {
+HXLINE( 195)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 195)								_this2->byteLength = (_this2->bytesPerElement * srcLength);
+HXDLIN( 195)								_this2->byteOffset = 0;
+HXDLIN( 195)								_this2->length = srcLength;
+HXDLIN( 195)								this1 = _this2;
+            							}
+            							else {
+HXLINE( 195)								if (::hx::IsNotNull( buffer )) {
+HXLINE( 195)									 ::lime::utils::ArrayBufferView _this3 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
+HXDLIN( 195)									int in_byteOffset = ( (int)(byteoffset) );
+HXDLIN( 195)									if ((in_byteOffset < 0)) {
+HXLINE( 195)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 195)									if ((::hx::Mod(in_byteOffset,_this3->bytesPerElement) != 0)) {
+HXLINE( 195)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 195)									int bufferByteLength = buffer->length;
+HXDLIN( 195)									int elementSize1 = _this3->bytesPerElement;
+HXDLIN( 195)									int newByteLength = bufferByteLength;
+HXDLIN( 195)									if (::hx::IsNull( len )) {
+HXLINE( 195)										newByteLength = (bufferByteLength - in_byteOffset);
+HXDLIN( 195)										if ((::hx::Mod(bufferByteLength,_this3->bytesPerElement) != 0)) {
+HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 195)										if ((newByteLength < 0)) {
+HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 195)										newByteLength = (len * _this3->bytesPerElement);
+HXDLIN( 195)										int newRange = (in_byteOffset + newByteLength);
+HXDLIN( 195)										if ((newRange > bufferByteLength)) {
+HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 195)									_this3->buffer = buffer;
+HXDLIN( 195)									_this3->byteOffset = in_byteOffset;
+HXDLIN( 195)									_this3->byteLength = newByteLength;
+HXDLIN( 195)									_this3->length = ::Std_obj::_hx_int((( (Float)(newByteLength) ) / ( (Float)(_this3->bytesPerElement) )));
+HXDLIN( 195)									this1 = _this3;
+            								}
+            								else {
+HXLINE( 195)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int8Array",40,53,da,77));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this1;
+            			}
+            			break;
+            			case (int)2: {
+HXLINE( 198)				 ::Dynamic elements1 = null();
+HXDLIN( 198)				 ::haxe::io::Bytes buffer1 = this->buffer;
+HXDLIN( 198)				::cpp::VirtualArray array2 = null();
+HXDLIN( 198)				 ::openfl::_Vector::IntVector vector1 = null();
+HXDLIN( 198)				 ::lime::utils::ArrayBufferView view2 = null();
+HXDLIN( 198)				 ::Dynamic byteoffset1 = byte_offset;
+HXDLIN( 198)				if (::hx::IsNull( byteoffset1 )) {
+HXLINE( 198)					byteoffset1 = 0;
+            				}
+HXDLIN( 198)				 ::lime::utils::ArrayBufferView this2;
+HXDLIN( 198)				if (::hx::IsNotNull( elements1 )) {
+HXLINE( 198)					this2 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements1,2);
+            				}
+            				else {
+HXLINE( 198)					if (::hx::IsNotNull( array2 )) {
+HXLINE( 198)						 ::lime::utils::ArrayBufferView _this4 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
+HXDLIN( 198)						_this4->byteOffset = 0;
+HXDLIN( 198)						_this4->length = array2->get_length();
+HXDLIN( 198)						_this4->byteLength = (_this4->length * _this4->bytesPerElement);
+HXDLIN( 198)						_this4->buffer = ::haxe::io::Bytes_obj::alloc(_this4->byteLength);
+HXDLIN( 198)						_this4->copyFromArray(array2,null());
+HXDLIN( 198)						this2 = _this4;
+            					}
+            					else {
+HXLINE( 198)						if (::hx::IsNotNull( vector1 )) {
+HXLINE( 198)							 ::lime::utils::ArrayBufferView _this5 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
+HXDLIN( 198)							::cpp::VirtualArray array3 = ( (::cpp::VirtualArray)(vector1->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 198)							_this5->byteOffset = 0;
+HXDLIN( 198)							_this5->length = array3->get_length();
+HXDLIN( 198)							_this5->byteLength = (_this5->length * _this5->bytesPerElement);
+HXDLIN( 198)							_this5->buffer = ::haxe::io::Bytes_obj::alloc(_this5->byteLength);
+HXDLIN( 198)							_this5->copyFromArray(array3,null());
+HXDLIN( 198)							this2 = _this5;
+            						}
+            						else {
+HXLINE( 198)							if (::hx::IsNotNull( view2 )) {
+HXLINE( 198)								 ::lime::utils::ArrayBufferView _this6 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
+HXDLIN( 198)								 ::haxe::io::Bytes srcData1 = view2->buffer;
+HXDLIN( 198)								int srcLength2 = view2->length;
+HXDLIN( 198)								int srcByteOffset1 = view2->byteOffset;
+HXDLIN( 198)								int srcElementSize1 = view2->bytesPerElement;
+HXDLIN( 198)								int elementSize2 = _this6->bytesPerElement;
+HXDLIN( 198)								if ((view2->type == _this6->type)) {
+HXLINE( 198)									int srcLength3 = srcData1->length;
+HXDLIN( 198)									int cloneLength1 = (srcLength3 - srcByteOffset1);
+HXDLIN( 198)									_this6->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength1);
+HXDLIN( 198)									_this6->buffer->blit(0,srcData1,srcByteOffset1,cloneLength1);
+            								}
+            								else {
+HXLINE( 198)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 198)								_this6->byteLength = (_this6->bytesPerElement * srcLength2);
+HXDLIN( 198)								_this6->byteOffset = 0;
+HXDLIN( 198)								_this6->length = srcLength2;
+HXDLIN( 198)								this2 = _this6;
+            							}
+            							else {
+HXLINE( 198)								if (::hx::IsNotNull( buffer1 )) {
+HXLINE( 198)									 ::lime::utils::ArrayBufferView _this7 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
+HXDLIN( 198)									int in_byteOffset1 = ( (int)(byteoffset1) );
+HXDLIN( 198)									if ((in_byteOffset1 < 0)) {
+HXLINE( 198)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 198)									if ((::hx::Mod(in_byteOffset1,_this7->bytesPerElement) != 0)) {
+HXLINE( 198)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 198)									int bufferByteLength1 = buffer1->length;
+HXDLIN( 198)									int elementSize3 = _this7->bytesPerElement;
+HXDLIN( 198)									int newByteLength1 = bufferByteLength1;
+HXDLIN( 198)									if (::hx::IsNull( len )) {
+HXLINE( 198)										newByteLength1 = (bufferByteLength1 - in_byteOffset1);
+HXDLIN( 198)										if ((::hx::Mod(bufferByteLength1,_this7->bytesPerElement) != 0)) {
+HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 198)										if ((newByteLength1 < 0)) {
+HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 198)										newByteLength1 = (len * _this7->bytesPerElement);
+HXDLIN( 198)										int newRange1 = (in_byteOffset1 + newByteLength1);
+HXDLIN( 198)										if ((newRange1 > bufferByteLength1)) {
+HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 198)									_this7->buffer = buffer1;
+HXDLIN( 198)									_this7->byteOffset = in_byteOffset1;
+HXDLIN( 198)									_this7->byteLength = newByteLength1;
+HXDLIN( 198)									_this7->length = ::Std_obj::_hx_int((( (Float)(newByteLength1) ) / ( (Float)(_this7->bytesPerElement) )));
+HXDLIN( 198)									this2 = _this7;
+            								}
+            								else {
+HXLINE( 198)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int16Array",95,b2,95,a7));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this2;
+            			}
+            			break;
+            			case (int)3: {
+HXLINE( 201)				 ::Dynamic elements2 = null();
+HXDLIN( 201)				 ::haxe::io::Bytes buffer2 = this->buffer;
+HXDLIN( 201)				::cpp::VirtualArray array4 = null();
+HXDLIN( 201)				 ::openfl::_Vector::IntVector vector2 = null();
+HXDLIN( 201)				 ::lime::utils::ArrayBufferView view3 = null();
+HXDLIN( 201)				 ::Dynamic byteoffset2 = byte_offset;
+HXDLIN( 201)				if (::hx::IsNull( byteoffset2 )) {
+HXLINE( 201)					byteoffset2 = 0;
+            				}
+HXDLIN( 201)				 ::lime::utils::ArrayBufferView this3;
+HXDLIN( 201)				if (::hx::IsNotNull( elements2 )) {
+HXLINE( 201)					this3 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements2,3);
+            				}
+            				else {
+HXLINE( 201)					if (::hx::IsNotNull( array4 )) {
+HXLINE( 201)						 ::lime::utils::ArrayBufferView _this8 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
+HXDLIN( 201)						_this8->byteOffset = 0;
+HXDLIN( 201)						_this8->length = array4->get_length();
+HXDLIN( 201)						_this8->byteLength = (_this8->length * _this8->bytesPerElement);
+HXDLIN( 201)						_this8->buffer = ::haxe::io::Bytes_obj::alloc(_this8->byteLength);
+HXDLIN( 201)						_this8->copyFromArray(array4,null());
+HXDLIN( 201)						this3 = _this8;
+            					}
+            					else {
+HXLINE( 201)						if (::hx::IsNotNull( vector2 )) {
+HXLINE( 201)							 ::lime::utils::ArrayBufferView _this9 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
+HXDLIN( 201)							::cpp::VirtualArray array5 = ( (::cpp::VirtualArray)(vector2->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 201)							_this9->byteOffset = 0;
+HXDLIN( 201)							_this9->length = array5->get_length();
+HXDLIN( 201)							_this9->byteLength = (_this9->length * _this9->bytesPerElement);
+HXDLIN( 201)							_this9->buffer = ::haxe::io::Bytes_obj::alloc(_this9->byteLength);
+HXDLIN( 201)							_this9->copyFromArray(array5,null());
+HXDLIN( 201)							this3 = _this9;
+            						}
+            						else {
+HXLINE( 201)							if (::hx::IsNotNull( view3 )) {
+HXLINE( 201)								 ::lime::utils::ArrayBufferView _this10 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
+HXDLIN( 201)								 ::haxe::io::Bytes srcData2 = view3->buffer;
+HXDLIN( 201)								int srcLength4 = view3->length;
+HXDLIN( 201)								int srcByteOffset2 = view3->byteOffset;
+HXDLIN( 201)								int srcElementSize2 = view3->bytesPerElement;
+HXDLIN( 201)								int elementSize4 = _this10->bytesPerElement;
+HXDLIN( 201)								if ((view3->type == _this10->type)) {
+HXLINE( 201)									int srcLength5 = srcData2->length;
+HXDLIN( 201)									int cloneLength2 = (srcLength5 - srcByteOffset2);
+HXDLIN( 201)									_this10->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength2);
+HXDLIN( 201)									_this10->buffer->blit(0,srcData2,srcByteOffset2,cloneLength2);
+            								}
+            								else {
+HXLINE( 201)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 201)								_this10->byteLength = (_this10->bytesPerElement * srcLength4);
+HXDLIN( 201)								_this10->byteOffset = 0;
+HXDLIN( 201)								_this10->length = srcLength4;
+HXDLIN( 201)								this3 = _this10;
+            							}
+            							else {
+HXLINE( 201)								if (::hx::IsNotNull( buffer2 )) {
+HXLINE( 201)									 ::lime::utils::ArrayBufferView _this11 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
+HXDLIN( 201)									int in_byteOffset2 = ( (int)(byteoffset2) );
+HXDLIN( 201)									if ((in_byteOffset2 < 0)) {
+HXLINE( 201)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 201)									if ((::hx::Mod(in_byteOffset2,_this11->bytesPerElement) != 0)) {
+HXLINE( 201)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 201)									int bufferByteLength2 = buffer2->length;
+HXDLIN( 201)									int elementSize5 = _this11->bytesPerElement;
+HXDLIN( 201)									int newByteLength2 = bufferByteLength2;
+HXDLIN( 201)									if (::hx::IsNull( len )) {
+HXLINE( 201)										newByteLength2 = (bufferByteLength2 - in_byteOffset2);
+HXDLIN( 201)										if ((::hx::Mod(bufferByteLength2,_this11->bytesPerElement) != 0)) {
+HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 201)										if ((newByteLength2 < 0)) {
+HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 201)										newByteLength2 = (len * _this11->bytesPerElement);
+HXDLIN( 201)										int newRange2 = (in_byteOffset2 + newByteLength2);
+HXDLIN( 201)										if ((newRange2 > bufferByteLength2)) {
+HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 201)									_this11->buffer = buffer2;
+HXDLIN( 201)									_this11->byteOffset = in_byteOffset2;
+HXDLIN( 201)									_this11->byteLength = newByteLength2;
+HXDLIN( 201)									_this11->length = ::Std_obj::_hx_int((( (Float)(newByteLength2) ) / ( (Float)(_this11->bytesPerElement) )));
+HXDLIN( 201)									this3 = _this11;
+            								}
+            								else {
+HXLINE( 201)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int32Array",9b,2e,53,61));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this3;
+            			}
+            			break;
+            			case (int)4: {
+HXLINE( 204)				 ::Dynamic elements3 = null();
+HXDLIN( 204)				 ::haxe::io::Bytes buffer3 = this->buffer;
+HXDLIN( 204)				::cpp::VirtualArray array6 = null();
+HXDLIN( 204)				 ::openfl::_Vector::IntVector vector3 = null();
+HXDLIN( 204)				 ::lime::utils::ArrayBufferView view4 = null();
+HXDLIN( 204)				 ::Dynamic byteoffset3 = byte_offset;
+HXDLIN( 204)				if (::hx::IsNull( byteoffset3 )) {
+HXLINE( 204)					byteoffset3 = 0;
+            				}
+HXDLIN( 204)				 ::lime::utils::ArrayBufferView this4;
+HXDLIN( 204)				if (::hx::IsNotNull( elements3 )) {
+HXLINE( 204)					this4 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements3,4);
+            				}
+            				else {
+HXLINE( 204)					if (::hx::IsNotNull( array6 )) {
+HXLINE( 204)						 ::lime::utils::ArrayBufferView _this12 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
+HXDLIN( 204)						_this12->byteOffset = 0;
+HXDLIN( 204)						_this12->length = array6->get_length();
+HXDLIN( 204)						_this12->byteLength = (_this12->length * _this12->bytesPerElement);
+HXDLIN( 204)						_this12->buffer = ::haxe::io::Bytes_obj::alloc(_this12->byteLength);
+HXDLIN( 204)						_this12->copyFromArray(array6,null());
+HXDLIN( 204)						this4 = _this12;
+            					}
+            					else {
+HXLINE( 204)						if (::hx::IsNotNull( vector3 )) {
+HXLINE( 204)							 ::lime::utils::ArrayBufferView _this13 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
+HXDLIN( 204)							::cpp::VirtualArray array7 = ( (::cpp::VirtualArray)(vector3->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 204)							_this13->byteOffset = 0;
+HXDLIN( 204)							_this13->length = array7->get_length();
+HXDLIN( 204)							_this13->byteLength = (_this13->length * _this13->bytesPerElement);
+HXDLIN( 204)							_this13->buffer = ::haxe::io::Bytes_obj::alloc(_this13->byteLength);
+HXDLIN( 204)							_this13->copyFromArray(array7,null());
+HXDLIN( 204)							this4 = _this13;
+            						}
+            						else {
+HXLINE( 204)							if (::hx::IsNotNull( view4 )) {
+HXLINE( 204)								 ::lime::utils::ArrayBufferView _this14 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
+HXDLIN( 204)								 ::haxe::io::Bytes srcData3 = view4->buffer;
+HXDLIN( 204)								int srcLength6 = view4->length;
+HXDLIN( 204)								int srcByteOffset3 = view4->byteOffset;
+HXDLIN( 204)								int srcElementSize3 = view4->bytesPerElement;
+HXDLIN( 204)								int elementSize6 = _this14->bytesPerElement;
+HXDLIN( 204)								if ((view4->type == _this14->type)) {
+HXLINE( 204)									int srcLength7 = srcData3->length;
+HXDLIN( 204)									int cloneLength3 = (srcLength7 - srcByteOffset3);
+HXDLIN( 204)									_this14->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength3);
+HXDLIN( 204)									_this14->buffer->blit(0,srcData3,srcByteOffset3,cloneLength3);
+            								}
+            								else {
+HXLINE( 204)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 204)								_this14->byteLength = (_this14->bytesPerElement * srcLength6);
+HXDLIN( 204)								_this14->byteOffset = 0;
+HXDLIN( 204)								_this14->length = srcLength6;
+HXDLIN( 204)								this4 = _this14;
+            							}
+            							else {
+HXLINE( 204)								if (::hx::IsNotNull( buffer3 )) {
+HXLINE( 204)									 ::lime::utils::ArrayBufferView _this15 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
+HXDLIN( 204)									int in_byteOffset3 = ( (int)(byteoffset3) );
+HXDLIN( 204)									if ((in_byteOffset3 < 0)) {
+HXLINE( 204)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 204)									if ((::hx::Mod(in_byteOffset3,_this15->bytesPerElement) != 0)) {
+HXLINE( 204)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 204)									int bufferByteLength3 = buffer3->length;
+HXDLIN( 204)									int elementSize7 = _this15->bytesPerElement;
+HXDLIN( 204)									int newByteLength3 = bufferByteLength3;
+HXDLIN( 204)									if (::hx::IsNull( len )) {
+HXLINE( 204)										newByteLength3 = (bufferByteLength3 - in_byteOffset3);
+HXDLIN( 204)										if ((::hx::Mod(bufferByteLength3,_this15->bytesPerElement) != 0)) {
+HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 204)										if ((newByteLength3 < 0)) {
+HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 204)										newByteLength3 = (len * _this15->bytesPerElement);
+HXDLIN( 204)										int newRange3 = (in_byteOffset3 + newByteLength3);
+HXDLIN( 204)										if ((newRange3 > bufferByteLength3)) {
+HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 204)									_this15->buffer = buffer3;
+HXDLIN( 204)									_this15->byteOffset = in_byteOffset3;
+HXDLIN( 204)									_this15->byteLength = newByteLength3;
+HXDLIN( 204)									_this15->length = ::Std_obj::_hx_int((( (Float)(newByteLength3) ) / ( (Float)(_this15->bytesPerElement) )));
+HXDLIN( 204)									this4 = _this15;
+            								}
+            								else {
+HXLINE( 204)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt8Array",6b,44,d5,85));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this4;
+            			}
+            			break;
+            			case (int)5: {
+HXLINE( 207)				 ::Dynamic elements4 = null();
+HXDLIN( 207)				 ::haxe::io::Bytes buffer4 = this->buffer;
+HXDLIN( 207)				::cpp::VirtualArray array8 = null();
+HXDLIN( 207)				 ::openfl::_Vector::IntVector vector4 = null();
+HXDLIN( 207)				 ::lime::utils::ArrayBufferView view5 = null();
+HXDLIN( 207)				 ::Dynamic byteoffset4 = byte_offset;
+HXDLIN( 207)				if (::hx::IsNull( byteoffset4 )) {
+HXLINE( 207)					byteoffset4 = 0;
+            				}
+HXDLIN( 207)				 ::lime::utils::ArrayBufferView this5;
+HXDLIN( 207)				if (::hx::IsNotNull( elements4 )) {
+HXLINE( 207)					this5 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements4,5);
+            				}
+            				else {
+HXLINE( 207)					if (::hx::IsNotNull( array8 )) {
+HXLINE( 207)						 ::lime::utils::ArrayBufferView _this16 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
+HXDLIN( 207)						_this16->byteOffset = 0;
+HXDLIN( 207)						_this16->length = array8->get_length();
+HXDLIN( 207)						_this16->byteLength = (_this16->length * _this16->bytesPerElement);
+HXDLIN( 207)						_this16->buffer = ::haxe::io::Bytes_obj::alloc(_this16->byteLength);
+HXDLIN( 207)						_this16->copyFromArray(array8,null());
+HXDLIN( 207)						this5 = _this16;
+            					}
+            					else {
+HXLINE( 207)						if (::hx::IsNotNull( vector4 )) {
+HXLINE( 207)							 ::lime::utils::ArrayBufferView _this17 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
+HXDLIN( 207)							::cpp::VirtualArray array9 = ( (::cpp::VirtualArray)(vector4->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 207)							_this17->byteOffset = 0;
+HXDLIN( 207)							_this17->length = array9->get_length();
+HXDLIN( 207)							_this17->byteLength = (_this17->length * _this17->bytesPerElement);
+HXDLIN( 207)							_this17->buffer = ::haxe::io::Bytes_obj::alloc(_this17->byteLength);
+HXDLIN( 207)							_this17->copyFromArray(array9,null());
+HXDLIN( 207)							this5 = _this17;
+            						}
+            						else {
+HXLINE( 207)							if (::hx::IsNotNull( view5 )) {
+HXLINE( 207)								 ::lime::utils::ArrayBufferView _this18 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
+HXDLIN( 207)								 ::haxe::io::Bytes srcData4 = view5->buffer;
+HXDLIN( 207)								int srcLength8 = view5->length;
+HXDLIN( 207)								int srcByteOffset4 = view5->byteOffset;
+HXDLIN( 207)								int srcElementSize4 = view5->bytesPerElement;
+HXDLIN( 207)								int elementSize8 = _this18->bytesPerElement;
+HXDLIN( 207)								if ((view5->type == _this18->type)) {
+HXLINE( 207)									int srcLength9 = srcData4->length;
+HXDLIN( 207)									int cloneLength4 = (srcLength9 - srcByteOffset4);
+HXDLIN( 207)									_this18->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength4);
+HXDLIN( 207)									_this18->buffer->blit(0,srcData4,srcByteOffset4,cloneLength4);
+            								}
+            								else {
+HXLINE( 207)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 207)								_this18->byteLength = (_this18->bytesPerElement * srcLength8);
+HXDLIN( 207)								_this18->byteOffset = 0;
+HXDLIN( 207)								_this18->length = srcLength8;
+HXDLIN( 207)								this5 = _this18;
+            							}
+            							else {
+HXLINE( 207)								if (::hx::IsNotNull( buffer4 )) {
+HXLINE( 207)									 ::lime::utils::ArrayBufferView _this19 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
+HXDLIN( 207)									int in_byteOffset4 = ( (int)(byteoffset4) );
+HXDLIN( 207)									if ((in_byteOffset4 < 0)) {
+HXLINE( 207)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 207)									if ((::hx::Mod(in_byteOffset4,_this19->bytesPerElement) != 0)) {
+HXLINE( 207)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 207)									int bufferByteLength4 = buffer4->length;
+HXDLIN( 207)									int elementSize9 = _this19->bytesPerElement;
+HXDLIN( 207)									int newByteLength4 = bufferByteLength4;
+HXDLIN( 207)									if (::hx::IsNull( len )) {
+HXLINE( 207)										newByteLength4 = (bufferByteLength4 - in_byteOffset4);
+HXDLIN( 207)										if ((::hx::Mod(bufferByteLength4,_this19->bytesPerElement) != 0)) {
+HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 207)										if ((newByteLength4 < 0)) {
+HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 207)										newByteLength4 = (len * _this19->bytesPerElement);
+HXDLIN( 207)										int newRange4 = (in_byteOffset4 + newByteLength4);
+HXDLIN( 207)										if ((newRange4 > bufferByteLength4)) {
+HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 207)									_this19->buffer = buffer4;
+HXDLIN( 207)									_this19->byteOffset = in_byteOffset4;
+HXDLIN( 207)									_this19->byteLength = newByteLength4;
+HXDLIN( 207)									_this19->length = ::Std_obj::_hx_int((( (Float)(newByteLength4) ) / ( (Float)(_this19->bytesPerElement) )));
+HXDLIN( 207)									this5 = _this19;
+            								}
+            								else {
+HXLINE( 207)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt8ClampedArray",8d,06,77,13));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this5;
+            			}
+            			break;
+            			case (int)6: {
+HXLINE( 210)				 ::Dynamic elements5 = null();
+HXDLIN( 210)				 ::haxe::io::Bytes buffer5 = this->buffer;
+HXDLIN( 210)				::cpp::VirtualArray array10 = null();
+HXDLIN( 210)				 ::openfl::_Vector::IntVector vector5 = null();
+HXDLIN( 210)				 ::lime::utils::ArrayBufferView view6 = null();
+HXDLIN( 210)				 ::Dynamic byteoffset5 = byte_offset;
+HXDLIN( 210)				if (::hx::IsNull( byteoffset5 )) {
+HXLINE( 210)					byteoffset5 = 0;
+            				}
+HXDLIN( 210)				 ::lime::utils::ArrayBufferView this6;
+HXDLIN( 210)				if (::hx::IsNotNull( elements5 )) {
+HXLINE( 210)					this6 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements5,6);
+            				}
+            				else {
+HXLINE( 210)					if (::hx::IsNotNull( array10 )) {
+HXLINE( 210)						 ::lime::utils::ArrayBufferView _this20 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
+HXDLIN( 210)						_this20->byteOffset = 0;
+HXDLIN( 210)						_this20->length = array10->get_length();
+HXDLIN( 210)						_this20->byteLength = (_this20->length * _this20->bytesPerElement);
+HXDLIN( 210)						_this20->buffer = ::haxe::io::Bytes_obj::alloc(_this20->byteLength);
+HXDLIN( 210)						_this20->copyFromArray(array10,null());
+HXDLIN( 210)						this6 = _this20;
+            					}
+            					else {
+HXLINE( 210)						if (::hx::IsNotNull( vector5 )) {
+HXLINE( 210)							 ::lime::utils::ArrayBufferView _this21 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
+HXDLIN( 210)							::cpp::VirtualArray array11 = ( (::cpp::VirtualArray)(vector5->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 210)							_this21->byteOffset = 0;
+HXDLIN( 210)							_this21->length = array11->get_length();
+HXDLIN( 210)							_this21->byteLength = (_this21->length * _this21->bytesPerElement);
+HXDLIN( 210)							_this21->buffer = ::haxe::io::Bytes_obj::alloc(_this21->byteLength);
+HXDLIN( 210)							_this21->copyFromArray(array11,null());
+HXDLIN( 210)							this6 = _this21;
+            						}
+            						else {
+HXLINE( 210)							if (::hx::IsNotNull( view6 )) {
+HXLINE( 210)								 ::lime::utils::ArrayBufferView _this22 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
+HXDLIN( 210)								 ::haxe::io::Bytes srcData5 = view6->buffer;
+HXDLIN( 210)								int srcLength10 = view6->length;
+HXDLIN( 210)								int srcByteOffset5 = view6->byteOffset;
+HXDLIN( 210)								int srcElementSize5 = view6->bytesPerElement;
+HXDLIN( 210)								int elementSize10 = _this22->bytesPerElement;
+HXDLIN( 210)								if ((view6->type == _this22->type)) {
+HXLINE( 210)									int srcLength11 = srcData5->length;
+HXDLIN( 210)									int cloneLength5 = (srcLength11 - srcByteOffset5);
+HXDLIN( 210)									_this22->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength5);
+HXDLIN( 210)									_this22->buffer->blit(0,srcData5,srcByteOffset5,cloneLength5);
+            								}
+            								else {
+HXLINE( 210)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 210)								_this22->byteLength = (_this22->bytesPerElement * srcLength10);
+HXDLIN( 210)								_this22->byteOffset = 0;
+HXDLIN( 210)								_this22->length = srcLength10;
+HXDLIN( 210)								this6 = _this22;
+            							}
+            							else {
+HXLINE( 210)								if (::hx::IsNotNull( buffer5 )) {
+HXLINE( 210)									 ::lime::utils::ArrayBufferView _this23 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
+HXDLIN( 210)									int in_byteOffset5 = ( (int)(byteoffset5) );
+HXDLIN( 210)									if ((in_byteOffset5 < 0)) {
+HXLINE( 210)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 210)									if ((::hx::Mod(in_byteOffset5,_this23->bytesPerElement) != 0)) {
+HXLINE( 210)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 210)									int bufferByteLength5 = buffer5->length;
+HXDLIN( 210)									int elementSize11 = _this23->bytesPerElement;
+HXDLIN( 210)									int newByteLength5 = bufferByteLength5;
+HXDLIN( 210)									if (::hx::IsNull( len )) {
+HXLINE( 210)										newByteLength5 = (bufferByteLength5 - in_byteOffset5);
+HXDLIN( 210)										if ((::hx::Mod(bufferByteLength5,_this23->bytesPerElement) != 0)) {
+HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 210)										if ((newByteLength5 < 0)) {
+HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 210)										newByteLength5 = (len * _this23->bytesPerElement);
+HXDLIN( 210)										int newRange5 = (in_byteOffset5 + newByteLength5);
+HXDLIN( 210)										if ((newRange5 > bufferByteLength5)) {
+HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 210)									_this23->buffer = buffer5;
+HXDLIN( 210)									_this23->byteOffset = in_byteOffset5;
+HXDLIN( 210)									_this23->byteLength = newByteLength5;
+HXDLIN( 210)									_this23->length = ::Std_obj::_hx_int((( (Float)(newByteLength5) ) / ( (Float)(_this23->bytesPerElement) )));
+HXDLIN( 210)									this6 = _this23;
+            								}
+            								else {
+HXLINE( 210)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt16Array",0a,c7,2d,d5));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this6;
+            			}
+            			break;
+            			case (int)7: {
+HXLINE( 213)				 ::Dynamic elements6 = null();
+HXDLIN( 213)				 ::haxe::io::Bytes buffer6 = this->buffer;
+HXDLIN( 213)				::cpp::VirtualArray array12 = null();
+HXDLIN( 213)				 ::openfl::_Vector::IntVector vector6 = null();
+HXDLIN( 213)				 ::lime::utils::ArrayBufferView view7 = null();
+HXDLIN( 213)				 ::Dynamic byteoffset6 = byte_offset;
+HXDLIN( 213)				if (::hx::IsNull( byteoffset6 )) {
+HXLINE( 213)					byteoffset6 = 0;
+            				}
+HXDLIN( 213)				 ::lime::utils::ArrayBufferView this7;
+HXDLIN( 213)				if (::hx::IsNotNull( elements6 )) {
+HXLINE( 213)					this7 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements6,7);
+            				}
+            				else {
+HXLINE( 213)					if (::hx::IsNotNull( array12 )) {
+HXLINE( 213)						 ::lime::utils::ArrayBufferView _this24 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
+HXDLIN( 213)						_this24->byteOffset = 0;
+HXDLIN( 213)						_this24->length = array12->get_length();
+HXDLIN( 213)						_this24->byteLength = (_this24->length * _this24->bytesPerElement);
+HXDLIN( 213)						_this24->buffer = ::haxe::io::Bytes_obj::alloc(_this24->byteLength);
+HXDLIN( 213)						_this24->copyFromArray(array12,null());
+HXDLIN( 213)						this7 = _this24;
+            					}
+            					else {
+HXLINE( 213)						if (::hx::IsNotNull( vector6 )) {
+HXLINE( 213)							 ::lime::utils::ArrayBufferView _this25 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
+HXDLIN( 213)							::cpp::VirtualArray array13 = ( (::cpp::VirtualArray)(vector6->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 213)							_this25->byteOffset = 0;
+HXDLIN( 213)							_this25->length = array13->get_length();
+HXDLIN( 213)							_this25->byteLength = (_this25->length * _this25->bytesPerElement);
+HXDLIN( 213)							_this25->buffer = ::haxe::io::Bytes_obj::alloc(_this25->byteLength);
+HXDLIN( 213)							_this25->copyFromArray(array13,null());
+HXDLIN( 213)							this7 = _this25;
+            						}
+            						else {
+HXLINE( 213)							if (::hx::IsNotNull( view7 )) {
+HXLINE( 213)								 ::lime::utils::ArrayBufferView _this26 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
+HXDLIN( 213)								 ::haxe::io::Bytes srcData6 = view7->buffer;
+HXDLIN( 213)								int srcLength12 = view7->length;
+HXDLIN( 213)								int srcByteOffset6 = view7->byteOffset;
+HXDLIN( 213)								int srcElementSize6 = view7->bytesPerElement;
+HXDLIN( 213)								int elementSize12 = _this26->bytesPerElement;
+HXDLIN( 213)								if ((view7->type == _this26->type)) {
+HXLINE( 213)									int srcLength13 = srcData6->length;
+HXDLIN( 213)									int cloneLength6 = (srcLength13 - srcByteOffset6);
+HXDLIN( 213)									_this26->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength6);
+HXDLIN( 213)									_this26->buffer->blit(0,srcData6,srcByteOffset6,cloneLength6);
+            								}
+            								else {
+HXLINE( 213)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 213)								_this26->byteLength = (_this26->bytesPerElement * srcLength12);
+HXDLIN( 213)								_this26->byteOffset = 0;
+HXDLIN( 213)								_this26->length = srcLength12;
+HXDLIN( 213)								this7 = _this26;
+            							}
+            							else {
+HXLINE( 213)								if (::hx::IsNotNull( buffer6 )) {
+HXLINE( 213)									 ::lime::utils::ArrayBufferView _this27 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
+HXDLIN( 213)									int in_byteOffset6 = ( (int)(byteoffset6) );
+HXDLIN( 213)									if ((in_byteOffset6 < 0)) {
+HXLINE( 213)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 213)									if ((::hx::Mod(in_byteOffset6,_this27->bytesPerElement) != 0)) {
+HXLINE( 213)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 213)									int bufferByteLength6 = buffer6->length;
+HXDLIN( 213)									int elementSize13 = _this27->bytesPerElement;
+HXDLIN( 213)									int newByteLength6 = bufferByteLength6;
+HXDLIN( 213)									if (::hx::IsNull( len )) {
+HXLINE( 213)										newByteLength6 = (bufferByteLength6 - in_byteOffset6);
+HXDLIN( 213)										if ((::hx::Mod(bufferByteLength6,_this27->bytesPerElement) != 0)) {
+HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 213)										if ((newByteLength6 < 0)) {
+HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 213)										newByteLength6 = (len * _this27->bytesPerElement);
+HXDLIN( 213)										int newRange6 = (in_byteOffset6 + newByteLength6);
+HXDLIN( 213)										if ((newRange6 > bufferByteLength6)) {
+HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 213)									_this27->buffer = buffer6;
+HXDLIN( 213)									_this27->byteOffset = in_byteOffset6;
+HXDLIN( 213)									_this27->byteLength = newByteLength6;
+HXDLIN( 213)									_this27->length = ::Std_obj::_hx_int((( (Float)(newByteLength6) ) / ( (Float)(_this27->bytesPerElement) )));
+HXDLIN( 213)									this7 = _this27;
+            								}
+            								else {
+HXLINE( 213)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt32Array",10,43,eb,8e));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this7;
+            			}
+            			break;
+            			case (int)8: {
+HXLINE( 216)				 ::Dynamic elements7 = null();
+HXDLIN( 216)				 ::haxe::io::Bytes buffer7 = this->buffer;
+HXDLIN( 216)				::cpp::VirtualArray array14 = null();
+HXDLIN( 216)				 ::openfl::_Vector::FloatVector vector7 = null();
+HXDLIN( 216)				 ::lime::utils::ArrayBufferView view8 = null();
+HXDLIN( 216)				 ::Dynamic byteoffset7 = byte_offset;
+HXDLIN( 216)				if (::hx::IsNull( byteoffset7 )) {
+HXLINE( 216)					byteoffset7 = 0;
+            				}
+HXDLIN( 216)				 ::lime::utils::ArrayBufferView this8;
+HXDLIN( 216)				if (::hx::IsNotNull( elements7 )) {
+HXLINE( 216)					this8 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements7,8);
+            				}
+            				else {
+HXLINE( 216)					if (::hx::IsNotNull( array14 )) {
+HXLINE( 216)						 ::lime::utils::ArrayBufferView _this28 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
+HXDLIN( 216)						_this28->byteOffset = 0;
+HXDLIN( 216)						_this28->length = array14->get_length();
+HXDLIN( 216)						_this28->byteLength = (_this28->length * _this28->bytesPerElement);
+HXDLIN( 216)						_this28->buffer = ::haxe::io::Bytes_obj::alloc(_this28->byteLength);
+HXDLIN( 216)						_this28->copyFromArray(array14,null());
+HXDLIN( 216)						this8 = _this28;
+            					}
+            					else {
+HXLINE( 216)						if (::hx::IsNotNull( vector7 )) {
+HXLINE( 216)							 ::lime::utils::ArrayBufferView _this29 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
+HXDLIN( 216)							::cpp::VirtualArray array15 = ( (::cpp::VirtualArray)(vector7->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 216)							_this29->byteOffset = 0;
+HXDLIN( 216)							_this29->length = array15->get_length();
+HXDLIN( 216)							_this29->byteLength = (_this29->length * _this29->bytesPerElement);
+HXDLIN( 216)							_this29->buffer = ::haxe::io::Bytes_obj::alloc(_this29->byteLength);
+HXDLIN( 216)							_this29->copyFromArray(array15,null());
+HXDLIN( 216)							this8 = _this29;
+            						}
+            						else {
+HXLINE( 216)							if (::hx::IsNotNull( view8 )) {
+HXLINE( 216)								 ::lime::utils::ArrayBufferView _this30 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
+HXDLIN( 216)								 ::haxe::io::Bytes srcData7 = view8->buffer;
+HXDLIN( 216)								int srcLength14 = view8->length;
+HXDLIN( 216)								int srcByteOffset7 = view8->byteOffset;
+HXDLIN( 216)								int srcElementSize7 = view8->bytesPerElement;
+HXDLIN( 216)								int elementSize14 = _this30->bytesPerElement;
+HXDLIN( 216)								if ((view8->type == _this30->type)) {
+HXLINE( 216)									int srcLength15 = srcData7->length;
+HXDLIN( 216)									int cloneLength7 = (srcLength15 - srcByteOffset7);
+HXDLIN( 216)									_this30->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength7);
+HXDLIN( 216)									_this30->buffer->blit(0,srcData7,srcByteOffset7,cloneLength7);
+            								}
+            								else {
+HXLINE( 216)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 216)								_this30->byteLength = (_this30->bytesPerElement * srcLength14);
+HXDLIN( 216)								_this30->byteOffset = 0;
+HXDLIN( 216)								_this30->length = srcLength14;
+HXDLIN( 216)								this8 = _this30;
+            							}
+            							else {
+HXLINE( 216)								if (::hx::IsNotNull( buffer7 )) {
+HXLINE( 216)									 ::lime::utils::ArrayBufferView _this31 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
+HXDLIN( 216)									int in_byteOffset7 = ( (int)(byteoffset7) );
+HXDLIN( 216)									if ((in_byteOffset7 < 0)) {
+HXLINE( 216)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 216)									if ((::hx::Mod(in_byteOffset7,_this31->bytesPerElement) != 0)) {
+HXLINE( 216)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 216)									int bufferByteLength7 = buffer7->length;
+HXDLIN( 216)									int elementSize15 = _this31->bytesPerElement;
+HXDLIN( 216)									int newByteLength7 = bufferByteLength7;
+HXDLIN( 216)									if (::hx::IsNull( len )) {
+HXLINE( 216)										newByteLength7 = (bufferByteLength7 - in_byteOffset7);
+HXDLIN( 216)										if ((::hx::Mod(bufferByteLength7,_this31->bytesPerElement) != 0)) {
+HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 216)										if ((newByteLength7 < 0)) {
+HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 216)										newByteLength7 = (len * _this31->bytesPerElement);
+HXDLIN( 216)										int newRange7 = (in_byteOffset7 + newByteLength7);
+HXDLIN( 216)										if ((newRange7 > bufferByteLength7)) {
+HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 216)									_this31->buffer = buffer7;
+HXDLIN( 216)									_this31->byteOffset = in_byteOffset7;
+HXDLIN( 216)									_this31->byteLength = newByteLength7;
+HXDLIN( 216)									_this31->length = ::Std_obj::_hx_int((( (Float)(newByteLength7) ) / ( (Float)(_this31->bytesPerElement) )));
+HXDLIN( 216)									this8 = _this31;
+            								}
+            								else {
+HXLINE( 216)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Float32Array",8e,c1,f4,d4));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this8;
+            			}
+            			break;
+            			case (int)9: {
+HXLINE( 219)				 ::Dynamic elements8 = null();
+HXDLIN( 219)				 ::haxe::io::Bytes buffer8 = this->buffer;
+HXDLIN( 219)				::cpp::VirtualArray array16 = null();
+HXDLIN( 219)				 ::openfl::_Vector::FloatVector vector8 = null();
+HXDLIN( 219)				 ::lime::utils::ArrayBufferView view9 = null();
+HXDLIN( 219)				 ::Dynamic byteoffset8 = byte_offset;
+HXDLIN( 219)				if (::hx::IsNull( byteoffset8 )) {
+HXLINE( 219)					byteoffset8 = 0;
+            				}
+HXDLIN( 219)				 ::lime::utils::ArrayBufferView this9;
+HXDLIN( 219)				if (::hx::IsNotNull( elements8 )) {
+HXLINE( 219)					this9 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements8,9);
+            				}
+            				else {
+HXLINE( 219)					if (::hx::IsNotNull( array16 )) {
+HXLINE( 219)						 ::lime::utils::ArrayBufferView _this32 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
+HXDLIN( 219)						_this32->byteOffset = 0;
+HXDLIN( 219)						_this32->length = array16->get_length();
+HXDLIN( 219)						_this32->byteLength = (_this32->length * _this32->bytesPerElement);
+HXDLIN( 219)						_this32->buffer = ::haxe::io::Bytes_obj::alloc(_this32->byteLength);
+HXDLIN( 219)						_this32->copyFromArray(array16,null());
+HXDLIN( 219)						this9 = _this32;
+            					}
+            					else {
+HXLINE( 219)						if (::hx::IsNotNull( vector8 )) {
+HXLINE( 219)							 ::lime::utils::ArrayBufferView _this33 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
+HXDLIN( 219)							::cpp::VirtualArray array17 = ( (::cpp::VirtualArray)(vector8->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
+HXDLIN( 219)							_this33->byteOffset = 0;
+HXDLIN( 219)							_this33->length = array17->get_length();
+HXDLIN( 219)							_this33->byteLength = (_this33->length * _this33->bytesPerElement);
+HXDLIN( 219)							_this33->buffer = ::haxe::io::Bytes_obj::alloc(_this33->byteLength);
+HXDLIN( 219)							_this33->copyFromArray(array17,null());
+HXDLIN( 219)							this9 = _this33;
+            						}
+            						else {
+HXLINE( 219)							if (::hx::IsNotNull( view9 )) {
+HXLINE( 219)								 ::lime::utils::ArrayBufferView _this34 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
+HXDLIN( 219)								 ::haxe::io::Bytes srcData8 = view9->buffer;
+HXDLIN( 219)								int srcLength16 = view9->length;
+HXDLIN( 219)								int srcByteOffset8 = view9->byteOffset;
+HXDLIN( 219)								int srcElementSize8 = view9->bytesPerElement;
+HXDLIN( 219)								int elementSize16 = _this34->bytesPerElement;
+HXDLIN( 219)								if ((view9->type == _this34->type)) {
+HXLINE( 219)									int srcLength17 = srcData8->length;
+HXDLIN( 219)									int cloneLength8 = (srcLength17 - srcByteOffset8);
+HXDLIN( 219)									_this34->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength8);
+HXDLIN( 219)									_this34->buffer->blit(0,srcData8,srcByteOffset8,cloneLength8);
+            								}
+            								else {
+HXLINE( 219)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
+            								}
+HXDLIN( 219)								_this34->byteLength = (_this34->bytesPerElement * srcLength16);
+HXDLIN( 219)								_this34->byteOffset = 0;
+HXDLIN( 219)								_this34->length = srcLength16;
+HXDLIN( 219)								this9 = _this34;
+            							}
+            							else {
+HXLINE( 219)								if (::hx::IsNotNull( buffer8 )) {
+HXLINE( 219)									 ::lime::utils::ArrayBufferView _this35 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
+HXDLIN( 219)									int in_byteOffset8 = ( (int)(byteoffset8) );
+HXDLIN( 219)									if ((in_byteOffset8 < 0)) {
+HXLINE( 219)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 219)									if ((::hx::Mod(in_byteOffset8,_this35->bytesPerElement) != 0)) {
+HXLINE( 219)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            									}
+HXDLIN( 219)									int bufferByteLength8 = buffer8->length;
+HXDLIN( 219)									int elementSize17 = _this35->bytesPerElement;
+HXDLIN( 219)									int newByteLength8 = bufferByteLength8;
+HXDLIN( 219)									if (::hx::IsNull( len )) {
+HXLINE( 219)										newByteLength8 = (bufferByteLength8 - in_byteOffset8);
+HXDLIN( 219)										if ((::hx::Mod(bufferByteLength8,_this35->bytesPerElement) != 0)) {
+HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+HXDLIN( 219)										if ((newByteLength8 < 0)) {
+HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+            									else {
+HXLINE( 219)										newByteLength8 = (len * _this35->bytesPerElement);
+HXDLIN( 219)										int newRange8 = (in_byteOffset8 + newByteLength8);
+HXDLIN( 219)										if ((newRange8 > bufferByteLength8)) {
+HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
+            										}
+            									}
+HXDLIN( 219)									_this35->buffer = buffer8;
+HXDLIN( 219)									_this35->byteOffset = in_byteOffset8;
+HXDLIN( 219)									_this35->byteLength = newByteLength8;
+HXDLIN( 219)									_this35->length = ::Std_obj::_hx_int((( (Float)(newByteLength8) ) / ( (Float)(_this35->bytesPerElement) )));
+HXDLIN( 219)									this9 = _this35;
+            								}
+            								else {
+HXLINE( 219)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Float64Array",8f,de,6b,1e));
+            								}
+            							}
+            						}
+            					}
+            				}
+HXLINE( 192)				view = this9;
+            			}
+            			break;
+            		}
+HXLINE( 225)		return view;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(ArrayBufferView_obj,subarray_lime_utils_UInt32Array,return )
 
  ::lime::utils::ArrayBufferView ArrayBufferView_obj::subarray_lime_utils_Float64Array(int begin, ::Dynamic end){
             	HX_GC_STACKFRAME(&_hx_pos_244a612994c6bd06_185_subarray_lime_utils_Float64Array)
@@ -3906,8 +6738,8 @@ HXLINE( 225)		return view;
 
 HX_DEFINE_DYNAMIC_FUNC2(ArrayBufferView_obj,subarray_lime_utils_UInt8ClampedArray,return )
 
- ::lime::utils::ArrayBufferView ArrayBufferView_obj::subarray_lime_utils_UInt16Array(int begin, ::Dynamic end){
-            	HX_GC_STACKFRAME(&_hx_pos_244a612994c6bd06_185_subarray_lime_utils_UInt16Array)
+ ::lime::utils::ArrayBufferView ArrayBufferView_obj::subarray_lime_utils_UInt8Array(int begin, ::Dynamic end){
+            	HX_GC_STACKFRAME(&_hx_pos_244a612994c6bd06_185_subarray_lime_utils_UInt8Array)
 HXLINE( 186)		if (::hx::IsNull( end )) {
 HXLINE( 186)			end = this->length;
             		}
@@ -4848,1895 +7680,7 @@ HXLINE( 225)		return view;
             	}
 
 
-HX_DEFINE_DYNAMIC_FUNC2(ArrayBufferView_obj,subarray_lime_utils_UInt16Array,return )
-
- ::lime::utils::ArrayBufferView ArrayBufferView_obj::subarray_lime_utils_Int32Array(int begin, ::Dynamic end){
-            	HX_GC_STACKFRAME(&_hx_pos_244a612994c6bd06_185_subarray_lime_utils_Int32Array)
-HXLINE( 186)		if (::hx::IsNull( end )) {
-HXLINE( 186)			end = this->length;
-            		}
-HXLINE( 187)		int len = (( (int)(end) ) - begin);
-HXLINE( 188)		if ((len < 0)) {
-HXLINE( 188)			len = 0;
-            		}
-HXLINE( 189)		if ((len > this->length)) {
-HXLINE( 189)			len = this->length;
-            		}
-HXLINE( 190)		int byte_offset = ((begin * this->bytesPerElement) + this->byteOffset);
-HXLINE( 192)		 ::lime::utils::ArrayBufferView view;
-HXDLIN( 192)		switch((int)(this->type)){
-            			case (int)0: {
-HXLINE( 222)				HX_STACK_DO_THROW(HX_("subarray on a blank ArrayBufferView",39,87,fd,19));
-            			}
-            			break;
-            			case (int)1: {
-HXLINE( 195)				 ::Dynamic elements = null();
-HXDLIN( 195)				 ::haxe::io::Bytes buffer = this->buffer;
-HXDLIN( 195)				::cpp::VirtualArray array = null();
-HXDLIN( 195)				 ::openfl::_Vector::IntVector vector = null();
-HXDLIN( 195)				 ::lime::utils::ArrayBufferView view1 = null();
-HXDLIN( 195)				 ::Dynamic byteoffset = byte_offset;
-HXDLIN( 195)				if (::hx::IsNull( byteoffset )) {
-HXLINE( 195)					byteoffset = 0;
-            				}
-HXDLIN( 195)				 ::lime::utils::ArrayBufferView this1;
-HXDLIN( 195)				if (::hx::IsNotNull( elements )) {
-HXLINE( 195)					this1 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements,1);
-            				}
-            				else {
-HXLINE( 195)					if (::hx::IsNotNull( array )) {
-HXLINE( 195)						 ::lime::utils::ArrayBufferView _this =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
-HXDLIN( 195)						_this->byteOffset = 0;
-HXDLIN( 195)						_this->length = array->get_length();
-HXDLIN( 195)						_this->byteLength = (_this->length * _this->bytesPerElement);
-HXDLIN( 195)						_this->buffer = ::haxe::io::Bytes_obj::alloc(_this->byteLength);
-HXDLIN( 195)						_this->copyFromArray(array,null());
-HXDLIN( 195)						this1 = _this;
-            					}
-            					else {
-HXLINE( 195)						if (::hx::IsNotNull( vector )) {
-HXLINE( 195)							 ::lime::utils::ArrayBufferView _this1 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
-HXDLIN( 195)							::cpp::VirtualArray array1 = ( (::cpp::VirtualArray)(vector->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 195)							_this1->byteOffset = 0;
-HXDLIN( 195)							_this1->length = array1->get_length();
-HXDLIN( 195)							_this1->byteLength = (_this1->length * _this1->bytesPerElement);
-HXDLIN( 195)							_this1->buffer = ::haxe::io::Bytes_obj::alloc(_this1->byteLength);
-HXDLIN( 195)							_this1->copyFromArray(array1,null());
-HXDLIN( 195)							this1 = _this1;
-            						}
-            						else {
-HXLINE( 195)							if (::hx::IsNotNull( view1 )) {
-HXLINE( 195)								 ::lime::utils::ArrayBufferView _this2 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
-HXDLIN( 195)								 ::haxe::io::Bytes srcData = view1->buffer;
-HXDLIN( 195)								int srcLength = view1->length;
-HXDLIN( 195)								int srcByteOffset = view1->byteOffset;
-HXDLIN( 195)								int srcElementSize = view1->bytesPerElement;
-HXDLIN( 195)								int elementSize = _this2->bytesPerElement;
-HXDLIN( 195)								if ((view1->type == _this2->type)) {
-HXLINE( 195)									int srcLength1 = srcData->length;
-HXDLIN( 195)									int cloneLength = (srcLength1 - srcByteOffset);
-HXDLIN( 195)									_this2->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength);
-HXDLIN( 195)									_this2->buffer->blit(0,srcData,srcByteOffset,cloneLength);
-            								}
-            								else {
-HXLINE( 195)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 195)								_this2->byteLength = (_this2->bytesPerElement * srcLength);
-HXDLIN( 195)								_this2->byteOffset = 0;
-HXDLIN( 195)								_this2->length = srcLength;
-HXDLIN( 195)								this1 = _this2;
-            							}
-            							else {
-HXLINE( 195)								if (::hx::IsNotNull( buffer )) {
-HXLINE( 195)									 ::lime::utils::ArrayBufferView _this3 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
-HXDLIN( 195)									int in_byteOffset = ( (int)(byteoffset) );
-HXDLIN( 195)									if ((in_byteOffset < 0)) {
-HXLINE( 195)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 195)									if ((::hx::Mod(in_byteOffset,_this3->bytesPerElement) != 0)) {
-HXLINE( 195)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 195)									int bufferByteLength = buffer->length;
-HXDLIN( 195)									int elementSize1 = _this3->bytesPerElement;
-HXDLIN( 195)									int newByteLength = bufferByteLength;
-HXDLIN( 195)									if (::hx::IsNull( len )) {
-HXLINE( 195)										newByteLength = (bufferByteLength - in_byteOffset);
-HXDLIN( 195)										if ((::hx::Mod(bufferByteLength,_this3->bytesPerElement) != 0)) {
-HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 195)										if ((newByteLength < 0)) {
-HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 195)										newByteLength = (len * _this3->bytesPerElement);
-HXDLIN( 195)										int newRange = (in_byteOffset + newByteLength);
-HXDLIN( 195)										if ((newRange > bufferByteLength)) {
-HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 195)									_this3->buffer = buffer;
-HXDLIN( 195)									_this3->byteOffset = in_byteOffset;
-HXDLIN( 195)									_this3->byteLength = newByteLength;
-HXDLIN( 195)									_this3->length = ::Std_obj::_hx_int((( (Float)(newByteLength) ) / ( (Float)(_this3->bytesPerElement) )));
-HXDLIN( 195)									this1 = _this3;
-            								}
-            								else {
-HXLINE( 195)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int8Array",40,53,da,77));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this1;
-            			}
-            			break;
-            			case (int)2: {
-HXLINE( 198)				 ::Dynamic elements1 = null();
-HXDLIN( 198)				 ::haxe::io::Bytes buffer1 = this->buffer;
-HXDLIN( 198)				::cpp::VirtualArray array2 = null();
-HXDLIN( 198)				 ::openfl::_Vector::IntVector vector1 = null();
-HXDLIN( 198)				 ::lime::utils::ArrayBufferView view2 = null();
-HXDLIN( 198)				 ::Dynamic byteoffset1 = byte_offset;
-HXDLIN( 198)				if (::hx::IsNull( byteoffset1 )) {
-HXLINE( 198)					byteoffset1 = 0;
-            				}
-HXDLIN( 198)				 ::lime::utils::ArrayBufferView this2;
-HXDLIN( 198)				if (::hx::IsNotNull( elements1 )) {
-HXLINE( 198)					this2 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements1,2);
-            				}
-            				else {
-HXLINE( 198)					if (::hx::IsNotNull( array2 )) {
-HXLINE( 198)						 ::lime::utils::ArrayBufferView _this4 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
-HXDLIN( 198)						_this4->byteOffset = 0;
-HXDLIN( 198)						_this4->length = array2->get_length();
-HXDLIN( 198)						_this4->byteLength = (_this4->length * _this4->bytesPerElement);
-HXDLIN( 198)						_this4->buffer = ::haxe::io::Bytes_obj::alloc(_this4->byteLength);
-HXDLIN( 198)						_this4->copyFromArray(array2,null());
-HXDLIN( 198)						this2 = _this4;
-            					}
-            					else {
-HXLINE( 198)						if (::hx::IsNotNull( vector1 )) {
-HXLINE( 198)							 ::lime::utils::ArrayBufferView _this5 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
-HXDLIN( 198)							::cpp::VirtualArray array3 = ( (::cpp::VirtualArray)(vector1->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 198)							_this5->byteOffset = 0;
-HXDLIN( 198)							_this5->length = array3->get_length();
-HXDLIN( 198)							_this5->byteLength = (_this5->length * _this5->bytesPerElement);
-HXDLIN( 198)							_this5->buffer = ::haxe::io::Bytes_obj::alloc(_this5->byteLength);
-HXDLIN( 198)							_this5->copyFromArray(array3,null());
-HXDLIN( 198)							this2 = _this5;
-            						}
-            						else {
-HXLINE( 198)							if (::hx::IsNotNull( view2 )) {
-HXLINE( 198)								 ::lime::utils::ArrayBufferView _this6 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
-HXDLIN( 198)								 ::haxe::io::Bytes srcData1 = view2->buffer;
-HXDLIN( 198)								int srcLength2 = view2->length;
-HXDLIN( 198)								int srcByteOffset1 = view2->byteOffset;
-HXDLIN( 198)								int srcElementSize1 = view2->bytesPerElement;
-HXDLIN( 198)								int elementSize2 = _this6->bytesPerElement;
-HXDLIN( 198)								if ((view2->type == _this6->type)) {
-HXLINE( 198)									int srcLength3 = srcData1->length;
-HXDLIN( 198)									int cloneLength1 = (srcLength3 - srcByteOffset1);
-HXDLIN( 198)									_this6->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength1);
-HXDLIN( 198)									_this6->buffer->blit(0,srcData1,srcByteOffset1,cloneLength1);
-            								}
-            								else {
-HXLINE( 198)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 198)								_this6->byteLength = (_this6->bytesPerElement * srcLength2);
-HXDLIN( 198)								_this6->byteOffset = 0;
-HXDLIN( 198)								_this6->length = srcLength2;
-HXDLIN( 198)								this2 = _this6;
-            							}
-            							else {
-HXLINE( 198)								if (::hx::IsNotNull( buffer1 )) {
-HXLINE( 198)									 ::lime::utils::ArrayBufferView _this7 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
-HXDLIN( 198)									int in_byteOffset1 = ( (int)(byteoffset1) );
-HXDLIN( 198)									if ((in_byteOffset1 < 0)) {
-HXLINE( 198)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 198)									if ((::hx::Mod(in_byteOffset1,_this7->bytesPerElement) != 0)) {
-HXLINE( 198)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 198)									int bufferByteLength1 = buffer1->length;
-HXDLIN( 198)									int elementSize3 = _this7->bytesPerElement;
-HXDLIN( 198)									int newByteLength1 = bufferByteLength1;
-HXDLIN( 198)									if (::hx::IsNull( len )) {
-HXLINE( 198)										newByteLength1 = (bufferByteLength1 - in_byteOffset1);
-HXDLIN( 198)										if ((::hx::Mod(bufferByteLength1,_this7->bytesPerElement) != 0)) {
-HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 198)										if ((newByteLength1 < 0)) {
-HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 198)										newByteLength1 = (len * _this7->bytesPerElement);
-HXDLIN( 198)										int newRange1 = (in_byteOffset1 + newByteLength1);
-HXDLIN( 198)										if ((newRange1 > bufferByteLength1)) {
-HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 198)									_this7->buffer = buffer1;
-HXDLIN( 198)									_this7->byteOffset = in_byteOffset1;
-HXDLIN( 198)									_this7->byteLength = newByteLength1;
-HXDLIN( 198)									_this7->length = ::Std_obj::_hx_int((( (Float)(newByteLength1) ) / ( (Float)(_this7->bytesPerElement) )));
-HXDLIN( 198)									this2 = _this7;
-            								}
-            								else {
-HXLINE( 198)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int16Array",95,b2,95,a7));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this2;
-            			}
-            			break;
-            			case (int)3: {
-HXLINE( 201)				 ::Dynamic elements2 = null();
-HXDLIN( 201)				 ::haxe::io::Bytes buffer2 = this->buffer;
-HXDLIN( 201)				::cpp::VirtualArray array4 = null();
-HXDLIN( 201)				 ::openfl::_Vector::IntVector vector2 = null();
-HXDLIN( 201)				 ::lime::utils::ArrayBufferView view3 = null();
-HXDLIN( 201)				 ::Dynamic byteoffset2 = byte_offset;
-HXDLIN( 201)				if (::hx::IsNull( byteoffset2 )) {
-HXLINE( 201)					byteoffset2 = 0;
-            				}
-HXDLIN( 201)				 ::lime::utils::ArrayBufferView this3;
-HXDLIN( 201)				if (::hx::IsNotNull( elements2 )) {
-HXLINE( 201)					this3 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements2,3);
-            				}
-            				else {
-HXLINE( 201)					if (::hx::IsNotNull( array4 )) {
-HXLINE( 201)						 ::lime::utils::ArrayBufferView _this8 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
-HXDLIN( 201)						_this8->byteOffset = 0;
-HXDLIN( 201)						_this8->length = array4->get_length();
-HXDLIN( 201)						_this8->byteLength = (_this8->length * _this8->bytesPerElement);
-HXDLIN( 201)						_this8->buffer = ::haxe::io::Bytes_obj::alloc(_this8->byteLength);
-HXDLIN( 201)						_this8->copyFromArray(array4,null());
-HXDLIN( 201)						this3 = _this8;
-            					}
-            					else {
-HXLINE( 201)						if (::hx::IsNotNull( vector2 )) {
-HXLINE( 201)							 ::lime::utils::ArrayBufferView _this9 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
-HXDLIN( 201)							::cpp::VirtualArray array5 = ( (::cpp::VirtualArray)(vector2->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 201)							_this9->byteOffset = 0;
-HXDLIN( 201)							_this9->length = array5->get_length();
-HXDLIN( 201)							_this9->byteLength = (_this9->length * _this9->bytesPerElement);
-HXDLIN( 201)							_this9->buffer = ::haxe::io::Bytes_obj::alloc(_this9->byteLength);
-HXDLIN( 201)							_this9->copyFromArray(array5,null());
-HXDLIN( 201)							this3 = _this9;
-            						}
-            						else {
-HXLINE( 201)							if (::hx::IsNotNull( view3 )) {
-HXLINE( 201)								 ::lime::utils::ArrayBufferView _this10 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
-HXDLIN( 201)								 ::haxe::io::Bytes srcData2 = view3->buffer;
-HXDLIN( 201)								int srcLength4 = view3->length;
-HXDLIN( 201)								int srcByteOffset2 = view3->byteOffset;
-HXDLIN( 201)								int srcElementSize2 = view3->bytesPerElement;
-HXDLIN( 201)								int elementSize4 = _this10->bytesPerElement;
-HXDLIN( 201)								if ((view3->type == _this10->type)) {
-HXLINE( 201)									int srcLength5 = srcData2->length;
-HXDLIN( 201)									int cloneLength2 = (srcLength5 - srcByteOffset2);
-HXDLIN( 201)									_this10->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength2);
-HXDLIN( 201)									_this10->buffer->blit(0,srcData2,srcByteOffset2,cloneLength2);
-            								}
-            								else {
-HXLINE( 201)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 201)								_this10->byteLength = (_this10->bytesPerElement * srcLength4);
-HXDLIN( 201)								_this10->byteOffset = 0;
-HXDLIN( 201)								_this10->length = srcLength4;
-HXDLIN( 201)								this3 = _this10;
-            							}
-            							else {
-HXLINE( 201)								if (::hx::IsNotNull( buffer2 )) {
-HXLINE( 201)									 ::lime::utils::ArrayBufferView _this11 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
-HXDLIN( 201)									int in_byteOffset2 = ( (int)(byteoffset2) );
-HXDLIN( 201)									if ((in_byteOffset2 < 0)) {
-HXLINE( 201)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 201)									if ((::hx::Mod(in_byteOffset2,_this11->bytesPerElement) != 0)) {
-HXLINE( 201)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 201)									int bufferByteLength2 = buffer2->length;
-HXDLIN( 201)									int elementSize5 = _this11->bytesPerElement;
-HXDLIN( 201)									int newByteLength2 = bufferByteLength2;
-HXDLIN( 201)									if (::hx::IsNull( len )) {
-HXLINE( 201)										newByteLength2 = (bufferByteLength2 - in_byteOffset2);
-HXDLIN( 201)										if ((::hx::Mod(bufferByteLength2,_this11->bytesPerElement) != 0)) {
-HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 201)										if ((newByteLength2 < 0)) {
-HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 201)										newByteLength2 = (len * _this11->bytesPerElement);
-HXDLIN( 201)										int newRange2 = (in_byteOffset2 + newByteLength2);
-HXDLIN( 201)										if ((newRange2 > bufferByteLength2)) {
-HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 201)									_this11->buffer = buffer2;
-HXDLIN( 201)									_this11->byteOffset = in_byteOffset2;
-HXDLIN( 201)									_this11->byteLength = newByteLength2;
-HXDLIN( 201)									_this11->length = ::Std_obj::_hx_int((( (Float)(newByteLength2) ) / ( (Float)(_this11->bytesPerElement) )));
-HXDLIN( 201)									this3 = _this11;
-            								}
-            								else {
-HXLINE( 201)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int32Array",9b,2e,53,61));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this3;
-            			}
-            			break;
-            			case (int)4: {
-HXLINE( 204)				 ::Dynamic elements3 = null();
-HXDLIN( 204)				 ::haxe::io::Bytes buffer3 = this->buffer;
-HXDLIN( 204)				::cpp::VirtualArray array6 = null();
-HXDLIN( 204)				 ::openfl::_Vector::IntVector vector3 = null();
-HXDLIN( 204)				 ::lime::utils::ArrayBufferView view4 = null();
-HXDLIN( 204)				 ::Dynamic byteoffset3 = byte_offset;
-HXDLIN( 204)				if (::hx::IsNull( byteoffset3 )) {
-HXLINE( 204)					byteoffset3 = 0;
-            				}
-HXDLIN( 204)				 ::lime::utils::ArrayBufferView this4;
-HXDLIN( 204)				if (::hx::IsNotNull( elements3 )) {
-HXLINE( 204)					this4 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements3,4);
-            				}
-            				else {
-HXLINE( 204)					if (::hx::IsNotNull( array6 )) {
-HXLINE( 204)						 ::lime::utils::ArrayBufferView _this12 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
-HXDLIN( 204)						_this12->byteOffset = 0;
-HXDLIN( 204)						_this12->length = array6->get_length();
-HXDLIN( 204)						_this12->byteLength = (_this12->length * _this12->bytesPerElement);
-HXDLIN( 204)						_this12->buffer = ::haxe::io::Bytes_obj::alloc(_this12->byteLength);
-HXDLIN( 204)						_this12->copyFromArray(array6,null());
-HXDLIN( 204)						this4 = _this12;
-            					}
-            					else {
-HXLINE( 204)						if (::hx::IsNotNull( vector3 )) {
-HXLINE( 204)							 ::lime::utils::ArrayBufferView _this13 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
-HXDLIN( 204)							::cpp::VirtualArray array7 = ( (::cpp::VirtualArray)(vector3->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 204)							_this13->byteOffset = 0;
-HXDLIN( 204)							_this13->length = array7->get_length();
-HXDLIN( 204)							_this13->byteLength = (_this13->length * _this13->bytesPerElement);
-HXDLIN( 204)							_this13->buffer = ::haxe::io::Bytes_obj::alloc(_this13->byteLength);
-HXDLIN( 204)							_this13->copyFromArray(array7,null());
-HXDLIN( 204)							this4 = _this13;
-            						}
-            						else {
-HXLINE( 204)							if (::hx::IsNotNull( view4 )) {
-HXLINE( 204)								 ::lime::utils::ArrayBufferView _this14 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
-HXDLIN( 204)								 ::haxe::io::Bytes srcData3 = view4->buffer;
-HXDLIN( 204)								int srcLength6 = view4->length;
-HXDLIN( 204)								int srcByteOffset3 = view4->byteOffset;
-HXDLIN( 204)								int srcElementSize3 = view4->bytesPerElement;
-HXDLIN( 204)								int elementSize6 = _this14->bytesPerElement;
-HXDLIN( 204)								if ((view4->type == _this14->type)) {
-HXLINE( 204)									int srcLength7 = srcData3->length;
-HXDLIN( 204)									int cloneLength3 = (srcLength7 - srcByteOffset3);
-HXDLIN( 204)									_this14->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength3);
-HXDLIN( 204)									_this14->buffer->blit(0,srcData3,srcByteOffset3,cloneLength3);
-            								}
-            								else {
-HXLINE( 204)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 204)								_this14->byteLength = (_this14->bytesPerElement * srcLength6);
-HXDLIN( 204)								_this14->byteOffset = 0;
-HXDLIN( 204)								_this14->length = srcLength6;
-HXDLIN( 204)								this4 = _this14;
-            							}
-            							else {
-HXLINE( 204)								if (::hx::IsNotNull( buffer3 )) {
-HXLINE( 204)									 ::lime::utils::ArrayBufferView _this15 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
-HXDLIN( 204)									int in_byteOffset3 = ( (int)(byteoffset3) );
-HXDLIN( 204)									if ((in_byteOffset3 < 0)) {
-HXLINE( 204)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 204)									if ((::hx::Mod(in_byteOffset3,_this15->bytesPerElement) != 0)) {
-HXLINE( 204)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 204)									int bufferByteLength3 = buffer3->length;
-HXDLIN( 204)									int elementSize7 = _this15->bytesPerElement;
-HXDLIN( 204)									int newByteLength3 = bufferByteLength3;
-HXDLIN( 204)									if (::hx::IsNull( len )) {
-HXLINE( 204)										newByteLength3 = (bufferByteLength3 - in_byteOffset3);
-HXDLIN( 204)										if ((::hx::Mod(bufferByteLength3,_this15->bytesPerElement) != 0)) {
-HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 204)										if ((newByteLength3 < 0)) {
-HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 204)										newByteLength3 = (len * _this15->bytesPerElement);
-HXDLIN( 204)										int newRange3 = (in_byteOffset3 + newByteLength3);
-HXDLIN( 204)										if ((newRange3 > bufferByteLength3)) {
-HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 204)									_this15->buffer = buffer3;
-HXDLIN( 204)									_this15->byteOffset = in_byteOffset3;
-HXDLIN( 204)									_this15->byteLength = newByteLength3;
-HXDLIN( 204)									_this15->length = ::Std_obj::_hx_int((( (Float)(newByteLength3) ) / ( (Float)(_this15->bytesPerElement) )));
-HXDLIN( 204)									this4 = _this15;
-            								}
-            								else {
-HXLINE( 204)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt8Array",6b,44,d5,85));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this4;
-            			}
-            			break;
-            			case (int)5: {
-HXLINE( 207)				 ::Dynamic elements4 = null();
-HXDLIN( 207)				 ::haxe::io::Bytes buffer4 = this->buffer;
-HXDLIN( 207)				::cpp::VirtualArray array8 = null();
-HXDLIN( 207)				 ::openfl::_Vector::IntVector vector4 = null();
-HXDLIN( 207)				 ::lime::utils::ArrayBufferView view5 = null();
-HXDLIN( 207)				 ::Dynamic byteoffset4 = byte_offset;
-HXDLIN( 207)				if (::hx::IsNull( byteoffset4 )) {
-HXLINE( 207)					byteoffset4 = 0;
-            				}
-HXDLIN( 207)				 ::lime::utils::ArrayBufferView this5;
-HXDLIN( 207)				if (::hx::IsNotNull( elements4 )) {
-HXLINE( 207)					this5 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements4,5);
-            				}
-            				else {
-HXLINE( 207)					if (::hx::IsNotNull( array8 )) {
-HXLINE( 207)						 ::lime::utils::ArrayBufferView _this16 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
-HXDLIN( 207)						_this16->byteOffset = 0;
-HXDLIN( 207)						_this16->length = array8->get_length();
-HXDLIN( 207)						_this16->byteLength = (_this16->length * _this16->bytesPerElement);
-HXDLIN( 207)						_this16->buffer = ::haxe::io::Bytes_obj::alloc(_this16->byteLength);
-HXDLIN( 207)						_this16->copyFromArray(array8,null());
-HXDLIN( 207)						this5 = _this16;
-            					}
-            					else {
-HXLINE( 207)						if (::hx::IsNotNull( vector4 )) {
-HXLINE( 207)							 ::lime::utils::ArrayBufferView _this17 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
-HXDLIN( 207)							::cpp::VirtualArray array9 = ( (::cpp::VirtualArray)(vector4->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 207)							_this17->byteOffset = 0;
-HXDLIN( 207)							_this17->length = array9->get_length();
-HXDLIN( 207)							_this17->byteLength = (_this17->length * _this17->bytesPerElement);
-HXDLIN( 207)							_this17->buffer = ::haxe::io::Bytes_obj::alloc(_this17->byteLength);
-HXDLIN( 207)							_this17->copyFromArray(array9,null());
-HXDLIN( 207)							this5 = _this17;
-            						}
-            						else {
-HXLINE( 207)							if (::hx::IsNotNull( view5 )) {
-HXLINE( 207)								 ::lime::utils::ArrayBufferView _this18 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
-HXDLIN( 207)								 ::haxe::io::Bytes srcData4 = view5->buffer;
-HXDLIN( 207)								int srcLength8 = view5->length;
-HXDLIN( 207)								int srcByteOffset4 = view5->byteOffset;
-HXDLIN( 207)								int srcElementSize4 = view5->bytesPerElement;
-HXDLIN( 207)								int elementSize8 = _this18->bytesPerElement;
-HXDLIN( 207)								if ((view5->type == _this18->type)) {
-HXLINE( 207)									int srcLength9 = srcData4->length;
-HXDLIN( 207)									int cloneLength4 = (srcLength9 - srcByteOffset4);
-HXDLIN( 207)									_this18->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength4);
-HXDLIN( 207)									_this18->buffer->blit(0,srcData4,srcByteOffset4,cloneLength4);
-            								}
-            								else {
-HXLINE( 207)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 207)								_this18->byteLength = (_this18->bytesPerElement * srcLength8);
-HXDLIN( 207)								_this18->byteOffset = 0;
-HXDLIN( 207)								_this18->length = srcLength8;
-HXDLIN( 207)								this5 = _this18;
-            							}
-            							else {
-HXLINE( 207)								if (::hx::IsNotNull( buffer4 )) {
-HXLINE( 207)									 ::lime::utils::ArrayBufferView _this19 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
-HXDLIN( 207)									int in_byteOffset4 = ( (int)(byteoffset4) );
-HXDLIN( 207)									if ((in_byteOffset4 < 0)) {
-HXLINE( 207)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 207)									if ((::hx::Mod(in_byteOffset4,_this19->bytesPerElement) != 0)) {
-HXLINE( 207)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 207)									int bufferByteLength4 = buffer4->length;
-HXDLIN( 207)									int elementSize9 = _this19->bytesPerElement;
-HXDLIN( 207)									int newByteLength4 = bufferByteLength4;
-HXDLIN( 207)									if (::hx::IsNull( len )) {
-HXLINE( 207)										newByteLength4 = (bufferByteLength4 - in_byteOffset4);
-HXDLIN( 207)										if ((::hx::Mod(bufferByteLength4,_this19->bytesPerElement) != 0)) {
-HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 207)										if ((newByteLength4 < 0)) {
-HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 207)										newByteLength4 = (len * _this19->bytesPerElement);
-HXDLIN( 207)										int newRange4 = (in_byteOffset4 + newByteLength4);
-HXDLIN( 207)										if ((newRange4 > bufferByteLength4)) {
-HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 207)									_this19->buffer = buffer4;
-HXDLIN( 207)									_this19->byteOffset = in_byteOffset4;
-HXDLIN( 207)									_this19->byteLength = newByteLength4;
-HXDLIN( 207)									_this19->length = ::Std_obj::_hx_int((( (Float)(newByteLength4) ) / ( (Float)(_this19->bytesPerElement) )));
-HXDLIN( 207)									this5 = _this19;
-            								}
-            								else {
-HXLINE( 207)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt8ClampedArray",8d,06,77,13));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this5;
-            			}
-            			break;
-            			case (int)6: {
-HXLINE( 210)				 ::Dynamic elements5 = null();
-HXDLIN( 210)				 ::haxe::io::Bytes buffer5 = this->buffer;
-HXDLIN( 210)				::cpp::VirtualArray array10 = null();
-HXDLIN( 210)				 ::openfl::_Vector::IntVector vector5 = null();
-HXDLIN( 210)				 ::lime::utils::ArrayBufferView view6 = null();
-HXDLIN( 210)				 ::Dynamic byteoffset5 = byte_offset;
-HXDLIN( 210)				if (::hx::IsNull( byteoffset5 )) {
-HXLINE( 210)					byteoffset5 = 0;
-            				}
-HXDLIN( 210)				 ::lime::utils::ArrayBufferView this6;
-HXDLIN( 210)				if (::hx::IsNotNull( elements5 )) {
-HXLINE( 210)					this6 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements5,6);
-            				}
-            				else {
-HXLINE( 210)					if (::hx::IsNotNull( array10 )) {
-HXLINE( 210)						 ::lime::utils::ArrayBufferView _this20 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
-HXDLIN( 210)						_this20->byteOffset = 0;
-HXDLIN( 210)						_this20->length = array10->get_length();
-HXDLIN( 210)						_this20->byteLength = (_this20->length * _this20->bytesPerElement);
-HXDLIN( 210)						_this20->buffer = ::haxe::io::Bytes_obj::alloc(_this20->byteLength);
-HXDLIN( 210)						_this20->copyFromArray(array10,null());
-HXDLIN( 210)						this6 = _this20;
-            					}
-            					else {
-HXLINE( 210)						if (::hx::IsNotNull( vector5 )) {
-HXLINE( 210)							 ::lime::utils::ArrayBufferView _this21 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
-HXDLIN( 210)							::cpp::VirtualArray array11 = ( (::cpp::VirtualArray)(vector5->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 210)							_this21->byteOffset = 0;
-HXDLIN( 210)							_this21->length = array11->get_length();
-HXDLIN( 210)							_this21->byteLength = (_this21->length * _this21->bytesPerElement);
-HXDLIN( 210)							_this21->buffer = ::haxe::io::Bytes_obj::alloc(_this21->byteLength);
-HXDLIN( 210)							_this21->copyFromArray(array11,null());
-HXDLIN( 210)							this6 = _this21;
-            						}
-            						else {
-HXLINE( 210)							if (::hx::IsNotNull( view6 )) {
-HXLINE( 210)								 ::lime::utils::ArrayBufferView _this22 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
-HXDLIN( 210)								 ::haxe::io::Bytes srcData5 = view6->buffer;
-HXDLIN( 210)								int srcLength10 = view6->length;
-HXDLIN( 210)								int srcByteOffset5 = view6->byteOffset;
-HXDLIN( 210)								int srcElementSize5 = view6->bytesPerElement;
-HXDLIN( 210)								int elementSize10 = _this22->bytesPerElement;
-HXDLIN( 210)								if ((view6->type == _this22->type)) {
-HXLINE( 210)									int srcLength11 = srcData5->length;
-HXDLIN( 210)									int cloneLength5 = (srcLength11 - srcByteOffset5);
-HXDLIN( 210)									_this22->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength5);
-HXDLIN( 210)									_this22->buffer->blit(0,srcData5,srcByteOffset5,cloneLength5);
-            								}
-            								else {
-HXLINE( 210)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 210)								_this22->byteLength = (_this22->bytesPerElement * srcLength10);
-HXDLIN( 210)								_this22->byteOffset = 0;
-HXDLIN( 210)								_this22->length = srcLength10;
-HXDLIN( 210)								this6 = _this22;
-            							}
-            							else {
-HXLINE( 210)								if (::hx::IsNotNull( buffer5 )) {
-HXLINE( 210)									 ::lime::utils::ArrayBufferView _this23 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
-HXDLIN( 210)									int in_byteOffset5 = ( (int)(byteoffset5) );
-HXDLIN( 210)									if ((in_byteOffset5 < 0)) {
-HXLINE( 210)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 210)									if ((::hx::Mod(in_byteOffset5,_this23->bytesPerElement) != 0)) {
-HXLINE( 210)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 210)									int bufferByteLength5 = buffer5->length;
-HXDLIN( 210)									int elementSize11 = _this23->bytesPerElement;
-HXDLIN( 210)									int newByteLength5 = bufferByteLength5;
-HXDLIN( 210)									if (::hx::IsNull( len )) {
-HXLINE( 210)										newByteLength5 = (bufferByteLength5 - in_byteOffset5);
-HXDLIN( 210)										if ((::hx::Mod(bufferByteLength5,_this23->bytesPerElement) != 0)) {
-HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 210)										if ((newByteLength5 < 0)) {
-HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 210)										newByteLength5 = (len * _this23->bytesPerElement);
-HXDLIN( 210)										int newRange5 = (in_byteOffset5 + newByteLength5);
-HXDLIN( 210)										if ((newRange5 > bufferByteLength5)) {
-HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 210)									_this23->buffer = buffer5;
-HXDLIN( 210)									_this23->byteOffset = in_byteOffset5;
-HXDLIN( 210)									_this23->byteLength = newByteLength5;
-HXDLIN( 210)									_this23->length = ::Std_obj::_hx_int((( (Float)(newByteLength5) ) / ( (Float)(_this23->bytesPerElement) )));
-HXDLIN( 210)									this6 = _this23;
-            								}
-            								else {
-HXLINE( 210)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt16Array",0a,c7,2d,d5));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this6;
-            			}
-            			break;
-            			case (int)7: {
-HXLINE( 213)				 ::Dynamic elements6 = null();
-HXDLIN( 213)				 ::haxe::io::Bytes buffer6 = this->buffer;
-HXDLIN( 213)				::cpp::VirtualArray array12 = null();
-HXDLIN( 213)				 ::openfl::_Vector::IntVector vector6 = null();
-HXDLIN( 213)				 ::lime::utils::ArrayBufferView view7 = null();
-HXDLIN( 213)				 ::Dynamic byteoffset6 = byte_offset;
-HXDLIN( 213)				if (::hx::IsNull( byteoffset6 )) {
-HXLINE( 213)					byteoffset6 = 0;
-            				}
-HXDLIN( 213)				 ::lime::utils::ArrayBufferView this7;
-HXDLIN( 213)				if (::hx::IsNotNull( elements6 )) {
-HXLINE( 213)					this7 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements6,7);
-            				}
-            				else {
-HXLINE( 213)					if (::hx::IsNotNull( array12 )) {
-HXLINE( 213)						 ::lime::utils::ArrayBufferView _this24 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
-HXDLIN( 213)						_this24->byteOffset = 0;
-HXDLIN( 213)						_this24->length = array12->get_length();
-HXDLIN( 213)						_this24->byteLength = (_this24->length * _this24->bytesPerElement);
-HXDLIN( 213)						_this24->buffer = ::haxe::io::Bytes_obj::alloc(_this24->byteLength);
-HXDLIN( 213)						_this24->copyFromArray(array12,null());
-HXDLIN( 213)						this7 = _this24;
-            					}
-            					else {
-HXLINE( 213)						if (::hx::IsNotNull( vector6 )) {
-HXLINE( 213)							 ::lime::utils::ArrayBufferView _this25 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
-HXDLIN( 213)							::cpp::VirtualArray array13 = ( (::cpp::VirtualArray)(vector6->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 213)							_this25->byteOffset = 0;
-HXDLIN( 213)							_this25->length = array13->get_length();
-HXDLIN( 213)							_this25->byteLength = (_this25->length * _this25->bytesPerElement);
-HXDLIN( 213)							_this25->buffer = ::haxe::io::Bytes_obj::alloc(_this25->byteLength);
-HXDLIN( 213)							_this25->copyFromArray(array13,null());
-HXDLIN( 213)							this7 = _this25;
-            						}
-            						else {
-HXLINE( 213)							if (::hx::IsNotNull( view7 )) {
-HXLINE( 213)								 ::lime::utils::ArrayBufferView _this26 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
-HXDLIN( 213)								 ::haxe::io::Bytes srcData6 = view7->buffer;
-HXDLIN( 213)								int srcLength12 = view7->length;
-HXDLIN( 213)								int srcByteOffset6 = view7->byteOffset;
-HXDLIN( 213)								int srcElementSize6 = view7->bytesPerElement;
-HXDLIN( 213)								int elementSize12 = _this26->bytesPerElement;
-HXDLIN( 213)								if ((view7->type == _this26->type)) {
-HXLINE( 213)									int srcLength13 = srcData6->length;
-HXDLIN( 213)									int cloneLength6 = (srcLength13 - srcByteOffset6);
-HXDLIN( 213)									_this26->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength6);
-HXDLIN( 213)									_this26->buffer->blit(0,srcData6,srcByteOffset6,cloneLength6);
-            								}
-            								else {
-HXLINE( 213)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 213)								_this26->byteLength = (_this26->bytesPerElement * srcLength12);
-HXDLIN( 213)								_this26->byteOffset = 0;
-HXDLIN( 213)								_this26->length = srcLength12;
-HXDLIN( 213)								this7 = _this26;
-            							}
-            							else {
-HXLINE( 213)								if (::hx::IsNotNull( buffer6 )) {
-HXLINE( 213)									 ::lime::utils::ArrayBufferView _this27 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
-HXDLIN( 213)									int in_byteOffset6 = ( (int)(byteoffset6) );
-HXDLIN( 213)									if ((in_byteOffset6 < 0)) {
-HXLINE( 213)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 213)									if ((::hx::Mod(in_byteOffset6,_this27->bytesPerElement) != 0)) {
-HXLINE( 213)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 213)									int bufferByteLength6 = buffer6->length;
-HXDLIN( 213)									int elementSize13 = _this27->bytesPerElement;
-HXDLIN( 213)									int newByteLength6 = bufferByteLength6;
-HXDLIN( 213)									if (::hx::IsNull( len )) {
-HXLINE( 213)										newByteLength6 = (bufferByteLength6 - in_byteOffset6);
-HXDLIN( 213)										if ((::hx::Mod(bufferByteLength6,_this27->bytesPerElement) != 0)) {
-HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 213)										if ((newByteLength6 < 0)) {
-HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 213)										newByteLength6 = (len * _this27->bytesPerElement);
-HXDLIN( 213)										int newRange6 = (in_byteOffset6 + newByteLength6);
-HXDLIN( 213)										if ((newRange6 > bufferByteLength6)) {
-HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 213)									_this27->buffer = buffer6;
-HXDLIN( 213)									_this27->byteOffset = in_byteOffset6;
-HXDLIN( 213)									_this27->byteLength = newByteLength6;
-HXDLIN( 213)									_this27->length = ::Std_obj::_hx_int((( (Float)(newByteLength6) ) / ( (Float)(_this27->bytesPerElement) )));
-HXDLIN( 213)									this7 = _this27;
-            								}
-            								else {
-HXLINE( 213)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt32Array",10,43,eb,8e));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this7;
-            			}
-            			break;
-            			case (int)8: {
-HXLINE( 216)				 ::Dynamic elements7 = null();
-HXDLIN( 216)				 ::haxe::io::Bytes buffer7 = this->buffer;
-HXDLIN( 216)				::cpp::VirtualArray array14 = null();
-HXDLIN( 216)				 ::openfl::_Vector::FloatVector vector7 = null();
-HXDLIN( 216)				 ::lime::utils::ArrayBufferView view8 = null();
-HXDLIN( 216)				 ::Dynamic byteoffset7 = byte_offset;
-HXDLIN( 216)				if (::hx::IsNull( byteoffset7 )) {
-HXLINE( 216)					byteoffset7 = 0;
-            				}
-HXDLIN( 216)				 ::lime::utils::ArrayBufferView this8;
-HXDLIN( 216)				if (::hx::IsNotNull( elements7 )) {
-HXLINE( 216)					this8 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements7,8);
-            				}
-            				else {
-HXLINE( 216)					if (::hx::IsNotNull( array14 )) {
-HXLINE( 216)						 ::lime::utils::ArrayBufferView _this28 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
-HXDLIN( 216)						_this28->byteOffset = 0;
-HXDLIN( 216)						_this28->length = array14->get_length();
-HXDLIN( 216)						_this28->byteLength = (_this28->length * _this28->bytesPerElement);
-HXDLIN( 216)						_this28->buffer = ::haxe::io::Bytes_obj::alloc(_this28->byteLength);
-HXDLIN( 216)						_this28->copyFromArray(array14,null());
-HXDLIN( 216)						this8 = _this28;
-            					}
-            					else {
-HXLINE( 216)						if (::hx::IsNotNull( vector7 )) {
-HXLINE( 216)							 ::lime::utils::ArrayBufferView _this29 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
-HXDLIN( 216)							::cpp::VirtualArray array15 = ( (::cpp::VirtualArray)(vector7->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 216)							_this29->byteOffset = 0;
-HXDLIN( 216)							_this29->length = array15->get_length();
-HXDLIN( 216)							_this29->byteLength = (_this29->length * _this29->bytesPerElement);
-HXDLIN( 216)							_this29->buffer = ::haxe::io::Bytes_obj::alloc(_this29->byteLength);
-HXDLIN( 216)							_this29->copyFromArray(array15,null());
-HXDLIN( 216)							this8 = _this29;
-            						}
-            						else {
-HXLINE( 216)							if (::hx::IsNotNull( view8 )) {
-HXLINE( 216)								 ::lime::utils::ArrayBufferView _this30 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
-HXDLIN( 216)								 ::haxe::io::Bytes srcData7 = view8->buffer;
-HXDLIN( 216)								int srcLength14 = view8->length;
-HXDLIN( 216)								int srcByteOffset7 = view8->byteOffset;
-HXDLIN( 216)								int srcElementSize7 = view8->bytesPerElement;
-HXDLIN( 216)								int elementSize14 = _this30->bytesPerElement;
-HXDLIN( 216)								if ((view8->type == _this30->type)) {
-HXLINE( 216)									int srcLength15 = srcData7->length;
-HXDLIN( 216)									int cloneLength7 = (srcLength15 - srcByteOffset7);
-HXDLIN( 216)									_this30->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength7);
-HXDLIN( 216)									_this30->buffer->blit(0,srcData7,srcByteOffset7,cloneLength7);
-            								}
-            								else {
-HXLINE( 216)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 216)								_this30->byteLength = (_this30->bytesPerElement * srcLength14);
-HXDLIN( 216)								_this30->byteOffset = 0;
-HXDLIN( 216)								_this30->length = srcLength14;
-HXDLIN( 216)								this8 = _this30;
-            							}
-            							else {
-HXLINE( 216)								if (::hx::IsNotNull( buffer7 )) {
-HXLINE( 216)									 ::lime::utils::ArrayBufferView _this31 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
-HXDLIN( 216)									int in_byteOffset7 = ( (int)(byteoffset7) );
-HXDLIN( 216)									if ((in_byteOffset7 < 0)) {
-HXLINE( 216)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 216)									if ((::hx::Mod(in_byteOffset7,_this31->bytesPerElement) != 0)) {
-HXLINE( 216)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 216)									int bufferByteLength7 = buffer7->length;
-HXDLIN( 216)									int elementSize15 = _this31->bytesPerElement;
-HXDLIN( 216)									int newByteLength7 = bufferByteLength7;
-HXDLIN( 216)									if (::hx::IsNull( len )) {
-HXLINE( 216)										newByteLength7 = (bufferByteLength7 - in_byteOffset7);
-HXDLIN( 216)										if ((::hx::Mod(bufferByteLength7,_this31->bytesPerElement) != 0)) {
-HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 216)										if ((newByteLength7 < 0)) {
-HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 216)										newByteLength7 = (len * _this31->bytesPerElement);
-HXDLIN( 216)										int newRange7 = (in_byteOffset7 + newByteLength7);
-HXDLIN( 216)										if ((newRange7 > bufferByteLength7)) {
-HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 216)									_this31->buffer = buffer7;
-HXDLIN( 216)									_this31->byteOffset = in_byteOffset7;
-HXDLIN( 216)									_this31->byteLength = newByteLength7;
-HXDLIN( 216)									_this31->length = ::Std_obj::_hx_int((( (Float)(newByteLength7) ) / ( (Float)(_this31->bytesPerElement) )));
-HXDLIN( 216)									this8 = _this31;
-            								}
-            								else {
-HXLINE( 216)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Float32Array",8e,c1,f4,d4));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this8;
-            			}
-            			break;
-            			case (int)9: {
-HXLINE( 219)				 ::Dynamic elements8 = null();
-HXDLIN( 219)				 ::haxe::io::Bytes buffer8 = this->buffer;
-HXDLIN( 219)				::cpp::VirtualArray array16 = null();
-HXDLIN( 219)				 ::openfl::_Vector::FloatVector vector8 = null();
-HXDLIN( 219)				 ::lime::utils::ArrayBufferView view9 = null();
-HXDLIN( 219)				 ::Dynamic byteoffset8 = byte_offset;
-HXDLIN( 219)				if (::hx::IsNull( byteoffset8 )) {
-HXLINE( 219)					byteoffset8 = 0;
-            				}
-HXDLIN( 219)				 ::lime::utils::ArrayBufferView this9;
-HXDLIN( 219)				if (::hx::IsNotNull( elements8 )) {
-HXLINE( 219)					this9 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements8,9);
-            				}
-            				else {
-HXLINE( 219)					if (::hx::IsNotNull( array16 )) {
-HXLINE( 219)						 ::lime::utils::ArrayBufferView _this32 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
-HXDLIN( 219)						_this32->byteOffset = 0;
-HXDLIN( 219)						_this32->length = array16->get_length();
-HXDLIN( 219)						_this32->byteLength = (_this32->length * _this32->bytesPerElement);
-HXDLIN( 219)						_this32->buffer = ::haxe::io::Bytes_obj::alloc(_this32->byteLength);
-HXDLIN( 219)						_this32->copyFromArray(array16,null());
-HXDLIN( 219)						this9 = _this32;
-            					}
-            					else {
-HXLINE( 219)						if (::hx::IsNotNull( vector8 )) {
-HXLINE( 219)							 ::lime::utils::ArrayBufferView _this33 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
-HXDLIN( 219)							::cpp::VirtualArray array17 = ( (::cpp::VirtualArray)(vector8->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 219)							_this33->byteOffset = 0;
-HXDLIN( 219)							_this33->length = array17->get_length();
-HXDLIN( 219)							_this33->byteLength = (_this33->length * _this33->bytesPerElement);
-HXDLIN( 219)							_this33->buffer = ::haxe::io::Bytes_obj::alloc(_this33->byteLength);
-HXDLIN( 219)							_this33->copyFromArray(array17,null());
-HXDLIN( 219)							this9 = _this33;
-            						}
-            						else {
-HXLINE( 219)							if (::hx::IsNotNull( view9 )) {
-HXLINE( 219)								 ::lime::utils::ArrayBufferView _this34 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
-HXDLIN( 219)								 ::haxe::io::Bytes srcData8 = view9->buffer;
-HXDLIN( 219)								int srcLength16 = view9->length;
-HXDLIN( 219)								int srcByteOffset8 = view9->byteOffset;
-HXDLIN( 219)								int srcElementSize8 = view9->bytesPerElement;
-HXDLIN( 219)								int elementSize16 = _this34->bytesPerElement;
-HXDLIN( 219)								if ((view9->type == _this34->type)) {
-HXLINE( 219)									int srcLength17 = srcData8->length;
-HXDLIN( 219)									int cloneLength8 = (srcLength17 - srcByteOffset8);
-HXDLIN( 219)									_this34->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength8);
-HXDLIN( 219)									_this34->buffer->blit(0,srcData8,srcByteOffset8,cloneLength8);
-            								}
-            								else {
-HXLINE( 219)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 219)								_this34->byteLength = (_this34->bytesPerElement * srcLength16);
-HXDLIN( 219)								_this34->byteOffset = 0;
-HXDLIN( 219)								_this34->length = srcLength16;
-HXDLIN( 219)								this9 = _this34;
-            							}
-            							else {
-HXLINE( 219)								if (::hx::IsNotNull( buffer8 )) {
-HXLINE( 219)									 ::lime::utils::ArrayBufferView _this35 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
-HXDLIN( 219)									int in_byteOffset8 = ( (int)(byteoffset8) );
-HXDLIN( 219)									if ((in_byteOffset8 < 0)) {
-HXLINE( 219)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 219)									if ((::hx::Mod(in_byteOffset8,_this35->bytesPerElement) != 0)) {
-HXLINE( 219)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 219)									int bufferByteLength8 = buffer8->length;
-HXDLIN( 219)									int elementSize17 = _this35->bytesPerElement;
-HXDLIN( 219)									int newByteLength8 = bufferByteLength8;
-HXDLIN( 219)									if (::hx::IsNull( len )) {
-HXLINE( 219)										newByteLength8 = (bufferByteLength8 - in_byteOffset8);
-HXDLIN( 219)										if ((::hx::Mod(bufferByteLength8,_this35->bytesPerElement) != 0)) {
-HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 219)										if ((newByteLength8 < 0)) {
-HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 219)										newByteLength8 = (len * _this35->bytesPerElement);
-HXDLIN( 219)										int newRange8 = (in_byteOffset8 + newByteLength8);
-HXDLIN( 219)										if ((newRange8 > bufferByteLength8)) {
-HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 219)									_this35->buffer = buffer8;
-HXDLIN( 219)									_this35->byteOffset = in_byteOffset8;
-HXDLIN( 219)									_this35->byteLength = newByteLength8;
-HXDLIN( 219)									_this35->length = ::Std_obj::_hx_int((( (Float)(newByteLength8) ) / ( (Float)(_this35->bytesPerElement) )));
-HXDLIN( 219)									this9 = _this35;
-            								}
-            								else {
-HXLINE( 219)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Float64Array",8f,de,6b,1e));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this9;
-            			}
-            			break;
-            		}
-HXLINE( 225)		return view;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC2(ArrayBufferView_obj,subarray_lime_utils_Int32Array,return )
-
- ::lime::utils::ArrayBufferView ArrayBufferView_obj::subarray_lime_utils_UInt32Array(int begin, ::Dynamic end){
-            	HX_GC_STACKFRAME(&_hx_pos_244a612994c6bd06_185_subarray_lime_utils_UInt32Array)
-HXLINE( 186)		if (::hx::IsNull( end )) {
-HXLINE( 186)			end = this->length;
-            		}
-HXLINE( 187)		int len = (( (int)(end) ) - begin);
-HXLINE( 188)		if ((len < 0)) {
-HXLINE( 188)			len = 0;
-            		}
-HXLINE( 189)		if ((len > this->length)) {
-HXLINE( 189)			len = this->length;
-            		}
-HXLINE( 190)		int byte_offset = ((begin * this->bytesPerElement) + this->byteOffset);
-HXLINE( 192)		 ::lime::utils::ArrayBufferView view;
-HXDLIN( 192)		switch((int)(this->type)){
-            			case (int)0: {
-HXLINE( 222)				HX_STACK_DO_THROW(HX_("subarray on a blank ArrayBufferView",39,87,fd,19));
-            			}
-            			break;
-            			case (int)1: {
-HXLINE( 195)				 ::Dynamic elements = null();
-HXDLIN( 195)				 ::haxe::io::Bytes buffer = this->buffer;
-HXDLIN( 195)				::cpp::VirtualArray array = null();
-HXDLIN( 195)				 ::openfl::_Vector::IntVector vector = null();
-HXDLIN( 195)				 ::lime::utils::ArrayBufferView view1 = null();
-HXDLIN( 195)				 ::Dynamic byteoffset = byte_offset;
-HXDLIN( 195)				if (::hx::IsNull( byteoffset )) {
-HXLINE( 195)					byteoffset = 0;
-            				}
-HXDLIN( 195)				 ::lime::utils::ArrayBufferView this1;
-HXDLIN( 195)				if (::hx::IsNotNull( elements )) {
-HXLINE( 195)					this1 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements,1);
-            				}
-            				else {
-HXLINE( 195)					if (::hx::IsNotNull( array )) {
-HXLINE( 195)						 ::lime::utils::ArrayBufferView _this =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
-HXDLIN( 195)						_this->byteOffset = 0;
-HXDLIN( 195)						_this->length = array->get_length();
-HXDLIN( 195)						_this->byteLength = (_this->length * _this->bytesPerElement);
-HXDLIN( 195)						_this->buffer = ::haxe::io::Bytes_obj::alloc(_this->byteLength);
-HXDLIN( 195)						_this->copyFromArray(array,null());
-HXDLIN( 195)						this1 = _this;
-            					}
-            					else {
-HXLINE( 195)						if (::hx::IsNotNull( vector )) {
-HXLINE( 195)							 ::lime::utils::ArrayBufferView _this1 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
-HXDLIN( 195)							::cpp::VirtualArray array1 = ( (::cpp::VirtualArray)(vector->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 195)							_this1->byteOffset = 0;
-HXDLIN( 195)							_this1->length = array1->get_length();
-HXDLIN( 195)							_this1->byteLength = (_this1->length * _this1->bytesPerElement);
-HXDLIN( 195)							_this1->buffer = ::haxe::io::Bytes_obj::alloc(_this1->byteLength);
-HXDLIN( 195)							_this1->copyFromArray(array1,null());
-HXDLIN( 195)							this1 = _this1;
-            						}
-            						else {
-HXLINE( 195)							if (::hx::IsNotNull( view1 )) {
-HXLINE( 195)								 ::lime::utils::ArrayBufferView _this2 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
-HXDLIN( 195)								 ::haxe::io::Bytes srcData = view1->buffer;
-HXDLIN( 195)								int srcLength = view1->length;
-HXDLIN( 195)								int srcByteOffset = view1->byteOffset;
-HXDLIN( 195)								int srcElementSize = view1->bytesPerElement;
-HXDLIN( 195)								int elementSize = _this2->bytesPerElement;
-HXDLIN( 195)								if ((view1->type == _this2->type)) {
-HXLINE( 195)									int srcLength1 = srcData->length;
-HXDLIN( 195)									int cloneLength = (srcLength1 - srcByteOffset);
-HXDLIN( 195)									_this2->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength);
-HXDLIN( 195)									_this2->buffer->blit(0,srcData,srcByteOffset,cloneLength);
-            								}
-            								else {
-HXLINE( 195)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 195)								_this2->byteLength = (_this2->bytesPerElement * srcLength);
-HXDLIN( 195)								_this2->byteOffset = 0;
-HXDLIN( 195)								_this2->length = srcLength;
-HXDLIN( 195)								this1 = _this2;
-            							}
-            							else {
-HXLINE( 195)								if (::hx::IsNotNull( buffer )) {
-HXLINE( 195)									 ::lime::utils::ArrayBufferView _this3 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
-HXDLIN( 195)									int in_byteOffset = ( (int)(byteoffset) );
-HXDLIN( 195)									if ((in_byteOffset < 0)) {
-HXLINE( 195)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 195)									if ((::hx::Mod(in_byteOffset,_this3->bytesPerElement) != 0)) {
-HXLINE( 195)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 195)									int bufferByteLength = buffer->length;
-HXDLIN( 195)									int elementSize1 = _this3->bytesPerElement;
-HXDLIN( 195)									int newByteLength = bufferByteLength;
-HXDLIN( 195)									if (::hx::IsNull( len )) {
-HXLINE( 195)										newByteLength = (bufferByteLength - in_byteOffset);
-HXDLIN( 195)										if ((::hx::Mod(bufferByteLength,_this3->bytesPerElement) != 0)) {
-HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 195)										if ((newByteLength < 0)) {
-HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 195)										newByteLength = (len * _this3->bytesPerElement);
-HXDLIN( 195)										int newRange = (in_byteOffset + newByteLength);
-HXDLIN( 195)										if ((newRange > bufferByteLength)) {
-HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 195)									_this3->buffer = buffer;
-HXDLIN( 195)									_this3->byteOffset = in_byteOffset;
-HXDLIN( 195)									_this3->byteLength = newByteLength;
-HXDLIN( 195)									_this3->length = ::Std_obj::_hx_int((( (Float)(newByteLength) ) / ( (Float)(_this3->bytesPerElement) )));
-HXDLIN( 195)									this1 = _this3;
-            								}
-            								else {
-HXLINE( 195)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int8Array",40,53,da,77));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this1;
-            			}
-            			break;
-            			case (int)2: {
-HXLINE( 198)				 ::Dynamic elements1 = null();
-HXDLIN( 198)				 ::haxe::io::Bytes buffer1 = this->buffer;
-HXDLIN( 198)				::cpp::VirtualArray array2 = null();
-HXDLIN( 198)				 ::openfl::_Vector::IntVector vector1 = null();
-HXDLIN( 198)				 ::lime::utils::ArrayBufferView view2 = null();
-HXDLIN( 198)				 ::Dynamic byteoffset1 = byte_offset;
-HXDLIN( 198)				if (::hx::IsNull( byteoffset1 )) {
-HXLINE( 198)					byteoffset1 = 0;
-            				}
-HXDLIN( 198)				 ::lime::utils::ArrayBufferView this2;
-HXDLIN( 198)				if (::hx::IsNotNull( elements1 )) {
-HXLINE( 198)					this2 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements1,2);
-            				}
-            				else {
-HXLINE( 198)					if (::hx::IsNotNull( array2 )) {
-HXLINE( 198)						 ::lime::utils::ArrayBufferView _this4 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
-HXDLIN( 198)						_this4->byteOffset = 0;
-HXDLIN( 198)						_this4->length = array2->get_length();
-HXDLIN( 198)						_this4->byteLength = (_this4->length * _this4->bytesPerElement);
-HXDLIN( 198)						_this4->buffer = ::haxe::io::Bytes_obj::alloc(_this4->byteLength);
-HXDLIN( 198)						_this4->copyFromArray(array2,null());
-HXDLIN( 198)						this2 = _this4;
-            					}
-            					else {
-HXLINE( 198)						if (::hx::IsNotNull( vector1 )) {
-HXLINE( 198)							 ::lime::utils::ArrayBufferView _this5 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
-HXDLIN( 198)							::cpp::VirtualArray array3 = ( (::cpp::VirtualArray)(vector1->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 198)							_this5->byteOffset = 0;
-HXDLIN( 198)							_this5->length = array3->get_length();
-HXDLIN( 198)							_this5->byteLength = (_this5->length * _this5->bytesPerElement);
-HXDLIN( 198)							_this5->buffer = ::haxe::io::Bytes_obj::alloc(_this5->byteLength);
-HXDLIN( 198)							_this5->copyFromArray(array3,null());
-HXDLIN( 198)							this2 = _this5;
-            						}
-            						else {
-HXLINE( 198)							if (::hx::IsNotNull( view2 )) {
-HXLINE( 198)								 ::lime::utils::ArrayBufferView _this6 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
-HXDLIN( 198)								 ::haxe::io::Bytes srcData1 = view2->buffer;
-HXDLIN( 198)								int srcLength2 = view2->length;
-HXDLIN( 198)								int srcByteOffset1 = view2->byteOffset;
-HXDLIN( 198)								int srcElementSize1 = view2->bytesPerElement;
-HXDLIN( 198)								int elementSize2 = _this6->bytesPerElement;
-HXDLIN( 198)								if ((view2->type == _this6->type)) {
-HXLINE( 198)									int srcLength3 = srcData1->length;
-HXDLIN( 198)									int cloneLength1 = (srcLength3 - srcByteOffset1);
-HXDLIN( 198)									_this6->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength1);
-HXDLIN( 198)									_this6->buffer->blit(0,srcData1,srcByteOffset1,cloneLength1);
-            								}
-            								else {
-HXLINE( 198)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 198)								_this6->byteLength = (_this6->bytesPerElement * srcLength2);
-HXDLIN( 198)								_this6->byteOffset = 0;
-HXDLIN( 198)								_this6->length = srcLength2;
-HXDLIN( 198)								this2 = _this6;
-            							}
-            							else {
-HXLINE( 198)								if (::hx::IsNotNull( buffer1 )) {
-HXLINE( 198)									 ::lime::utils::ArrayBufferView _this7 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
-HXDLIN( 198)									int in_byteOffset1 = ( (int)(byteoffset1) );
-HXDLIN( 198)									if ((in_byteOffset1 < 0)) {
-HXLINE( 198)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 198)									if ((::hx::Mod(in_byteOffset1,_this7->bytesPerElement) != 0)) {
-HXLINE( 198)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 198)									int bufferByteLength1 = buffer1->length;
-HXDLIN( 198)									int elementSize3 = _this7->bytesPerElement;
-HXDLIN( 198)									int newByteLength1 = bufferByteLength1;
-HXDLIN( 198)									if (::hx::IsNull( len )) {
-HXLINE( 198)										newByteLength1 = (bufferByteLength1 - in_byteOffset1);
-HXDLIN( 198)										if ((::hx::Mod(bufferByteLength1,_this7->bytesPerElement) != 0)) {
-HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 198)										if ((newByteLength1 < 0)) {
-HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 198)										newByteLength1 = (len * _this7->bytesPerElement);
-HXDLIN( 198)										int newRange1 = (in_byteOffset1 + newByteLength1);
-HXDLIN( 198)										if ((newRange1 > bufferByteLength1)) {
-HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 198)									_this7->buffer = buffer1;
-HXDLIN( 198)									_this7->byteOffset = in_byteOffset1;
-HXDLIN( 198)									_this7->byteLength = newByteLength1;
-HXDLIN( 198)									_this7->length = ::Std_obj::_hx_int((( (Float)(newByteLength1) ) / ( (Float)(_this7->bytesPerElement) )));
-HXDLIN( 198)									this2 = _this7;
-            								}
-            								else {
-HXLINE( 198)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int16Array",95,b2,95,a7));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this2;
-            			}
-            			break;
-            			case (int)3: {
-HXLINE( 201)				 ::Dynamic elements2 = null();
-HXDLIN( 201)				 ::haxe::io::Bytes buffer2 = this->buffer;
-HXDLIN( 201)				::cpp::VirtualArray array4 = null();
-HXDLIN( 201)				 ::openfl::_Vector::IntVector vector2 = null();
-HXDLIN( 201)				 ::lime::utils::ArrayBufferView view3 = null();
-HXDLIN( 201)				 ::Dynamic byteoffset2 = byte_offset;
-HXDLIN( 201)				if (::hx::IsNull( byteoffset2 )) {
-HXLINE( 201)					byteoffset2 = 0;
-            				}
-HXDLIN( 201)				 ::lime::utils::ArrayBufferView this3;
-HXDLIN( 201)				if (::hx::IsNotNull( elements2 )) {
-HXLINE( 201)					this3 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements2,3);
-            				}
-            				else {
-HXLINE( 201)					if (::hx::IsNotNull( array4 )) {
-HXLINE( 201)						 ::lime::utils::ArrayBufferView _this8 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
-HXDLIN( 201)						_this8->byteOffset = 0;
-HXDLIN( 201)						_this8->length = array4->get_length();
-HXDLIN( 201)						_this8->byteLength = (_this8->length * _this8->bytesPerElement);
-HXDLIN( 201)						_this8->buffer = ::haxe::io::Bytes_obj::alloc(_this8->byteLength);
-HXDLIN( 201)						_this8->copyFromArray(array4,null());
-HXDLIN( 201)						this3 = _this8;
-            					}
-            					else {
-HXLINE( 201)						if (::hx::IsNotNull( vector2 )) {
-HXLINE( 201)							 ::lime::utils::ArrayBufferView _this9 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
-HXDLIN( 201)							::cpp::VirtualArray array5 = ( (::cpp::VirtualArray)(vector2->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 201)							_this9->byteOffset = 0;
-HXDLIN( 201)							_this9->length = array5->get_length();
-HXDLIN( 201)							_this9->byteLength = (_this9->length * _this9->bytesPerElement);
-HXDLIN( 201)							_this9->buffer = ::haxe::io::Bytes_obj::alloc(_this9->byteLength);
-HXDLIN( 201)							_this9->copyFromArray(array5,null());
-HXDLIN( 201)							this3 = _this9;
-            						}
-            						else {
-HXLINE( 201)							if (::hx::IsNotNull( view3 )) {
-HXLINE( 201)								 ::lime::utils::ArrayBufferView _this10 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
-HXDLIN( 201)								 ::haxe::io::Bytes srcData2 = view3->buffer;
-HXDLIN( 201)								int srcLength4 = view3->length;
-HXDLIN( 201)								int srcByteOffset2 = view3->byteOffset;
-HXDLIN( 201)								int srcElementSize2 = view3->bytesPerElement;
-HXDLIN( 201)								int elementSize4 = _this10->bytesPerElement;
-HXDLIN( 201)								if ((view3->type == _this10->type)) {
-HXLINE( 201)									int srcLength5 = srcData2->length;
-HXDLIN( 201)									int cloneLength2 = (srcLength5 - srcByteOffset2);
-HXDLIN( 201)									_this10->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength2);
-HXDLIN( 201)									_this10->buffer->blit(0,srcData2,srcByteOffset2,cloneLength2);
-            								}
-            								else {
-HXLINE( 201)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 201)								_this10->byteLength = (_this10->bytesPerElement * srcLength4);
-HXDLIN( 201)								_this10->byteOffset = 0;
-HXDLIN( 201)								_this10->length = srcLength4;
-HXDLIN( 201)								this3 = _this10;
-            							}
-            							else {
-HXLINE( 201)								if (::hx::IsNotNull( buffer2 )) {
-HXLINE( 201)									 ::lime::utils::ArrayBufferView _this11 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
-HXDLIN( 201)									int in_byteOffset2 = ( (int)(byteoffset2) );
-HXDLIN( 201)									if ((in_byteOffset2 < 0)) {
-HXLINE( 201)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 201)									if ((::hx::Mod(in_byteOffset2,_this11->bytesPerElement) != 0)) {
-HXLINE( 201)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 201)									int bufferByteLength2 = buffer2->length;
-HXDLIN( 201)									int elementSize5 = _this11->bytesPerElement;
-HXDLIN( 201)									int newByteLength2 = bufferByteLength2;
-HXDLIN( 201)									if (::hx::IsNull( len )) {
-HXLINE( 201)										newByteLength2 = (bufferByteLength2 - in_byteOffset2);
-HXDLIN( 201)										if ((::hx::Mod(bufferByteLength2,_this11->bytesPerElement) != 0)) {
-HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 201)										if ((newByteLength2 < 0)) {
-HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 201)										newByteLength2 = (len * _this11->bytesPerElement);
-HXDLIN( 201)										int newRange2 = (in_byteOffset2 + newByteLength2);
-HXDLIN( 201)										if ((newRange2 > bufferByteLength2)) {
-HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 201)									_this11->buffer = buffer2;
-HXDLIN( 201)									_this11->byteOffset = in_byteOffset2;
-HXDLIN( 201)									_this11->byteLength = newByteLength2;
-HXDLIN( 201)									_this11->length = ::Std_obj::_hx_int((( (Float)(newByteLength2) ) / ( (Float)(_this11->bytesPerElement) )));
-HXDLIN( 201)									this3 = _this11;
-            								}
-            								else {
-HXLINE( 201)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int32Array",9b,2e,53,61));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this3;
-            			}
-            			break;
-            			case (int)4: {
-HXLINE( 204)				 ::Dynamic elements3 = null();
-HXDLIN( 204)				 ::haxe::io::Bytes buffer3 = this->buffer;
-HXDLIN( 204)				::cpp::VirtualArray array6 = null();
-HXDLIN( 204)				 ::openfl::_Vector::IntVector vector3 = null();
-HXDLIN( 204)				 ::lime::utils::ArrayBufferView view4 = null();
-HXDLIN( 204)				 ::Dynamic byteoffset3 = byte_offset;
-HXDLIN( 204)				if (::hx::IsNull( byteoffset3 )) {
-HXLINE( 204)					byteoffset3 = 0;
-            				}
-HXDLIN( 204)				 ::lime::utils::ArrayBufferView this4;
-HXDLIN( 204)				if (::hx::IsNotNull( elements3 )) {
-HXLINE( 204)					this4 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements3,4);
-            				}
-            				else {
-HXLINE( 204)					if (::hx::IsNotNull( array6 )) {
-HXLINE( 204)						 ::lime::utils::ArrayBufferView _this12 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
-HXDLIN( 204)						_this12->byteOffset = 0;
-HXDLIN( 204)						_this12->length = array6->get_length();
-HXDLIN( 204)						_this12->byteLength = (_this12->length * _this12->bytesPerElement);
-HXDLIN( 204)						_this12->buffer = ::haxe::io::Bytes_obj::alloc(_this12->byteLength);
-HXDLIN( 204)						_this12->copyFromArray(array6,null());
-HXDLIN( 204)						this4 = _this12;
-            					}
-            					else {
-HXLINE( 204)						if (::hx::IsNotNull( vector3 )) {
-HXLINE( 204)							 ::lime::utils::ArrayBufferView _this13 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
-HXDLIN( 204)							::cpp::VirtualArray array7 = ( (::cpp::VirtualArray)(vector3->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 204)							_this13->byteOffset = 0;
-HXDLIN( 204)							_this13->length = array7->get_length();
-HXDLIN( 204)							_this13->byteLength = (_this13->length * _this13->bytesPerElement);
-HXDLIN( 204)							_this13->buffer = ::haxe::io::Bytes_obj::alloc(_this13->byteLength);
-HXDLIN( 204)							_this13->copyFromArray(array7,null());
-HXDLIN( 204)							this4 = _this13;
-            						}
-            						else {
-HXLINE( 204)							if (::hx::IsNotNull( view4 )) {
-HXLINE( 204)								 ::lime::utils::ArrayBufferView _this14 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
-HXDLIN( 204)								 ::haxe::io::Bytes srcData3 = view4->buffer;
-HXDLIN( 204)								int srcLength6 = view4->length;
-HXDLIN( 204)								int srcByteOffset3 = view4->byteOffset;
-HXDLIN( 204)								int srcElementSize3 = view4->bytesPerElement;
-HXDLIN( 204)								int elementSize6 = _this14->bytesPerElement;
-HXDLIN( 204)								if ((view4->type == _this14->type)) {
-HXLINE( 204)									int srcLength7 = srcData3->length;
-HXDLIN( 204)									int cloneLength3 = (srcLength7 - srcByteOffset3);
-HXDLIN( 204)									_this14->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength3);
-HXDLIN( 204)									_this14->buffer->blit(0,srcData3,srcByteOffset3,cloneLength3);
-            								}
-            								else {
-HXLINE( 204)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 204)								_this14->byteLength = (_this14->bytesPerElement * srcLength6);
-HXDLIN( 204)								_this14->byteOffset = 0;
-HXDLIN( 204)								_this14->length = srcLength6;
-HXDLIN( 204)								this4 = _this14;
-            							}
-            							else {
-HXLINE( 204)								if (::hx::IsNotNull( buffer3 )) {
-HXLINE( 204)									 ::lime::utils::ArrayBufferView _this15 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
-HXDLIN( 204)									int in_byteOffset3 = ( (int)(byteoffset3) );
-HXDLIN( 204)									if ((in_byteOffset3 < 0)) {
-HXLINE( 204)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 204)									if ((::hx::Mod(in_byteOffset3,_this15->bytesPerElement) != 0)) {
-HXLINE( 204)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 204)									int bufferByteLength3 = buffer3->length;
-HXDLIN( 204)									int elementSize7 = _this15->bytesPerElement;
-HXDLIN( 204)									int newByteLength3 = bufferByteLength3;
-HXDLIN( 204)									if (::hx::IsNull( len )) {
-HXLINE( 204)										newByteLength3 = (bufferByteLength3 - in_byteOffset3);
-HXDLIN( 204)										if ((::hx::Mod(bufferByteLength3,_this15->bytesPerElement) != 0)) {
-HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 204)										if ((newByteLength3 < 0)) {
-HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 204)										newByteLength3 = (len * _this15->bytesPerElement);
-HXDLIN( 204)										int newRange3 = (in_byteOffset3 + newByteLength3);
-HXDLIN( 204)										if ((newRange3 > bufferByteLength3)) {
-HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 204)									_this15->buffer = buffer3;
-HXDLIN( 204)									_this15->byteOffset = in_byteOffset3;
-HXDLIN( 204)									_this15->byteLength = newByteLength3;
-HXDLIN( 204)									_this15->length = ::Std_obj::_hx_int((( (Float)(newByteLength3) ) / ( (Float)(_this15->bytesPerElement) )));
-HXDLIN( 204)									this4 = _this15;
-            								}
-            								else {
-HXLINE( 204)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt8Array",6b,44,d5,85));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this4;
-            			}
-            			break;
-            			case (int)5: {
-HXLINE( 207)				 ::Dynamic elements4 = null();
-HXDLIN( 207)				 ::haxe::io::Bytes buffer4 = this->buffer;
-HXDLIN( 207)				::cpp::VirtualArray array8 = null();
-HXDLIN( 207)				 ::openfl::_Vector::IntVector vector4 = null();
-HXDLIN( 207)				 ::lime::utils::ArrayBufferView view5 = null();
-HXDLIN( 207)				 ::Dynamic byteoffset4 = byte_offset;
-HXDLIN( 207)				if (::hx::IsNull( byteoffset4 )) {
-HXLINE( 207)					byteoffset4 = 0;
-            				}
-HXDLIN( 207)				 ::lime::utils::ArrayBufferView this5;
-HXDLIN( 207)				if (::hx::IsNotNull( elements4 )) {
-HXLINE( 207)					this5 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements4,5);
-            				}
-            				else {
-HXLINE( 207)					if (::hx::IsNotNull( array8 )) {
-HXLINE( 207)						 ::lime::utils::ArrayBufferView _this16 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
-HXDLIN( 207)						_this16->byteOffset = 0;
-HXDLIN( 207)						_this16->length = array8->get_length();
-HXDLIN( 207)						_this16->byteLength = (_this16->length * _this16->bytesPerElement);
-HXDLIN( 207)						_this16->buffer = ::haxe::io::Bytes_obj::alloc(_this16->byteLength);
-HXDLIN( 207)						_this16->copyFromArray(array8,null());
-HXDLIN( 207)						this5 = _this16;
-            					}
-            					else {
-HXLINE( 207)						if (::hx::IsNotNull( vector4 )) {
-HXLINE( 207)							 ::lime::utils::ArrayBufferView _this17 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
-HXDLIN( 207)							::cpp::VirtualArray array9 = ( (::cpp::VirtualArray)(vector4->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 207)							_this17->byteOffset = 0;
-HXDLIN( 207)							_this17->length = array9->get_length();
-HXDLIN( 207)							_this17->byteLength = (_this17->length * _this17->bytesPerElement);
-HXDLIN( 207)							_this17->buffer = ::haxe::io::Bytes_obj::alloc(_this17->byteLength);
-HXDLIN( 207)							_this17->copyFromArray(array9,null());
-HXDLIN( 207)							this5 = _this17;
-            						}
-            						else {
-HXLINE( 207)							if (::hx::IsNotNull( view5 )) {
-HXLINE( 207)								 ::lime::utils::ArrayBufferView _this18 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
-HXDLIN( 207)								 ::haxe::io::Bytes srcData4 = view5->buffer;
-HXDLIN( 207)								int srcLength8 = view5->length;
-HXDLIN( 207)								int srcByteOffset4 = view5->byteOffset;
-HXDLIN( 207)								int srcElementSize4 = view5->bytesPerElement;
-HXDLIN( 207)								int elementSize8 = _this18->bytesPerElement;
-HXDLIN( 207)								if ((view5->type == _this18->type)) {
-HXLINE( 207)									int srcLength9 = srcData4->length;
-HXDLIN( 207)									int cloneLength4 = (srcLength9 - srcByteOffset4);
-HXDLIN( 207)									_this18->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength4);
-HXDLIN( 207)									_this18->buffer->blit(0,srcData4,srcByteOffset4,cloneLength4);
-            								}
-            								else {
-HXLINE( 207)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 207)								_this18->byteLength = (_this18->bytesPerElement * srcLength8);
-HXDLIN( 207)								_this18->byteOffset = 0;
-HXDLIN( 207)								_this18->length = srcLength8;
-HXDLIN( 207)								this5 = _this18;
-            							}
-            							else {
-HXLINE( 207)								if (::hx::IsNotNull( buffer4 )) {
-HXLINE( 207)									 ::lime::utils::ArrayBufferView _this19 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
-HXDLIN( 207)									int in_byteOffset4 = ( (int)(byteoffset4) );
-HXDLIN( 207)									if ((in_byteOffset4 < 0)) {
-HXLINE( 207)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 207)									if ((::hx::Mod(in_byteOffset4,_this19->bytesPerElement) != 0)) {
-HXLINE( 207)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 207)									int bufferByteLength4 = buffer4->length;
-HXDLIN( 207)									int elementSize9 = _this19->bytesPerElement;
-HXDLIN( 207)									int newByteLength4 = bufferByteLength4;
-HXDLIN( 207)									if (::hx::IsNull( len )) {
-HXLINE( 207)										newByteLength4 = (bufferByteLength4 - in_byteOffset4);
-HXDLIN( 207)										if ((::hx::Mod(bufferByteLength4,_this19->bytesPerElement) != 0)) {
-HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 207)										if ((newByteLength4 < 0)) {
-HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 207)										newByteLength4 = (len * _this19->bytesPerElement);
-HXDLIN( 207)										int newRange4 = (in_byteOffset4 + newByteLength4);
-HXDLIN( 207)										if ((newRange4 > bufferByteLength4)) {
-HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 207)									_this19->buffer = buffer4;
-HXDLIN( 207)									_this19->byteOffset = in_byteOffset4;
-HXDLIN( 207)									_this19->byteLength = newByteLength4;
-HXDLIN( 207)									_this19->length = ::Std_obj::_hx_int((( (Float)(newByteLength4) ) / ( (Float)(_this19->bytesPerElement) )));
-HXDLIN( 207)									this5 = _this19;
-            								}
-            								else {
-HXLINE( 207)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt8ClampedArray",8d,06,77,13));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this5;
-            			}
-            			break;
-            			case (int)6: {
-HXLINE( 210)				 ::Dynamic elements5 = null();
-HXDLIN( 210)				 ::haxe::io::Bytes buffer5 = this->buffer;
-HXDLIN( 210)				::cpp::VirtualArray array10 = null();
-HXDLIN( 210)				 ::openfl::_Vector::IntVector vector5 = null();
-HXDLIN( 210)				 ::lime::utils::ArrayBufferView view6 = null();
-HXDLIN( 210)				 ::Dynamic byteoffset5 = byte_offset;
-HXDLIN( 210)				if (::hx::IsNull( byteoffset5 )) {
-HXLINE( 210)					byteoffset5 = 0;
-            				}
-HXDLIN( 210)				 ::lime::utils::ArrayBufferView this6;
-HXDLIN( 210)				if (::hx::IsNotNull( elements5 )) {
-HXLINE( 210)					this6 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements5,6);
-            				}
-            				else {
-HXLINE( 210)					if (::hx::IsNotNull( array10 )) {
-HXLINE( 210)						 ::lime::utils::ArrayBufferView _this20 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
-HXDLIN( 210)						_this20->byteOffset = 0;
-HXDLIN( 210)						_this20->length = array10->get_length();
-HXDLIN( 210)						_this20->byteLength = (_this20->length * _this20->bytesPerElement);
-HXDLIN( 210)						_this20->buffer = ::haxe::io::Bytes_obj::alloc(_this20->byteLength);
-HXDLIN( 210)						_this20->copyFromArray(array10,null());
-HXDLIN( 210)						this6 = _this20;
-            					}
-            					else {
-HXLINE( 210)						if (::hx::IsNotNull( vector5 )) {
-HXLINE( 210)							 ::lime::utils::ArrayBufferView _this21 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
-HXDLIN( 210)							::cpp::VirtualArray array11 = ( (::cpp::VirtualArray)(vector5->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 210)							_this21->byteOffset = 0;
-HXDLIN( 210)							_this21->length = array11->get_length();
-HXDLIN( 210)							_this21->byteLength = (_this21->length * _this21->bytesPerElement);
-HXDLIN( 210)							_this21->buffer = ::haxe::io::Bytes_obj::alloc(_this21->byteLength);
-HXDLIN( 210)							_this21->copyFromArray(array11,null());
-HXDLIN( 210)							this6 = _this21;
-            						}
-            						else {
-HXLINE( 210)							if (::hx::IsNotNull( view6 )) {
-HXLINE( 210)								 ::lime::utils::ArrayBufferView _this22 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
-HXDLIN( 210)								 ::haxe::io::Bytes srcData5 = view6->buffer;
-HXDLIN( 210)								int srcLength10 = view6->length;
-HXDLIN( 210)								int srcByteOffset5 = view6->byteOffset;
-HXDLIN( 210)								int srcElementSize5 = view6->bytesPerElement;
-HXDLIN( 210)								int elementSize10 = _this22->bytesPerElement;
-HXDLIN( 210)								if ((view6->type == _this22->type)) {
-HXLINE( 210)									int srcLength11 = srcData5->length;
-HXDLIN( 210)									int cloneLength5 = (srcLength11 - srcByteOffset5);
-HXDLIN( 210)									_this22->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength5);
-HXDLIN( 210)									_this22->buffer->blit(0,srcData5,srcByteOffset5,cloneLength5);
-            								}
-            								else {
-HXLINE( 210)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 210)								_this22->byteLength = (_this22->bytesPerElement * srcLength10);
-HXDLIN( 210)								_this22->byteOffset = 0;
-HXDLIN( 210)								_this22->length = srcLength10;
-HXDLIN( 210)								this6 = _this22;
-            							}
-            							else {
-HXLINE( 210)								if (::hx::IsNotNull( buffer5 )) {
-HXLINE( 210)									 ::lime::utils::ArrayBufferView _this23 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
-HXDLIN( 210)									int in_byteOffset5 = ( (int)(byteoffset5) );
-HXDLIN( 210)									if ((in_byteOffset5 < 0)) {
-HXLINE( 210)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 210)									if ((::hx::Mod(in_byteOffset5,_this23->bytesPerElement) != 0)) {
-HXLINE( 210)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 210)									int bufferByteLength5 = buffer5->length;
-HXDLIN( 210)									int elementSize11 = _this23->bytesPerElement;
-HXDLIN( 210)									int newByteLength5 = bufferByteLength5;
-HXDLIN( 210)									if (::hx::IsNull( len )) {
-HXLINE( 210)										newByteLength5 = (bufferByteLength5 - in_byteOffset5);
-HXDLIN( 210)										if ((::hx::Mod(bufferByteLength5,_this23->bytesPerElement) != 0)) {
-HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 210)										if ((newByteLength5 < 0)) {
-HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 210)										newByteLength5 = (len * _this23->bytesPerElement);
-HXDLIN( 210)										int newRange5 = (in_byteOffset5 + newByteLength5);
-HXDLIN( 210)										if ((newRange5 > bufferByteLength5)) {
-HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 210)									_this23->buffer = buffer5;
-HXDLIN( 210)									_this23->byteOffset = in_byteOffset5;
-HXDLIN( 210)									_this23->byteLength = newByteLength5;
-HXDLIN( 210)									_this23->length = ::Std_obj::_hx_int((( (Float)(newByteLength5) ) / ( (Float)(_this23->bytesPerElement) )));
-HXDLIN( 210)									this6 = _this23;
-            								}
-            								else {
-HXLINE( 210)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt16Array",0a,c7,2d,d5));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this6;
-            			}
-            			break;
-            			case (int)7: {
-HXLINE( 213)				 ::Dynamic elements6 = null();
-HXDLIN( 213)				 ::haxe::io::Bytes buffer6 = this->buffer;
-HXDLIN( 213)				::cpp::VirtualArray array12 = null();
-HXDLIN( 213)				 ::openfl::_Vector::IntVector vector6 = null();
-HXDLIN( 213)				 ::lime::utils::ArrayBufferView view7 = null();
-HXDLIN( 213)				 ::Dynamic byteoffset6 = byte_offset;
-HXDLIN( 213)				if (::hx::IsNull( byteoffset6 )) {
-HXLINE( 213)					byteoffset6 = 0;
-            				}
-HXDLIN( 213)				 ::lime::utils::ArrayBufferView this7;
-HXDLIN( 213)				if (::hx::IsNotNull( elements6 )) {
-HXLINE( 213)					this7 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements6,7);
-            				}
-            				else {
-HXLINE( 213)					if (::hx::IsNotNull( array12 )) {
-HXLINE( 213)						 ::lime::utils::ArrayBufferView _this24 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
-HXDLIN( 213)						_this24->byteOffset = 0;
-HXDLIN( 213)						_this24->length = array12->get_length();
-HXDLIN( 213)						_this24->byteLength = (_this24->length * _this24->bytesPerElement);
-HXDLIN( 213)						_this24->buffer = ::haxe::io::Bytes_obj::alloc(_this24->byteLength);
-HXDLIN( 213)						_this24->copyFromArray(array12,null());
-HXDLIN( 213)						this7 = _this24;
-            					}
-            					else {
-HXLINE( 213)						if (::hx::IsNotNull( vector6 )) {
-HXLINE( 213)							 ::lime::utils::ArrayBufferView _this25 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
-HXDLIN( 213)							::cpp::VirtualArray array13 = ( (::cpp::VirtualArray)(vector6->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 213)							_this25->byteOffset = 0;
-HXDLIN( 213)							_this25->length = array13->get_length();
-HXDLIN( 213)							_this25->byteLength = (_this25->length * _this25->bytesPerElement);
-HXDLIN( 213)							_this25->buffer = ::haxe::io::Bytes_obj::alloc(_this25->byteLength);
-HXDLIN( 213)							_this25->copyFromArray(array13,null());
-HXDLIN( 213)							this7 = _this25;
-            						}
-            						else {
-HXLINE( 213)							if (::hx::IsNotNull( view7 )) {
-HXLINE( 213)								 ::lime::utils::ArrayBufferView _this26 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
-HXDLIN( 213)								 ::haxe::io::Bytes srcData6 = view7->buffer;
-HXDLIN( 213)								int srcLength12 = view7->length;
-HXDLIN( 213)								int srcByteOffset6 = view7->byteOffset;
-HXDLIN( 213)								int srcElementSize6 = view7->bytesPerElement;
-HXDLIN( 213)								int elementSize12 = _this26->bytesPerElement;
-HXDLIN( 213)								if ((view7->type == _this26->type)) {
-HXLINE( 213)									int srcLength13 = srcData6->length;
-HXDLIN( 213)									int cloneLength6 = (srcLength13 - srcByteOffset6);
-HXDLIN( 213)									_this26->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength6);
-HXDLIN( 213)									_this26->buffer->blit(0,srcData6,srcByteOffset6,cloneLength6);
-            								}
-            								else {
-HXLINE( 213)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 213)								_this26->byteLength = (_this26->bytesPerElement * srcLength12);
-HXDLIN( 213)								_this26->byteOffset = 0;
-HXDLIN( 213)								_this26->length = srcLength12;
-HXDLIN( 213)								this7 = _this26;
-            							}
-            							else {
-HXLINE( 213)								if (::hx::IsNotNull( buffer6 )) {
-HXLINE( 213)									 ::lime::utils::ArrayBufferView _this27 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
-HXDLIN( 213)									int in_byteOffset6 = ( (int)(byteoffset6) );
-HXDLIN( 213)									if ((in_byteOffset6 < 0)) {
-HXLINE( 213)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 213)									if ((::hx::Mod(in_byteOffset6,_this27->bytesPerElement) != 0)) {
-HXLINE( 213)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 213)									int bufferByteLength6 = buffer6->length;
-HXDLIN( 213)									int elementSize13 = _this27->bytesPerElement;
-HXDLIN( 213)									int newByteLength6 = bufferByteLength6;
-HXDLIN( 213)									if (::hx::IsNull( len )) {
-HXLINE( 213)										newByteLength6 = (bufferByteLength6 - in_byteOffset6);
-HXDLIN( 213)										if ((::hx::Mod(bufferByteLength6,_this27->bytesPerElement) != 0)) {
-HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 213)										if ((newByteLength6 < 0)) {
-HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 213)										newByteLength6 = (len * _this27->bytesPerElement);
-HXDLIN( 213)										int newRange6 = (in_byteOffset6 + newByteLength6);
-HXDLIN( 213)										if ((newRange6 > bufferByteLength6)) {
-HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 213)									_this27->buffer = buffer6;
-HXDLIN( 213)									_this27->byteOffset = in_byteOffset6;
-HXDLIN( 213)									_this27->byteLength = newByteLength6;
-HXDLIN( 213)									_this27->length = ::Std_obj::_hx_int((( (Float)(newByteLength6) ) / ( (Float)(_this27->bytesPerElement) )));
-HXDLIN( 213)									this7 = _this27;
-            								}
-            								else {
-HXLINE( 213)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt32Array",10,43,eb,8e));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this7;
-            			}
-            			break;
-            			case (int)8: {
-HXLINE( 216)				 ::Dynamic elements7 = null();
-HXDLIN( 216)				 ::haxe::io::Bytes buffer7 = this->buffer;
-HXDLIN( 216)				::cpp::VirtualArray array14 = null();
-HXDLIN( 216)				 ::openfl::_Vector::FloatVector vector7 = null();
-HXDLIN( 216)				 ::lime::utils::ArrayBufferView view8 = null();
-HXDLIN( 216)				 ::Dynamic byteoffset7 = byte_offset;
-HXDLIN( 216)				if (::hx::IsNull( byteoffset7 )) {
-HXLINE( 216)					byteoffset7 = 0;
-            				}
-HXDLIN( 216)				 ::lime::utils::ArrayBufferView this8;
-HXDLIN( 216)				if (::hx::IsNotNull( elements7 )) {
-HXLINE( 216)					this8 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements7,8);
-            				}
-            				else {
-HXLINE( 216)					if (::hx::IsNotNull( array14 )) {
-HXLINE( 216)						 ::lime::utils::ArrayBufferView _this28 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
-HXDLIN( 216)						_this28->byteOffset = 0;
-HXDLIN( 216)						_this28->length = array14->get_length();
-HXDLIN( 216)						_this28->byteLength = (_this28->length * _this28->bytesPerElement);
-HXDLIN( 216)						_this28->buffer = ::haxe::io::Bytes_obj::alloc(_this28->byteLength);
-HXDLIN( 216)						_this28->copyFromArray(array14,null());
-HXDLIN( 216)						this8 = _this28;
-            					}
-            					else {
-HXLINE( 216)						if (::hx::IsNotNull( vector7 )) {
-HXLINE( 216)							 ::lime::utils::ArrayBufferView _this29 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
-HXDLIN( 216)							::cpp::VirtualArray array15 = ( (::cpp::VirtualArray)(vector7->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 216)							_this29->byteOffset = 0;
-HXDLIN( 216)							_this29->length = array15->get_length();
-HXDLIN( 216)							_this29->byteLength = (_this29->length * _this29->bytesPerElement);
-HXDLIN( 216)							_this29->buffer = ::haxe::io::Bytes_obj::alloc(_this29->byteLength);
-HXDLIN( 216)							_this29->copyFromArray(array15,null());
-HXDLIN( 216)							this8 = _this29;
-            						}
-            						else {
-HXLINE( 216)							if (::hx::IsNotNull( view8 )) {
-HXLINE( 216)								 ::lime::utils::ArrayBufferView _this30 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
-HXDLIN( 216)								 ::haxe::io::Bytes srcData7 = view8->buffer;
-HXDLIN( 216)								int srcLength14 = view8->length;
-HXDLIN( 216)								int srcByteOffset7 = view8->byteOffset;
-HXDLIN( 216)								int srcElementSize7 = view8->bytesPerElement;
-HXDLIN( 216)								int elementSize14 = _this30->bytesPerElement;
-HXDLIN( 216)								if ((view8->type == _this30->type)) {
-HXLINE( 216)									int srcLength15 = srcData7->length;
-HXDLIN( 216)									int cloneLength7 = (srcLength15 - srcByteOffset7);
-HXDLIN( 216)									_this30->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength7);
-HXDLIN( 216)									_this30->buffer->blit(0,srcData7,srcByteOffset7,cloneLength7);
-            								}
-            								else {
-HXLINE( 216)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 216)								_this30->byteLength = (_this30->bytesPerElement * srcLength14);
-HXDLIN( 216)								_this30->byteOffset = 0;
-HXDLIN( 216)								_this30->length = srcLength14;
-HXDLIN( 216)								this8 = _this30;
-            							}
-            							else {
-HXLINE( 216)								if (::hx::IsNotNull( buffer7 )) {
-HXLINE( 216)									 ::lime::utils::ArrayBufferView _this31 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
-HXDLIN( 216)									int in_byteOffset7 = ( (int)(byteoffset7) );
-HXDLIN( 216)									if ((in_byteOffset7 < 0)) {
-HXLINE( 216)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 216)									if ((::hx::Mod(in_byteOffset7,_this31->bytesPerElement) != 0)) {
-HXLINE( 216)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 216)									int bufferByteLength7 = buffer7->length;
-HXDLIN( 216)									int elementSize15 = _this31->bytesPerElement;
-HXDLIN( 216)									int newByteLength7 = bufferByteLength7;
-HXDLIN( 216)									if (::hx::IsNull( len )) {
-HXLINE( 216)										newByteLength7 = (bufferByteLength7 - in_byteOffset7);
-HXDLIN( 216)										if ((::hx::Mod(bufferByteLength7,_this31->bytesPerElement) != 0)) {
-HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 216)										if ((newByteLength7 < 0)) {
-HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 216)										newByteLength7 = (len * _this31->bytesPerElement);
-HXDLIN( 216)										int newRange7 = (in_byteOffset7 + newByteLength7);
-HXDLIN( 216)										if ((newRange7 > bufferByteLength7)) {
-HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 216)									_this31->buffer = buffer7;
-HXDLIN( 216)									_this31->byteOffset = in_byteOffset7;
-HXDLIN( 216)									_this31->byteLength = newByteLength7;
-HXDLIN( 216)									_this31->length = ::Std_obj::_hx_int((( (Float)(newByteLength7) ) / ( (Float)(_this31->bytesPerElement) )));
-HXDLIN( 216)									this8 = _this31;
-            								}
-            								else {
-HXLINE( 216)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Float32Array",8e,c1,f4,d4));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this8;
-            			}
-            			break;
-            			case (int)9: {
-HXLINE( 219)				 ::Dynamic elements8 = null();
-HXDLIN( 219)				 ::haxe::io::Bytes buffer8 = this->buffer;
-HXDLIN( 219)				::cpp::VirtualArray array16 = null();
-HXDLIN( 219)				 ::openfl::_Vector::FloatVector vector8 = null();
-HXDLIN( 219)				 ::lime::utils::ArrayBufferView view9 = null();
-HXDLIN( 219)				 ::Dynamic byteoffset8 = byte_offset;
-HXDLIN( 219)				if (::hx::IsNull( byteoffset8 )) {
-HXLINE( 219)					byteoffset8 = 0;
-            				}
-HXDLIN( 219)				 ::lime::utils::ArrayBufferView this9;
-HXDLIN( 219)				if (::hx::IsNotNull( elements8 )) {
-HXLINE( 219)					this9 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements8,9);
-            				}
-            				else {
-HXLINE( 219)					if (::hx::IsNotNull( array16 )) {
-HXLINE( 219)						 ::lime::utils::ArrayBufferView _this32 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
-HXDLIN( 219)						_this32->byteOffset = 0;
-HXDLIN( 219)						_this32->length = array16->get_length();
-HXDLIN( 219)						_this32->byteLength = (_this32->length * _this32->bytesPerElement);
-HXDLIN( 219)						_this32->buffer = ::haxe::io::Bytes_obj::alloc(_this32->byteLength);
-HXDLIN( 219)						_this32->copyFromArray(array16,null());
-HXDLIN( 219)						this9 = _this32;
-            					}
-            					else {
-HXLINE( 219)						if (::hx::IsNotNull( vector8 )) {
-HXLINE( 219)							 ::lime::utils::ArrayBufferView _this33 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
-HXDLIN( 219)							::cpp::VirtualArray array17 = ( (::cpp::VirtualArray)(vector8->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 219)							_this33->byteOffset = 0;
-HXDLIN( 219)							_this33->length = array17->get_length();
-HXDLIN( 219)							_this33->byteLength = (_this33->length * _this33->bytesPerElement);
-HXDLIN( 219)							_this33->buffer = ::haxe::io::Bytes_obj::alloc(_this33->byteLength);
-HXDLIN( 219)							_this33->copyFromArray(array17,null());
-HXDLIN( 219)							this9 = _this33;
-            						}
-            						else {
-HXLINE( 219)							if (::hx::IsNotNull( view9 )) {
-HXLINE( 219)								 ::lime::utils::ArrayBufferView _this34 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
-HXDLIN( 219)								 ::haxe::io::Bytes srcData8 = view9->buffer;
-HXDLIN( 219)								int srcLength16 = view9->length;
-HXDLIN( 219)								int srcByteOffset8 = view9->byteOffset;
-HXDLIN( 219)								int srcElementSize8 = view9->bytesPerElement;
-HXDLIN( 219)								int elementSize16 = _this34->bytesPerElement;
-HXDLIN( 219)								if ((view9->type == _this34->type)) {
-HXLINE( 219)									int srcLength17 = srcData8->length;
-HXDLIN( 219)									int cloneLength8 = (srcLength17 - srcByteOffset8);
-HXDLIN( 219)									_this34->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength8);
-HXDLIN( 219)									_this34->buffer->blit(0,srcData8,srcByteOffset8,cloneLength8);
-            								}
-            								else {
-HXLINE( 219)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 219)								_this34->byteLength = (_this34->bytesPerElement * srcLength16);
-HXDLIN( 219)								_this34->byteOffset = 0;
-HXDLIN( 219)								_this34->length = srcLength16;
-HXDLIN( 219)								this9 = _this34;
-            							}
-            							else {
-HXLINE( 219)								if (::hx::IsNotNull( buffer8 )) {
-HXLINE( 219)									 ::lime::utils::ArrayBufferView _this35 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
-HXDLIN( 219)									int in_byteOffset8 = ( (int)(byteoffset8) );
-HXDLIN( 219)									if ((in_byteOffset8 < 0)) {
-HXLINE( 219)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 219)									if ((::hx::Mod(in_byteOffset8,_this35->bytesPerElement) != 0)) {
-HXLINE( 219)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 219)									int bufferByteLength8 = buffer8->length;
-HXDLIN( 219)									int elementSize17 = _this35->bytesPerElement;
-HXDLIN( 219)									int newByteLength8 = bufferByteLength8;
-HXDLIN( 219)									if (::hx::IsNull( len )) {
-HXLINE( 219)										newByteLength8 = (bufferByteLength8 - in_byteOffset8);
-HXDLIN( 219)										if ((::hx::Mod(bufferByteLength8,_this35->bytesPerElement) != 0)) {
-HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 219)										if ((newByteLength8 < 0)) {
-HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 219)										newByteLength8 = (len * _this35->bytesPerElement);
-HXDLIN( 219)										int newRange8 = (in_byteOffset8 + newByteLength8);
-HXDLIN( 219)										if ((newRange8 > bufferByteLength8)) {
-HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 219)									_this35->buffer = buffer8;
-HXDLIN( 219)									_this35->byteOffset = in_byteOffset8;
-HXDLIN( 219)									_this35->byteLength = newByteLength8;
-HXDLIN( 219)									_this35->length = ::Std_obj::_hx_int((( (Float)(newByteLength8) ) / ( (Float)(_this35->bytesPerElement) )));
-HXDLIN( 219)									this9 = _this35;
-            								}
-            								else {
-HXLINE( 219)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Float64Array",8f,de,6b,1e));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this9;
-            			}
-            			break;
-            		}
-HXLINE( 225)		return view;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC2(ArrayBufferView_obj,subarray_lime_utils_UInt32Array,return )
+HX_DEFINE_DYNAMIC_FUNC2(ArrayBufferView_obj,subarray_lime_utils_UInt8Array,return )
 
  ::lime::utils::ArrayBufferView ArrayBufferView_obj::subarray_lime_utils_Float32Array(int begin, ::Dynamic end){
             	HX_GC_STACKFRAME(&_hx_pos_244a612994c6bd06_185_subarray_lime_utils_Float32Array)
@@ -7682,950 +8626,6 @@ HXLINE( 225)		return view;
 
 HX_DEFINE_DYNAMIC_FUNC2(ArrayBufferView_obj,subarray_lime_utils_Float32Array,return )
 
- ::lime::utils::ArrayBufferView ArrayBufferView_obj::subarray_lime_utils_UInt8Array(int begin, ::Dynamic end){
-            	HX_GC_STACKFRAME(&_hx_pos_244a612994c6bd06_185_subarray_lime_utils_UInt8Array)
-HXLINE( 186)		if (::hx::IsNull( end )) {
-HXLINE( 186)			end = this->length;
-            		}
-HXLINE( 187)		int len = (( (int)(end) ) - begin);
-HXLINE( 188)		if ((len < 0)) {
-HXLINE( 188)			len = 0;
-            		}
-HXLINE( 189)		if ((len > this->length)) {
-HXLINE( 189)			len = this->length;
-            		}
-HXLINE( 190)		int byte_offset = ((begin * this->bytesPerElement) + this->byteOffset);
-HXLINE( 192)		 ::lime::utils::ArrayBufferView view;
-HXDLIN( 192)		switch((int)(this->type)){
-            			case (int)0: {
-HXLINE( 222)				HX_STACK_DO_THROW(HX_("subarray on a blank ArrayBufferView",39,87,fd,19));
-            			}
-            			break;
-            			case (int)1: {
-HXLINE( 195)				 ::Dynamic elements = null();
-HXDLIN( 195)				 ::haxe::io::Bytes buffer = this->buffer;
-HXDLIN( 195)				::cpp::VirtualArray array = null();
-HXDLIN( 195)				 ::openfl::_Vector::IntVector vector = null();
-HXDLIN( 195)				 ::lime::utils::ArrayBufferView view1 = null();
-HXDLIN( 195)				 ::Dynamic byteoffset = byte_offset;
-HXDLIN( 195)				if (::hx::IsNull( byteoffset )) {
-HXLINE( 195)					byteoffset = 0;
-            				}
-HXDLIN( 195)				 ::lime::utils::ArrayBufferView this1;
-HXDLIN( 195)				if (::hx::IsNotNull( elements )) {
-HXLINE( 195)					this1 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements,1);
-            				}
-            				else {
-HXLINE( 195)					if (::hx::IsNotNull( array )) {
-HXLINE( 195)						 ::lime::utils::ArrayBufferView _this =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
-HXDLIN( 195)						_this->byteOffset = 0;
-HXDLIN( 195)						_this->length = array->get_length();
-HXDLIN( 195)						_this->byteLength = (_this->length * _this->bytesPerElement);
-HXDLIN( 195)						_this->buffer = ::haxe::io::Bytes_obj::alloc(_this->byteLength);
-HXDLIN( 195)						_this->copyFromArray(array,null());
-HXDLIN( 195)						this1 = _this;
-            					}
-            					else {
-HXLINE( 195)						if (::hx::IsNotNull( vector )) {
-HXLINE( 195)							 ::lime::utils::ArrayBufferView _this1 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
-HXDLIN( 195)							::cpp::VirtualArray array1 = ( (::cpp::VirtualArray)(vector->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 195)							_this1->byteOffset = 0;
-HXDLIN( 195)							_this1->length = array1->get_length();
-HXDLIN( 195)							_this1->byteLength = (_this1->length * _this1->bytesPerElement);
-HXDLIN( 195)							_this1->buffer = ::haxe::io::Bytes_obj::alloc(_this1->byteLength);
-HXDLIN( 195)							_this1->copyFromArray(array1,null());
-HXDLIN( 195)							this1 = _this1;
-            						}
-            						else {
-HXLINE( 195)							if (::hx::IsNotNull( view1 )) {
-HXLINE( 195)								 ::lime::utils::ArrayBufferView _this2 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
-HXDLIN( 195)								 ::haxe::io::Bytes srcData = view1->buffer;
-HXDLIN( 195)								int srcLength = view1->length;
-HXDLIN( 195)								int srcByteOffset = view1->byteOffset;
-HXDLIN( 195)								int srcElementSize = view1->bytesPerElement;
-HXDLIN( 195)								int elementSize = _this2->bytesPerElement;
-HXDLIN( 195)								if ((view1->type == _this2->type)) {
-HXLINE( 195)									int srcLength1 = srcData->length;
-HXDLIN( 195)									int cloneLength = (srcLength1 - srcByteOffset);
-HXDLIN( 195)									_this2->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength);
-HXDLIN( 195)									_this2->buffer->blit(0,srcData,srcByteOffset,cloneLength);
-            								}
-            								else {
-HXLINE( 195)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 195)								_this2->byteLength = (_this2->bytesPerElement * srcLength);
-HXDLIN( 195)								_this2->byteOffset = 0;
-HXDLIN( 195)								_this2->length = srcLength;
-HXDLIN( 195)								this1 = _this2;
-            							}
-            							else {
-HXLINE( 195)								if (::hx::IsNotNull( buffer )) {
-HXLINE( 195)									 ::lime::utils::ArrayBufferView _this3 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,1);
-HXDLIN( 195)									int in_byteOffset = ( (int)(byteoffset) );
-HXDLIN( 195)									if ((in_byteOffset < 0)) {
-HXLINE( 195)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 195)									if ((::hx::Mod(in_byteOffset,_this3->bytesPerElement) != 0)) {
-HXLINE( 195)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 195)									int bufferByteLength = buffer->length;
-HXDLIN( 195)									int elementSize1 = _this3->bytesPerElement;
-HXDLIN( 195)									int newByteLength = bufferByteLength;
-HXDLIN( 195)									if (::hx::IsNull( len )) {
-HXLINE( 195)										newByteLength = (bufferByteLength - in_byteOffset);
-HXDLIN( 195)										if ((::hx::Mod(bufferByteLength,_this3->bytesPerElement) != 0)) {
-HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 195)										if ((newByteLength < 0)) {
-HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 195)										newByteLength = (len * _this3->bytesPerElement);
-HXDLIN( 195)										int newRange = (in_byteOffset + newByteLength);
-HXDLIN( 195)										if ((newRange > bufferByteLength)) {
-HXLINE( 195)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 195)									_this3->buffer = buffer;
-HXDLIN( 195)									_this3->byteOffset = in_byteOffset;
-HXDLIN( 195)									_this3->byteLength = newByteLength;
-HXDLIN( 195)									_this3->length = ::Std_obj::_hx_int((( (Float)(newByteLength) ) / ( (Float)(_this3->bytesPerElement) )));
-HXDLIN( 195)									this1 = _this3;
-            								}
-            								else {
-HXLINE( 195)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int8Array",40,53,da,77));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this1;
-            			}
-            			break;
-            			case (int)2: {
-HXLINE( 198)				 ::Dynamic elements1 = null();
-HXDLIN( 198)				 ::haxe::io::Bytes buffer1 = this->buffer;
-HXDLIN( 198)				::cpp::VirtualArray array2 = null();
-HXDLIN( 198)				 ::openfl::_Vector::IntVector vector1 = null();
-HXDLIN( 198)				 ::lime::utils::ArrayBufferView view2 = null();
-HXDLIN( 198)				 ::Dynamic byteoffset1 = byte_offset;
-HXDLIN( 198)				if (::hx::IsNull( byteoffset1 )) {
-HXLINE( 198)					byteoffset1 = 0;
-            				}
-HXDLIN( 198)				 ::lime::utils::ArrayBufferView this2;
-HXDLIN( 198)				if (::hx::IsNotNull( elements1 )) {
-HXLINE( 198)					this2 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements1,2);
-            				}
-            				else {
-HXLINE( 198)					if (::hx::IsNotNull( array2 )) {
-HXLINE( 198)						 ::lime::utils::ArrayBufferView _this4 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
-HXDLIN( 198)						_this4->byteOffset = 0;
-HXDLIN( 198)						_this4->length = array2->get_length();
-HXDLIN( 198)						_this4->byteLength = (_this4->length * _this4->bytesPerElement);
-HXDLIN( 198)						_this4->buffer = ::haxe::io::Bytes_obj::alloc(_this4->byteLength);
-HXDLIN( 198)						_this4->copyFromArray(array2,null());
-HXDLIN( 198)						this2 = _this4;
-            					}
-            					else {
-HXLINE( 198)						if (::hx::IsNotNull( vector1 )) {
-HXLINE( 198)							 ::lime::utils::ArrayBufferView _this5 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
-HXDLIN( 198)							::cpp::VirtualArray array3 = ( (::cpp::VirtualArray)(vector1->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 198)							_this5->byteOffset = 0;
-HXDLIN( 198)							_this5->length = array3->get_length();
-HXDLIN( 198)							_this5->byteLength = (_this5->length * _this5->bytesPerElement);
-HXDLIN( 198)							_this5->buffer = ::haxe::io::Bytes_obj::alloc(_this5->byteLength);
-HXDLIN( 198)							_this5->copyFromArray(array3,null());
-HXDLIN( 198)							this2 = _this5;
-            						}
-            						else {
-HXLINE( 198)							if (::hx::IsNotNull( view2 )) {
-HXLINE( 198)								 ::lime::utils::ArrayBufferView _this6 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
-HXDLIN( 198)								 ::haxe::io::Bytes srcData1 = view2->buffer;
-HXDLIN( 198)								int srcLength2 = view2->length;
-HXDLIN( 198)								int srcByteOffset1 = view2->byteOffset;
-HXDLIN( 198)								int srcElementSize1 = view2->bytesPerElement;
-HXDLIN( 198)								int elementSize2 = _this6->bytesPerElement;
-HXDLIN( 198)								if ((view2->type == _this6->type)) {
-HXLINE( 198)									int srcLength3 = srcData1->length;
-HXDLIN( 198)									int cloneLength1 = (srcLength3 - srcByteOffset1);
-HXDLIN( 198)									_this6->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength1);
-HXDLIN( 198)									_this6->buffer->blit(0,srcData1,srcByteOffset1,cloneLength1);
-            								}
-            								else {
-HXLINE( 198)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 198)								_this6->byteLength = (_this6->bytesPerElement * srcLength2);
-HXDLIN( 198)								_this6->byteOffset = 0;
-HXDLIN( 198)								_this6->length = srcLength2;
-HXDLIN( 198)								this2 = _this6;
-            							}
-            							else {
-HXLINE( 198)								if (::hx::IsNotNull( buffer1 )) {
-HXLINE( 198)									 ::lime::utils::ArrayBufferView _this7 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,2);
-HXDLIN( 198)									int in_byteOffset1 = ( (int)(byteoffset1) );
-HXDLIN( 198)									if ((in_byteOffset1 < 0)) {
-HXLINE( 198)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 198)									if ((::hx::Mod(in_byteOffset1,_this7->bytesPerElement) != 0)) {
-HXLINE( 198)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 198)									int bufferByteLength1 = buffer1->length;
-HXDLIN( 198)									int elementSize3 = _this7->bytesPerElement;
-HXDLIN( 198)									int newByteLength1 = bufferByteLength1;
-HXDLIN( 198)									if (::hx::IsNull( len )) {
-HXLINE( 198)										newByteLength1 = (bufferByteLength1 - in_byteOffset1);
-HXDLIN( 198)										if ((::hx::Mod(bufferByteLength1,_this7->bytesPerElement) != 0)) {
-HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 198)										if ((newByteLength1 < 0)) {
-HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 198)										newByteLength1 = (len * _this7->bytesPerElement);
-HXDLIN( 198)										int newRange1 = (in_byteOffset1 + newByteLength1);
-HXDLIN( 198)										if ((newRange1 > bufferByteLength1)) {
-HXLINE( 198)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 198)									_this7->buffer = buffer1;
-HXDLIN( 198)									_this7->byteOffset = in_byteOffset1;
-HXDLIN( 198)									_this7->byteLength = newByteLength1;
-HXDLIN( 198)									_this7->length = ::Std_obj::_hx_int((( (Float)(newByteLength1) ) / ( (Float)(_this7->bytesPerElement) )));
-HXDLIN( 198)									this2 = _this7;
-            								}
-            								else {
-HXLINE( 198)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int16Array",95,b2,95,a7));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this2;
-            			}
-            			break;
-            			case (int)3: {
-HXLINE( 201)				 ::Dynamic elements2 = null();
-HXDLIN( 201)				 ::haxe::io::Bytes buffer2 = this->buffer;
-HXDLIN( 201)				::cpp::VirtualArray array4 = null();
-HXDLIN( 201)				 ::openfl::_Vector::IntVector vector2 = null();
-HXDLIN( 201)				 ::lime::utils::ArrayBufferView view3 = null();
-HXDLIN( 201)				 ::Dynamic byteoffset2 = byte_offset;
-HXDLIN( 201)				if (::hx::IsNull( byteoffset2 )) {
-HXLINE( 201)					byteoffset2 = 0;
-            				}
-HXDLIN( 201)				 ::lime::utils::ArrayBufferView this3;
-HXDLIN( 201)				if (::hx::IsNotNull( elements2 )) {
-HXLINE( 201)					this3 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements2,3);
-            				}
-            				else {
-HXLINE( 201)					if (::hx::IsNotNull( array4 )) {
-HXLINE( 201)						 ::lime::utils::ArrayBufferView _this8 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
-HXDLIN( 201)						_this8->byteOffset = 0;
-HXDLIN( 201)						_this8->length = array4->get_length();
-HXDLIN( 201)						_this8->byteLength = (_this8->length * _this8->bytesPerElement);
-HXDLIN( 201)						_this8->buffer = ::haxe::io::Bytes_obj::alloc(_this8->byteLength);
-HXDLIN( 201)						_this8->copyFromArray(array4,null());
-HXDLIN( 201)						this3 = _this8;
-            					}
-            					else {
-HXLINE( 201)						if (::hx::IsNotNull( vector2 )) {
-HXLINE( 201)							 ::lime::utils::ArrayBufferView _this9 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
-HXDLIN( 201)							::cpp::VirtualArray array5 = ( (::cpp::VirtualArray)(vector2->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 201)							_this9->byteOffset = 0;
-HXDLIN( 201)							_this9->length = array5->get_length();
-HXDLIN( 201)							_this9->byteLength = (_this9->length * _this9->bytesPerElement);
-HXDLIN( 201)							_this9->buffer = ::haxe::io::Bytes_obj::alloc(_this9->byteLength);
-HXDLIN( 201)							_this9->copyFromArray(array5,null());
-HXDLIN( 201)							this3 = _this9;
-            						}
-            						else {
-HXLINE( 201)							if (::hx::IsNotNull( view3 )) {
-HXLINE( 201)								 ::lime::utils::ArrayBufferView _this10 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
-HXDLIN( 201)								 ::haxe::io::Bytes srcData2 = view3->buffer;
-HXDLIN( 201)								int srcLength4 = view3->length;
-HXDLIN( 201)								int srcByteOffset2 = view3->byteOffset;
-HXDLIN( 201)								int srcElementSize2 = view3->bytesPerElement;
-HXDLIN( 201)								int elementSize4 = _this10->bytesPerElement;
-HXDLIN( 201)								if ((view3->type == _this10->type)) {
-HXLINE( 201)									int srcLength5 = srcData2->length;
-HXDLIN( 201)									int cloneLength2 = (srcLength5 - srcByteOffset2);
-HXDLIN( 201)									_this10->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength2);
-HXDLIN( 201)									_this10->buffer->blit(0,srcData2,srcByteOffset2,cloneLength2);
-            								}
-            								else {
-HXLINE( 201)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 201)								_this10->byteLength = (_this10->bytesPerElement * srcLength4);
-HXDLIN( 201)								_this10->byteOffset = 0;
-HXDLIN( 201)								_this10->length = srcLength4;
-HXDLIN( 201)								this3 = _this10;
-            							}
-            							else {
-HXLINE( 201)								if (::hx::IsNotNull( buffer2 )) {
-HXLINE( 201)									 ::lime::utils::ArrayBufferView _this11 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,3);
-HXDLIN( 201)									int in_byteOffset2 = ( (int)(byteoffset2) );
-HXDLIN( 201)									if ((in_byteOffset2 < 0)) {
-HXLINE( 201)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 201)									if ((::hx::Mod(in_byteOffset2,_this11->bytesPerElement) != 0)) {
-HXLINE( 201)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 201)									int bufferByteLength2 = buffer2->length;
-HXDLIN( 201)									int elementSize5 = _this11->bytesPerElement;
-HXDLIN( 201)									int newByteLength2 = bufferByteLength2;
-HXDLIN( 201)									if (::hx::IsNull( len )) {
-HXLINE( 201)										newByteLength2 = (bufferByteLength2 - in_byteOffset2);
-HXDLIN( 201)										if ((::hx::Mod(bufferByteLength2,_this11->bytesPerElement) != 0)) {
-HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 201)										if ((newByteLength2 < 0)) {
-HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 201)										newByteLength2 = (len * _this11->bytesPerElement);
-HXDLIN( 201)										int newRange2 = (in_byteOffset2 + newByteLength2);
-HXDLIN( 201)										if ((newRange2 > bufferByteLength2)) {
-HXLINE( 201)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 201)									_this11->buffer = buffer2;
-HXDLIN( 201)									_this11->byteOffset = in_byteOffset2;
-HXDLIN( 201)									_this11->byteLength = newByteLength2;
-HXDLIN( 201)									_this11->length = ::Std_obj::_hx_int((( (Float)(newByteLength2) ) / ( (Float)(_this11->bytesPerElement) )));
-HXDLIN( 201)									this3 = _this11;
-            								}
-            								else {
-HXLINE( 201)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Int32Array",9b,2e,53,61));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this3;
-            			}
-            			break;
-            			case (int)4: {
-HXLINE( 204)				 ::Dynamic elements3 = null();
-HXDLIN( 204)				 ::haxe::io::Bytes buffer3 = this->buffer;
-HXDLIN( 204)				::cpp::VirtualArray array6 = null();
-HXDLIN( 204)				 ::openfl::_Vector::IntVector vector3 = null();
-HXDLIN( 204)				 ::lime::utils::ArrayBufferView view4 = null();
-HXDLIN( 204)				 ::Dynamic byteoffset3 = byte_offset;
-HXDLIN( 204)				if (::hx::IsNull( byteoffset3 )) {
-HXLINE( 204)					byteoffset3 = 0;
-            				}
-HXDLIN( 204)				 ::lime::utils::ArrayBufferView this4;
-HXDLIN( 204)				if (::hx::IsNotNull( elements3 )) {
-HXLINE( 204)					this4 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements3,4);
-            				}
-            				else {
-HXLINE( 204)					if (::hx::IsNotNull( array6 )) {
-HXLINE( 204)						 ::lime::utils::ArrayBufferView _this12 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
-HXDLIN( 204)						_this12->byteOffset = 0;
-HXDLIN( 204)						_this12->length = array6->get_length();
-HXDLIN( 204)						_this12->byteLength = (_this12->length * _this12->bytesPerElement);
-HXDLIN( 204)						_this12->buffer = ::haxe::io::Bytes_obj::alloc(_this12->byteLength);
-HXDLIN( 204)						_this12->copyFromArray(array6,null());
-HXDLIN( 204)						this4 = _this12;
-            					}
-            					else {
-HXLINE( 204)						if (::hx::IsNotNull( vector3 )) {
-HXLINE( 204)							 ::lime::utils::ArrayBufferView _this13 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
-HXDLIN( 204)							::cpp::VirtualArray array7 = ( (::cpp::VirtualArray)(vector3->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 204)							_this13->byteOffset = 0;
-HXDLIN( 204)							_this13->length = array7->get_length();
-HXDLIN( 204)							_this13->byteLength = (_this13->length * _this13->bytesPerElement);
-HXDLIN( 204)							_this13->buffer = ::haxe::io::Bytes_obj::alloc(_this13->byteLength);
-HXDLIN( 204)							_this13->copyFromArray(array7,null());
-HXDLIN( 204)							this4 = _this13;
-            						}
-            						else {
-HXLINE( 204)							if (::hx::IsNotNull( view4 )) {
-HXLINE( 204)								 ::lime::utils::ArrayBufferView _this14 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
-HXDLIN( 204)								 ::haxe::io::Bytes srcData3 = view4->buffer;
-HXDLIN( 204)								int srcLength6 = view4->length;
-HXDLIN( 204)								int srcByteOffset3 = view4->byteOffset;
-HXDLIN( 204)								int srcElementSize3 = view4->bytesPerElement;
-HXDLIN( 204)								int elementSize6 = _this14->bytesPerElement;
-HXDLIN( 204)								if ((view4->type == _this14->type)) {
-HXLINE( 204)									int srcLength7 = srcData3->length;
-HXDLIN( 204)									int cloneLength3 = (srcLength7 - srcByteOffset3);
-HXDLIN( 204)									_this14->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength3);
-HXDLIN( 204)									_this14->buffer->blit(0,srcData3,srcByteOffset3,cloneLength3);
-            								}
-            								else {
-HXLINE( 204)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 204)								_this14->byteLength = (_this14->bytesPerElement * srcLength6);
-HXDLIN( 204)								_this14->byteOffset = 0;
-HXDLIN( 204)								_this14->length = srcLength6;
-HXDLIN( 204)								this4 = _this14;
-            							}
-            							else {
-HXLINE( 204)								if (::hx::IsNotNull( buffer3 )) {
-HXLINE( 204)									 ::lime::utils::ArrayBufferView _this15 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,4);
-HXDLIN( 204)									int in_byteOffset3 = ( (int)(byteoffset3) );
-HXDLIN( 204)									if ((in_byteOffset3 < 0)) {
-HXLINE( 204)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 204)									if ((::hx::Mod(in_byteOffset3,_this15->bytesPerElement) != 0)) {
-HXLINE( 204)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 204)									int bufferByteLength3 = buffer3->length;
-HXDLIN( 204)									int elementSize7 = _this15->bytesPerElement;
-HXDLIN( 204)									int newByteLength3 = bufferByteLength3;
-HXDLIN( 204)									if (::hx::IsNull( len )) {
-HXLINE( 204)										newByteLength3 = (bufferByteLength3 - in_byteOffset3);
-HXDLIN( 204)										if ((::hx::Mod(bufferByteLength3,_this15->bytesPerElement) != 0)) {
-HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 204)										if ((newByteLength3 < 0)) {
-HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 204)										newByteLength3 = (len * _this15->bytesPerElement);
-HXDLIN( 204)										int newRange3 = (in_byteOffset3 + newByteLength3);
-HXDLIN( 204)										if ((newRange3 > bufferByteLength3)) {
-HXLINE( 204)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 204)									_this15->buffer = buffer3;
-HXDLIN( 204)									_this15->byteOffset = in_byteOffset3;
-HXDLIN( 204)									_this15->byteLength = newByteLength3;
-HXDLIN( 204)									_this15->length = ::Std_obj::_hx_int((( (Float)(newByteLength3) ) / ( (Float)(_this15->bytesPerElement) )));
-HXDLIN( 204)									this4 = _this15;
-            								}
-            								else {
-HXLINE( 204)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt8Array",6b,44,d5,85));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this4;
-            			}
-            			break;
-            			case (int)5: {
-HXLINE( 207)				 ::Dynamic elements4 = null();
-HXDLIN( 207)				 ::haxe::io::Bytes buffer4 = this->buffer;
-HXDLIN( 207)				::cpp::VirtualArray array8 = null();
-HXDLIN( 207)				 ::openfl::_Vector::IntVector vector4 = null();
-HXDLIN( 207)				 ::lime::utils::ArrayBufferView view5 = null();
-HXDLIN( 207)				 ::Dynamic byteoffset4 = byte_offset;
-HXDLIN( 207)				if (::hx::IsNull( byteoffset4 )) {
-HXLINE( 207)					byteoffset4 = 0;
-            				}
-HXDLIN( 207)				 ::lime::utils::ArrayBufferView this5;
-HXDLIN( 207)				if (::hx::IsNotNull( elements4 )) {
-HXLINE( 207)					this5 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements4,5);
-            				}
-            				else {
-HXLINE( 207)					if (::hx::IsNotNull( array8 )) {
-HXLINE( 207)						 ::lime::utils::ArrayBufferView _this16 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
-HXDLIN( 207)						_this16->byteOffset = 0;
-HXDLIN( 207)						_this16->length = array8->get_length();
-HXDLIN( 207)						_this16->byteLength = (_this16->length * _this16->bytesPerElement);
-HXDLIN( 207)						_this16->buffer = ::haxe::io::Bytes_obj::alloc(_this16->byteLength);
-HXDLIN( 207)						_this16->copyFromArray(array8,null());
-HXDLIN( 207)						this5 = _this16;
-            					}
-            					else {
-HXLINE( 207)						if (::hx::IsNotNull( vector4 )) {
-HXLINE( 207)							 ::lime::utils::ArrayBufferView _this17 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
-HXDLIN( 207)							::cpp::VirtualArray array9 = ( (::cpp::VirtualArray)(vector4->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 207)							_this17->byteOffset = 0;
-HXDLIN( 207)							_this17->length = array9->get_length();
-HXDLIN( 207)							_this17->byteLength = (_this17->length * _this17->bytesPerElement);
-HXDLIN( 207)							_this17->buffer = ::haxe::io::Bytes_obj::alloc(_this17->byteLength);
-HXDLIN( 207)							_this17->copyFromArray(array9,null());
-HXDLIN( 207)							this5 = _this17;
-            						}
-            						else {
-HXLINE( 207)							if (::hx::IsNotNull( view5 )) {
-HXLINE( 207)								 ::lime::utils::ArrayBufferView _this18 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
-HXDLIN( 207)								 ::haxe::io::Bytes srcData4 = view5->buffer;
-HXDLIN( 207)								int srcLength8 = view5->length;
-HXDLIN( 207)								int srcByteOffset4 = view5->byteOffset;
-HXDLIN( 207)								int srcElementSize4 = view5->bytesPerElement;
-HXDLIN( 207)								int elementSize8 = _this18->bytesPerElement;
-HXDLIN( 207)								if ((view5->type == _this18->type)) {
-HXLINE( 207)									int srcLength9 = srcData4->length;
-HXDLIN( 207)									int cloneLength4 = (srcLength9 - srcByteOffset4);
-HXDLIN( 207)									_this18->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength4);
-HXDLIN( 207)									_this18->buffer->blit(0,srcData4,srcByteOffset4,cloneLength4);
-            								}
-            								else {
-HXLINE( 207)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 207)								_this18->byteLength = (_this18->bytesPerElement * srcLength8);
-HXDLIN( 207)								_this18->byteOffset = 0;
-HXDLIN( 207)								_this18->length = srcLength8;
-HXDLIN( 207)								this5 = _this18;
-            							}
-            							else {
-HXLINE( 207)								if (::hx::IsNotNull( buffer4 )) {
-HXLINE( 207)									 ::lime::utils::ArrayBufferView _this19 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,5);
-HXDLIN( 207)									int in_byteOffset4 = ( (int)(byteoffset4) );
-HXDLIN( 207)									if ((in_byteOffset4 < 0)) {
-HXLINE( 207)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 207)									if ((::hx::Mod(in_byteOffset4,_this19->bytesPerElement) != 0)) {
-HXLINE( 207)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 207)									int bufferByteLength4 = buffer4->length;
-HXDLIN( 207)									int elementSize9 = _this19->bytesPerElement;
-HXDLIN( 207)									int newByteLength4 = bufferByteLength4;
-HXDLIN( 207)									if (::hx::IsNull( len )) {
-HXLINE( 207)										newByteLength4 = (bufferByteLength4 - in_byteOffset4);
-HXDLIN( 207)										if ((::hx::Mod(bufferByteLength4,_this19->bytesPerElement) != 0)) {
-HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 207)										if ((newByteLength4 < 0)) {
-HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 207)										newByteLength4 = (len * _this19->bytesPerElement);
-HXDLIN( 207)										int newRange4 = (in_byteOffset4 + newByteLength4);
-HXDLIN( 207)										if ((newRange4 > bufferByteLength4)) {
-HXLINE( 207)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 207)									_this19->buffer = buffer4;
-HXDLIN( 207)									_this19->byteOffset = in_byteOffset4;
-HXDLIN( 207)									_this19->byteLength = newByteLength4;
-HXDLIN( 207)									_this19->length = ::Std_obj::_hx_int((( (Float)(newByteLength4) ) / ( (Float)(_this19->bytesPerElement) )));
-HXDLIN( 207)									this5 = _this19;
-            								}
-            								else {
-HXLINE( 207)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt8ClampedArray",8d,06,77,13));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this5;
-            			}
-            			break;
-            			case (int)6: {
-HXLINE( 210)				 ::Dynamic elements5 = null();
-HXDLIN( 210)				 ::haxe::io::Bytes buffer5 = this->buffer;
-HXDLIN( 210)				::cpp::VirtualArray array10 = null();
-HXDLIN( 210)				 ::openfl::_Vector::IntVector vector5 = null();
-HXDLIN( 210)				 ::lime::utils::ArrayBufferView view6 = null();
-HXDLIN( 210)				 ::Dynamic byteoffset5 = byte_offset;
-HXDLIN( 210)				if (::hx::IsNull( byteoffset5 )) {
-HXLINE( 210)					byteoffset5 = 0;
-            				}
-HXDLIN( 210)				 ::lime::utils::ArrayBufferView this6;
-HXDLIN( 210)				if (::hx::IsNotNull( elements5 )) {
-HXLINE( 210)					this6 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements5,6);
-            				}
-            				else {
-HXLINE( 210)					if (::hx::IsNotNull( array10 )) {
-HXLINE( 210)						 ::lime::utils::ArrayBufferView _this20 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
-HXDLIN( 210)						_this20->byteOffset = 0;
-HXDLIN( 210)						_this20->length = array10->get_length();
-HXDLIN( 210)						_this20->byteLength = (_this20->length * _this20->bytesPerElement);
-HXDLIN( 210)						_this20->buffer = ::haxe::io::Bytes_obj::alloc(_this20->byteLength);
-HXDLIN( 210)						_this20->copyFromArray(array10,null());
-HXDLIN( 210)						this6 = _this20;
-            					}
-            					else {
-HXLINE( 210)						if (::hx::IsNotNull( vector5 )) {
-HXLINE( 210)							 ::lime::utils::ArrayBufferView _this21 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
-HXDLIN( 210)							::cpp::VirtualArray array11 = ( (::cpp::VirtualArray)(vector5->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 210)							_this21->byteOffset = 0;
-HXDLIN( 210)							_this21->length = array11->get_length();
-HXDLIN( 210)							_this21->byteLength = (_this21->length * _this21->bytesPerElement);
-HXDLIN( 210)							_this21->buffer = ::haxe::io::Bytes_obj::alloc(_this21->byteLength);
-HXDLIN( 210)							_this21->copyFromArray(array11,null());
-HXDLIN( 210)							this6 = _this21;
-            						}
-            						else {
-HXLINE( 210)							if (::hx::IsNotNull( view6 )) {
-HXLINE( 210)								 ::lime::utils::ArrayBufferView _this22 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
-HXDLIN( 210)								 ::haxe::io::Bytes srcData5 = view6->buffer;
-HXDLIN( 210)								int srcLength10 = view6->length;
-HXDLIN( 210)								int srcByteOffset5 = view6->byteOffset;
-HXDLIN( 210)								int srcElementSize5 = view6->bytesPerElement;
-HXDLIN( 210)								int elementSize10 = _this22->bytesPerElement;
-HXDLIN( 210)								if ((view6->type == _this22->type)) {
-HXLINE( 210)									int srcLength11 = srcData5->length;
-HXDLIN( 210)									int cloneLength5 = (srcLength11 - srcByteOffset5);
-HXDLIN( 210)									_this22->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength5);
-HXDLIN( 210)									_this22->buffer->blit(0,srcData5,srcByteOffset5,cloneLength5);
-            								}
-            								else {
-HXLINE( 210)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 210)								_this22->byteLength = (_this22->bytesPerElement * srcLength10);
-HXDLIN( 210)								_this22->byteOffset = 0;
-HXDLIN( 210)								_this22->length = srcLength10;
-HXDLIN( 210)								this6 = _this22;
-            							}
-            							else {
-HXLINE( 210)								if (::hx::IsNotNull( buffer5 )) {
-HXLINE( 210)									 ::lime::utils::ArrayBufferView _this23 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,6);
-HXDLIN( 210)									int in_byteOffset5 = ( (int)(byteoffset5) );
-HXDLIN( 210)									if ((in_byteOffset5 < 0)) {
-HXLINE( 210)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 210)									if ((::hx::Mod(in_byteOffset5,_this23->bytesPerElement) != 0)) {
-HXLINE( 210)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 210)									int bufferByteLength5 = buffer5->length;
-HXDLIN( 210)									int elementSize11 = _this23->bytesPerElement;
-HXDLIN( 210)									int newByteLength5 = bufferByteLength5;
-HXDLIN( 210)									if (::hx::IsNull( len )) {
-HXLINE( 210)										newByteLength5 = (bufferByteLength5 - in_byteOffset5);
-HXDLIN( 210)										if ((::hx::Mod(bufferByteLength5,_this23->bytesPerElement) != 0)) {
-HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 210)										if ((newByteLength5 < 0)) {
-HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 210)										newByteLength5 = (len * _this23->bytesPerElement);
-HXDLIN( 210)										int newRange5 = (in_byteOffset5 + newByteLength5);
-HXDLIN( 210)										if ((newRange5 > bufferByteLength5)) {
-HXLINE( 210)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 210)									_this23->buffer = buffer5;
-HXDLIN( 210)									_this23->byteOffset = in_byteOffset5;
-HXDLIN( 210)									_this23->byteLength = newByteLength5;
-HXDLIN( 210)									_this23->length = ::Std_obj::_hx_int((( (Float)(newByteLength5) ) / ( (Float)(_this23->bytesPerElement) )));
-HXDLIN( 210)									this6 = _this23;
-            								}
-            								else {
-HXLINE( 210)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt16Array",0a,c7,2d,d5));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this6;
-            			}
-            			break;
-            			case (int)7: {
-HXLINE( 213)				 ::Dynamic elements6 = null();
-HXDLIN( 213)				 ::haxe::io::Bytes buffer6 = this->buffer;
-HXDLIN( 213)				::cpp::VirtualArray array12 = null();
-HXDLIN( 213)				 ::openfl::_Vector::IntVector vector6 = null();
-HXDLIN( 213)				 ::lime::utils::ArrayBufferView view7 = null();
-HXDLIN( 213)				 ::Dynamic byteoffset6 = byte_offset;
-HXDLIN( 213)				if (::hx::IsNull( byteoffset6 )) {
-HXLINE( 213)					byteoffset6 = 0;
-            				}
-HXDLIN( 213)				 ::lime::utils::ArrayBufferView this7;
-HXDLIN( 213)				if (::hx::IsNotNull( elements6 )) {
-HXLINE( 213)					this7 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements6,7);
-            				}
-            				else {
-HXLINE( 213)					if (::hx::IsNotNull( array12 )) {
-HXLINE( 213)						 ::lime::utils::ArrayBufferView _this24 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
-HXDLIN( 213)						_this24->byteOffset = 0;
-HXDLIN( 213)						_this24->length = array12->get_length();
-HXDLIN( 213)						_this24->byteLength = (_this24->length * _this24->bytesPerElement);
-HXDLIN( 213)						_this24->buffer = ::haxe::io::Bytes_obj::alloc(_this24->byteLength);
-HXDLIN( 213)						_this24->copyFromArray(array12,null());
-HXDLIN( 213)						this7 = _this24;
-            					}
-            					else {
-HXLINE( 213)						if (::hx::IsNotNull( vector6 )) {
-HXLINE( 213)							 ::lime::utils::ArrayBufferView _this25 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
-HXDLIN( 213)							::cpp::VirtualArray array13 = ( (::cpp::VirtualArray)(vector6->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 213)							_this25->byteOffset = 0;
-HXDLIN( 213)							_this25->length = array13->get_length();
-HXDLIN( 213)							_this25->byteLength = (_this25->length * _this25->bytesPerElement);
-HXDLIN( 213)							_this25->buffer = ::haxe::io::Bytes_obj::alloc(_this25->byteLength);
-HXDLIN( 213)							_this25->copyFromArray(array13,null());
-HXDLIN( 213)							this7 = _this25;
-            						}
-            						else {
-HXLINE( 213)							if (::hx::IsNotNull( view7 )) {
-HXLINE( 213)								 ::lime::utils::ArrayBufferView _this26 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
-HXDLIN( 213)								 ::haxe::io::Bytes srcData6 = view7->buffer;
-HXDLIN( 213)								int srcLength12 = view7->length;
-HXDLIN( 213)								int srcByteOffset6 = view7->byteOffset;
-HXDLIN( 213)								int srcElementSize6 = view7->bytesPerElement;
-HXDLIN( 213)								int elementSize12 = _this26->bytesPerElement;
-HXDLIN( 213)								if ((view7->type == _this26->type)) {
-HXLINE( 213)									int srcLength13 = srcData6->length;
-HXDLIN( 213)									int cloneLength6 = (srcLength13 - srcByteOffset6);
-HXDLIN( 213)									_this26->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength6);
-HXDLIN( 213)									_this26->buffer->blit(0,srcData6,srcByteOffset6,cloneLength6);
-            								}
-            								else {
-HXLINE( 213)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 213)								_this26->byteLength = (_this26->bytesPerElement * srcLength12);
-HXDLIN( 213)								_this26->byteOffset = 0;
-HXDLIN( 213)								_this26->length = srcLength12;
-HXDLIN( 213)								this7 = _this26;
-            							}
-            							else {
-HXLINE( 213)								if (::hx::IsNotNull( buffer6 )) {
-HXLINE( 213)									 ::lime::utils::ArrayBufferView _this27 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,7);
-HXDLIN( 213)									int in_byteOffset6 = ( (int)(byteoffset6) );
-HXDLIN( 213)									if ((in_byteOffset6 < 0)) {
-HXLINE( 213)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 213)									if ((::hx::Mod(in_byteOffset6,_this27->bytesPerElement) != 0)) {
-HXLINE( 213)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 213)									int bufferByteLength6 = buffer6->length;
-HXDLIN( 213)									int elementSize13 = _this27->bytesPerElement;
-HXDLIN( 213)									int newByteLength6 = bufferByteLength6;
-HXDLIN( 213)									if (::hx::IsNull( len )) {
-HXLINE( 213)										newByteLength6 = (bufferByteLength6 - in_byteOffset6);
-HXDLIN( 213)										if ((::hx::Mod(bufferByteLength6,_this27->bytesPerElement) != 0)) {
-HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 213)										if ((newByteLength6 < 0)) {
-HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 213)										newByteLength6 = (len * _this27->bytesPerElement);
-HXDLIN( 213)										int newRange6 = (in_byteOffset6 + newByteLength6);
-HXDLIN( 213)										if ((newRange6 > bufferByteLength6)) {
-HXLINE( 213)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 213)									_this27->buffer = buffer6;
-HXDLIN( 213)									_this27->byteOffset = in_byteOffset6;
-HXDLIN( 213)									_this27->byteLength = newByteLength6;
-HXDLIN( 213)									_this27->length = ::Std_obj::_hx_int((( (Float)(newByteLength6) ) / ( (Float)(_this27->bytesPerElement) )));
-HXDLIN( 213)									this7 = _this27;
-            								}
-            								else {
-HXLINE( 213)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for UInt32Array",10,43,eb,8e));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this7;
-            			}
-            			break;
-            			case (int)8: {
-HXLINE( 216)				 ::Dynamic elements7 = null();
-HXDLIN( 216)				 ::haxe::io::Bytes buffer7 = this->buffer;
-HXDLIN( 216)				::cpp::VirtualArray array14 = null();
-HXDLIN( 216)				 ::openfl::_Vector::FloatVector vector7 = null();
-HXDLIN( 216)				 ::lime::utils::ArrayBufferView view8 = null();
-HXDLIN( 216)				 ::Dynamic byteoffset7 = byte_offset;
-HXDLIN( 216)				if (::hx::IsNull( byteoffset7 )) {
-HXLINE( 216)					byteoffset7 = 0;
-            				}
-HXDLIN( 216)				 ::lime::utils::ArrayBufferView this8;
-HXDLIN( 216)				if (::hx::IsNotNull( elements7 )) {
-HXLINE( 216)					this8 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements7,8);
-            				}
-            				else {
-HXLINE( 216)					if (::hx::IsNotNull( array14 )) {
-HXLINE( 216)						 ::lime::utils::ArrayBufferView _this28 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
-HXDLIN( 216)						_this28->byteOffset = 0;
-HXDLIN( 216)						_this28->length = array14->get_length();
-HXDLIN( 216)						_this28->byteLength = (_this28->length * _this28->bytesPerElement);
-HXDLIN( 216)						_this28->buffer = ::haxe::io::Bytes_obj::alloc(_this28->byteLength);
-HXDLIN( 216)						_this28->copyFromArray(array14,null());
-HXDLIN( 216)						this8 = _this28;
-            					}
-            					else {
-HXLINE( 216)						if (::hx::IsNotNull( vector7 )) {
-HXLINE( 216)							 ::lime::utils::ArrayBufferView _this29 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
-HXDLIN( 216)							::cpp::VirtualArray array15 = ( (::cpp::VirtualArray)(vector7->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 216)							_this29->byteOffset = 0;
-HXDLIN( 216)							_this29->length = array15->get_length();
-HXDLIN( 216)							_this29->byteLength = (_this29->length * _this29->bytesPerElement);
-HXDLIN( 216)							_this29->buffer = ::haxe::io::Bytes_obj::alloc(_this29->byteLength);
-HXDLIN( 216)							_this29->copyFromArray(array15,null());
-HXDLIN( 216)							this8 = _this29;
-            						}
-            						else {
-HXLINE( 216)							if (::hx::IsNotNull( view8 )) {
-HXLINE( 216)								 ::lime::utils::ArrayBufferView _this30 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
-HXDLIN( 216)								 ::haxe::io::Bytes srcData7 = view8->buffer;
-HXDLIN( 216)								int srcLength14 = view8->length;
-HXDLIN( 216)								int srcByteOffset7 = view8->byteOffset;
-HXDLIN( 216)								int srcElementSize7 = view8->bytesPerElement;
-HXDLIN( 216)								int elementSize14 = _this30->bytesPerElement;
-HXDLIN( 216)								if ((view8->type == _this30->type)) {
-HXLINE( 216)									int srcLength15 = srcData7->length;
-HXDLIN( 216)									int cloneLength7 = (srcLength15 - srcByteOffset7);
-HXDLIN( 216)									_this30->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength7);
-HXDLIN( 216)									_this30->buffer->blit(0,srcData7,srcByteOffset7,cloneLength7);
-            								}
-            								else {
-HXLINE( 216)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 216)								_this30->byteLength = (_this30->bytesPerElement * srcLength14);
-HXDLIN( 216)								_this30->byteOffset = 0;
-HXDLIN( 216)								_this30->length = srcLength14;
-HXDLIN( 216)								this8 = _this30;
-            							}
-            							else {
-HXLINE( 216)								if (::hx::IsNotNull( buffer7 )) {
-HXLINE( 216)									 ::lime::utils::ArrayBufferView _this31 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,8);
-HXDLIN( 216)									int in_byteOffset7 = ( (int)(byteoffset7) );
-HXDLIN( 216)									if ((in_byteOffset7 < 0)) {
-HXLINE( 216)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 216)									if ((::hx::Mod(in_byteOffset7,_this31->bytesPerElement) != 0)) {
-HXLINE( 216)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 216)									int bufferByteLength7 = buffer7->length;
-HXDLIN( 216)									int elementSize15 = _this31->bytesPerElement;
-HXDLIN( 216)									int newByteLength7 = bufferByteLength7;
-HXDLIN( 216)									if (::hx::IsNull( len )) {
-HXLINE( 216)										newByteLength7 = (bufferByteLength7 - in_byteOffset7);
-HXDLIN( 216)										if ((::hx::Mod(bufferByteLength7,_this31->bytesPerElement) != 0)) {
-HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 216)										if ((newByteLength7 < 0)) {
-HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 216)										newByteLength7 = (len * _this31->bytesPerElement);
-HXDLIN( 216)										int newRange7 = (in_byteOffset7 + newByteLength7);
-HXDLIN( 216)										if ((newRange7 > bufferByteLength7)) {
-HXLINE( 216)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 216)									_this31->buffer = buffer7;
-HXDLIN( 216)									_this31->byteOffset = in_byteOffset7;
-HXDLIN( 216)									_this31->byteLength = newByteLength7;
-HXDLIN( 216)									_this31->length = ::Std_obj::_hx_int((( (Float)(newByteLength7) ) / ( (Float)(_this31->bytesPerElement) )));
-HXDLIN( 216)									this8 = _this31;
-            								}
-            								else {
-HXLINE( 216)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Float32Array",8e,c1,f4,d4));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this8;
-            			}
-            			break;
-            			case (int)9: {
-HXLINE( 219)				 ::Dynamic elements8 = null();
-HXDLIN( 219)				 ::haxe::io::Bytes buffer8 = this->buffer;
-HXDLIN( 219)				::cpp::VirtualArray array16 = null();
-HXDLIN( 219)				 ::openfl::_Vector::FloatVector vector8 = null();
-HXDLIN( 219)				 ::lime::utils::ArrayBufferView view9 = null();
-HXDLIN( 219)				 ::Dynamic byteoffset8 = byte_offset;
-HXDLIN( 219)				if (::hx::IsNull( byteoffset8 )) {
-HXLINE( 219)					byteoffset8 = 0;
-            				}
-HXDLIN( 219)				 ::lime::utils::ArrayBufferView this9;
-HXDLIN( 219)				if (::hx::IsNotNull( elements8 )) {
-HXLINE( 219)					this9 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,elements8,9);
-            				}
-            				else {
-HXLINE( 219)					if (::hx::IsNotNull( array16 )) {
-HXLINE( 219)						 ::lime::utils::ArrayBufferView _this32 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
-HXDLIN( 219)						_this32->byteOffset = 0;
-HXDLIN( 219)						_this32->length = array16->get_length();
-HXDLIN( 219)						_this32->byteLength = (_this32->length * _this32->bytesPerElement);
-HXDLIN( 219)						_this32->buffer = ::haxe::io::Bytes_obj::alloc(_this32->byteLength);
-HXDLIN( 219)						_this32->copyFromArray(array16,null());
-HXDLIN( 219)						this9 = _this32;
-            					}
-            					else {
-HXLINE( 219)						if (::hx::IsNotNull( vector8 )) {
-HXLINE( 219)							 ::lime::utils::ArrayBufferView _this33 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
-HXDLIN( 219)							::cpp::VirtualArray array17 = ( (::cpp::VirtualArray)(vector8->__Field(HX_("__array",79,c6,ed,8f),::hx::paccDynamic)) );
-HXDLIN( 219)							_this33->byteOffset = 0;
-HXDLIN( 219)							_this33->length = array17->get_length();
-HXDLIN( 219)							_this33->byteLength = (_this33->length * _this33->bytesPerElement);
-HXDLIN( 219)							_this33->buffer = ::haxe::io::Bytes_obj::alloc(_this33->byteLength);
-HXDLIN( 219)							_this33->copyFromArray(array17,null());
-HXDLIN( 219)							this9 = _this33;
-            						}
-            						else {
-HXLINE( 219)							if (::hx::IsNotNull( view9 )) {
-HXLINE( 219)								 ::lime::utils::ArrayBufferView _this34 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
-HXDLIN( 219)								 ::haxe::io::Bytes srcData8 = view9->buffer;
-HXDLIN( 219)								int srcLength16 = view9->length;
-HXDLIN( 219)								int srcByteOffset8 = view9->byteOffset;
-HXDLIN( 219)								int srcElementSize8 = view9->bytesPerElement;
-HXDLIN( 219)								int elementSize16 = _this34->bytesPerElement;
-HXDLIN( 219)								if ((view9->type == _this34->type)) {
-HXLINE( 219)									int srcLength17 = srcData8->length;
-HXDLIN( 219)									int cloneLength8 = (srcLength17 - srcByteOffset8);
-HXDLIN( 219)									_this34->buffer = ::haxe::io::Bytes_obj::alloc(cloneLength8);
-HXDLIN( 219)									_this34->buffer->blit(0,srcData8,srcByteOffset8,cloneLength8);
-            								}
-            								else {
-HXLINE( 219)									HX_STACK_DO_THROW(HX_("unimplemented",09,2f,74,b4));
-            								}
-HXDLIN( 219)								_this34->byteLength = (_this34->bytesPerElement * srcLength16);
-HXDLIN( 219)								_this34->byteOffset = 0;
-HXDLIN( 219)								_this34->length = srcLength16;
-HXDLIN( 219)								this9 = _this34;
-            							}
-            							else {
-HXLINE( 219)								if (::hx::IsNotNull( buffer8 )) {
-HXLINE( 219)									 ::lime::utils::ArrayBufferView _this35 =  ::lime::utils::ArrayBufferView_obj::__alloc( HX_CTX ,0,9);
-HXDLIN( 219)									int in_byteOffset8 = ( (int)(byteoffset8) );
-HXDLIN( 219)									if ((in_byteOffset8 < 0)) {
-HXLINE( 219)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 219)									if ((::hx::Mod(in_byteOffset8,_this35->bytesPerElement) != 0)) {
-HXLINE( 219)										HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            									}
-HXDLIN( 219)									int bufferByteLength8 = buffer8->length;
-HXDLIN( 219)									int elementSize17 = _this35->bytesPerElement;
-HXDLIN( 219)									int newByteLength8 = bufferByteLength8;
-HXDLIN( 219)									if (::hx::IsNull( len )) {
-HXLINE( 219)										newByteLength8 = (bufferByteLength8 - in_byteOffset8);
-HXDLIN( 219)										if ((::hx::Mod(bufferByteLength8,_this35->bytesPerElement) != 0)) {
-HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-HXDLIN( 219)										if ((newByteLength8 < 0)) {
-HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-            									else {
-HXLINE( 219)										newByteLength8 = (len * _this35->bytesPerElement);
-HXDLIN( 219)										int newRange8 = (in_byteOffset8 + newByteLength8);
-HXDLIN( 219)										if ((newRange8 > bufferByteLength8)) {
-HXLINE( 219)											HX_STACK_DO_THROW(::lime::utils::TAError_obj::RangeError_dyn());
-            										}
-            									}
-HXDLIN( 219)									_this35->buffer = buffer8;
-HXDLIN( 219)									_this35->byteOffset = in_byteOffset8;
-HXDLIN( 219)									_this35->byteLength = newByteLength8;
-HXDLIN( 219)									_this35->length = ::Std_obj::_hx_int((( (Float)(newByteLength8) ) / ( (Float)(_this35->bytesPerElement) )));
-HXDLIN( 219)									this9 = _this35;
-            								}
-            								else {
-HXLINE( 219)									HX_STACK_DO_THROW(HX_("Invalid constructor arguments for Float64Array",8f,de,6b,1e));
-            								}
-            							}
-            						}
-            					}
-            				}
-HXLINE( 192)				view = this9;
-            			}
-            			break;
-            		}
-HXLINE( 225)		return view;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC2(ArrayBufferView_obj,subarray_lime_utils_UInt8Array,return )
-
  ::lime::utils::ArrayBufferView ArrayBufferView_obj::initTypedArray( ::lime::utils::ArrayBufferView view){
             	HX_STACKFRAME(&_hx_pos_244a612994c6bd06_54_initTypedArray)
 HXLINE(  55)		 ::haxe::io::Bytes srcData = view->buffer;
@@ -9283,14 +9283,14 @@ static ::hx::StaticInfo *ArrayBufferView_obj_sStaticStorageInfo = 0;
 
 static ::String ArrayBufferView_obj_sMemberFields[] = {
 	HX_("subarray_lime_utils_Int16Array",d7,8d,80,c2),
+	HX_("subarray_lime_utils_Int32Array",dd,09,3e,7c),
+	HX_("subarray_lime_utils_UInt16Array",88,c5,c2,47),
+	HX_("subarray_lime_utils_UInt32Array",8e,41,80,01),
 	HX_("subarray_lime_utils_Float64Array",51,8e,35,ee),
 	HX_("subarray_lime_utils_Int8Array",3e,16,ba,20),
 	HX_("subarray_lime_utils_UInt8ClampedArray",8b,f7,6e,70),
-	HX_("subarray_lime_utils_UInt16Array",88,c5,c2,47),
-	HX_("subarray_lime_utils_Int32Array",dd,09,3e,7c),
-	HX_("subarray_lime_utils_UInt32Array",8e,41,80,01),
-	HX_("subarray_lime_utils_Float32Array",50,71,be,a4),
 	HX_("subarray_lime_utils_UInt8Array",ad,1f,c0,a0),
+	HX_("subarray_lime_utils_Float32Array",50,71,be,a4),
 	HX_("type",ba,f2,08,4d),
 	HX_("buffer",00,bd,94,d0),
 	HX_("byteOffset",bb,20,44,38),

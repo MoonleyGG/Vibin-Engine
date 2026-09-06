@@ -5,14 +5,55 @@
   <file name="src/vibin/states/ui/mainmenu/MainMenuState.cpp" >
    <depend name="include/backend/DiscordRPC.h"/>
    <depend name="include/flixel/FlxBasic.h"/>
+   <depend name="include/flixel/FlxG.h"/>
+   <depend name="include/flixel/FlxObject.h"/>
+   <depend name="include/flixel/FlxSprite.h"/>
    <depend name="include/flixel/FlxState.h"/>
    <depend name="include/flixel/group/FlxTypedContainer.h"/>
    <depend name="include/flixel/group/FlxTypedGroup.h"/>
+   <depend name="include/flixel/input/FlxKeyManager.h"/>
+   <depend name="include/flixel/input/IFlxInputManager.h"/>
+   <depend name="include/flixel/input/keyboard/FlxKeyboard.h"/>
+   <depend name="include/flixel/math/FlxBasePoint.h"/>
+   <depend name="include/flixel/system/frontEnds/CameraFrontEnd.h"/>
+   <depend name="include/flixel/tweens/FlxEase.h"/>
+   <depend name="include/flixel/tweens/FlxTween.h"/>
+   <depend name="include/flixel/tweens/misc/NumTween.h"/>
+   <depend name="include/flixel/tweens/misc/VarTween.h"/>
    <depend name="include/flixel/util/IFlxDestroyable.h"/>
-   <depend name="include/haxe/Log.h"/>
+   <depend name="include/flixel/util/IFlxPooled.h"/>
    <depend name="include/util/fileUtils/TxtSplitter.h"/>
    <depend name="include/vibin/backend/backendStates/MusicUIBeatState.h"/>
+   <depend name="include/vibin/objects/ui/mainmenu/MainMenuButton.h"/>
+   <depend name="include/vibin/options/OptionControls.h"/>
    <depend name="include/vibin/states/ui/mainmenu/MainMenuState.h"/>
+  </file>
+  <file name="src/vibin/options/OptionControls.cpp" >
+   <depend name="include/vibin/options/OptionControls.h"/>
+  </file>
+  <file name="src/vibin/objects/ui/mainmenu/MainMenuButton.cpp" >
+   <depend name="include/flixel/FlxBasic.h"/>
+   <depend name="include/flixel/FlxObject.h"/>
+   <depend name="include/flixel/FlxSprite.h"/>
+   <depend name="include/flixel/animation/FlxAnimationController.h"/>
+   <depend name="include/flixel/graphics/frames/FlxAtlasFrames.h"/>
+   <depend name="include/flixel/graphics/frames/FlxFramesCollection.h"/>
+   <depend name="include/flixel/math/FlxBasePoint.h"/>
+   <depend name="include/flixel/util/IFlxDestroyable.h"/>
+   <depend name="include/flixel/util/IFlxPooled.h"/>
+   <depend name="include/haxe/io/Path.h"/>
+   <depend name="include/vibin/objects/ui/mainmenu/MainMenuButton.h"/>
+  </file>
+  <file name="src/vibin/backend/ui/FullScreenScaleMode.cpp" >
+   <depend name="include/flixel/FlxBasic.h"/>
+   <depend name="include/flixel/FlxCamera.h"/>
+   <depend name="include/flixel/FlxG.h"/>
+   <depend name="include/flixel/math/FlxBasePoint.h"/>
+   <depend name="include/flixel/system/frontEnds/CameraFrontEnd.h"/>
+   <depend name="include/flixel/system/scaleModes/BaseScaleMode.h"/>
+   <depend name="include/flixel/util/IFlxDestroyable.h"/>
+   <depend name="include/flixel/util/IFlxPooled.h"/>
+   <depend name="include/vibin/backend/ui/FullScreenScaleMode.h"/>
   </file>
   <file name="src/vibin/backend/backendStates/MusicUIBeatState.cpp" >
    <depend name="include/flixel/FlxBasic.h"/>
@@ -23,6 +64,15 @@
    <depend name="include/flixel/util/FlxTimerManager.h"/>
    <depend name="include/flixel/util/IFlxDestroyable.h"/>
    <depend name="include/vibin/backend/backendStates/MusicUIBeatState.h"/>
+  </file>
+  <file name="src/vibin/backend/Controls.cpp" >
+   <depend name="include/flixel/FlxG.h"/>
+   <depend name="include/flixel/input/FlxKeyManager.h"/>
+   <depend name="include/flixel/input/IFlxInputManager.h"/>
+   <depend name="include/flixel/input/keyboard/FlxKeyboard.h"/>
+   <depend name="include/flixel/util/IFlxDestroyable.h"/>
+   <depend name="include/vibin/backend/Controls.h"/>
+   <depend name="include/vibin/options/OptionControls.h"/>
   </file>
   <file name="src/vibin/InitState.cpp" >
    <depend name="include/Type.h"/>
@@ -7190,24 +7240,6 @@
    <depend name="include/openfl/events/EventDispatcher.h"/>
    <depend name="include/openfl/events/IEventDispatcher.h"/>
   </file>
-  <file name="src/flixel/system/scaleModes/StageSizeScaleMode.cpp" >
-   <depend name="include/flixel/FlxBasic.h"/>
-   <depend name="include/flixel/FlxCamera.h"/>
-   <depend name="include/flixel/FlxG.h"/>
-   <depend name="include/flixel/FlxGame.h"/>
-   <depend name="include/flixel/math/FlxBasePoint.h"/>
-   <depend name="include/flixel/system/scaleModes/BaseScaleMode.h"/>
-   <depend name="include/flixel/system/scaleModes/StageSizeScaleMode.h"/>
-   <depend name="include/flixel/util/IFlxDestroyable.h"/>
-   <depend name="include/flixel/util/IFlxPooled.h"/>
-   <depend name="include/openfl/display/DisplayObject.h"/>
-   <depend name="include/openfl/display/DisplayObjectContainer.h"/>
-   <depend name="include/openfl/display/IBitmapDrawable.h"/>
-   <depend name="include/openfl/display/InteractiveObject.h"/>
-   <depend name="include/openfl/display/Sprite.h"/>
-   <depend name="include/openfl/events/EventDispatcher.h"/>
-   <depend name="include/openfl/events/IEventDispatcher.h"/>
-  </file>
   <file name="src/flixel/system/replay/MouseRecord.cpp" >
    <depend name="include/flixel/system/replay/MouseRecord.h"/>
   </file>
@@ -11906,7 +11938,6 @@
    <depend name="include/flixel/system/frontEnds/FlxLogStylesList.h"/>
    <depend name="include/flixel/system/frontEnds/LogFrontEnd.h"/>
    <depend name="include/flixel/system/scaleModes/BaseScaleMode.h"/>
-   <depend name="include/flixel/system/scaleModes/StageSizeScaleMode.h"/>
    <depend name="include/flixel/util/IFlxDestroyable.h"/>
    <depend name="include/flixel/util/typeLimit/_NextState/InitialState_Impl_.h"/>
    <depend name="include/flixel/util/typeLimit/_NextState/NextState_Impl_.h"/>
@@ -11931,6 +11962,7 @@
    <depend name="include/openfl/utils/Assets.h"/>
    <depend name="include/openfl/utils/IAssetCache.h"/>
    <depend name="include/vibin/InitState.h"/>
+   <depend name="include/vibin/backend/ui/FullScreenScaleMode.h"/>
   </file>
   <file name="src/openfl/display/Sprite.cpp" tags="haxe,release">
    <depend name="include/lime/app/IModule.h"/>
@@ -12315,6 +12347,8 @@
    <depend name="include/flixel/FlxCameraFollowStyle.h"/>
    <depend name="include/lime/utils/TAError.h"/>
    <depend name="include/ValueType.h"/>
+   <depend name="include/vibin/options/OptionControls.h"/>
+   <depend name="include/vibin/objects/ui/mainmenu/MainMenuButton.h"/>
    <depend name="include/sys/thread/Tls.h"/>
    <depend name="include/openfl/utils/_internal/format/amf3/AMF3Array.h"/>
    <depend name="include/openfl/utils/_internal/TouchData.h"/>

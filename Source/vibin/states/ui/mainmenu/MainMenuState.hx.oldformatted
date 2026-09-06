@@ -1,0 +1,157 @@
+package vibin.states.ui.mainmenu;
+
+import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.FlxSprite;
+import flixel.FlxObject;
+import flixel.FlxG;
+import flixel.math.FlxMath;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import util.fileUtils.TxtSplitter;
+import vibin.objects.ui.mainmenu.MainMenuButton;
+
+class MainMenuState extends MusicUIBeatState {
+    var MenuButtons:Array<String> = [];
+    var menuButtonGroup:FlxTypedGroup<MainMenuButton>;
+    var bg:FlxSprite;
+
+    var curSelected:Int = 0; // im so silly :3
+    var vinylSpinAngle:Float = 0;
+    var targetSelectionAngle:Float = 0;
+    var currentSelectionAngle:Float = 0;
+    var bgScale:Float = 1;
+
+    var spinTween:FlxTween;
+    var passiveSpeed:Float = 60; // current speed of the continuous rotation
+
+    var targetWidthPixels:Float = 1280;
+    var targetHeightPixels:Float = 720;
+
+    var recordedge:FlxSprite;
+    var vinyl:FlxSprite;
+
+    var buttonPadding:Float = 310;
+
+    override function create() {
+        super.create();
+
+        FlxG.cameras.bgColor = 0xFFfde871; 
+
+        DiscordRPC.changePresence("In the Menus", "Main Menu");
+
+        menuButtonGroup = new FlxTypedGroup<MainMenuButton>();
+
+        MenuButtons = TxtSplitter.SplitTxt("menus/ui/mainmenu/MainMenuButtons");
+
+        for (i in 0...MenuButtons.length) {
+            var button:MainMenuButton = new MainMenuButton(0, 0, MenuButtons[i]);
+            var menuButtonLength:Float = MenuButtons.length; 
+            button.scrollFactor.set(0, 0);
+            menuButtonGroup.add(button);
+        }
+
+        bg = new FlxSprite(0, 0);
+        bg.loadGraphic("assets/images/menus/bg.png");
+        bg.scrollFactor.set(0, 0);
+        add(bg);
+
+        recordedge = new FlxSprite(0, 0);
+        recordedge.loadGraphic("assets/images/menus/mainmenu/recordedge.png");
+        recordedge.scrollFactor.set(0, 0);
+
+        vinyl = new FlxSprite(0, 0); // god why is vinyl so hard to spell correctly first try
+        vinyl.loadGraphic("assets/images/menus/mainmenu/record.png");
+        vinyl.scrollFactor.set(0, 0);
+        vinyl.centerOffsets();
+        vinyl.centerOrigin();
+
+        recordedge.setPosition(FlxG.width - recordedge.width, FlxG.height - recordedge.height);
+        vinyl.setPosition(FlxG.width - vinyl.width, (FlxG.height - vinyl.height) / 2);
+
+        add(vinyl);
+        add(menuButtonGroup);
+        add(recordedge); // add this above the vinyl
+
+        updateButtonPositions();
+    }
+
+    override function update(elapsed:Float) {
+        super.update(elapsed);
+
+        recordedge.setPosition(FlxG.width - recordedge.width, FlxG.height - recordedge.height);
+        bg.setGraphicSize(1280, 720);
+bg.updateHitbox();
+bg.x = 0;
+        vinyl.x = FlxG.width - vinyl.width;
+        vinyl.screenCenter(Y);
+
+        vinylSpinAngle += passiveSpeed * elapsed;
+
+        // Vinyl uses 70% of currentSelectionAngle for less rotation scale
+        vinyl.angle = vinylSpinAngle + (currentSelectionAngle * 0.7);
+
+        updateButtonPositions();
+
+        if (Controls.downUI_P) {
+            changeSelection(1);
+        }
+        if (Controls.upUI_P) {
+            changeSelection(-1);
+        }
+    }
+
+    function updateButtonPositions() {
+        var vinylCenterX:Float = vinyl.getGraphicMidpoint().x;
+        var vinylCenterY:Float = vinyl.getGraphicMidpoint().y;
+        var angleStep:Float = (Math.PI * 2) / menuButtonGroup.members.length;
+
+        for (i in 0...menuButtonGroup.members.length) {
+            var button:MainMenuButton = menuButtonGroup.members[i];
+            
+            // Buttons use currentSelectionAngle directly to smoothly orbit alongside the tween
+            var selectionOffsetRad:Float = currentSelectionAngle * (Math.PI / 180);
+            var placementAngle:Float = Math.PI + selectionOffsetRad - (i * angleStep);
+
+            button.x = vinylCenterX + (Math.cos(placementAngle) * buttonPadding) - (button.width / 2);
+            button.y = vinylCenterY + (Math.sin(placementAngle) * buttonPadding) - (button.height / 2);
+            
+            button.angle = (placementAngle * (180 / Math.PI)) - 180;
+        }
+    }
+
+    function changeSelection(change:Int = 0) {
+        curSelected += change;
+
+        if (curSelected < 0)
+            curSelected = MenuButtons.length - 1;
+        if (curSelected >= MenuButtons.length)
+            curSelected = 0;
+
+        var angleStepDeg:Float = 360 / menuButtonGroup.members.length;
+        targetSelectionAngle = curSelected * angleStepDeg;
+
+        if (spinTween != null)
+            spinTween.cancel();
+
+        // Quintic ease-out creates an ultra-smooth start and gradual stop for all elements
+        spinTween = FlxTween.tween(this, {currentSelectionAngle: targetSelectionAngle}, 0.8, {ease: FlxEase.quintOut});
+
+        if (change < 0) {
+            FlxTween.num(passiveSpeed, 0, 0.3, {ease: FlxEase.sineOut}, function(val:Float) {
+                passiveSpeed = val;
+            });
+            FlxTween.num(0, 60, 0.5, {ease: FlxEase.sineInOut, startDelay: 0.3}, function(val:Float) {
+                passiveSpeed = val;
+            });
+        }
+
+        for (i in 0...menuButtonGroup.members.length) {
+            var button:MainMenuButton = menuButtonGroup.members[i];
+            if (i == curSelected) {
+                button.playAnim("selected");
+            } else {
+                button.playAnim("idle");
+            }
+        }
+    }
+}

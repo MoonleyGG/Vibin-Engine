@@ -52,6 +52,15 @@ class HXCPP_CLASS_ATTRIBUTES ArrayBufferView_obj : public ::hx::Object
 		 ::lime::utils::ArrayBufferView subarray_lime_utils_Int16Array(int begin, ::Dynamic end);
 		::Dynamic subarray_lime_utils_Int16Array_dyn();
 
+		 ::lime::utils::ArrayBufferView subarray_lime_utils_Int32Array(int begin, ::Dynamic end);
+		::Dynamic subarray_lime_utils_Int32Array_dyn();
+
+		 ::lime::utils::ArrayBufferView subarray_lime_utils_UInt16Array(int begin, ::Dynamic end);
+		::Dynamic subarray_lime_utils_UInt16Array_dyn();
+
+		 ::lime::utils::ArrayBufferView subarray_lime_utils_UInt32Array(int begin, ::Dynamic end);
+		::Dynamic subarray_lime_utils_UInt32Array_dyn();
+
 		 ::lime::utils::ArrayBufferView subarray_lime_utils_Float64Array(int begin, ::Dynamic end);
 		::Dynamic subarray_lime_utils_Float64Array_dyn();
 
@@ -61,20 +70,11 @@ class HXCPP_CLASS_ATTRIBUTES ArrayBufferView_obj : public ::hx::Object
 		 ::lime::utils::ArrayBufferView subarray_lime_utils_UInt8ClampedArray(int begin, ::Dynamic end);
 		::Dynamic subarray_lime_utils_UInt8ClampedArray_dyn();
 
-		 ::lime::utils::ArrayBufferView subarray_lime_utils_UInt16Array(int begin, ::Dynamic end);
-		::Dynamic subarray_lime_utils_UInt16Array_dyn();
-
-		 ::lime::utils::ArrayBufferView subarray_lime_utils_Int32Array(int begin, ::Dynamic end);
-		::Dynamic subarray_lime_utils_Int32Array_dyn();
-
-		 ::lime::utils::ArrayBufferView subarray_lime_utils_UInt32Array(int begin, ::Dynamic end);
-		::Dynamic subarray_lime_utils_UInt32Array_dyn();
+		 ::lime::utils::ArrayBufferView subarray_lime_utils_UInt8Array(int begin, ::Dynamic end);
+		::Dynamic subarray_lime_utils_UInt8Array_dyn();
 
 		 ::lime::utils::ArrayBufferView subarray_lime_utils_Float32Array(int begin, ::Dynamic end);
 		::Dynamic subarray_lime_utils_Float32Array_dyn();
-
-		 ::lime::utils::ArrayBufferView subarray_lime_utils_UInt8Array(int begin, ::Dynamic end);
-		::Dynamic subarray_lime_utils_UInt8Array_dyn();
 
 		int type;
 		 ::haxe::io::Bytes buffer;

@@ -45,7 +45,7 @@ class Project extends HXProject {
     /**
      * simplified game title. also used for the exe file
      */
-	 static final TITLESIMPLE:String = "vibinengine";
+	 static final TITLESIMPLE:String = "VibinEngine";
 
 	 //
 	 // WINDOW CONFIGS
@@ -106,6 +106,7 @@ class Project extends HXProject {
 
 		doHaxeDefs();
 		loadHaxelibraries();
+      cleanExportAssets();
    }
 
    function doHaxeDefs() {
@@ -121,4 +122,49 @@ class Project extends HXProject {
       haxelibs.push(new Haxelib("hxdiscord_rpc"));
       }
    }
+
+/**
+ * delete the old assets folder :3
+ */
+function cleanExportAssets() {
+    // Only run asset cleanup during build tasks, skip during run/test
+    if (command != "build" && command != "update") {
+        return;
+    }
+
+    var path = "Export/windows/bin/assets";
+
+    if (FileSystem.exists(path))
+    {
+        trace("Yo black impostor can you kill the assets folder, thanks");
+        deleteDirectory(path);
+
+        if (!FileSystem.exists(path))
+        {
+            trace("assets folder cleanup done");
+        }
+        else
+        {
+            trace("Failed to delete assets folder!");
+        }
+    }
+}
+
+ function deleteDirectory(path:String) {
+    for (entry in FileSystem.readDirectory(path))
+    {
+        var fullPath = Path.join([path, entry]);
+
+        if (FileSystem.isDirectory(fullPath))
+        {
+            deleteDirectory(fullPath);
+        }
+        else
+        {
+            FileSystem.deleteFile(fullPath);
+        }
+    }
+
+    FileSystem.deleteDirectory(path);
+}
 }

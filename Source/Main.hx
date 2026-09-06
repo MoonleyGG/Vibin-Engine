@@ -1,7 +1,6 @@
 package;
 
 import lime.system.System;
-import flixel.FlxG;
 import flixel.FlxGame;
 import flixel.FlxState;
 #if hxvlc
@@ -12,6 +11,10 @@ import openfl.events.Event;
 import openfl.Lib;
 import openfl.media.Video;
 import openfl.net.NetStream;
+/**
+ * funkin imports
+ */
+ import vibin.backend.ui.FullScreenScaleMode;
 
 /**
  * The main class which initializes HaxeFlixel and starts the game in its initial state.
@@ -55,8 +58,8 @@ class Main extends Sprite
   }
 
   function setupGame():Void
-{
-    var game:FlxGame = new FlxGame(
+    {
+      var game:FlxGame = new FlxGame(
         gameWidth,
         gameHeight,
         initialState,
@@ -68,15 +71,15 @@ class Main extends Sprite
 
     addChild(game);
 
-    FlxG.scaleMode = new flixel.system.scaleModes.StageSizeScaleMode();
-
+    FlxG.scaleMode = new FullScreenScaleMode();
+    
     #if !debug
-	if (!skipSplash) {
-		trace("title splash");
-		FlxG.switchState(() -> new flixel.system.FlxSplash(
-			() -> Type.createInstance(initialState, [])
-			));
-		}
-	#end
+    if (!skipSplash) {
+      trace("title splash");
+      FlxG.switchState(() -> new flixel.system.FlxSplash(
+        () -> Type.createInstance(initialState, [])
+      ));
     }
+    #end
+  }
 }

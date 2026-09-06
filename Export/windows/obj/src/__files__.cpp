@@ -243,7 +243,6 @@ const char *__hxcpp_all_files[] = {
 "flixel/system/replay/MouseRecord.hx",
 "flixel/system/scaleModes/BaseScaleMode.hx",
 "flixel/system/scaleModes/RatioScaleMode.hx",
-"flixel/system/scaleModes/StageSizeScaleMode.hx",
 "flixel/system/ui/FlxFocusLostScreen.hx",
 "flixel/system/ui/FlxSoundTray.hx",
 "flixel/system/ui/FlxSystemButton.hx",
@@ -824,7 +823,11 @@ const char *__hxcpp_all_files[] = {
 "openfl/utils/_internal/format/amf3/AMF3Writer.hx",
 "util/fileUtils/TxtSplitter.hx",
 "vibin/InitState.hx",
+"vibin/backend/Controls.hx",
 "vibin/backend/backendStates/MusicUIBeatState.hx",
+"vibin/backend/ui/FullScreenScaleMode.hx",
+"vibin/objects/ui/mainmenu/MainMenuButton.hx",
+"vibin/options/OptionControls.hx",
 "vibin/states/ui/mainmenu/MainMenuState.hx",
 #endif
  0 };
@@ -1070,7 +1073,6 @@ const char *__hxcpp_all_files_fullpath[] = {
 "D:\\Hackse\\haxe\\lib\\flixel\\6,2,0\\flixel\\system\\replay\\MouseRecord.hx",
 "D:\\Hackse\\haxe\\lib\\flixel\\6,2,0\\flixel\\system\\scaleModes\\BaseScaleMode.hx",
 "D:\\Hackse\\haxe\\lib\\flixel\\6,2,0\\flixel\\system\\scaleModes\\RatioScaleMode.hx",
-"D:\\Hackse\\haxe\\lib\\flixel\\6,2,0\\flixel\\system\\scaleModes\\StageSizeScaleMode.hx",
 "D:\\Hackse\\haxe\\lib\\flixel\\6,2,0\\flixel\\system\\ui\\FlxFocusLostScreen.hx",
 "D:\\Hackse\\haxe\\lib\\flixel\\6,2,0\\flixel\\system\\ui\\FlxSoundTray.hx",
 "D:\\Hackse\\haxe\\lib\\flixel\\6,2,0\\flixel\\system\\ui\\FlxSystemButton.hx",
@@ -1651,7 +1653,11 @@ const char *__hxcpp_all_files_fullpath[] = {
 "D:\\Hackse\\haxe\\lib\\openfl\\9,5,2\\src\\openfl\\utils\\_internal\\format\\amf3\\AMF3Writer.hx",
 "D:\\My Projects\\vibin engine\\vibin engine\\Source\\util\\fileUtils\\TxtSplitter.hx",
 "D:\\My Projects\\vibin engine\\vibin engine\\Source\\vibin\\InitState.hx",
+"D:\\My Projects\\vibin engine\\vibin engine\\Source\\vibin\\backend\\Controls.hx",
 "D:\\My Projects\\vibin engine\\vibin engine\\Source\\vibin\\backend\\backendStates\\MusicUIBeatState.hx",
+"D:\\My Projects\\vibin engine\\vibin engine\\Source\\vibin\\backend\\ui\\FullScreenScaleMode.hx",
+"D:\\My Projects\\vibin engine\\vibin engine\\Source\\vibin\\objects\\ui\\mainmenu\\MainMenuButton.hx",
+"D:\\My Projects\\vibin engine\\vibin engine\\Source\\vibin\\options\\OptionControls.hx",
 "D:\\My Projects\\vibin engine\\vibin engine\\Source\\vibin\\states\\ui\\mainmenu\\MainMenuState.hx",
 #endif
  0 };
@@ -1962,7 +1968,6 @@ const char *__hxcpp_all_classes[] = {
 "flixel.system.macros.FlxMacroUtil",
 "flixel.system.replay.CodeValuePair",
 "flixel.system.replay.MouseRecord",
-"flixel.system.scaleModes.StageSizeScaleMode",
 "flixel.system.ui.FlxFocusLostScreen",
 "flixel.system.ui.FlxSoundTray",
 "flixel.system.ui.FlxSystemButton",
@@ -2730,7 +2735,11 @@ const char *__hxcpp_all_classes[] = {
 "sys.thread.Tls",
 "util.fileUtils.TxtSplitter",
 "vibin.InitState",
+"vibin.backend.Controls",
 "vibin.backend.backendStates.MusicUIBeatState",
+"vibin.backend.ui.FullScreenScaleMode",
+"vibin.objects.ui.mainmenu.MainMenuButton",
+"vibin.options.OptionControls",
 "vibin.states.ui.mainmenu.MainMenuState",
 #endif
  0 };

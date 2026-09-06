@@ -56,7 +56,7 @@ class HXCPP_CLASS_ATTRIBUTES MusicUIBeatState_obj : public  ::flixel::FlxState_o
 		Float step;
 		virtual void create();
 
-		void update(Float elapsed);
+		virtual void update(Float elapsed);
 
 };
 

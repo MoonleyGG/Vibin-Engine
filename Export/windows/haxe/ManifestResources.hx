@@ -94,6 +94,26 @@ import sys.FileSystem;
 #if flash
 
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_menus_ui_mainmenu_mainmenubuttons_vibintxt extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_bg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_bgselected_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_mainmenu_record_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_mainmenu_recordedge_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_awards_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_awards_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_credits_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_credits_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_freeplay_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_freeplay_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_gallery_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_gallery_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_merch_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_merch_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_options_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_options_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_optionsbutton_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_optionsbutton_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_storymode_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_storymode_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }

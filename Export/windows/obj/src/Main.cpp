@@ -43,9 +43,6 @@
 #ifndef INCLUDED_flixel_system_scaleModes_BaseScaleMode
 #include <flixel/system/scaleModes/BaseScaleMode.h>
 #endif
-#ifndef INCLUDED_flixel_system_scaleModes_StageSizeScaleMode
-#include <flixel/system/scaleModes/StageSizeScaleMode.h>
-#endif
 #ifndef INCLUDED_flixel_util_IFlxDestroyable
 #include <flixel/util/IFlxDestroyable.h>
 #endif
@@ -118,24 +115,27 @@
 #ifndef INCLUDED_vibin_InitState
 #include <vibin/InitState.h>
 #endif
+#ifndef INCLUDED_vibin_backend_ui_FullScreenScaleMode
+#include <vibin/backend/ui/FullScreenScaleMode.h>
+#endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_e47a9afac0942eb9_19_new,"Main","new",0x6616a5cb,"Main.new","Main.hx",19,0x087e5c05)
-HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_40_init,"Main","init",0xea732345,"Main.init","Main.hx",40,0x087e5c05)
-HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_36_init,"Main","init",0xea732345,"Main.init","Main.hx",36,0x087e5c05)
-HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_58_setupGame,"Main","setupGame",0x7f7688ba,"Main.setupGame","Main.hx",58,0x087e5c05)
-HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_77_setupGame,"Main","setupGame",0x7f7688ba,"Main.setupGame","Main.hx",77,0x087e5c05)
-HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_76_setupGame,"Main","setupGame",0x7f7688ba,"Main.setupGame","Main.hx",76,0x087e5c05)
+HX_DEFINE_STACK_FRAME(_hx_pos_e47a9afac0942eb9_22_new,"Main","new",0x6616a5cb,"Main.new","Main.hx",22,0x087e5c05)
+HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_43_init,"Main","init",0xea732345,"Main.init","Main.hx",43,0x087e5c05)
+HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_39_init,"Main","init",0xea732345,"Main.init","Main.hx",39,0x087e5c05)
+HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_61_setupGame,"Main","setupGame",0x7f7688ba,"Main.setupGame","Main.hx",61,0x087e5c05)
+HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_80_setupGame,"Main","setupGame",0x7f7688ba,"Main.setupGame","Main.hx",80,0x087e5c05)
+HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_79_setupGame,"Main","setupGame",0x7f7688ba,"Main.setupGame","Main.hx",79,0x087e5c05)
 
 void Main_obj::__construct(){
-            	HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_19_new)
-HXLINE(  26)		this->framerate = 60;
-HXLINE(  25)		this->skipSplash = false;
-HXLINE(  24)		this->zoom = ((Float)-1);
-HXLINE(  23)		this->initialState = ::hx::ClassOf< ::vibin::InitState >();
-HXLINE(  22)		this->gameHeight = 720;
-HXLINE(  21)		this->gameWidth = 1280;
-HXLINE(  30)		super::__construct();
-HXLINE(  32)		this->init(null());
+            	HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_22_new)
+HXLINE(  29)		this->framerate = 60;
+HXLINE(  28)		this->skipSplash = false;
+HXLINE(  27)		this->zoom = ((Float)-1);
+HXLINE(  26)		this->initialState = ::hx::ClassOf< ::vibin::InitState >();
+HXLINE(  25)		this->gameHeight = 720;
+HXLINE(  24)		this->gameWidth = 1280;
+HXLINE(  33)		super::__construct();
+HXLINE(  35)		this->init(null());
             	}
 
 Dynamic Main_obj::__CreateEmpty() { return new Main_obj; }
@@ -172,65 +172,65 @@ bool Main_obj::_hx_isInstanceOf(int inClassId) {
 void Main_obj::init( ::openfl::events::Event event){
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_0) HXARGC(1)
             		void _hx_run(int _){
-            			HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_40_init)
-HXLINE(  46)			::openfl::utils::IAssetCache_obj::clear(::openfl::utils::Assets_obj::cache,null());
-HXLINE(  48)			::haxe::Log_obj::trace(HX_(" EXITING Resources are disposed, Game is closing now.",87,83,01,87),::hx::SourceInfo(HX_("Source/Main.hx",b1,67,fd,ea),48,HX_("Main",59,64,2f,33),HX_("init",10,3b,bb,45)));
-HXLINE(  50)			::Sys_obj::exit(0);
+            			HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_43_init)
+HXLINE(  49)			::openfl::utils::IAssetCache_obj::clear(::openfl::utils::Assets_obj::cache,null());
+HXLINE(  51)			::haxe::Log_obj::trace(HX_(" EXITING Resources are disposed, Game is closing now.",87,83,01,87),::hx::SourceInfo(HX_("Source/Main.hx",b1,67,fd,ea),51,HX_("Main",59,64,2f,33),HX_("init",10,3b,bb,45)));
+HXLINE(  53)			::Sys_obj::exit(0);
             		}
             		HX_END_LOCAL_FUNC1((void))
 
-            	HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_36_init)
-HXLINE(  39)		::openfl::Lib_obj::get_application()->onExit->add( ::Dynamic(new _hx_Closure_0()),null(),99);
-HXLINE(  54)		this->setupGame();
+            	HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_39_init)
+HXLINE(  42)		::openfl::Lib_obj::get_application()->onExit->add( ::Dynamic(new _hx_Closure_0()),null(),99);
+HXLINE(  57)		this->setupGame();
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC1(Main_obj,init,(void))
 
 void Main_obj::setupGame(){
-            	HX_GC_STACKFRAME(&_hx_pos_e47a9afac0942eb9_58_setupGame)
-HXDLIN(  58)		 ::Main _gthis = ::hx::ObjectPtr<OBJ_>(this);
-HXLINE(  60)		int game = this->gameWidth;
-HXLINE(  61)		int game1 = this->gameHeight;
-HXLINE(  62)		 ::Dynamic game2 = ::flixel::util::typeLimit::_NextState::InitialState_Impl__obj::fromType(this->initialState);
-HXLINE(  63)		int game3 = this->framerate;
-HXLINE(  64)		int game4 = this->framerate;
-HXLINE(  59)		 ::flixel::FlxGame game5 =  ::flixel::FlxGame_obj::__alloc( HX_CTX ,game,game1,game2,game3,game4,true,::openfl::Lib_obj::get_current()->stage->window->_hx___fullscreen);
-HXLINE(  69)		this->addChild(game5);
-HXLINE(  71)		::flixel::FlxG_obj::set_scaleMode( ::flixel::_hx_system::scaleModes::StageSizeScaleMode_obj::__alloc( HX_CTX ));
-HXLINE(  74)		if (!(this->skipSplash)) {
-HXLINE(  75)			::haxe::Log_obj::trace(HX_("title splash",ef,a6,bc,48),::hx::SourceInfo(HX_("Source/Main.hx",b1,67,fd,ea),75,HX_("Main",59,64,2f,33),HX_("setupGame",0f,51,ed,9e)));
-HXLINE(  76)			{
+            	HX_GC_STACKFRAME(&_hx_pos_e47a9afac0942eb9_61_setupGame)
+HXDLIN(  61)		 ::Main _gthis = ::hx::ObjectPtr<OBJ_>(this);
+HXLINE(  63)		int game = this->gameWidth;
+HXLINE(  64)		int game1 = this->gameHeight;
+HXLINE(  65)		 ::Dynamic game2 = ::flixel::util::typeLimit::_NextState::InitialState_Impl__obj::fromType(this->initialState);
+HXLINE(  66)		int game3 = this->framerate;
+HXLINE(  67)		int game4 = this->framerate;
+HXLINE(  62)		 ::flixel::FlxGame game5 =  ::flixel::FlxGame_obj::__alloc( HX_CTX ,game,game1,game2,game3,game4,true,::openfl::Lib_obj::get_current()->stage->window->_hx___fullscreen);
+HXLINE(  72)		this->addChild(game5);
+HXLINE(  74)		::flixel::FlxG_obj::set_scaleMode( ::vibin::backend::ui::FullScreenScaleMode_obj::__alloc( HX_CTX ));
+HXLINE(  77)		if (!(this->skipSplash)) {
+HXLINE(  78)			::haxe::Log_obj::trace(HX_("title splash",ef,a6,bc,48),::hx::SourceInfo(HX_("Source/Main.hx",b1,67,fd,ea),78,HX_("Main",59,64,2f,33),HX_("setupGame",0f,51,ed,9e)));
+HXLINE(  79)			{
             				HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_1, ::Main,_gthis) HXARGC(0)
             				 ::flixel::FlxState _hx_run(){
             					HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_0, ::Main,_gthis) HXARGC(0)
             					 ::flixel::FlxState _hx_run(){
-            						HX_GC_STACKFRAME(&_hx_pos_e47a9afac0942eb9_77_setupGame)
-HXLINE(  77)						return ( ( ::flixel::FlxState)(::Type_obj::createInstance(_gthis->initialState,::cpp::VirtualArray_obj::__new(0))) );
+            						HX_GC_STACKFRAME(&_hx_pos_e47a9afac0942eb9_80_setupGame)
+HXLINE(  80)						return ( ( ::flixel::FlxState)(::Type_obj::createInstance(_gthis->initialState,::cpp::VirtualArray_obj::__new(0))) );
             					}
             					HX_END_LOCAL_FUNC0(return)
 
-            					HX_GC_STACKFRAME(&_hx_pos_e47a9afac0942eb9_76_setupGame)
-HXLINE(  76)					return  ::flixel::_hx_system::FlxSplash_obj::__alloc( HX_CTX ,::flixel::util::typeLimit::_NextState::NextState_Impl__obj::fromMaker( ::Dynamic(new _hx_Closure_0(_gthis))));
+            					HX_GC_STACKFRAME(&_hx_pos_e47a9afac0942eb9_79_setupGame)
+HXLINE(  79)					return  ::flixel::_hx_system::FlxSplash_obj::__alloc( HX_CTX ,::flixel::util::typeLimit::_NextState::NextState_Impl__obj::fromMaker( ::Dynamic(new _hx_Closure_0(_gthis))));
             				}
             				HX_END_LOCAL_FUNC0(return)
 
             				HX_BEGIN_LOCAL_FUNC_S2(::hx::LocalFunc,_hx_Closure_2, ::Dynamic,nextState, ::flixel::FlxState,stateOnCall) HXARGC(0)
             				void _hx_run(){
-            					HX_GC_STACKFRAME(&_hx_pos_e47a9afac0942eb9_76_setupGame)
-HXLINE(  76)					if (::hx::IsInstanceEq( ::flixel::FlxG_obj::game->_state,stateOnCall )) {
-HXLINE(  76)						::flixel::FlxG_obj::game->_nextState = nextState;
+            					HX_GC_STACKFRAME(&_hx_pos_e47a9afac0942eb9_79_setupGame)
+HXLINE(  79)					if (::hx::IsInstanceEq( ::flixel::FlxG_obj::game->_state,stateOnCall )) {
+HXLINE(  79)						::flixel::FlxG_obj::game->_nextState = nextState;
             					}
             					else {
-HXLINE(  76)						 ::flixel::_hx_system::frontEnds::LogFrontEnd _this = ::flixel::FlxG_obj::log;
-HXDLIN(  76)						_this->advanced(HX_("`onOutroComplete` was called after the state was switched. This will be ignored",46,b2,58,c7),_this->styles->warning,true,::hx::SourceInfo(HX_("flixel/FlxG.hx",36,68,17,8e),387,HX_("flixel.FlxG",07,ab,3b,0e),HX_("switchState",7d,07,8b,77)));
+HXLINE(  79)						 ::flixel::_hx_system::frontEnds::LogFrontEnd _this = ::flixel::FlxG_obj::log;
+HXDLIN(  79)						_this->advanced(HX_("`onOutroComplete` was called after the state was switched. This will be ignored",46,b2,58,c7),_this->styles->warning,true,::hx::SourceInfo(HX_("flixel/FlxG.hx",36,68,17,8e),387,HX_("flixel.FlxG",07,ab,3b,0e),HX_("switchState",7d,07,8b,77)));
             					}
             				}
             				HX_END_LOCAL_FUNC0((void))
 
-HXLINE(  76)				 ::Dynamic nextState = ::flixel::util::typeLimit::_NextState::NextState_Impl__obj::fromMaker( ::Dynamic(new _hx_Closure_1(_gthis)));
-HXDLIN(  76)				 ::flixel::FlxState stateOnCall = ::flixel::FlxG_obj::game->_state;
-HXDLIN(  76)				::flixel::FlxG_obj::game->_state->startOutro( ::Dynamic(new _hx_Closure_2(nextState,stateOnCall)));
+HXLINE(  79)				 ::Dynamic nextState = ::flixel::util::typeLimit::_NextState::NextState_Impl__obj::fromMaker( ::Dynamic(new _hx_Closure_1(_gthis)));
+HXDLIN(  79)				 ::flixel::FlxState stateOnCall = ::flixel::FlxG_obj::game->_state;
+HXDLIN(  79)				::flixel::FlxG_obj::game->_state->startOutro( ::Dynamic(new _hx_Closure_2(nextState,stateOnCall)));
             			}
             		}
             	}

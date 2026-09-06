@@ -193,6 +193,12 @@
 #ifndef INCLUDED_ValueType
 #include <ValueType.h>
 #endif
+#ifndef INCLUDED_vibin_options_OptionControls
+#include <vibin/options/OptionControls.h>
+#endif
+#ifndef INCLUDED_vibin_objects_ui_mainmenu_MainMenuButton
+#include <vibin/objects/ui/mainmenu/MainMenuButton.h>
+#endif
 #ifndef INCLUDED_sys_thread_Tls
 #include <sys/thread/Tls.h>
 #endif
@@ -1384,8 +1390,14 @@
 #ifndef INCLUDED_vibin_states_ui_mainmenu_MainMenuState
 #include <vibin/states/ui/mainmenu/MainMenuState.h>
 #endif
+#ifndef INCLUDED_vibin_backend_ui_FullScreenScaleMode
+#include <vibin/backend/ui/FullScreenScaleMode.h>
+#endif
 #ifndef INCLUDED_vibin_backend_backendStates_MusicUIBeatState
 #include <vibin/backend/backendStates/MusicUIBeatState.h>
+#endif
+#ifndef INCLUDED_vibin_backend_Controls
+#include <vibin/backend/Controls.h>
 #endif
 #ifndef INCLUDED_vibin_InitState
 #include <vibin/InitState.h>
@@ -2932,9 +2944,6 @@
 #ifndef INCLUDED_flixel_system_ui_FlxFocusLostScreen
 #include <flixel/system/ui/FlxFocusLostScreen.h>
 #endif
-#ifndef INCLUDED_flixel_system_scaleModes_StageSizeScaleMode
-#include <flixel/system/scaleModes/StageSizeScaleMode.h>
-#endif
 #ifndef INCLUDED_flixel_system_replay_MouseRecord
 #include <flixel/system/replay/MouseRecord.h>
 #endif
@@ -3582,6 +3591,8 @@ __files__boot();
 ::flixel::FlxCameraFollowStyle_obj::__register();
 ::lime::utils::TAError_obj::__register();
 ::ValueType_obj::__register();
+::vibin::options::OptionControls_obj::__register();
+::vibin::objects::ui::mainmenu::MainMenuButton_obj::__register();
 ::sys::thread::Tls_obj::__register();
 ::openfl::utils::_internal::format::amf3::AMF3Array_obj::__register();
 ::openfl::utils::_internal::TouchData_obj::__register();
@@ -3979,7 +3990,9 @@ __files__boot();
 ::lime::_internal::backend::native::NativeApplication_obj::__register();
 ::lime::_internal::backend::native::NativeCFFI_obj::__register();
 ::vibin::states::ui::mainmenu::MainMenuState_obj::__register();
+::vibin::backend::ui::FullScreenScaleMode_obj::__register();
 ::vibin::backend::backendStates::MusicUIBeatState_obj::__register();
+::vibin::backend::Controls_obj::__register();
 ::vibin::InitState_obj::__register();
 ::util::fileUtils::TxtSplitter_obj::__register();
 ::sys::thread::_Thread::Thread_Impl__obj::__register();
@@ -4495,7 +4508,6 @@ __files__boot();
 ::flixel::_hx_system::ui::FlxSystemButton_obj::__register();
 ::flixel::_hx_system::ui::FlxSoundTray_obj::__register();
 ::flixel::_hx_system::ui::FlxFocusLostScreen_obj::__register();
-::flixel::_hx_system::scaleModes::StageSizeScaleMode_obj::__register();
 ::flixel::_hx_system::replay::MouseRecord_obj::__register();
 ::flixel::_hx_system::replay::CodeValuePair_obj::__register();
 ::flixel::_hx_system::macros::FlxMacroUtil_obj::__register();
@@ -5157,5 +5169,7 @@ __files__boot();
 ::openfl::utils::_internal::TouchData_obj::__boot();
 ::openfl::utils::_internal::format::amf3::AMF3Array_obj::__boot();
 ::sys::thread::Tls_obj::__boot();
+::vibin::objects::ui::mainmenu::MainMenuButton_obj::__boot();
+::vibin::options::OptionControls_obj::__boot();
 }
 
