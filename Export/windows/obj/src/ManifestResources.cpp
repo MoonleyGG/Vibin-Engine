@@ -10,6 +10,12 @@
 #ifndef INCLUDED_StringTools
 #include <StringTools.h>
 #endif
+#ifndef INCLUDED___ASSET__OPENFL__assets_fonts_5by7_b_ttf
+#include <__ASSET__OPENFL__assets_fonts_5by7_b_ttf.h>
+#endif
+#ifndef INCLUDED___ASSET__OPENFL__assets_fonts_5by7_ttf
+#include <__ASSET__OPENFL__assets_fonts_5by7_ttf.h>
+#endif
 #ifndef INCLUDED___ASSET__OPENFL__flixel_fonts_monsterrat_ttf
 #include <__ASSET__OPENFL__flixel_fonts_monsterrat_ttf.h>
 #endif
@@ -85,21 +91,23 @@ HXDLIN(  50)				::ManifestResources_obj::rootPath = (::ManifestResources_obj::ro
 HXLINE(  56)		if (::hx::IsNull( ::ManifestResources_obj::rootPath )) {
 HXLINE(  65)			::ManifestResources_obj::rootPath = ::lime::_hx_system::System_obj::get_applicationDirectory();
             		}
-HXLINE(  73)		::openfl::text::Font_obj::registerFont(::hx::ClassOf< ::__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf >());
-HXLINE(  74)		::openfl::text::Font_obj::registerFont(::hx::ClassOf< ::__ASSET__OPENFL__flixel_fonts_monsterrat_ttf >());
-HXLINE(  78)		 ::Dynamic data;
-HXDLIN(  78)		 ::Dynamic manifest;
-HXDLIN(  78)		 ::Dynamic bundle;
-HXLINE(  80)		{
-HXLINE(  80)			::String v = (::ManifestResources_obj::rootPath + HX_("manifest/default.json",95,ea,cc,42));
-HXDLIN(  80)			::lime::utils::Assets_obj::libraryPaths->set(HX_("default",c1,d8,c3,9b),v);
+HXLINE(  73)		::openfl::text::Font_obj::registerFont(::hx::ClassOf< ::__ASSET__OPENFL__assets_fonts_5by7_ttf >());
+HXLINE(  74)		::openfl::text::Font_obj::registerFont(::hx::ClassOf< ::__ASSET__OPENFL__assets_fonts_5by7_b_ttf >());
+HXLINE(  75)		::openfl::text::Font_obj::registerFont(::hx::ClassOf< ::__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf >());
+HXLINE(  76)		::openfl::text::Font_obj::registerFont(::hx::ClassOf< ::__ASSET__OPENFL__flixel_fonts_monsterrat_ttf >());
+HXLINE(  80)		 ::Dynamic data;
+HXDLIN(  80)		 ::Dynamic manifest;
+HXDLIN(  80)		 ::Dynamic bundle;
+HXLINE(  82)		{
+HXLINE(  82)			::String v = (::ManifestResources_obj::rootPath + HX_("manifest/default.json",95,ea,cc,42));
+HXDLIN(  82)			::lime::utils::Assets_obj::libraryPaths->set(HX_("default",c1,d8,c3,9b),v);
             		}
-HXLINE(  78)		 ::lime::utils::AssetLibrary library = ::lime::utils::Assets_obj::getLibrary(HX_("default",c1,d8,c3,9b));
-HXLINE(  84)		if (::hx::IsNotNull( library )) {
-HXLINE(  84)			::ManifestResources_obj::preloadLibraries->push(library);
+HXLINE(  80)		 ::lime::utils::AssetLibrary library = ::lime::utils::Assets_obj::getLibrary(HX_("default",c1,d8,c3,9b));
+HXLINE(  86)		if (::hx::IsNotNull( library )) {
+HXLINE(  86)			::ManifestResources_obj::preloadLibraries->push(library);
             		}
             		else {
-HXLINE(  85)			::ManifestResources_obj::preloadLibraryNames->push(HX_("default",c1,d8,c3,9b));
+HXLINE(  87)			::ManifestResources_obj::preloadLibraryNames->push(HX_("default",c1,d8,c3,9b));
             		}
             	}
 

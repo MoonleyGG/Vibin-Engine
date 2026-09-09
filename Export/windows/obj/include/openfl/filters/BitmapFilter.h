@@ -65,7 +65,7 @@ class HXCPP_CLASS_ATTRIBUTES BitmapFilter_obj : public ::hx::Object
 		virtual  ::openfl::filters::BitmapFilter clone();
 		::Dynamic clone_dyn();
 
-		 ::openfl::display::BitmapData _hx___applyFilter( ::openfl::display::BitmapData bitmapData, ::openfl::display::BitmapData sourceBitmapData, ::openfl::geom::Rectangle sourceRect, ::openfl::geom::Point destPoint);
+		virtual  ::openfl::display::BitmapData _hx___applyFilter( ::openfl::display::BitmapData bitmapData, ::openfl::display::BitmapData sourceBitmapData, ::openfl::geom::Rectangle sourceRect, ::openfl::geom::Point destPoint);
 		::Dynamic _hx___applyFilter_dyn();
 
 		virtual  ::openfl::display::Shader _hx___initShader( ::openfl::display::DisplayObjectRenderer renderer,int pass, ::openfl::display::BitmapData sourceBitmapData);

@@ -19,6 +19,9 @@
 #ifndef INCLUDED_flixel_system_debug_console_ConsoleUtil
 #include <flixel/system/debug/console/ConsoleUtil.h>
 #endif
+#ifndef INCLUDED_flixel_system_debug_console__ConsoleUtil_Interp
+#include <flixel/system/debug/console/_ConsoleUtil/Interp.h>
+#endif
 #ifndef INCLUDED_flixel_system_debug_log_FlxLogStyle
 #include <flixel/system/debug/log/FlxLogStyle.h>
 #endif
@@ -31,7 +34,29 @@
 #ifndef INCLUDED_flixel_util_FlxStringUtil
 #include <flixel/util/FlxStringUtil.h>
 #endif
+#ifndef INCLUDED_haxe_IMap
+#include <haxe/IMap.h>
+#endif
+#ifndef INCLUDED_haxe_ds_StringMap
+#include <haxe/ds/StringMap.h>
+#endif
+#ifndef INCLUDED_hscript_Expr
+#include <hscript/Expr.h>
+#endif
+#ifndef INCLUDED_hscript_Interp
+#include <hscript/Interp.h>
+#endif
+#ifndef INCLUDED_hscript_Parser
+#include <hscript/Parser.h>
+#endif
 
+HX_LOCAL_STACK_FRAME(_hx_pos_a994ee380c23f681_35_init,"flixel.system.debug.console.ConsoleUtil","init",0x40765844,"flixel.system.debug.console.ConsoleUtil.init","flixel/system/debug/console/ConsoleUtil.hx",35,0x2e8bcde6)
+HX_LOCAL_STACK_FRAME(_hx_pos_a994ee380c23f681_50_parseCommand,"flixel.system.debug.console.ConsoleUtil","parseCommand",0xbaf1368c,"flixel.system.debug.console.ConsoleUtil.parseCommand","flixel/system/debug/console/ConsoleUtil.hx",50,0x2e8bcde6)
+HX_LOCAL_STACK_FRAME(_hx_pos_a994ee380c23f681_64_runCommand,"flixel.system.debug.console.ConsoleUtil","runCommand",0x85b4fd74,"flixel.system.debug.console.ConsoleUtil.runCommand","flixel/system/debug/console/ConsoleUtil.hx",64,0x2e8bcde6)
+HX_LOCAL_STACK_FRAME(_hx_pos_a994ee380c23f681_74_runExpr,"flixel.system.debug.console.ConsoleUtil","runExpr",0x4a0f2d6c,"flixel.system.debug.console.ConsoleUtil.runExpr","flixel/system/debug/console/ConsoleUtil.hx",74,0x2e8bcde6)
+HX_LOCAL_STACK_FRAME(_hx_pos_a994ee380c23f681_85_registerObject,"flixel.system.debug.console.ConsoleUtil","registerObject",0x0d502bb6,"flixel.system.debug.console.ConsoleUtil.registerObject","flixel/system/debug/console/ConsoleUtil.hx",85,0x2e8bcde6)
+HX_LOCAL_STACK_FRAME(_hx_pos_a994ee380c23f681_97_registerFunction,"flixel.system.debug.console.ConsoleUtil","registerFunction",0xb3a1c3cf,"flixel.system.debug.console.ConsoleUtil.registerFunction","flixel/system/debug/console/ConsoleUtil.hx",97,0x2e8bcde6)
+HX_LOCAL_STACK_FRAME(_hx_pos_a994ee380c23f681_109_removeByAlias,"flixel.system.debug.console.ConsoleUtil","removeByAlias",0xae78d8a1,"flixel.system.debug.console.ConsoleUtil.removeByAlias","flixel/system/debug/console/ConsoleUtil.hx",109,0x2e8bcde6)
 HX_LOCAL_STACK_FRAME(_hx_pos_a994ee380c23f681_114_getFields,"flixel.system.debug.console.ConsoleUtil","getFields",0x604f9dfb,"flixel.system.debug.console.ConsoleUtil.getFields","flixel/system/debug/console/ConsoleUtil.hx",114,0x2e8bcde6)
 HX_LOCAL_STACK_FRAME(_hx_pos_a994ee380c23f681_145_sortFields,"flixel.system.debug.console.ConsoleUtil","sortFields",0x773f00ab,"flixel.system.debug.console.ConsoleUtil.sortFields","flixel/system/debug/console/ConsoleUtil.hx",145,0x2e8bcde6)
 HX_LOCAL_STACK_FRAME(_hx_pos_a994ee380c23f681_171_log,"flixel.system.debug.console.ConsoleUtil","log",0x2bebd9d0,"flixel.system.debug.console.ConsoleUtil.log","flixel/system/debug/console/ConsoleUtil.hx",171,0x2e8bcde6)
@@ -56,6 +81,84 @@ Dynamic ConsoleUtil_obj::__Create(::hx::DynamicArray inArgs)
 bool ConsoleUtil_obj::_hx_isInstanceOf(int inClassId) {
 	return inClassId==(int)0x00000001 || inClassId==(int)0x31204b4a;
 }
+
+ ::hscript::Parser ConsoleUtil_obj::parser;
+
+ ::flixel::_hx_system::debug::console::_ConsoleUtil::Interp ConsoleUtil_obj::interp;
+
+void ConsoleUtil_obj::init(){
+            	HX_GC_STACKFRAME(&_hx_pos_a994ee380c23f681_35_init)
+HXLINE(  36)		::flixel::_hx_system::debug::console::ConsoleUtil_obj::parser =  ::hscript::Parser_obj::__alloc( HX_CTX );
+HXLINE(  37)		::flixel::_hx_system::debug::console::ConsoleUtil_obj::parser->allowJSON = true;
+HXLINE(  38)		::flixel::_hx_system::debug::console::ConsoleUtil_obj::parser->allowTypes = true;
+HXLINE(  40)		::flixel::_hx_system::debug::console::ConsoleUtil_obj::interp =  ::flixel::_hx_system::debug::console::_ConsoleUtil::Interp_obj::__alloc( HX_CTX );
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC0(ConsoleUtil_obj,init,(void))
+
+ ::hscript::Expr ConsoleUtil_obj::parseCommand(::String input){
+            	HX_STACKFRAME(&_hx_pos_a994ee380c23f681_50_parseCommand)
+HXLINE(  51)		if (::StringTools_obj::endsWith(input,HX_(";",3b,00,00,00))) {
+HXLINE(  52)			input = input.substr(0,-1);
+            		}
+HXLINE(  53)		return ::flixel::_hx_system::debug::console::ConsoleUtil_obj::parser->parseString(input,null(),null());
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC1(ConsoleUtil_obj,parseCommand,return )
+
+ ::Dynamic ConsoleUtil_obj::runCommand(::String input){
+            	HX_STACKFRAME(&_hx_pos_a994ee380c23f681_64_runCommand)
+HXDLIN(  64)		 ::flixel::_hx_system::debug::console::_ConsoleUtil::Interp _hx_tmp = ::flixel::_hx_system::debug::console::ConsoleUtil_obj::interp;
+HXDLIN(  64)		return _hx_tmp->expr(::flixel::_hx_system::debug::console::ConsoleUtil_obj::parseCommand(input));
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC1(ConsoleUtil_obj,runCommand,return )
+
+ ::Dynamic ConsoleUtil_obj::runExpr( ::hscript::Expr expr){
+            	HX_STACKFRAME(&_hx_pos_a994ee380c23f681_74_runExpr)
+HXDLIN(  74)		return ::flixel::_hx_system::debug::console::ConsoleUtil_obj::interp->expr(expr);
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC1(ConsoleUtil_obj,runExpr,return )
+
+void ConsoleUtil_obj::registerObject(::String alias, ::Dynamic object){
+            	HX_STACKFRAME(&_hx_pos_a994ee380c23f681_85_registerObject)
+HXDLIN(  85)		bool _hx_tmp;
+HXDLIN(  85)		if (::hx::IsNotNull( object )) {
+HXDLIN(  85)			_hx_tmp = ::Reflect_obj::isObject(object);
+            		}
+            		else {
+HXDLIN(  85)			_hx_tmp = true;
+            		}
+HXDLIN(  85)		if (_hx_tmp) {
+HXLINE(  86)			::flixel::_hx_system::debug::console::ConsoleUtil_obj::interp->variables->set(alias,object);
+            		}
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC2(ConsoleUtil_obj,registerObject,(void))
+
+void ConsoleUtil_obj::registerFunction(::String alias, ::Dynamic func){
+            	HX_STACKFRAME(&_hx_pos_a994ee380c23f681_97_registerFunction)
+HXDLIN(  97)		if (::Reflect_obj::isFunction(func)) {
+HXLINE(  98)			::flixel::_hx_system::debug::console::ConsoleUtil_obj::interp->variables->set(alias,func);
+            		}
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC2(ConsoleUtil_obj,registerFunction,(void))
+
+void ConsoleUtil_obj::removeByAlias(::String alias){
+            	HX_STACKFRAME(&_hx_pos_a994ee380c23f681_109_removeByAlias)
+HXDLIN( 109)		::flixel::_hx_system::debug::console::ConsoleUtil_obj::interp->variables->remove(alias);
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC1(ConsoleUtil_obj,removeByAlias,(void))
 
 ::Array< ::String > ConsoleUtil_obj::getFields( ::Dynamic Object){
             	HX_STACKFRAME(&_hx_pos_a994ee380c23f681_114_getFields)
@@ -162,23 +265,82 @@ bool ConsoleUtil_obj::__GetStatic(const ::String &inName, Dynamic &outValue, ::h
 	case 3:
 		if (HX_FIELD_EQ(inName,"log") ) { outValue = log_dyn(); return true; }
 		break;
+	case 4:
+		if (HX_FIELD_EQ(inName,"init") ) { outValue = init_dyn(); return true; }
+		break;
+	case 6:
+		if (HX_FIELD_EQ(inName,"parser") ) { outValue = ( parser ); return true; }
+		if (HX_FIELD_EQ(inName,"interp") ) { outValue = ( interp ); return true; }
+		break;
+	case 7:
+		if (HX_FIELD_EQ(inName,"runExpr") ) { outValue = runExpr_dyn(); return true; }
+		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"getFields") ) { outValue = getFields_dyn(); return true; }
 		break;
 	case 10:
+		if (HX_FIELD_EQ(inName,"runCommand") ) { outValue = runCommand_dyn(); return true; }
 		if (HX_FIELD_EQ(inName,"sortFields") ) { outValue = sortFields_dyn(); return true; }
+		break;
+	case 12:
+		if (HX_FIELD_EQ(inName,"parseCommand") ) { outValue = parseCommand_dyn(); return true; }
+		break;
+	case 13:
+		if (HX_FIELD_EQ(inName,"removeByAlias") ) { outValue = removeByAlias_dyn(); return true; }
+		break;
+	case 14:
+		if (HX_FIELD_EQ(inName,"registerObject") ) { outValue = registerObject_dyn(); return true; }
+		break;
+	case 16:
+		if (HX_FIELD_EQ(inName,"registerFunction") ) { outValue = registerFunction_dyn(); return true; }
+	}
+	return false;
+}
+
+bool ConsoleUtil_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,::hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 6:
+		if (HX_FIELD_EQ(inName,"parser") ) { parser=ioValue.Cast<  ::hscript::Parser >(); return true; }
+		if (HX_FIELD_EQ(inName,"interp") ) { interp=ioValue.Cast<  ::flixel::_hx_system::debug::console::_ConsoleUtil::Interp >(); return true; }
 	}
 	return false;
 }
 
 #ifdef HXCPP_SCRIPTABLE
 static ::hx::StorageInfo *ConsoleUtil_obj_sMemberStorageInfo = 0;
-static ::hx::StaticInfo *ConsoleUtil_obj_sStaticStorageInfo = 0;
+static ::hx::StaticInfo ConsoleUtil_obj_sStaticStorageInfo[] = {
+	{::hx::fsObject /*  ::hscript::Parser */ ,(void *) &ConsoleUtil_obj::parser,HX_("parser",df,9c,88,ed)},
+	{::hx::fsObject /*  ::flixel::_hx_system::debug::console::_ConsoleUtil::Interp */ ,(void *) &ConsoleUtil_obj::interp,HX_("interp",d4,79,86,9e)},
+	{ ::hx::fsUnknown, 0, null()}
+};
+#endif
+
+static void ConsoleUtil_obj_sMarkStatics(HX_MARK_PARAMS) {
+	HX_MARK_MEMBER_NAME(ConsoleUtil_obj::parser,"parser");
+	HX_MARK_MEMBER_NAME(ConsoleUtil_obj::interp,"interp");
+};
+
+#ifdef HXCPP_VISIT_ALLOCS
+static void ConsoleUtil_obj_sVisitStatics(HX_VISIT_PARAMS) {
+	HX_VISIT_MEMBER_NAME(ConsoleUtil_obj::parser,"parser");
+	HX_VISIT_MEMBER_NAME(ConsoleUtil_obj::interp,"interp");
+};
+
 #endif
 
 ::hx::Class ConsoleUtil_obj::__mClass;
 
 static ::String ConsoleUtil_obj_sStaticFields[] = {
+	HX_("parser",df,9c,88,ed),
+	HX_("interp",d4,79,86,9e),
+	HX_("init",10,3b,bb,45),
+	HX_("parseCommand",58,c5,47,db),
+	HX_("runCommand",40,01,ea,eb),
+	HX_("runExpr",20,12,5b,d0),
+	HX_("registerObject",82,05,81,db),
+	HX_("registerFunction",9b,a8,15,13),
+	HX_("removeByAlias",55,3c,df,d9),
 	HX_("getFields",af,17,e5,fc),
 	HX_("sortFields",77,04,74,dd),
 	HX_("log",84,54,52,00),
@@ -195,10 +357,14 @@ void ConsoleUtil_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &ConsoleUtil_obj::__GetStatic;
-	__mClass->mSetStaticField = &::hx::Class_obj::SetNoStaticField;
+	__mClass->mSetStaticField = &ConsoleUtil_obj::__SetStatic;
+	__mClass->mMarkFunc = ConsoleUtil_obj_sMarkStatics;
 	__mClass->mStatics = ::hx::Class_obj::dupFunctions(ConsoleUtil_obj_sStaticFields);
 	__mClass->mMembers = ::hx::Class_obj::dupFunctions(0 /* sMemberFields */);
 	__mClass->mCanCast = ::hx::TCanCast< ConsoleUtil_obj >;
+#ifdef HXCPP_VISIT_ALLOCS
+	__mClass->mVisitFunc = ConsoleUtil_obj_sVisitStatics;
+#endif
 #ifdef HXCPP_SCRIPTABLE
 	__mClass->mMemberStorageInfo = ConsoleUtil_obj_sMemberStorageInfo;
 #endif

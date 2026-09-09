@@ -7,15 +7,26 @@ import flixel.tweens.FlxEase;
 import util.fileUtils.TxtSplitter;
 import vibin.objects.ui.mainmenu.MainMenuButton;
 
-      /**
-      * 
-      */
+import flixel.text.FlxText;
+import openfl.filters.ShaderFilter;
+import vibin.graphics.shaders.StrokeShader;
+
+import openfl.Assets;
+import openfl.filters.BlurFilter;
+import openfl.filters.GlowFilter;
+import openfl.display.BitmapData;
+import openfl.display.Shader;
 
 class MainMenuState extends MusicUIBeatState {
     //
     // object variables
     //
     var menuButtonGroup:FlxTypedGroup<MainMenuButton>; // does this count? i dont have anywere else to put it tho so ig
+    var textGroup:FlxTypedGroup<FlxSprite>;
+
+    var blurred:FlxText;
+    var text:FlxText;
+
     var recordedge:FlxSprite;
     var vinyl:FlxSprite;
     var bg:FlxSprite;
@@ -52,6 +63,8 @@ class MainMenuState extends MusicUIBeatState {
 
       override function create() {
         super.create();
+
+        SoundUtil.playMusic("mainmenu", 1, true, true);
         
         /**
          * convert this to the most recurring color in the bg when i have made that system.
@@ -59,6 +72,7 @@ class MainMenuState extends MusicUIBeatState {
         FlxG.cameras.bgColor = 0xFFfde871;
         
         setupDiscord();
+        createText();
         setupSprites();
       }
 
@@ -67,9 +81,36 @@ class MainMenuState extends MusicUIBeatState {
 
         updateElapsed = elapsed;
 
-        updateButtonPositions();
         updateSprites();
+        updateButtonPositions();
         checkControls();
+      }
+
+      function createText() {
+        textGroup = new FlxTypedGroup<FlxSprite>();
+
+        blurred = new FlxText(0, 0, 0, "Playing Ludum Dare prototype menu theme - Kawai Sprite", 30);
+        blurred.font = "assets/fonts/5by7.ttf";
+        blurred.color = 0x00CCFF;
+        blurred.textField.filters = [
+            new BlurFilter(4, 4, 2),
+            new GlowFilter(0x00CCFF, 1, 5, 5, 2)
+        ];
+
+        text = new FlxText(0, 0, 0, "Playing Ludum Dare prototype menu theme - Kawai Sprite",30);
+        text.font = "assets/fonts/5by7.ttf";
+        text.color = 0xFFFFFF;
+        text.textField.filters = [
+            new GlowFilter(
+                0x00CCFF,
+                1,
+                5,
+                5,
+                210,
+            )
+        ];
+        text.scrollFactor.set(0, 0);
+        blurred.scrollFactor.set(0, 0);
       }
 
       /**
@@ -94,6 +135,7 @@ class MainMenuState extends MusicUIBeatState {
             menuButtonGroup.add(button);
         }
         updateButtonPositions();
+        changeSelection(0); // make sure you have a selection from the start
     }
 
     function setupSprites() {
@@ -118,6 +160,10 @@ class MainMenuState extends MusicUIBeatState {
          add(vinyl);
          add(menuButtonGroup);
          add(recordedge);
+        textGroup.add(blurred);
+        textGroup.add(text);
+        add(textGroup);
+        tweenText();
     }
 
     function checkControls() {
@@ -130,6 +176,10 @@ class MainMenuState extends MusicUIBeatState {
     }
 
     function updateButtonPositions() {
+         // i know these arent buttons but bowomp
+        text.y = recordedge.y + 652;
+        blurred.y = recordedge.y + 652;
+
         var vinylCenterX:Float = vinyl.getGraphicMidpoint().x;
         var vinylCenterY:Float = vinyl.getGraphicMidpoint().y;
         var angleStep:Float = (Math.PI * 2) / menuButtonGroup.members.length;
@@ -194,5 +244,23 @@ class MainMenuState extends MusicUIBeatState {
                 button.playAnim("idle");
             }
         }
+    }
+
+    function tweenText():Void
+    {
+        text.x = recordedge.x + 1050;
+
+        FlxTween.tween(text, {x: recordedge.x - 500}, 15, {
+            ease: FlxEase.linear,
+            onComplete: function(tween:FlxTween)
+            {
+                tweenText();
+            }
+        });
+        blurred.x = recordedge.x + 1050;
+
+        FlxTween.tween(blurred, {x: recordedge.x - 500}, 15, {
+            ease: FlxEase.linear,
+        });
     }
 }

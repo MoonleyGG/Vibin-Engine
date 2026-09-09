@@ -35,6 +35,9 @@
 #ifndef INCLUDED_flixel_system_debug__Icon_Close
 #include <flixel/system/debug/_Icon/Close.h>
 #endif
+#ifndef INCLUDED_flixel_system_debug_console_ConsoleUtil
+#include <flixel/system/debug/console/ConsoleUtil.h>
+#endif
 #ifndef INCLUDED_flixel_system_debug_watch_EditableTextField
 #include <flixel/system/debug/watch/EditableTextField.h>
 #endif
@@ -70,6 +73,9 @@
 #endif
 #ifndef INCLUDED_flixel_util__FlxSignal_FlxSignalHandler
 #include <flixel/util/_FlxSignal/FlxSignalHandler.h>
+#endif
+#ifndef INCLUDED_hscript_Expr
+#include <hscript/Expr.h>
 #endif
 #ifndef INCLUDED_openfl_display_BitmapData
 #include <openfl/display/BitmapData.h>
@@ -230,7 +236,7 @@ HXDLIN(  65)				return 10875373;
             			break;
             			case (int)2: {
 HXLINE(  66)				::String _g4 = _g->_hx_getString(0);
-HXDLIN(  66)				::String _g5 = _g->_hx_getString(1);
+HXDLIN(  66)				 ::hscript::Expr _g5 = _g->_hx_getObject(1).StaticCast<  ::hscript::Expr >();
 HXDLIN(  66)				return 12910211;
             			}
             			break;
@@ -287,7 +293,7 @@ HXLINE( 101)					::String _g1 = _g->_hx_getString(0);
             				}
             				break;
             				case (int)2: {
-HXLINE(  99)					::String _g2 = _g->_hx_getString(1);
+HXLINE(  99)					 ::hscript::Expr _g2 = _g->_hx_getObject(1).StaticCast<  ::hscript::Expr >();
 HXDLIN(  99)					{
 HXLINE(  99)						::String expression = _g->_hx_getString(0);
 HXLINE( 100)						this->displayName = expression;
@@ -333,8 +339,8 @@ HXLINE( 129)				return value;
             			break;
             			case (int)2: {
 HXLINE( 122)				::String _g1 = _g->_hx_getString(0);
-HXDLIN( 122)				::String parsedExpr = _g->_hx_getString(1);
-HXLINE( 126)				return HX_("hscript is not installed",84,84,f9,28);
+HXDLIN( 122)				 ::hscript::Expr parsedExpr = _g->_hx_getObject(1).StaticCast<  ::hscript::Expr >();
+HXLINE( 124)				return ::flixel::_hx_system::debug::console::ConsoleUtil_obj::runExpr(parsedExpr);
             			}
             			break;
             			case (int)3: {

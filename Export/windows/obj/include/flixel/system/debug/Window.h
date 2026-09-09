@@ -100,7 +100,7 @@ class HXCPP_CLASS_ATTRIBUTES Window_obj : public  ::openfl::display::Sprite_obj
 		virtual void resize(Float Width,Float Height);
 		::Dynamic resize_dyn();
 
-		void reposition(Float X,Float Y);
+		virtual void reposition(Float X,Float Y);
 		::Dynamic reposition_dyn();
 
 		void updateBounds( ::openfl::geom::Rectangle Bounds);

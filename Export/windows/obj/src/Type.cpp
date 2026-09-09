@@ -25,6 +25,7 @@ HX_LOCAL_STACK_FRAME(_hx_pos_c5249efc66ced353_111_getInstanceFields,"Type","getI
 HX_LOCAL_STACK_FRAME(_hx_pos_c5249efc66ced353_115_getClassFields,"Type","getClassFields",0x7edf22ef,"Type.getClassFields","D:\\Hackse\\haxe\\std/cpp/_std/Type.hx",115,0x9024b8a4)
 HX_LOCAL_STACK_FRAME(_hx_pos_c5249efc66ced353_120_getEnumConstructs,"Type","getEnumConstructs",0x7f46cf7f,"Type.getEnumConstructs","D:\\Hackse\\haxe\\std/cpp/_std/Type.hx",120,0x9024b8a4)
 HX_LOCAL_STACK_FRAME(_hx_pos_c5249efc66ced353_124_typeof,"Type","typeof",0xd6c51d65,"Type.typeof","D:\\Hackse\\haxe\\std/cpp/_std/Type.hx",124,0x9024b8a4)
+HX_LOCAL_STACK_FRAME(_hx_pos_c5249efc66ced353_153_enumConstructor,"Type","enumConstructor",0x45f8fde5,"Type.enumConstructor","D:\\Hackse\\haxe\\std/cpp/_std/Type.hx",153,0x9024b8a4)
 HX_LOCAL_STACK_FRAME(_hx_pos_c5249efc66ced353_158_enumParameters,"Type","enumParameters",0xf9e1b41f,"Type.enumParameters","D:\\Hackse\\haxe\\std/cpp/_std/Type.hx",158,0x9024b8a4)
 
 void Type_obj::__construct() { }
@@ -241,6 +242,15 @@ HXLINE( 128)		return null();
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,_hx_typeof,return )
 
+::String Type_obj::enumConstructor( ::Dynamic e){
+            	HX_STACKFRAME(&_hx_pos_c5249efc66ced353_153_enumConstructor)
+HXLINE( 154)		 hx::EnumBase value = ( ( hx::EnumBase)(e) );
+HXLINE( 155)		return value->_hx_getTag();
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,enumConstructor,return )
+
 ::cpp::VirtualArray Type_obj::enumParameters( ::Dynamic e){
             	HX_STACKFRAME(&_hx_pos_c5249efc66ced353_158_enumParameters)
 HXLINE( 159)		 hx::EnumBase value = ( ( hx::EnumBase)(e) );
@@ -286,6 +296,9 @@ bool Type_obj::__GetStatic(const ::String &inName, Dynamic &outValue, ::hx::Prop
 		if (HX_FIELD_EQ(inName,"getClassFields") ) { outValue = getClassFields_dyn(); return true; }
 		if (HX_FIELD_EQ(inName,"enumParameters") ) { outValue = enumParameters_dyn(); return true; }
 		break;
+	case 15:
+		if (HX_FIELD_EQ(inName,"enumConstructor") ) { outValue = enumConstructor_dyn(); return true; }
+		break;
 	case 17:
 		if (HX_FIELD_EQ(inName,"getInstanceFields") ) { outValue = getInstanceFields_dyn(); return true; }
 		if (HX_FIELD_EQ(inName,"getEnumConstructs") ) { outValue = getEnumConstructs_dyn(); return true; }
@@ -318,6 +331,7 @@ static ::String Type_obj_sStaticFields[] = {
 	HX_("getClassFields",db,c7,75,7f),
 	HX_("getEnumConstructs",13,06,6d,83),
 	HX_("typeof",51,f6,36,57),
+	HX_("enumConstructor",79,a7,32,c9),
 	HX_("enumParameters",0b,59,78,fa),
 	::String(null())
 };

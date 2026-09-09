@@ -7,6 +7,10 @@
 #endif
 
 HX_DECLARE_CLASS4(flixel,_hx_system,debug,console,ConsoleUtil)
+HX_DECLARE_CLASS5(flixel,_hx_system,debug,console,_ConsoleUtil,Interp)
+HX_DECLARE_CLASS1(hscript,Expr)
+HX_DECLARE_CLASS1(hscript,Interp)
+HX_DECLARE_CLASS1(hscript,Parser)
 
 namespace flixel{
 namespace _hx_system{
@@ -49,9 +53,33 @@ class HXCPP_CLASS_ATTRIBUTES ConsoleUtil_obj : public ::hx::Object
 
 		HX_DO_RTTI_ALL;
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, ::hx::PropertyAccess inCallProp);
+		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, ::hx::PropertyAccess inCallProp);
 		static void __register();
 		bool _hx_isInstanceOf(int inClassId);
 		::String __ToString() const { return HX_("ConsoleUtil",d9,fe,3d,06); }
+
+		static  ::hscript::Parser parser;
+		static  ::flixel::_hx_system::debug::console::_ConsoleUtil::Interp interp;
+		static void init();
+		static ::Dynamic init_dyn();
+
+		static  ::hscript::Expr parseCommand(::String input);
+		static ::Dynamic parseCommand_dyn();
+
+		static  ::Dynamic runCommand(::String input);
+		static ::Dynamic runCommand_dyn();
+
+		static  ::Dynamic runExpr( ::hscript::Expr expr);
+		static ::Dynamic runExpr_dyn();
+
+		static void registerObject(::String alias, ::Dynamic object);
+		static ::Dynamic registerObject_dyn();
+
+		static void registerFunction(::String alias, ::Dynamic func);
+		static ::Dynamic registerFunction_dyn();
+
+		static void removeByAlias(::String alias);
+		static ::Dynamic removeByAlias_dyn();
 
 		static ::Array< ::String > getFields( ::Dynamic Object);
 		static ::Dynamic getFields_dyn();

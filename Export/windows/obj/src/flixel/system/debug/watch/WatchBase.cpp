@@ -44,6 +44,9 @@
 #ifndef INCLUDED_flixel_util__FlxSignal_FlxSignal0
 #include <flixel/util/_FlxSignal/FlxSignal0.h>
 #endif
+#ifndef INCLUDED_hscript_Expr
+#include <hscript/Expr.h>
+#endif
 #ifndef INCLUDED_openfl_display_BitmapData
 #include <openfl/display/BitmapData.h>
 #endif
@@ -221,7 +224,7 @@ HXLINE(  81)					return true;
             			}
             			break;
             			case (int)2: {
-HXLINE(  82)				::String _g = data->_hx_getString(1);
+HXLINE(  82)				 ::hscript::Expr _g = data->_hx_getObject(1).StaticCast<  ::hscript::Expr >();
 HXDLIN(  82)				::String expression = data->_hx_getString(0);
 HXLINE(  83)				if (::hx::IsNotNull( expression )) {
 HXLINE(  83)					return (expression.length == 0);

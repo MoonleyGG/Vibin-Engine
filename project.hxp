@@ -117,6 +117,8 @@ class Project extends HXProject {
 	haxelibs.push(new Haxelib("lime"));
 	haxelibs.push(new Haxelib("flixel"));
 	haxelibs.push(new Haxelib("openfl"));
+    haxelibs.push(new Haxelib("hscript"));
+    haxelibs.push(new Haxelib("flixel-addons"));
    
    if (target == Platform.WINDOWS || target == Platform.MAC || target == Platform.LINUX) {
       haxelibs.push(new Haxelib("hxdiscord_rpc"));

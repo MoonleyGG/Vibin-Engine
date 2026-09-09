@@ -6,6 +6,8 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_726b2d953700bbfd_45_new,"IntIterator","new",0x5692054f,"IntIterator.new","D:\\Hackse\\haxe\\std/IntIterator.hx",45,0xb76b06c0)
+HX_LOCAL_STACK_FRAME(_hx_pos_726b2d953700bbfd_54_hasNext,"IntIterator","hasNext",0xd8737ddc,"IntIterator.hasNext","D:\\Hackse\\haxe\\std/IntIterator.hx",54,0xb76b06c0)
+HX_LOCAL_STACK_FRAME(_hx_pos_726b2d953700bbfd_63_next,"IntIterator","next",0x6932a124,"IntIterator.next","D:\\Hackse\\haxe\\std/IntIterator.hx",63,0xb76b06c0)
 
 void IntIterator_obj::__construct(int min,int max){
             	HX_STACKFRAME(&_hx_pos_726b2d953700bbfd_45_new)
@@ -28,6 +30,22 @@ bool IntIterator_obj::_hx_isInstanceOf(int inClassId) {
 	return inClassId==(int)0x00000001 || inClassId==(int)0x1516f71d;
 }
 
+bool IntIterator_obj::hasNext(){
+            	HX_STACKFRAME(&_hx_pos_726b2d953700bbfd_54_hasNext)
+HXDLIN(  54)		return (this->min < this->max);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(IntIterator_obj,hasNext,return )
+
+int IntIterator_obj::next(){
+            	HX_STACKFRAME(&_hx_pos_726b2d953700bbfd_63_next)
+HXDLIN(  63)		return this->min++;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(IntIterator_obj,next,return )
+
 
 IntIterator_obj::IntIterator_obj()
 {
@@ -39,6 +57,12 @@ IntIterator_obj::IntIterator_obj()
 	case 3:
 		if (HX_FIELD_EQ(inName,"min") ) { return ::hx::Val( min ); }
 		if (HX_FIELD_EQ(inName,"max") ) { return ::hx::Val( max ); }
+		break;
+	case 4:
+		if (HX_FIELD_EQ(inName,"next") ) { return ::hx::Val( next_dyn() ); }
+		break;
+	case 7:
+		if (HX_FIELD_EQ(inName,"hasNext") ) { return ::hx::Val( hasNext_dyn() ); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -72,6 +96,8 @@ static ::hx::StaticInfo *IntIterator_obj_sStaticStorageInfo = 0;
 static ::String IntIterator_obj_sMemberFields[] = {
 	HX_("min",92,11,53,00),
 	HX_("max",a4,0a,53,00),
+	HX_("hasNext",6d,a5,46,18),
+	HX_("next",f3,84,02,49),
 	::String(null()) };
 
 ::hx::Class IntIterator_obj::__mClass;

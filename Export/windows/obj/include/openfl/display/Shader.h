@@ -115,7 +115,7 @@ class HXCPP_CLASS_ATTRIBUTES Shader_obj : public ::hx::Object
 		void _hx___processGLData(::String source,::String storageType);
 		::Dynamic _hx___processGLData_dyn();
 
-		void _hx___update();
+		virtual void _hx___update();
 		::Dynamic _hx___update_dyn();
 
 		void _hx___updateFromBuffer( ::openfl::display::_internal::ShaderBuffer shaderBuffer,int bufferOffset);

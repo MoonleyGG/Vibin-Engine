@@ -15,6 +15,7 @@ HX_DECLARE_CLASS1(flixel,FlxSprite)
 HX_DECLARE_CLASS1(flixel,FlxState)
 HX_DECLARE_CLASS2(flixel,group,FlxTypedContainer)
 HX_DECLARE_CLASS2(flixel,group,FlxTypedGroup)
+HX_DECLARE_CLASS2(flixel,text,FlxText)
 HX_DECLARE_CLASS2(flixel,tweens,FlxTween)
 HX_DECLARE_CLASS2(flixel,util,IFlxDestroyable)
 HX_DECLARE_CLASS3(vibin,backend,backendStates,MusicUIBeatState)
@@ -59,6 +60,9 @@ class HXCPP_CLASS_ATTRIBUTES MainMenuState_obj : public  ::vibin::backend::backe
 		::String __ToString() const { return HX_("MainMenuState",59,88,5e,20); }
 
 		 ::flixel::group::FlxTypedGroup menuButtonGroup;
+		 ::flixel::group::FlxTypedGroup textGroup;
+		 ::flixel::text::FlxText blurred;
+		 ::flixel::text::FlxText text;
 		 ::flixel::FlxSprite recordedge;
 		 ::flixel::FlxSprite vinyl;
 		 ::flixel::FlxSprite bg;
@@ -74,6 +78,9 @@ class HXCPP_CLASS_ATTRIBUTES MainMenuState_obj : public  ::vibin::backend::backe
 		void create();
 
 		void update(Float elapsed);
+
+		void createText();
+		::Dynamic createText_dyn();
 
 		void setupDiscord();
 		::Dynamic setupDiscord_dyn();
@@ -95,6 +102,9 @@ class HXCPP_CLASS_ATTRIBUTES MainMenuState_obj : public  ::vibin::backend::backe
 
 		void changeSelection(::hx::Null< int >  change);
 		::Dynamic changeSelection_dyn();
+
+		void tweenText();
+		::Dynamic tweenText_dyn();
 
 };
 

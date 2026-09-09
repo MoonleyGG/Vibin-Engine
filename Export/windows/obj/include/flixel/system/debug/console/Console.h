@@ -23,8 +23,11 @@ HX_DECLARE_CLASS2(openfl,display,DisplayObjectContainer)
 HX_DECLARE_CLASS2(openfl,display,IBitmapDrawable)
 HX_DECLARE_CLASS2(openfl,display,InteractiveObject)
 HX_DECLARE_CLASS2(openfl,display,Sprite)
+HX_DECLARE_CLASS2(openfl,events,Event)
 HX_DECLARE_CLASS2(openfl,events,EventDispatcher)
+HX_DECLARE_CLASS2(openfl,events,FocusEvent)
 HX_DECLARE_CLASS2(openfl,events,IEventDispatcher)
+HX_DECLARE_CLASS2(openfl,events,KeyboardEvent)
 HX_DECLARE_CLASS2(openfl,text,TextField)
 
 namespace flixel{
@@ -84,11 +87,22 @@ class HXCPP_CLASS_ATTRIBUTES Console_obj : public  ::flixel::_hx_system::debug::
 
 		void update();
 
-		void onFocus( ::Dynamic _);
+		void onFocus( ::openfl::events::FocusEvent _);
 		::Dynamic onFocus_dyn();
 
-		void onFocusLost( ::Dynamic _);
+		void onFocusLost( ::openfl::events::FocusEvent _);
 		::Dynamic onFocusLost_dyn();
+
+		void onKeyDown( ::openfl::events::KeyboardEvent e);
+		::Dynamic onKeyDown_dyn();
+
+		void setText(::String text);
+		::Dynamic setText_dyn();
+
+		void processCommand();
+		::Dynamic processCommand_dyn();
+
+		void reposition(Float x,Float y);
 
 		void registerFunction(::String alias, ::Dynamic func,::String helpText);
 		::Dynamic registerFunction_dyn();

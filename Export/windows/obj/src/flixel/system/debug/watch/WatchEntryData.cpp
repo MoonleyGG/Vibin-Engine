@@ -4,12 +4,15 @@
 #ifndef INCLUDED_flixel_system_debug_watch_WatchEntryData
 #include <flixel/system/debug/watch/WatchEntryData.h>
 #endif
+#ifndef INCLUDED_hscript_Expr
+#include <hscript/Expr.h>
+#endif
 namespace flixel{
 namespace _hx_system{
 namespace debug{
 namespace watch{
 
-::flixel::_hx_system::debug::watch::WatchEntryData WatchEntryData_obj::EXPRESSION(::String expression,::String parsedExpr)
+::flixel::_hx_system::debug::watch::WatchEntryData WatchEntryData_obj::EXPRESSION(::String expression, ::hscript::Expr parsedExpr)
 {
 	return ::hx::CreateEnum< WatchEntryData_obj >(HX_("EXPRESSION",98,85,a8,20),2,2)->_hx_init(0,expression)->_hx_init(1,parsedExpr);
 }

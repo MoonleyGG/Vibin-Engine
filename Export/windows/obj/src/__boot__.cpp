@@ -49,6 +49,33 @@
 #ifndef INCLUDED_lime__internal_format_BMPType
 #include <lime/_internal/format/BMPType.h>
 #endif
+#ifndef INCLUDED_hscript_Token
+#include <hscript/Token.h>
+#endif
+#ifndef INCLUDED_hscript__Interp_Stop
+#include <hscript/_Interp/Stop.h>
+#endif
+#ifndef INCLUDED_hscript_FieldKind
+#include <hscript/FieldKind.h>
+#endif
+#ifndef INCLUDED_hscript_FieldAccess
+#include <hscript/FieldAccess.h>
+#endif
+#ifndef INCLUDED_hscript_ModuleDecl
+#include <hscript/ModuleDecl.h>
+#endif
+#ifndef INCLUDED_hscript_Error
+#include <hscript/Error.h>
+#endif
+#ifndef INCLUDED_hscript_CType
+#include <hscript/CType.h>
+#endif
+#ifndef INCLUDED_hscript_Expr
+#include <hscript/Expr.h>
+#endif
+#ifndef INCLUDED_hscript_Const
+#include <hscript/Const.h>
+#endif
 #ifndef INCLUDED_haxe_zip__InflateImpl_State
 #include <haxe/zip/_InflateImpl/State.h>
 #endif
@@ -369,6 +396,12 @@
 #endif
 #ifndef INCLUDED_openfl_filters_ShaderFilter
 #include <openfl/filters/ShaderFilter.h>
+#endif
+#ifndef INCLUDED_openfl_filters_GlowFilter
+#include <openfl/filters/GlowFilter.h>
+#endif
+#ifndef INCLUDED_openfl_filters_BlurFilter
+#include <openfl/filters/BlurFilter.h>
 #endif
 #ifndef INCLUDED_openfl_filesystem_File
 #include <openfl/filesystem/File.h>
@@ -919,6 +952,9 @@
 #ifndef INCLUDED_lime__internal_backend_native_NativeAudioSource
 #include <lime/_internal/backend/native/NativeAudioSource.h>
 #endif
+#ifndef INCLUDED_hscript_Parser
+#include <hscript/Parser.h>
+#endif
 #ifndef INCLUDED_haxe_zip_InflateImpl
 #include <haxe/zip/InflateImpl.h>
 #endif
@@ -1351,6 +1387,18 @@
 #ifndef INCLUDED_openfl_text_Font
 #include <openfl/text/Font.h>
 #endif
+#ifndef INCLUDED___ASSET__flixel_images_transitions_square_png
+#include <__ASSET__flixel_images_transitions_square_png.h>
+#endif
+#ifndef INCLUDED___ASSET__flixel_images_transitions_diamond_png
+#include <__ASSET__flixel_images_transitions_diamond_png.h>
+#endif
+#ifndef INCLUDED___ASSET__flixel_images_transitions_diagonal_gradient_png
+#include <__ASSET__flixel_images_transitions_diagonal_gradient_png.h>
+#endif
+#ifndef INCLUDED___ASSET__flixel_images_transitions_circle_png
+#include <__ASSET__flixel_images_transitions_circle_png.h>
+#endif
 #ifndef INCLUDED___ASSET__flixel_images_logo_default_png
 #include <__ASSET__flixel_images_logo_default_png.h>
 #endif
@@ -1390,6 +1438,9 @@
 #ifndef INCLUDED_vibin_states_ui_mainmenu_MainMenuState
 #include <vibin/states/ui/mainmenu/MainMenuState.h>
 #endif
+#ifndef INCLUDED_vibin_graphics_shaders_StrokeShader
+#include <vibin/graphics/shaders/StrokeShader.h>
+#endif
 #ifndef INCLUDED_vibin_backend_ui_FullScreenScaleMode
 #include <vibin/backend/ui/FullScreenScaleMode.h>
 #endif
@@ -1404,6 +1455,15 @@
 #endif
 #ifndef INCLUDED_util_fileUtils_TxtSplitter
 #include <util/fileUtils/TxtSplitter.h>
+#endif
+#ifndef INCLUDED_util_SoundUtil
+#include <util/SoundUtil.h>
+#endif
+#ifndef INCLUDED_util_AlphaMaskShader
+#include <util/AlphaMaskShader.h>
+#endif
+#ifndef INCLUDED_util_AlphaUtil
+#include <util/AlphaUtil.h>
 #endif
 #ifndef INCLUDED_sys_thread__Thread_Thread_Impl_
 #include <sys/thread/_Thread/Thread_Impl_.h>
@@ -1533,6 +1593,30 @@
 #endif
 #ifndef INCLUDED_openfl_geom_Transform
 #include <openfl/geom/Transform.h>
+#endif
+#ifndef INCLUDED_openfl_filters__GlowFilter_InvertAlphaShader
+#include <openfl/filters/_GlowFilter/InvertAlphaShader.h>
+#endif
+#ifndef INCLUDED_openfl_filters__GlowFilter_InnerCombineShader
+#include <openfl/filters/_GlowFilter/InnerCombineShader.h>
+#endif
+#ifndef INCLUDED_openfl_filters__GlowFilter_InnerCombineKnockoutShader
+#include <openfl/filters/_GlowFilter/InnerCombineKnockoutShader.h>
+#endif
+#ifndef INCLUDED_openfl_filters__GlowFilter_CombineShader
+#include <openfl/filters/_GlowFilter/CombineShader.h>
+#endif
+#ifndef INCLUDED_openfl_filters__GlowFilter_CombineKnockoutShader
+#include <openfl/filters/_GlowFilter/CombineKnockoutShader.h>
+#endif
+#ifndef INCLUDED_openfl_filters__GlowFilter_BlurAlphaShader
+#include <openfl/filters/_GlowFilter/BlurAlphaShader.h>
+#endif
+#ifndef INCLUDED_openfl_filters__BlurFilter_BlurShader
+#include <openfl/filters/_BlurFilter/BlurShader.h>
+#endif
+#ifndef INCLUDED_openfl_filters_BitmapFilterShader
+#include <openfl/filters/BitmapFilterShader.h>
 #endif
 #ifndef INCLUDED_openfl_filters_BitmapFilter
 #include <openfl/filters/BitmapFilter.h>
@@ -2638,6 +2722,9 @@
 #ifndef INCLUDED_hxdiscord_rpc_Types
 #include <hxdiscord_rpc/Types.h>
 #endif
+#ifndef INCLUDED_hscript_Tools
+#include <hscript/Tools.h>
+#endif
 #ifndef INCLUDED_haxe_zip_Reader
 #include <haxe/zip/Reader.h>
 #endif
@@ -2710,6 +2797,9 @@
 #ifndef INCLUDED_haxe_exceptions_PosException
 #include <haxe/exceptions/PosException.h>
 #endif
+#ifndef INCLUDED_haxe_ds__GenericStack_GenericStackIterator_hscript_Token
+#include <haxe/ds/_GenericStack/GenericStackIterator_hscript_Token.h>
+#endif
 #ifndef INCLUDED_haxe_ds_StringMap
 #include <haxe/ds/StringMap.h>
 #endif
@@ -2721,6 +2811,18 @@
 #endif
 #ifndef INCLUDED_haxe_ds_IntMap
 #include <haxe/ds/IntMap.h>
+#endif
+#ifndef INCLUDED_haxe_ds_GenericStack_hscript_Token
+#include <haxe/ds/GenericStack_hscript_Token.h>
+#endif
+#ifndef INCLUDED_haxe_ds__GenericStack_GenericStackIterator
+#include <haxe/ds/_GenericStack/GenericStackIterator.h>
+#endif
+#ifndef INCLUDED_haxe_ds_GenericCell
+#include <haxe/ds/GenericCell.h>
+#endif
+#ifndef INCLUDED_haxe_ds_GenericCell_hscript_Token
+#include <haxe/ds/GenericCell_hscript_Token.h>
 #endif
 #ifndef INCLUDED_haxe_ds_EnumValueMap
 #include <haxe/ds/EnumValueMap.h>
@@ -3009,6 +3111,12 @@
 #endif
 #ifndef INCLUDED_flixel_system_debug_interaction_tools_Tool
 #include <flixel/system/debug/interaction/tools/Tool.h>
+#endif
+#ifndef INCLUDED_flixel_system_debug_console__ConsoleUtil_Interp
+#include <flixel/system/debug/console/_ConsoleUtil/Interp.h>
+#endif
+#ifndef INCLUDED_hscript_Interp
+#include <hscript/Interp.h>
 #endif
 #ifndef INCLUDED_flixel_system_debug_console_ConsoleUtil
 #include <flixel/system/debug/console/ConsoleUtil.h>
@@ -3451,6 +3559,18 @@
 #ifndef INCLUDED___ASSET__OPENFL__flixel_fonts_nokiafc22_ttf
 #include <__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf.h>
 #endif
+#ifndef INCLUDED___ASSET__OPENFL__assets_fonts_5by7_b_ttf
+#include <__ASSET__OPENFL__assets_fonts_5by7_b_ttf.h>
+#endif
+#ifndef INCLUDED___ASSET__OPENFL__assets_fonts_5by7_ttf
+#include <__ASSET__OPENFL__assets_fonts_5by7_ttf.h>
+#endif
+#ifndef INCLUDED___ASSET__assets_fonts_5by7_b_ttf
+#include <__ASSET__assets_fonts_5by7_b_ttf.h>
+#endif
+#ifndef INCLUDED___ASSET__assets_fonts_5by7_ttf
+#include <__ASSET__assets_fonts_5by7_ttf.h>
+#endif
 #ifndef INCLUDED_lime_graphics_Image
 #include <lime/graphics/Image.h>
 #endif
@@ -3543,6 +3663,15 @@ __files__boot();
 ::lime::graphics::ImageFileFormat_obj::__register();
 ::lime::graphics::ImageChannel_obj::__register();
 ::lime::_internal::format::BMPType_obj::__register();
+::hscript::Token_obj::__register();
+::hscript::_Interp::Stop_obj::__register();
+::hscript::FieldKind_obj::__register();
+::hscript::FieldAccess_obj::__register();
+::hscript::ModuleDecl_obj::__register();
+::hscript::Error_obj::__register();
+::hscript::CType_obj::__register();
+::hscript::Expr_obj::__register();
+::hscript::Const_obj::__register();
 ::haxe::zip::_InflateImpl::State_obj::__register();
 ::haxe::zip::Huffman_obj::__register();
 ::haxe::zip::ExtraField_obj::__register();
@@ -3650,6 +3779,8 @@ __files__boot();
 ::openfl::geom::_Orientation3D::Orientation3D_Impl__obj::__register();
 ::openfl::geom::Matrix3D_obj::__register();
 ::openfl::filters::ShaderFilter_obj::__register();
+::openfl::filters::GlowFilter_obj::__register();
+::openfl::filters::BlurFilter_obj::__register();
 ::openfl::filesystem::File_obj::__register();
 ::openfl::events::UncaughtErrorEvent_obj::__register();
 ::openfl::events::TouchEvent_obj::__register();
@@ -3833,6 +3964,7 @@ __files__boot();
 ::lime::_internal::format::Base64_obj::__register();
 ::lime::_internal::backend::native::NativeOpenGLRenderContext_obj::__register();
 ::lime::_internal::backend::native::NativeAudioSource_obj::__register();
+::hscript::Parser_obj::__register();
 ::haxe::zip::InflateImpl_obj::__register();
 ::haxe::xml::Parser_obj::__register();
 ::haxe::crypto::Base64_obj::__register();
@@ -3977,6 +4109,10 @@ __files__boot();
 ::Xml_obj::__register();
 ::haxe::SysTools_obj::__register();
 ::openfl::text::Font_obj::__register();
+::__ASSET__flixel_images_transitions_square_png_obj::__register();
+::__ASSET__flixel_images_transitions_diamond_png_obj::__register();
+::__ASSET__flixel_images_transitions_diagonal_gradient_png_obj::__register();
+::__ASSET__flixel_images_transitions_circle_png_obj::__register();
 ::__ASSET__flixel_images_logo_default_png_obj::__register();
 ::__ASSET__flixel_images_ui_button_png_obj::__register();
 ::__ASSET__flixel_fonts_monsterrat_ttf_obj::__register();
@@ -3990,11 +4126,15 @@ __files__boot();
 ::lime::_internal::backend::native::NativeApplication_obj::__register();
 ::lime::_internal::backend::native::NativeCFFI_obj::__register();
 ::vibin::states::ui::mainmenu::MainMenuState_obj::__register();
+::vibin::graphics::shaders::StrokeShader_obj::__register();
 ::vibin::backend::ui::FullScreenScaleMode_obj::__register();
 ::vibin::backend::backendStates::MusicUIBeatState_obj::__register();
 ::vibin::backend::Controls_obj::__register();
 ::vibin::InitState_obj::__register();
 ::util::fileUtils::TxtSplitter_obj::__register();
+::util::SoundUtil_obj::__register();
+::util::AlphaMaskShader_obj::__register();
+::util::AlphaUtil_obj::__register();
 ::sys::thread::_Thread::Thread_Impl__obj::__register();
 ::sys::thread::NoEventLoopException_obj::__register();
 ::sys::thread::Lock_obj::__register();
@@ -4038,6 +4178,14 @@ __files__boot();
 ::openfl::media::ID3Info_obj::__register();
 ::openfl::geom::Vector3D_obj::__register();
 ::openfl::geom::Transform_obj::__register();
+::openfl::filters::_GlowFilter::InvertAlphaShader_obj::__register();
+::openfl::filters::_GlowFilter::InnerCombineShader_obj::__register();
+::openfl::filters::_GlowFilter::InnerCombineKnockoutShader_obj::__register();
+::openfl::filters::_GlowFilter::CombineShader_obj::__register();
+::openfl::filters::_GlowFilter::CombineKnockoutShader_obj::__register();
+::openfl::filters::_GlowFilter::BlurAlphaShader_obj::__register();
+::openfl::filters::_BlurFilter::BlurShader_obj::__register();
+::openfl::filters::BitmapFilterShader_obj::__register();
 ::openfl::filters::BitmapFilter_obj::__register();
 ::openfl::net::FileReference_obj::__register();
 ::openfl::events::UncaughtErrorEvents_obj::__register();
@@ -4406,6 +4554,7 @@ __files__boot();
 ::lime::_internal::backend::native::ClipboardEventInfo_obj::__register();
 ::lime::_internal::backend::native::ApplicationEventInfo_obj::__register();
 ::hxdiscord_rpc::Types_obj::__register();
+::hscript::Tools_obj::__register();
 ::haxe::zip::Reader_obj::__register();
 ::haxe::zip::_InflateImpl::Window_obj::__register();
 ::haxe::zip::HuffTools_obj::__register();
@@ -4430,10 +4579,15 @@ __files__boot();
 ::haxe::format::JsonParser_obj::__register();
 ::haxe::exceptions::NotImplementedException_obj::__register();
 ::haxe::exceptions::PosException_obj::__register();
+::haxe::ds::_GenericStack::GenericStackIterator_hscript_Token_obj::__register();
 ::haxe::ds::StringMap_obj::__register();
 ::haxe::ds::_List::ListIterator_obj::__register();
 ::haxe::ds::_List::ListNode_obj::__register();
 ::haxe::ds::IntMap_obj::__register();
+::haxe::ds::GenericStack_hscript_Token_obj::__register();
+::haxe::ds::_GenericStack::GenericStackIterator_obj::__register();
+::haxe::ds::GenericCell_obj::__register();
+::haxe::ds::GenericCell_hscript_Token_obj::__register();
 ::haxe::ds::EnumValueMap_obj::__register();
 ::haxe::ds::TreeNode_obj::__register();
 ::haxe::ds::BalancedTree_obj::__register();
@@ -4530,6 +4684,8 @@ __files__boot();
 ::flixel::_hx_system::debug::interaction::tools::LogBitmap_obj::__register();
 ::flixel::_hx_system::debug::interaction::tools::Eraser_obj::__register();
 ::flixel::_hx_system::debug::interaction::tools::Tool_obj::__register();
+::flixel::_hx_system::debug::console::_ConsoleUtil::Interp_obj::__register();
+::hscript::Interp_obj::__register();
 ::flixel::_hx_system::debug::console::ConsoleUtil_obj::__register();
 ::flixel::_hx_system::debug::console::ConsoleCommands_obj::__register();
 ::flixel::_hx_system::debug::completion::CompletionList_obj::__register();
@@ -4677,6 +4833,10 @@ __files__boot();
 ::Reflect_obj::__register();
 ::__ASSET__OPENFL__flixel_fonts_monsterrat_ttf_obj::__register();
 ::__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf_obj::__register();
+::__ASSET__OPENFL__assets_fonts_5by7_b_ttf_obj::__register();
+::__ASSET__OPENFL__assets_fonts_5by7_ttf_obj::__register();
+::__ASSET__assets_fonts_5by7_b_ttf_obj::__register();
+::__ASSET__assets_fonts_5by7_ttf_obj::__register();
 ::lime::graphics::Image_obj::__register();
 ::lime::text::Font_obj::__register();
 ::haxe::io::Bytes_obj::__register();
@@ -4716,6 +4876,15 @@ __files__boot();
 ::lime::graphics::ImageFileFormat_obj::__boot();
 ::lime::graphics::ImageChannel_obj::__boot();
 ::lime::_internal::format::BMPType_obj::__boot();
+::hscript::Token_obj::__boot();
+::hscript::_Interp::Stop_obj::__boot();
+::hscript::FieldKind_obj::__boot();
+::hscript::FieldAccess_obj::__boot();
+::hscript::ModuleDecl_obj::__boot();
+::hscript::Error_obj::__boot();
+::hscript::CType_obj::__boot();
+::hscript::Expr_obj::__boot();
+::hscript::Const_obj::__boot();
 ::haxe::zip::_InflateImpl::State_obj::__boot();
 ::haxe::zip::Huffman_obj::__boot();
 ::haxe::zip::ExtraField_obj::__boot();
@@ -4786,6 +4955,10 @@ __files__boot();
 ::__ASSET__flixel_fonts_monsterrat_ttf_obj::__boot();
 ::__ASSET__flixel_images_ui_button_png_obj::__boot();
 ::__ASSET__flixel_images_logo_default_png_obj::__boot();
+::__ASSET__flixel_images_transitions_circle_png_obj::__boot();
+::__ASSET__flixel_images_transitions_diagonal_gradient_png_obj::__boot();
+::__ASSET__flixel_images_transitions_diamond_png_obj::__boot();
+::__ASSET__flixel_images_transitions_square_png_obj::__boot();
 ::openfl::text::Font_obj::__boot();
 ::haxe::SysTools_obj::__boot();
 ::Xml_obj::__boot();
@@ -4929,6 +5102,7 @@ __files__boot();
 ::haxe::crypto::Base64_obj::__boot();
 ::haxe::xml::Parser_obj::__boot();
 ::haxe::zip::InflateImpl_obj::__boot();
+::hscript::Parser_obj::__boot();
 ::lime::_internal::backend::native::NativeAudioSource_obj::__boot();
 ::lime::_internal::backend::native::NativeOpenGLRenderContext_obj::__boot();
 ::lime::_internal::format::Base64_obj::__boot();
@@ -5112,6 +5286,8 @@ __files__boot();
 ::openfl::events::TouchEvent_obj::__boot();
 ::openfl::events::UncaughtErrorEvent_obj::__boot();
 ::openfl::filesystem::File_obj::__boot();
+::openfl::filters::BlurFilter_obj::__boot();
+::openfl::filters::GlowFilter_obj::__boot();
 ::openfl::filters::ShaderFilter_obj::__boot();
 ::openfl::geom::Matrix3D_obj::__boot();
 ::openfl::geom::_Orientation3D::Orientation3D_Impl__obj::__boot();

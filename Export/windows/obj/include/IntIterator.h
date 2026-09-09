@@ -60,6 +60,12 @@ HXLINE(  47)		( ( ::IntIterator)(__this) )->max = max;
 
 		int min;
 		int max;
+		bool hasNext();
+		::Dynamic hasNext_dyn();
+
+		int next();
+		::Dynamic next_dyn();
+
 };
 
 

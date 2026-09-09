@@ -1,4 +1,9 @@
 -main ApplicationMain 
+--macro keep('IntIterator')
+-cp D:/Hackse/haxe/lib/hscript/2,7,0
+-D hscript=2.7.0
+-cp D:/Hackse/haxe/lib/flixel-addons/4,0,2
+-D flixel-addons=4.0.2
 -cp D:/Hackse/haxe/lib/flixel/6,2,0
 -D flixel=6.2.0
 --macro lime._internal.macros.DefineMacro.run()
