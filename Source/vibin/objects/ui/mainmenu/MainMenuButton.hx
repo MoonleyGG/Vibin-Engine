@@ -13,6 +13,9 @@ class MainMenuButton extends FlxSprite
     {
         super(x, y);
 
+        if (menuButton == null || menuButton.trim() == "")
+            return;
+
         var imagePath:String = Path.join([ENV_PATH, menuButton + ".png"]);
         var xmlPath:String = Path.join([ENV_PATH, menuButton + ".xml"]);
 
@@ -20,7 +23,11 @@ class MainMenuButton extends FlxSprite
 
         antialiasing = true;
 
-        frames = FlxAtlasFrames.fromSparrow(imagePath, xmlPath);
+        var atlasFrames:FlxAtlasFrames = FlxAtlasFrames.fromSparrow(imagePath, xmlPath);
+        if (atlasFrames == null)
+            return;
+
+        frames = atlasFrames;
 
         animation.addByPrefix("idle", menuButton + " idle", 24, true);
         animation.addByPrefix("selected", menuButton + " selected", 24, true);

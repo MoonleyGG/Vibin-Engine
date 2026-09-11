@@ -23,10 +23,11 @@
 #include <vibin/options/OptionControls.h>
 #endif
 
-HX_LOCAL_STACK_FRAME(_hx_pos_412c8d617b2b86a7_18_get_leftUI_P,"vibin.backend.Controls","get_leftUI_P",0xfa877079,"vibin.backend.Controls.get_leftUI_P","vibin/backend/Controls.hx",18,0xa00baad2)
-HX_LOCAL_STACK_FRAME(_hx_pos_412c8d617b2b86a7_19_get_downUI_P,"vibin.backend.Controls","get_downUI_P",0x28742a54,"vibin.backend.Controls.get_downUI_P","vibin/backend/Controls.hx",19,0xa00baad2)
-HX_LOCAL_STACK_FRAME(_hx_pos_412c8d617b2b86a7_20_get_upUI_P,"vibin.backend.Controls","get_upUI_P",0x6ef6db8d,"vibin.backend.Controls.get_upUI_P","vibin/backend/Controls.hx",20,0xa00baad2)
-HX_LOCAL_STACK_FRAME(_hx_pos_412c8d617b2b86a7_21_get_rightUI_P,"vibin.backend.Controls","get_rightUI_P",0x51044114,"vibin.backend.Controls.get_rightUI_P","vibin/backend/Controls.hx",21,0xa00baad2)
+HX_LOCAL_STACK_FRAME(_hx_pos_412c8d617b2b86a7_19_get_leftUI_P,"vibin.backend.Controls","get_leftUI_P",0xfa877079,"vibin.backend.Controls.get_leftUI_P","vibin/backend/Controls.hx",19,0xa00baad2)
+HX_LOCAL_STACK_FRAME(_hx_pos_412c8d617b2b86a7_20_get_downUI_P,"vibin.backend.Controls","get_downUI_P",0x28742a54,"vibin.backend.Controls.get_downUI_P","vibin/backend/Controls.hx",20,0xa00baad2)
+HX_LOCAL_STACK_FRAME(_hx_pos_412c8d617b2b86a7_21_get_upUI_P,"vibin.backend.Controls","get_upUI_P",0x6ef6db8d,"vibin.backend.Controls.get_upUI_P","vibin/backend/Controls.hx",21,0xa00baad2)
+HX_LOCAL_STACK_FRAME(_hx_pos_412c8d617b2b86a7_22_get_rightUI_P,"vibin.backend.Controls","get_rightUI_P",0x51044114,"vibin.backend.Controls.get_rightUI_P","vibin/backend/Controls.hx",22,0xa00baad2)
+HX_LOCAL_STACK_FRAME(_hx_pos_412c8d617b2b86a7_23_get_accept_P,"vibin.backend.Controls","get_accept_P",0x6e1636a6,"vibin.backend.Controls.get_accept_P","vibin/backend/Controls.hx",23,0xa00baad2)
 namespace vibin{
 namespace backend{
 
@@ -48,36 +49,44 @@ bool Controls_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 bool Controls_obj::get_leftUI_P(){
-            	HX_STACKFRAME(&_hx_pos_412c8d617b2b86a7_18_get_leftUI_P)
-HXDLIN(  18)		return ::flixel::FlxG_obj::keys->checkKeyArrayState(::vibin::options::OptionControls_obj::leftKeys,2);
+            	HX_STACKFRAME(&_hx_pos_412c8d617b2b86a7_19_get_leftUI_P)
+HXDLIN(  19)		return ::flixel::FlxG_obj::keys->checkKeyArrayState(::vibin::options::OptionControls_obj::leftKeys,2);
             	}
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Controls_obj,get_leftUI_P,return )
 
 bool Controls_obj::get_downUI_P(){
-            	HX_STACKFRAME(&_hx_pos_412c8d617b2b86a7_19_get_downUI_P)
-HXDLIN(  19)		return ::flixel::FlxG_obj::keys->checkKeyArrayState(::vibin::options::OptionControls_obj::downKeys,2);
+            	HX_STACKFRAME(&_hx_pos_412c8d617b2b86a7_20_get_downUI_P)
+HXDLIN(  20)		return ::flixel::FlxG_obj::keys->checkKeyArrayState(::vibin::options::OptionControls_obj::downKeys,2);
             	}
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Controls_obj,get_downUI_P,return )
 
 bool Controls_obj::get_upUI_P(){
-            	HX_STACKFRAME(&_hx_pos_412c8d617b2b86a7_20_get_upUI_P)
-HXDLIN(  20)		return ::flixel::FlxG_obj::keys->checkKeyArrayState(::vibin::options::OptionControls_obj::upKeys,2);
+            	HX_STACKFRAME(&_hx_pos_412c8d617b2b86a7_21_get_upUI_P)
+HXDLIN(  21)		return ::flixel::FlxG_obj::keys->checkKeyArrayState(::vibin::options::OptionControls_obj::upKeys,2);
             	}
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Controls_obj,get_upUI_P,return )
 
 bool Controls_obj::get_rightUI_P(){
-            	HX_STACKFRAME(&_hx_pos_412c8d617b2b86a7_21_get_rightUI_P)
-HXDLIN(  21)		return ::flixel::FlxG_obj::keys->checkKeyArrayState(::vibin::options::OptionControls_obj::rightKeys,2);
+            	HX_STACKFRAME(&_hx_pos_412c8d617b2b86a7_22_get_rightUI_P)
+HXDLIN(  22)		return ::flixel::FlxG_obj::keys->checkKeyArrayState(::vibin::options::OptionControls_obj::rightKeys,2);
             	}
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Controls_obj,get_rightUI_P,return )
+
+bool Controls_obj::get_accept_P(){
+            	HX_STACKFRAME(&_hx_pos_412c8d617b2b86a7_23_get_accept_P)
+HXDLIN(  23)		return ::flixel::FlxG_obj::keys->checkKeyArrayState(::vibin::options::OptionControls_obj::acceptKeys,2);
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC0(Controls_obj,get_accept_P,return )
 
 
 Controls_obj::Controls_obj()
@@ -93,6 +102,7 @@ bool Controls_obj::__GetStatic(const ::String &inName, Dynamic &outValue, ::hx::
 	case 8:
 		if (HX_FIELD_EQ(inName,"leftUI_P") ) { if (inCallProp == ::hx::paccAlways) { outValue = ( get_leftUI_P() ); return true; } }
 		if (HX_FIELD_EQ(inName,"downUI_P") ) { if (inCallProp == ::hx::paccAlways) { outValue = ( get_downUI_P() ); return true; } }
+		if (HX_FIELD_EQ(inName,"accept_P") ) { if (inCallProp == ::hx::paccAlways) { outValue = ( get_accept_P() ); return true; } }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"rightUI_P") ) { if (inCallProp == ::hx::paccAlways) { outValue = ( get_rightUI_P() ); return true; } }
@@ -103,6 +113,7 @@ bool Controls_obj::__GetStatic(const ::String &inName, Dynamic &outValue, ::hx::
 	case 12:
 		if (HX_FIELD_EQ(inName,"get_leftUI_P") ) { outValue = get_leftUI_P_dyn(); return true; }
 		if (HX_FIELD_EQ(inName,"get_downUI_P") ) { outValue = get_downUI_P_dyn(); return true; }
+		if (HX_FIELD_EQ(inName,"get_accept_P") ) { outValue = get_accept_P_dyn(); return true; }
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"get_rightUI_P") ) { outValue = get_rightUI_P_dyn(); return true; }
@@ -122,6 +133,7 @@ static ::String Controls_obj_sStaticFields[] = {
 	HX_("get_downUI_P",d0,5f,8f,37),
 	HX_("get_upUI_P",09,7a,90,6d),
 	HX_("get_rightUI_P",18,d8,b7,79),
+	HX_("get_accept_P",22,6c,31,7d),
 	::String(null())
 };
 

@@ -63,6 +63,9 @@ class HXCPP_CLASS_ATTRIBUTES Controls_obj : public ::hx::Object
 		static bool get_rightUI_P();
 		static ::Dynamic get_rightUI_P_dyn();
 
+		static bool get_accept_P();
+		static ::Dynamic get_accept_P_dyn();
+
 };
 
 } // end namespace vibin

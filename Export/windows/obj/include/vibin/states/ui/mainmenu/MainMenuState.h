@@ -18,6 +18,7 @@ HX_DECLARE_CLASS2(flixel,group,FlxTypedGroup)
 HX_DECLARE_CLASS2(flixel,text,FlxText)
 HX_DECLARE_CLASS2(flixel,tweens,FlxTween)
 HX_DECLARE_CLASS2(flixel,util,IFlxDestroyable)
+HX_DECLARE_CLASS1(util,ColorSpriteMask)
 HX_DECLARE_CLASS3(vibin,backend,backendStates,MusicUIBeatState)
 HX_DECLARE_CLASS4(vibin,states,ui,mainmenu,MainMenuState)
 
@@ -63,6 +64,8 @@ class HXCPP_CLASS_ATTRIBUTES MainMenuState_obj : public  ::vibin::backend::backe
 		 ::flixel::group::FlxTypedGroup textGroup;
 		 ::flixel::text::FlxText blurred;
 		 ::flixel::text::FlxText text;
+		 ::util::ColorSpriteMask blurredMask;
+		 ::util::ColorSpriteMask textMask;
 		 ::flixel::FlxSprite recordedge;
 		 ::flixel::FlxSprite vinyl;
 		 ::flixel::FlxSprite bg;
@@ -105,6 +108,9 @@ class HXCPP_CLASS_ATTRIBUTES MainMenuState_obj : public  ::vibin::backend::backe
 
 		void tweenText();
 		::Dynamic tweenText_dyn();
+
+		void selectOption(::hx::Null< int >  change);
+		::Dynamic selectOption_dyn();
 
 };
 

@@ -98,11 +98,13 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_menus_ui_mainmenu_mainmenubuttons_vibintxt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_fonts_5by7_ttf extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_fonts_5by7_b_ttf extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_characters_players_boyfriend_animation_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_characters_players_boyfriend_spritemap1_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_characters_players_boyfriend_spritemap1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_bg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_bgselected_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_mainmenu_record_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_mainmenu_recordedge_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_mainmenu_recordmask_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_awards_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_awards_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_menus_ui_credits_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }

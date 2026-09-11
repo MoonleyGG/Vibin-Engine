@@ -1,11 +1,13 @@
 Export/windows/bin/assets/data/menus/ui/mainmenu/MainMenuButtons.vibintxt
 Export/windows/bin/assets/fonts/5by7.ttf
 Export/windows/bin/assets/fonts/5by7_b.ttf
+Export/windows/bin/assets/images/characters/players/boyfriend/Animation.json
+Export/windows/bin/assets/images/characters/players/boyfriend/spritemap1.json
+Export/windows/bin/assets/images/characters/players/boyfriend/spritemap1.png
 Export/windows/bin/assets/images/menus/bg.png
 Export/windows/bin/assets/images/menus/bgSelected.png
 Export/windows/bin/assets/images/menus/mainmenu/record.png
 Export/windows/bin/assets/images/menus/mainmenu/recordedge.png
-Export/windows/bin/assets/images/menus/mainmenu/recordmask.png
 Export/windows/bin/assets/images/menus/ui/awards.png
 Export/windows/bin/assets/images/menus/ui/awards.xml
 Export/windows/bin/assets/images/menus/ui/credits.png

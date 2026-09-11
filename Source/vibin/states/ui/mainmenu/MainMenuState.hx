@@ -26,11 +26,13 @@ class MainMenuState extends MusicUIBeatState {
 
     var blurred:FlxText;
     var text:FlxText;
+    var blurredMask:ColorSpriteMask;
+    var textMask:ColorSpriteMask;
 
     var recordedge:FlxSprite;
     var vinyl:FlxSprite;
     var bg:FlxSprite;
-    
+
     //
     // config
     //
@@ -64,7 +66,7 @@ class MainMenuState extends MusicUIBeatState {
       override function create() {
         super.create();
 
-        SoundUtil.playMusic("mainmenu", 1, true, true);
+        SoundUtil.playMusic("mainmenu", 1, true, false);
         
         /**
          * convert this to the most recurring color in the bg when i have made that system.
@@ -80,6 +82,11 @@ class MainMenuState extends MusicUIBeatState {
         super.update(elapsed);
 
         updateElapsed = elapsed;
+
+        if (textMask != null)
+            textMask.update();
+        if (blurredMask != null)
+            blurredMask.update();
 
         updateSprites();
         updateButtonPositions();
@@ -111,6 +118,8 @@ class MainMenuState extends MusicUIBeatState {
         ];
         text.scrollFactor.set(0, 0);
         blurred.scrollFactor.set(0, 0);
+        text.visible = true;
+        blurred.visible = true;
       }
 
       /**
@@ -127,13 +136,23 @@ class MainMenuState extends MusicUIBeatState {
       function setupMenuButtons() {
         menuButtonGroup = new FlxTypedGroup<MainMenuButton>();
         MenuButtons = TxtSplitter.SplitTxt("menus/ui/mainmenu/MainMenuButtons");
-        
+
         for (i in 0...MenuButtons.length) {
-            var button:MainMenuButton = new MainMenuButton(0, 0, MenuButtons[i]);
-            var menuButtonLength:Float = MenuButtons.length; 
+            var menuButtonName:String = MenuButtons[i];
+            if (menuButtonName == null || menuButtonName.trim() == "")
+                continue;
+
+            var button:MainMenuButton = new MainMenuButton(0, 0, menuButtonName);
+            if (button == null)
+                continue;
+
             button.scrollFactor.set(0, 0);
             menuButtonGroup.add(button);
         }
+
+        if (menuButtonGroup == null || menuButtonGroup.members == null || menuButtonGroup.members.length == 0)
+            return;
+
         updateButtonPositions();
         changeSelection(0); // make sure you have a selection from the start
     }
@@ -151,6 +170,20 @@ class MainMenuState extends MusicUIBeatState {
         vinyl.centerOffsets();
         vinyl.centerOrigin();
         vinyl.setPosition(FlxG.width - vinyl.width, (FlxG.height - vinyl.height) / 2);
+
+        textGroup.add(blurred);
+        textGroup.add(text);
+
+        if (recordedge != null)
+        {
+            var revealColor:Int = 0x171717;
+            blurredMask = new ColorSpriteMask(blurred, recordedge, revealColor, 8);
+            textMask = new ColorSpriteMask(text, recordedge, revealColor, 8);
+        }
+
+        add(textGroup);
+        tweenText();
+
         setupMenuButtons();
         
         /**
@@ -160,10 +193,6 @@ class MainMenuState extends MusicUIBeatState {
          add(vinyl);
          add(menuButtonGroup);
          add(recordedge);
-        textGroup.add(blurred);
-        textGroup.add(text);
-        add(textGroup);
-        tweenText();
     }
 
     function checkControls() {
@@ -173,12 +202,21 @@ class MainMenuState extends MusicUIBeatState {
         if (Controls.upUI_P) {
             changeSelection(-1);
         }
+        if (Controls.accept_P) {
+            selectOption(curSelected);
+        }
     }
 
     function updateButtonPositions() {
          // i know these arent buttons but bowomp
+        if (recordedge == null || vinyl == null)
+            return;
+
         text.y = recordedge.y + 652;
         blurred.y = recordedge.y + 652;
+
+        if (menuButtonGroup == null || menuButtonGroup.members == null || menuButtonGroup.members.length == 0)
+            return;
 
         var vinylCenterX:Float = vinyl.getGraphicMidpoint().x;
         var vinylCenterY:Float = vinyl.getGraphicMidpoint().y;
@@ -186,6 +224,8 @@ class MainMenuState extends MusicUIBeatState {
 
         for (i in 0...menuButtonGroup.members.length) {
             var button:MainMenuButton = menuButtonGroup.members[i];
+            if (button == null)
+                continue;
 
             var selectionOffsetRad:Float = currentSelectionAngle * (Math.PI / 180);
             var placementAngle:Float = Math.PI + selectionOffsetRad - (i * angleStep);
@@ -210,6 +250,9 @@ class MainMenuState extends MusicUIBeatState {
     }
 
     function changeSelection(change:Int = 0) {
+        if (MenuButtons.length == 0 || menuButtonGroup == null || menuButtonGroup.members.length == 0)
+            return;
+
         curSelected += change; // spare **change** sir?
 
         if (curSelected < 0)
@@ -262,5 +305,25 @@ class MainMenuState extends MusicUIBeatState {
         FlxTween.tween(blurred, {x: recordedge.x - 500}, 15, {
             ease: FlxEase.linear,
         });
+    }
+
+    function selectOption(change:Int = 0) {
+        switch (change)
+        {
+            case 0: // storymode
+                TransitionState.switchState(vibin.states.ui.mainmenu.MainMenuState);
+            case 1: // freeplay
+                TransitionState.switchState(vibin.states.ui.mainmenu.MainMenuState);
+            case 2: // gallery
+                TransitionState.switchState(vibin.states.ui.mainmenu.MainMenuState);
+            case 3: // awards
+                TransitionState.switchState(vibin.states.ui.mainmenu.MainMenuState);
+            case 4: // options
+                TransitionState.switchState(vibin.states.ui.mainmenu.MainMenuState);
+            case 5: // credits
+                TransitionState.switchState(vibin.states.ui.mainmenu.MainMenuState);
+            default:
+                trace("no menu option selected dumbass ;3");
+        }
     }
 }

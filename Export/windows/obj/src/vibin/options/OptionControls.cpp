@@ -21,6 +21,10 @@ HX_LOCAL_STACK_FRAME(_hx_pos_51b7ccacb8a6378b_9_boot,"vibin.options.OptionContro
 static const int _hx_array_data_13a50ff5_7[] = {
 	(int)39,(int)68,
 };
+HX_LOCAL_STACK_FRAME(_hx_pos_51b7ccacb8a6378b_10_boot,"vibin.options.OptionControls","boot",0xa39e2b4b,"vibin.options.OptionControls.boot","vibin/options/OptionControls.hx",10,0x7d732ea7)
+static const int _hx_array_data_13a50ff5_9[] = {
+	(int)13,(int)32,
+};
 namespace vibin{
 namespace options{
 
@@ -49,6 +53,8 @@ bool OptionControls_obj::_hx_isInstanceOf(int inClassId) {
 
 ::Array< int > OptionControls_obj::rightKeys;
 
+::Array< int > OptionControls_obj::acceptKeys;
+
 
 OptionControls_obj::OptionControls_obj()
 {
@@ -66,6 +72,9 @@ bool OptionControls_obj::__GetStatic(const ::String &inName, Dynamic &outValue, 
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"rightKeys") ) { outValue = ( rightKeys ); return true; }
+		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"acceptKeys") ) { outValue = ( acceptKeys ); return true; }
 	}
 	return false;
 }
@@ -82,6 +91,9 @@ bool OptionControls_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,::h
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"rightKeys") ) { rightKeys=ioValue.Cast< ::Array< int > >(); return true; }
+		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"acceptKeys") ) { acceptKeys=ioValue.Cast< ::Array< int > >(); return true; }
 	}
 	return false;
 }
@@ -93,6 +105,7 @@ static ::hx::StaticInfo OptionControls_obj_sStaticStorageInfo[] = {
 	{::hx::fsObject /* ::Array< int > */ ,(void *) &OptionControls_obj::downKeys,HX_("downKeys",76,df,ee,7b)},
 	{::hx::fsObject /* ::Array< int > */ ,(void *) &OptionControls_obj::upKeys,HX_("upKeys",ef,3d,82,76)},
 	{::hx::fsObject /* ::Array< int > */ ,(void *) &OptionControls_obj::rightKeys,HX_("rightKeys",f0,37,cd,b1)},
+	{::hx::fsObject /* ::Array< int > */ ,(void *) &OptionControls_obj::acceptKeys,HX_("acceptKeys",1c,c5,60,ba)},
 	{ ::hx::fsUnknown, 0, null()}
 };
 #endif
@@ -102,6 +115,7 @@ static void OptionControls_obj_sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(OptionControls_obj::downKeys,"downKeys");
 	HX_MARK_MEMBER_NAME(OptionControls_obj::upKeys,"upKeys");
 	HX_MARK_MEMBER_NAME(OptionControls_obj::rightKeys,"rightKeys");
+	HX_MARK_MEMBER_NAME(OptionControls_obj::acceptKeys,"acceptKeys");
 };
 
 #ifdef HXCPP_VISIT_ALLOCS
@@ -110,6 +124,7 @@ static void OptionControls_obj_sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(OptionControls_obj::downKeys,"downKeys");
 	HX_VISIT_MEMBER_NAME(OptionControls_obj::upKeys,"upKeys");
 	HX_VISIT_MEMBER_NAME(OptionControls_obj::rightKeys,"rightKeys");
+	HX_VISIT_MEMBER_NAME(OptionControls_obj::acceptKeys,"acceptKeys");
 };
 
 #endif
@@ -121,6 +136,7 @@ static ::String OptionControls_obj_sStaticFields[] = {
 	HX_("downKeys",76,df,ee,7b),
 	HX_("upKeys",ef,3d,82,76),
 	HX_("rightKeys",f0,37,cd,b1),
+	HX_("acceptKeys",1c,c5,60,ba),
 	::String(null())
 };
 
@@ -168,6 +184,10 @@ HXDLIN(   8)		upKeys = ::Array_obj< int >::fromData( _hx_array_data_13a50ff5_5,2
 {
             	HX_STACKFRAME(&_hx_pos_51b7ccacb8a6378b_9_boot)
 HXDLIN(   9)		rightKeys = ::Array_obj< int >::fromData( _hx_array_data_13a50ff5_7,2);
+            	}
+{
+            	HX_STACKFRAME(&_hx_pos_51b7ccacb8a6378b_10_boot)
+HXDLIN(  10)		acceptKeys = ::Array_obj< int >::fromData( _hx_array_data_13a50ff5_9,2);
             	}
 }
 

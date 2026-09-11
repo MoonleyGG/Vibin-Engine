@@ -57,6 +57,7 @@ class HXCPP_CLASS_ATTRIBUTES OptionControls_obj : public ::hx::Object
 		static ::Array< int > downKeys;
 		static ::Array< int > upKeys;
 		static ::Array< int > rightKeys;
+		static ::Array< int > acceptKeys;
 };
 
 } // end namespace vibin

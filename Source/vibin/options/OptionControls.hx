@@ -7,4 +7,5 @@ class OptionControls {
     public static var downKeys:Array<FlxKey> = [DOWN, S];
     public static var upKeys:Array<FlxKey> = [UP, W];
     public static var rightKeys:Array<FlxKey> = [RIGHT, D];
+    public static var acceptKeys:Array<FlxKey> = [ENTER, SPACE];
 }

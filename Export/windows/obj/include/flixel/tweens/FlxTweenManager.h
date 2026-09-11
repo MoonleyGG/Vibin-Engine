@@ -100,11 +100,11 @@ class HXCPP_CLASS_ATTRIBUTES FlxTweenManager_obj : public  ::flixel::FlxBasic_ob
 		 ::flixel::tweens::misc::NumTween add_flixel_tweens_misc_NumTween( ::flixel::tweens::misc::NumTween Tween,::hx::Null< bool >  Start);
 		::Dynamic add_flixel_tweens_misc_NumTween_dyn();
 
-		 ::flixel::tweens::misc::VarTween add_flixel_tweens_misc_VarTween( ::flixel::tweens::misc::VarTween Tween,::hx::Null< bool >  Start);
-		::Dynamic add_flixel_tweens_misc_VarTween_dyn();
-
 		 ::flixel::tweens::FlxTween add_flixel_tweens_FlxTween( ::flixel::tweens::FlxTween Tween,::hx::Null< bool >  Start);
 		::Dynamic add_flixel_tweens_FlxTween_dyn();
+
+		 ::flixel::tweens::misc::VarTween add_flixel_tweens_misc_VarTween( ::flixel::tweens::misc::VarTween Tween,::hx::Null< bool >  Start);
+		::Dynamic add_flixel_tweens_misc_VarTween_dyn();
 
 		::Array< ::Dynamic> _tweens;
 		 ::flixel::tweens::misc::VarTween tween( ::Dynamic Object, ::Dynamic Values,::hx::Null< Float >  Duration, ::Dynamic Options);
