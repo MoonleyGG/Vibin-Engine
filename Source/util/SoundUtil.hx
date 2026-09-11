@@ -15,7 +15,7 @@ class SoundUtil {
         var sound:FlxSound = FlxG.sound.play(path, volume, looped, null, autoDestroy);
 
         if (sound != null) {
-            sound.presist = persist;
+            sound.persist = persist;
             sound.name = key; // tag it so its findable in the loop next time
         }
 
