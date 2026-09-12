@@ -840,6 +840,7 @@ const char *__hxcpp_all_files[] = {
 "vibin/objects/ui/mainmenu/MainMenuButton.hx",
 "vibin/options/OptionControls.hx",
 "vibin/states/ui/mainmenu/MainMenuState.hx",
+"vibin/states/ui/storymode/StoryModeState.hx",
 #endif
  0 };
 
@@ -1681,6 +1682,7 @@ const char *__hxcpp_all_files_fullpath[] = {
 "D:\\My Projects\\vibin engine\\vibin engine\\Source\\vibin\\objects\\ui\\mainmenu\\MainMenuButton.hx",
 "D:\\My Projects\\vibin engine\\vibin engine\\Source\\vibin\\options\\OptionControls.hx",
 "D:\\My Projects\\vibin engine\\vibin engine\\Source\\vibin\\states\\ui\\mainmenu\\MainMenuState.hx",
+"D:\\My Projects\\vibin engine\\vibin engine\\Source\\vibin\\states\\ui\\storymode\\StoryModeState.hx",
 #endif
  0 };
 
@@ -2794,6 +2796,7 @@ const char *__hxcpp_all_classes[] = {
 "vibin.graphics.shaders.StrokeShader",
 "vibin.objects.ui.mainmenu.MainMenuButton",
 "vibin.options.OptionControls",
+"vibin.states.ui.storymode.StoryModeState",
 #endif
  0 };
 } // namespace hx

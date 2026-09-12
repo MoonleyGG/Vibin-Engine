@@ -229,6 +229,9 @@
 #ifndef INCLUDED_util_TransitionState
 #include <util/TransitionState.h>
 #endif
+#ifndef INCLUDED_util_SoundUtil
+#include <util/SoundUtil.h>
+#endif
 #ifndef INCLUDED_sys_thread_Tls
 #include <sys/thread/Tls.h>
 #endif
@@ -1438,6 +1441,9 @@
 #ifndef INCLUDED_lime__internal_backend_native_NativeCFFI
 #include <lime/_internal/backend/native/NativeCFFI.h>
 #endif
+#ifndef INCLUDED_vibin_states_ui_storymode_StoryModeState
+#include <vibin/states/ui/storymode/StoryModeState.h>
+#endif
 #ifndef INCLUDED_vibin_graphics_shaders_StrokeShader
 #include <vibin/graphics/shaders/StrokeShader.h>
 #endif
@@ -1458,9 +1464,6 @@
 #endif
 #ifndef INCLUDED_vibin_backend_backendStates_MusicUIBeatState
 #include <vibin/backend/backendStates/MusicUIBeatState.h>
-#endif
-#ifndef INCLUDED_util_SoundUtil
-#include <util/SoundUtil.h>
 #endif
 #ifndef INCLUDED_util_ColorSpriteMask
 #include <util/ColorSpriteMask.h>
@@ -3723,6 +3726,7 @@ __files__boot();
 ::vibin::options::OptionControls_obj::__register();
 ::vibin::objects::ui::mainmenu::MainMenuButton_obj::__register();
 ::util::TransitionState_obj::__register();
+::util::SoundUtil_obj::__register();
 ::sys::thread::Tls_obj::__register();
 ::openfl::utils::_internal::format::amf3::AMF3Array_obj::__register();
 ::openfl::utils::_internal::TouchData_obj::__register();
@@ -4126,6 +4130,7 @@ __files__boot();
 ::lime::app::Application_obj::__register();
 ::lime::_internal::backend::native::NativeApplication_obj::__register();
 ::lime::_internal::backend::native::NativeCFFI_obj::__register();
+::vibin::states::ui::storymode::StoryModeState_obj::__register();
 ::vibin::graphics::shaders::StrokeShader_obj::__register();
 ::vibin::backend::ui::FullScreenScaleMode_obj::__register();
 ::vibin::backend::Controls_obj::__register();
@@ -4133,7 +4138,6 @@ __files__boot();
 ::util::fileUtils::TxtSplitter_obj::__register();
 ::vibin::states::ui::mainmenu::MainMenuState_obj::__register();
 ::vibin::backend::backendStates::MusicUIBeatState_obj::__register();
-::util::SoundUtil_obj::__register();
 ::util::ColorSpriteMask_obj::__register();
 ::sys::thread::_Thread::Thread_Impl__obj::__register();
 ::sys::thread::NoEventLoopException_obj::__register();
@@ -5345,6 +5349,7 @@ __files__boot();
 ::openfl::utils::_internal::TouchData_obj::__boot();
 ::openfl::utils::_internal::format::amf3::AMF3Array_obj::__boot();
 ::sys::thread::Tls_obj::__boot();
+::util::SoundUtil_obj::__boot();
 ::util::TransitionState_obj::__boot();
 ::vibin::objects::ui::mainmenu::MainMenuButton_obj::__boot();
 ::vibin::options::OptionControls_obj::__boot();

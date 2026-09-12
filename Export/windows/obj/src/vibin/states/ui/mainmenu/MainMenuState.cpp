@@ -128,6 +128,9 @@
 #ifndef INCLUDED_vibin_states_ui_mainmenu_MainMenuState
 #include <vibin/states/ui/mainmenu/MainMenuState.h>
 #endif
+#ifndef INCLUDED_vibin_states_ui_storymode_StoryModeState
+#include <vibin/states/ui/storymode/StoryModeState.h>
+#endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_88c362ffb1408ce3_20_new,"vibin.states.ui.mainmenu.MainMenuState","new",0x159b111d,"vibin.states.ui.mainmenu.MainMenuState.new","vibin/states/ui/mainmenu/MainMenuState.hx",20,0x6725daf3)
 HX_LOCAL_STACK_FRAME(_hx_pos_88c362ffb1408ce3_66_create,"vibin.states.ui.mainmenu.MainMenuState","create",0x77bd7a5f,"vibin.states.ui.mainmenu.MainMenuState.create","vibin/states/ui/mainmenu/MainMenuState.hx",66,0x6725daf3)
@@ -197,7 +200,7 @@ bool MainMenuState_obj::_hx_isInstanceOf(int inClassId) {
 void MainMenuState_obj::create(){
             	HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_66_create)
 HXLINE(  67)		this->super::create();
-HXLINE(  69)		::util::SoundUtil_obj::playMusic(HX_("mainmenu",58,8e,02,b6),1,true,false);
+HXLINE(  69)		::util::SoundUtil_obj::playMusic(HX_("mainmenu",58,8e,02,b6),1,true,true);
 HXLINE(  74)		::flixel::FlxG_obj::cameras->set_bgColor(-137103);
 HXLINE(  76)		this->setupDiscord();
 HXLINE(  77)		this->createText();
@@ -575,7 +578,7 @@ void MainMenuState_obj::selectOption(::hx::Null< int >  __o_change){
             	HX_STACKFRAME(&_hx_pos_88c362ffb1408ce3_311_selectOption)
 HXDLIN( 311)		switch((int)(change)){
             			case (int)0: {
-HXLINE( 314)				::util::TransitionState_obj::switchState(::hx::ClassOf< ::vibin::states::ui::mainmenu::MainMenuState >());
+HXLINE( 314)				::util::TransitionState_obj::switchState(::hx::ClassOf< ::vibin::states::ui::storymode::StoryModeState >());
             			}
             			break;
             			case (int)1: {

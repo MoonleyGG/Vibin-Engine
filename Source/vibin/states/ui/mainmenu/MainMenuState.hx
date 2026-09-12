@@ -66,7 +66,7 @@ class MainMenuState extends MusicUIBeatState {
       override function create() {
         super.create();
 
-        SoundUtil.playMusic("mainmenu", 1, true, false);
+        SoundUtil.playMusic("mainmenu", 1, true, true);
         
         /**
          * convert this to the most recurring color in the bg when i have made that system.
@@ -311,7 +311,7 @@ class MainMenuState extends MusicUIBeatState {
         switch (change)
         {
             case 0: // storymode
-                TransitionState.switchState(vibin.states.ui.mainmenu.MainMenuState);
+                TransitionState.switchState(vibin.states.ui.storymode.StoryModeState);
             case 1: // freeplay
                 TransitionState.switchState(vibin.states.ui.mainmenu.MainMenuState);
             case 2: // gallery

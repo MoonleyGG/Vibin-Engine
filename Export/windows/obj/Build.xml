@@ -2,6 +2,17 @@
 <set name="HXCPP_API_LEVEL" value="430" />
 <files id="haxe">
 <compilerflag value="-Iinclude"/>
+  <file name="src/vibin/states/ui/storymode/StoryModeState.cpp" >
+   <depend name="include/flixel/FlxBasic.h"/>
+   <depend name="include/flixel/FlxState.h"/>
+   <depend name="include/flixel/group/FlxTypedContainer.h"/>
+   <depend name="include/flixel/group/FlxTypedGroup.h"/>
+   <depend name="include/flixel/sound/FlxSound.h"/>
+   <depend name="include/flixel/util/IFlxDestroyable.h"/>
+   <depend name="include/util/SoundUtil.h"/>
+   <depend name="include/vibin/backend/backendStates/MusicUIBeatState.h"/>
+   <depend name="include/vibin/states/ui/storymode/StoryModeState.h"/>
+  </file>
   <file name="src/vibin/options/OptionControls.cpp" >
    <depend name="include/vibin/options/OptionControls.h"/>
   </file>
@@ -146,6 +157,7 @@
    <depend name="include/vibin/objects/ui/mainmenu/MainMenuButton.h"/>
    <depend name="include/vibin/options/OptionControls.h"/>
    <depend name="include/vibin/states/ui/mainmenu/MainMenuState.h"/>
+   <depend name="include/vibin/states/ui/storymode/StoryModeState.h"/>
   </file>
   <file name="src/vibin/backend/backendStates/MusicUIBeatState.cpp" >
    <depend name="include/flixel/FlxBasic.h"/>
@@ -160,10 +172,15 @@
   <file name="src/util/SoundUtil.cpp" >
    <depend name="include/flixel/FlxBasic.h"/>
    <depend name="include/flixel/FlxG.h"/>
+   <depend name="include/flixel/group/FlxTypedGroup.h"/>
    <depend name="include/flixel/sound/FlxSound.h"/>
-   <depend name="include/flixel/sound/FlxSoundGroup.h"/>
    <depend name="include/flixel/system/frontEnds/SoundFrontEnd.h"/>
    <depend name="include/flixel/util/IFlxDestroyable.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/openfl/events/EventDispatcher.h"/>
+   <depend name="include/openfl/events/IEventDispatcher.h"/>
+   <depend name="include/openfl/media/SoundChannel.h"/>
    <depend name="include/util/SoundUtil.h"/>
   </file>
   <file name="src/util/ColorSpriteMask.cpp" >
@@ -12754,6 +12771,7 @@
    <depend name="include/vibin/options/OptionControls.h"/>
    <depend name="include/vibin/objects/ui/mainmenu/MainMenuButton.h"/>
    <depend name="include/util/TransitionState.h"/>
+   <depend name="include/util/SoundUtil.h"/>
    <depend name="include/sys/thread/Tls.h"/>
    <depend name="include/openfl/utils/_internal/format/amf3/AMF3Array.h"/>
    <depend name="include/openfl/utils/_internal/TouchData.h"/>
